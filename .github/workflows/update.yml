@@ -3,11 +3,20 @@ name: Update berth data
 # Reads the terminal's sailing list every 15 minutes and publishes when something changed
 # (or hourly as a heartbeat). No AI involved: research of new ships is done by a separate
 # Claude Code task, which this workflow starts through its API trigger when needed.
+#
+# GitHub's own cron proved unreliable for this repository (it never fired), so the workflow keeps
+# its own time: a run started with loop=true repeats the update every 15 minutes for about 5.5 hours
+# and then starts its successor. The cron below only restarts the chain if it ever breaks.
+# To start it by hand: Actions tab -> Update berth data -> Run workflow -> tick "loop".
 on:
   schedule:
-    - cron: '8,23,38,53 * * * *'
+    - cron: '23 */6 * * *'
   workflow_dispatch:
     inputs:
+      loop:
+        description: Keep running every 15 minutes and start a successor (normal operation)
+        type: boolean
+        default: true
       force:
         description: Publish even if nothing changed, and re-read Shiptrail now
         type: boolean
@@ -15,7 +24,9 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
+# One chain at a time: a second run waits, and a newer waiting run replaces an older one.
 concurrency:
   group: update-berth-data
   cancel-in-progress: false
@@ -23,45 +34,32 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 355
     steps:
       - uses: actions/checkout@v5
 
-      - name: Read terminal and AIS, update data
-        run: |
-          node --version
-          node scripts/update.mjs ${{ inputs.force && '--refresh' || '' }} > "$RUNNER_TEMP/summary.json"
-          cat "$RUNNER_TEMP/summary.json"
-
-      - name: Start research task if a ship needs it
-        id: fire
+      - name: Update (looping every 15 minutes when loop is on)
         env:
           CLAUDE_FIRE_URL: ${{ secrets.CLAUDE_FIRE_URL }}
           CLAUDE_FIRE_TOKEN: ${{ secrets.CLAUDE_FIRE_TOKEN }}
+          LOOP: ${{ github.event_name == 'schedule' || inputs.loop }}
+          FORCE: ${{ inputs.force }}
         run: |
-          node scripts/fire-research.mjs "$RUNNER_TEMP/summary.json" | tee "$RUNNER_TEMP/fire.txt"
-          if grep -q '^FIRED=1' "$RUNNER_TEMP/fire.txt"; then echo "fired=true" >> "$GITHUB_OUTPUT"; fi
-
-      - name: Publish
-        run: |
-          publish=$(node -p "JSON.parse(require('fs').readFileSync('$RUNNER_TEMP/summary.json','utf8')).publish")
-          if [ "$publish" != "true" ] && [ "${{ steps.fire.outputs.fired }}" != "true" ] && [ "${{ inputs.force }}" != "true" ]; then
-            echo "No change since the last publish; nothing to commit."
-            exit 0
+          node --version
+          if [ "$LOOP" != "true" ]; then
+            scripts/ci-run.sh $([ "$FORCE" = "true" ] && echo "--force --refresh")
+            exit $?
           fi
-          node scripts/validate.mjs
-          msg=$(node -e "
-            const s = JSON.parse(require('fs').readFileSync('$RUNNER_TEMP/summary.json','utf8'));
-            const ev = s.events.filter(e => ['arrived','departed'].includes(e.type)).map(e => e.name + ' ' + e.type);
-            const berth = s.at_berth.map(v => v.name).join(' + ') || 'berth clear';
-            const what = !s.terminal_ok ? 'terminal unreachable, last state kept' : ev.length ? ev.join(', ') : berth + (s.publish_reason === 'heartbeat' ? ' (heartbeat)' : '');
-            console.log('data: ' + what);")
-          git config user.name "brajdica-watch[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data
-          git commit -q -m "$msg"
-          for i in 1 2 3; do
-            git push origin HEAD:main && exit 0
-            git pull --rebase origin main
+          END=$(( $(date +%s) + 330*60 ))
+          first=1
+          while [ "$(date +%s)" -lt "$END" ]; do
+            if [ "$first" = 1 ] && [ "$FORCE" = "true" ]; then scripts/ci-run.sh --force --refresh; else scripts/ci-run.sh; fi || echo "cycle failed; will retry next cycle"
+            first=0
+            sleep $(( 900 - $(date +%s) % 900 ))   # until the next quarter hour
           done
-          exit 1
+
+      - name: Start the next run of the chain
+        if: ${{ always() && (github.event_name == 'schedule' || inputs.loop) }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run update.yml --repo "$GITHUB_REPOSITORY" --ref main -f loop=true

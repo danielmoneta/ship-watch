@@ -71,7 +71,7 @@ photo exists) are retried after 14 days; complete ones after a year.
 
 | Piece | Where | When | Cost |
 |---|---|---|---|
-| **Update berth data** workflow | GitHub → Actions tab | every 15 min (GitHub may delay runs by a few minutes) | free on a public repo |
+| **Update berth data** workflow | GitHub → Actions tab | every 15 min, as one long-running job that restarts itself about every 5½ hours | free on a public repo |
 | **Brajdica Watch – research** task | <https://claude.ai/code/routines> | when the workflow calls it, plus every 6 hours as a safety net | Claude subscription allowance |
 
 **Connecting the two (one-time).** In the Claude task's *Edit* dialog add an **API** trigger, copy the
@@ -89,10 +89,15 @@ It runs in the cloud environment `ship-watch`, which allow-lists the reference a
 **Cost.** Pages, Actions and the repository are free. Claude usage is a handful of near-empty safety-net
 runs a day plus one research run per new ship (a few a week).
 
+**How the 15-minute timing works.** GitHub's cron trigger never fired for this repository, so the
+workflow keeps its own time: a run loops (update, sleep to the next quarter hour) for 5½ hours and then
+starts its successor. On the Actions tab you should always see one run *in progress*. If you don't,
+click **Run workflow** with *loop* ticked. A 6-hourly cron is kept only as a restart in case the chain breaks.
+
 **Limits worth knowing**
 - GitHub disables scheduled workflows in public repos after 60 days without repository activity. This
   workflow commits at least hourly, which counts as activity; if it is ever disabled, re-enable it on the Actions tab.
-- Run the workflow by hand from the Actions tab (*Run workflow*; tick *force* to publish regardless).
+- A one-off run: Actions tab → *Run workflow* with *loop* unticked (tick *force* to publish regardless).
 - The terminal's ETAs are shift-slot placeholders (06:30 / 14:30 / 22:30); real arrivals differ by hours.
   Polling every 15 minutes makes that irrelevant.
 - Claude scheduled tasks and their API trigger are research-preview features and may change.
