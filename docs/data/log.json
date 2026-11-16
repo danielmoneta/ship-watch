@@ -114,6 +114,17 @@
       "events": 0,
       "research_needed": [],
       "errors": []
+    },
+    {
+      "at": "2026-11-16T22:27:15+01:00",
+      "terminal_ok": true,
+      "rows": 15,
+      "berth": [
+        "MSC TERESA"
+      ],
+      "events": 0,
+      "research_needed": [],
+      "errors": []
     }
   ],
   "events": [
