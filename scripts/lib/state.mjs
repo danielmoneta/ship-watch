@@ -129,21 +129,31 @@ export function effectiveVoyage(call) {
   // as a fallback, and not at all while Shiptrail shows her still lying in another port.
   if (t?.still_in_port && !t.previous_port && v.previous_port && !v.previous_port.departed_at) delete v.previous_port;
   if (t?.previous_port) {
-    if (v.previous_port && v.previous_port.locode && v.previous_port.locode !== t.previous_port.locode) v.superseded_previous_port = v.previous_port;
     const p = t.previous_port;
-    v.previous_port = {
+    const researched = v.previous_port && !v.previous_port.auto ? v.previous_port : null;
+    const same = researched && (researched.locode ? researched.locode === p.locode : normName(researched.name) === normName(p.name));
+    const auto = {
       name: p.name, locode: p.locode, country: p.country || null,
-      arrived_at: p.arrived_at ? toZagreb(p.arrived_at) : null,
-      departed_at: p.departed_at ? toZagreb(p.departed_at) : null,
+      arrived_at: p.arrived_at ? toZagrebIso(p.arrived_at) : null,
+      departed_at: p.departed_at ? toZagrebIso(p.departed_at) : null,
       kind: 'actual', source: 'Shiptrail (AIS port-call history)', source_url: t.source_url,
       retrieved_at: t.fetched_at, auto: true,
       // Two independent sources naming the same port raise the confidence.
-      confidence: call.voyage?.previous_port?.locode === p.locode && !call.voyage.previous_port.auto ? 'high' : 'medium',
+      confidence: same ? 'high' : 'medium',
     };
+    // Shiptrail hears ships through shore receivers and can miss a call. If research recorded a
+    // *later* actual call at a different port, that later call is the previous port.
+    const laterResearch = researched && !same && researched.kind === 'actual' && researched.departed_at
+      && new Date(researched.departed_at).getTime() > new Date(p.departed_at).getTime();
+    if (laterResearch) {
+      v.previous_port = { ...researched, note: `Shiptrail's latest recorded call is earlier (${p.name}); it may have missed this one.` };
+    } else {
+      if (researched && !same) auto.note = `An earlier research note named ${researched.name}; Shiptrail's recorded call is used.`;
+      v.previous_port = auto;
+    }
   }
   return Object.keys(v).length ? v : undefined;
 }
-const toZagreb = iso => toZagrebIso(iso);
 
 function publicCall(call, profiles) {
   const { first_seen, last_seen, listed, ...rest } = call;

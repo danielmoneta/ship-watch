@@ -12,6 +12,7 @@ import { parseWingoPort, parseWingoShip, resolveDestination } from '../scripts/l
 import { zagrebWallToIso, toZagrebIso, validImo } from '../scripts/lib/util.mjs';
 import { run } from '../scripts/update.mjs';
 import { summarizeShip } from '../scripts/lib/shiptrail.mjs';
+import { effectiveVoyage } from '../scripts/lib/state.mjs';
 
 const FX = path.join(path.dirname(fileURLToPath(import.meta.url)), 'fixtures');
 const TERMINAL = fs.readFileSync(path.join(FX, 'terminal-2026-11-16.html'), 'utf8');
@@ -392,4 +393,24 @@ test('SIMULATION: Shiptrail outage or an IMO mismatch leaves the previous port u
   st = json(dir2, 'data/status.json');
   assert.equal(st.berth.vessels[0].voyage, undefined);
   assert.match(st.berth.vessels[0].trail.identity_warning, /expected 9469560/);
+});
+
+test('previous port: Shiptrail first, but a later researched actual call wins; agreement raises confidence', () => {
+  const trail = { source_url: 'https://shiptrail.io/vessel/x', fetched_at: '2026-11-16T19:00:00+01:00',
+    previous_port: { name: 'Varna', locode: 'BGVAR', departed_at: '2026-11-04T14:22:37Z' } };
+  const leg = (name, locode, departed_at, kind = 'actual') => ({ name, locode, departed_at, kind, source: 'VesselFinder', source_url: 'https://www.vesselfinder.com/', confidence: 'medium' });
+  // Later researched call at another port: research wins, with a note.
+  let v = effectiveVoyage({ trail, voyage: { previous_port: leg('Derince', 'TRDRC', '2026-11-12T14:16:00+01:00') } });
+  assert.equal(v.previous_port.name, 'Derince'); assert.match(v.previous_port.note, /Varna/);
+  // Earlier researched call: Shiptrail wins.
+  v = effectiveVoyage({ trail, voyage: { previous_port: leg('Piraeus', 'GRPIR', '2026-11-01T10:00:00+02:00') } });
+  assert.equal(v.previous_port.name, 'Varna'); assert.equal(v.previous_port.confidence, 'medium');
+  // Same port from both: high confidence, Shiptrail's precise time.
+  v = effectiveVoyage({ trail, voyage: { previous_port: leg('Varna', 'BGVAR', null) } });
+  assert.equal(v.previous_port.confidence, 'high'); assert.equal(v.previous_port.departed_at, '2026-11-04T15:22:37+01:00');
+  // Nothing from either source: unknown, not guessed.
+  assert.equal(effectiveVoyage({}), undefined);
+  // Still lying in another port: a researched leg without a departure time is dropped.
+  v = effectiveVoyage({ trail: { still_in_port: { name: 'Trieste' }, previous_port: null }, voyage: { researched_at: 'x', previous_port: leg('Trieste', 'ITTRS', null) } });
+  assert.equal(v.previous_port, undefined);
 });

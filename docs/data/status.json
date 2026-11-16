@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-16T19:46:30+01:00",
+  "generated_at": "2026-11-16T19:47:04+01:00",
   "timezone": "Europe/Zagreb",
   "terminal": {
     "url": "https://webusercorner.ictsi.hr/?language=EN",
@@ -507,34 +507,6 @@
         "found": false
       },
       "imo": "9344409",
-      "voyage": {
-        "researched_at": "2026-11-16T19:25:00+01:00",
-        "previous_port": {
-          "name": "Varna",
-          "locode": "BGVAR",
-          "country": "Bulgaria",
-          "arrived_at": "2026-11-02T14:20:31+01:00",
-          "departed_at": "2026-11-04T15:22:37+01:00",
-          "kind": "actual",
-          "source": "Shiptrail (AIS port-call history)",
-          "source_url": "https://shiptrail.io/vessel/352005466-unity-one",
-          "retrieved_at": "2026-11-16T19:46:30+01:00",
-          "auto": true,
-          "confidence": "medium"
-        },
-        "next_port": null,
-        "notes": "Previous port is VesselFinder's 'Last Port' (Derince, Turkey, ATD 12 Nov 13:16 UTC). AIS destination is Rijeka, which only shows she is bound there.",
-        "superseded_previous_port": {
-          "name": "Derince",
-          "locode": "TRDRC",
-          "departed_at": "2026-11-12T14:16:00+01:00",
-          "kind": "actual",
-          "source": "VesselFinder (AIS port call)",
-          "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
-          "retrieved_at": "2026-11-16T19:25:00+01:00",
-          "confidence": "medium"
-        }
-      },
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/352005466-unity-one",
@@ -584,6 +556,22 @@
             "departed_at": "2026-11-02T12:09:23.112Z"
           }
         ]
+      },
+      "voyage": {
+        "researched_at": "2026-11-16T19:25:00+01:00",
+        "previous_port": {
+          "name": "Derince",
+          "locode": "TRDRC",
+          "departed_at": "2026-11-12T14:16:00+01:00",
+          "kind": "actual",
+          "source": "VesselFinder (AIS port call)",
+          "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
+          "retrieved_at": "2026-11-16T19:25:00+01:00",
+          "confidence": "medium",
+          "note": "Shiptrail's latest recorded call is earlier (Varna); it may have missed this one."
+        },
+        "next_port": null,
+        "notes": "Previous port is VesselFinder's 'Last Port' (Derince, Turkey, ATD 12 Nov 13:16 UTC). AIS destination is Rijeka, which only shows she is bound there."
       },
       "profile": {
         "imo": "9344409",
@@ -948,6 +936,6 @@
   "stale_after_hours": 3,
   "research_pending": [],
   "research_needed": [],
-  "next_check_at": "2026-11-16T20:46:30+01:00",
+  "next_check_at": "2026-11-16T20:47:04+01:00",
   "stale_grace_minutes": 100
 }
