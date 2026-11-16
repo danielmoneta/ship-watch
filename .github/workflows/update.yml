@@ -17,6 +17,10 @@ on:
         description: Keep running every 15 minutes and start a successor (normal operation)
         type: boolean
         default: true
+      minutes:
+        description: How long one run of the chain lasts (default 330)
+        type: number
+        default: 330
       force:
         description: Publish even if nothing changed, and re-read Shiptrail now
         type: boolean
@@ -44,18 +48,21 @@ jobs:
           CLAUDE_FIRE_TOKEN: ${{ secrets.CLAUDE_FIRE_TOKEN }}
           LOOP: ${{ github.event_name == 'schedule' || inputs.loop }}
           FORCE: ${{ inputs.force }}
+          MINUTES: ${{ inputs.minutes || 330 }}
         run: |
           node --version
           if [ "$LOOP" != "true" ]; then
             scripts/ci-run.sh $([ "$FORCE" = "true" ] && echo "--force --refresh")
             exit $?
           fi
-          END=$(( $(date +%s) + 330*60 ))
+          END=$(( $(date +%s) + MINUTES*60 ))
           first=1
           while [ "$(date +%s)" -lt "$END" ]; do
             if [ "$first" = 1 ] && [ "$FORCE" = "true" ]; then scripts/ci-run.sh --force --refresh; else scripts/ci-run.sh; fi || echo "cycle failed; will retry next cycle"
             first=0
-            sleep $(( 900 - $(date +%s) % 900 ))   # until the next quarter hour
+            now=$(date +%s); nap=$(( 900 - now % 900 )); left=$(( END - now ))
+            [ "$left" -le 0 ] && break
+            sleep $(( nap < left ? nap : left ))   # until the next quarter hour
           done
 
       - name: Start the next run of the chain
