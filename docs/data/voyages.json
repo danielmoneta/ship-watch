@@ -12,7 +12,7 @@
       "retrieved_at": "2026-11-16T16:24:23+01:00",
       "confidence": "medium"
     },
-    "notes": "Previous port could not be established: by the time of research the free AIS sources already showed Rijeka as her last port. The Trieste ETA (17 Nov 21:00 UTC) is the crew-entered AIS value, not a carrier schedule. VesselFinder logged her AIS arrival in the Rijeka port area at 09:19 local, ahead of the terminal ATA of 10:30."
+    "notes": "The Trieste ETA (17 Nov 21:00 UTC) is the crew-entered AIS value, not a carrier schedule. VesselFinder logged her AIS arrival in the Rijeka port area at 09:19 local, ahead of the terminal ATA of 10:30."
   },
   "MSC EAGLE III|AH644A": {
     "researched_at": "2026-11-16T16:24:23+01:00",
