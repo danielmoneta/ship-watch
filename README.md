@@ -1,8 +1,8 @@
 # Brajdica Watch
 
 A wall display for the container ship currently alongside at the Brajdica / Adriatic Gate
-Container Terminal in Rijeka. One static page, refreshed by an hourly unattended Claude Code
-cloud task. No server, no database, no AIS receiver.
+Container Terminal in Rijeka. One static page, kept current by a free GitHub Actions
+job every 15 minutes, with a Claude Code cloud task researching each new ship. No server, no database, no AIS receiver.
 
 - **Display:** `https://danielmoneta.github.io/ship-watch/` (GitHub Pages, `main` branch, `/docs` folder)
 - **E-ink:** add `?mode=eink` &nbsp;·&nbsp; **Colour:** `?mode=colour` (the choice is remembered on the device)
@@ -10,19 +10,23 @@ cloud task. No server, no database, no AIS receiver.
 ## How it works
 
 ```
- Claude Code cloud task         ──►  node scripts/update.mjs  ──►  docs/data/*.json  ──►  git push main
- (reads AUTOMATION.md)               terminal list + AIS check      (state + history)      │
-        │                                                                                   ▼
-        └─ only when a ship is new: web research ─► docs/data/vessels/<IMO>.json     GitHub Pages
-                                                                                            │
-                                               wall tablet / e-ink re-reads status.json every 5–10 min
+ GitHub Actions, every 15 min ─► node scripts/update.mjs ─► docs/data/*.json ─► commit to main ─► GitHub Pages
+ (no AI, free)                    terminal list + AIS check   (only when changed,                      │
+        │                                                      or hourly heartbeat)                     ▼
+        │ new ship needs research                                             wall tablet / e-ink re-reads
+        ▼                                                                     status.json every 5–10 min
+ Claude Code cloud task ─► web research ─► vessels/<IMO>.json, photos/, voyages.json ─► commit to main
+ (follows AUTOMATION.md)
 ```
 
-1. **`scripts/update.mjs`** (plain Node, no dependencies) does everything deterministic: fetches the
-   official [AGCT sailing list](https://webusercorner.ictsi.hr/?language=EN), parses it, compares it with
-   the stored state, records arrivals/departures, checks AIS, and writes the JSON the page reads.
-2. **Claude** is only needed for judgement: identifying and researching a ship the first time it
-   appears, and finding a properly licensed photo. On a normal hour it runs the script, commits and stops.
+1. **`.github/workflows/update.yml`** runs `scripts/update.mjs` (plain Node, no dependencies) every
+   15 minutes: it fetches the official [AGCT sailing list](https://webusercorner.ictsi.hr/?language=EN),
+   compares it with the stored state, records arrivals/departures, checks AIS, and writes the JSON the
+   page reads. It commits only when something changed, plus one heartbeat an hour.
+2. **Claude** is used only for judgement: identifying and researching a ship the first time it appears
+   and finding a properly licensed photo. The workflow starts that task through its API trigger
+   (`scripts/fire-research.mjs`) when `research_needed` is non-empty; the task also runs on a slow
+   schedule as a safety net. The two never edit the same files.
 3. **GitHub Pages** republishes on every push. The page polls `data/status.json` itself.
 
 ### Who decides what is at the berth
@@ -40,40 +44,46 @@ check is well overdue the page switches to **"Occupancy unconfirmed"**.
 | File | Contents |
 |---|---|
 | `status.json` | What the page shows: berth state, vessels alongside (with profile), upcoming calls, recent departures, source freshness |
-| `calls.json` | Every call seen, keyed `NAME\|arrival voyage`: ETA/ETD/ATA/ATD, status, AIS check, researched voyage (previous/next port). Completed calls are the visit history |
+| `calls.json` | Every call seen, keyed `NAME\|arrival voyage`: ETA/ETD/ATA/ATD, status, AIS check. Completed calls are the visit history |
+| `voyages.json` | Researched previous/next port per call, each labelled actual / scheduled / AIS destination / estimate |
 | `vessels/<IMO>.json` | Cached vessel profile. Every field carries `value, source, source_url, retrieved_at, confidence` |
 | `vessels/index.json` | Vessel name → IMO |
 | `photos/` | Licensed photographs (Wikimedia Commons), attribution stored in the profile |
-| `log.json` | Last 500 runs (with errors) and last 500 events |
+| `log.json` | Last 500 published runs (with errors) and last 500 events |
+| `automation.json` | When research was last requested from Claude |
 
 Profiles are cached by IMO: a returning ship is not researched again. Partial profiles (e.g. no free
 photo exists) are retried after 14 days; complete ones after a year.
 
-## The scheduled task
+## Automation
 
-One Claude Code cloud task, **"Brajdica Watch – hourly check"**, runs every hour in the cloud
-environment `ship-watch` (which allow-lists the terminal, AIS and Wikimedia hosts) with this repository
-attached. Its whole prompt is "follow `AUTOMATION.md`" — edit that file to change what a run does.
-Manage it at <https://claude.ai/code/routines> (pause, run now, change schedule or model).
+| Piece | Where | When | Cost |
+|---|---|---|---|
+| **Update berth data** workflow | GitHub → Actions tab | every 15 min (GitHub may delay runs by a few minutes) | free on a public repo |
+| **Brajdica Watch – research** task | <https://claude.ai/code/routines> | when the workflow calls it, plus every 6 hours as a safety net | Claude subscription allowance |
 
-`status.json` carries `next_check_at`; the page turns to **"Occupancy unconfirmed"** when that check is
-more than 100 minutes overdue (i.e. after roughly two missed runs).
+**Connecting the two (one-time).** In the Claude task's *Edit* dialog add an **API** trigger, copy the
+*Fire URL* and generate a token. Save them in GitHub under *Settings → Secrets and variables → Actions*
+as `CLAUDE_FIRE_URL` and `CLAUDE_FIRE_TOKEN`. Without the secrets everything still works; research
+simply waits for the task's next scheduled run. The workflow asks at most once per new need and
+retries after 6 hours (`docs/data/automation.json` records the last request).
 
-**Why not timed to each ship's ETA?** It was built and tested (16 Nov 2026): a one-shot task can fire at
-any minute, but a run can only re-arm the next one through the Claude Code Remote connector, which this
-account cannot attach to a task. `nextCheck()` in `scripts/lib/state.mjs` still computes the ideal time,
-so the chain can be switched on if that connector becomes available.
+The Claude task's whole prompt is "follow `AUTOMATION.md`" — edit that file to change what it does.
+It runs in the cloud environment `ship-watch`, which allow-lists the reference and Wikimedia hosts.
 
-**Cost.** GitHub Pages and the repository are free. The task uses your Claude subscription allowance
-(no separate bill): 24 short runs a day, plus a longer research run when
-a new ship appears (a few per week). To use less, switch the task to a smaller model or run it every 2–3 hours.
+**Staleness.** `status.json` is republished at least hourly. The page turns to
+**"Occupancy unconfirmed"** when the file is about 2 h 40 min old, i.e. when the workflow has stopped.
+
+**Cost.** Pages, Actions and the repository are free. Claude usage is a handful of near-empty safety-net
+runs a day plus one research run per new ship (a few a week).
 
 **Limits worth knowing**
-- A recurring cloud task cannot run more often than hourly, so a change can take up to an hour to appear.
-- Scheduled tasks are a research-preview feature. If they stop, the page says so
-  ("Occupancy unconfirmed") rather than showing old data as current.
-- The terminal's ETAs are shift-slot placeholders (06:30 / 14:30 / 22:30). In November 2026 real arrivals
-  ranged from 4½ hours early to more than a day late, so timing checks to ETAs would gain little.
+- GitHub disables scheduled workflows in public repos after 60 days without repository activity. This
+  workflow commits at least hourly, which counts as activity; if it is ever disabled, re-enable it on the Actions tab.
+- Run the workflow by hand from the Actions tab (*Run workflow*; tick *force* to publish regardless).
+- The terminal's ETAs are shift-slot placeholders (06:30 / 14:30 / 22:30); real arrivals differ by hours.
+  Polling every 15 minutes makes that irrelevant.
+- Claude scheduled tasks and their API trigger are research-preview features and may change.
 - Free sources rarely expose a ship's previous port after she has arrived; it is captured while she is
   still en route, otherwise shown as "not established".
 
