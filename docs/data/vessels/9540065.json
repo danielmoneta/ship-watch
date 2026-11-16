@@ -1,0 +1,92 @@
+{
+  "imo": "9540065",
+  "name": "MSC AUDREY",
+  "aliases": [],
+  "mmsi": "636022450",
+  "fields": {
+    "type": {
+      "value": "Container ship",
+      "source": "VesselFinder",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9540065",
+      "retrieved_at": "2026-11-16T17:50:48+01:00",
+      "confidence": "medium"
+    },
+    "flag": {
+      "value": "Liberia",
+      "source": "VesselFinder; Wingo Marine (AIS)",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9540065",
+      "retrieved_at": "2026-11-16T17:50:48+01:00",
+      "confidence": "high"
+    },
+    "year_built": {
+      "value": 2023,
+      "source": "VesselFinder; Port of Hamburg vessel listing (via web search)",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9540065",
+      "retrieved_at": "2026-11-16T17:50:48+01:00",
+      "confidence": "high"
+    },
+    "length_m": {
+      "value": 365.99,
+      "source": "VesselFinder; Port of Hamburg lists 366 m (via web search)",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9540065",
+      "retrieved_at": "2026-11-16T17:50:48+01:00",
+      "confidence": "high"
+    },
+    "beam_m": {
+      "value": 51.0,
+      "source": "VesselFinder; Maritime Optima (via web search)",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9540065",
+      "retrieved_at": "2026-11-16T17:50:48+01:00",
+      "confidence": "high"
+    },
+    "gross_tonnage": {
+      "value": 150783,
+      "source": "VesselFinder",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9540065",
+      "retrieved_at": "2026-11-16T17:50:48+01:00",
+      "confidence": "medium"
+    },
+    "deadweight_t": {
+      "value": 179762,
+      "source": "VesselFinder; Maritime Optima (via web search)",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9540065",
+      "retrieved_at": "2026-11-16T17:50:48+01:00",
+      "confidence": "low",
+      "note": "Other databases give 154,700 t (Terminal49) and 159,528 t (MagicPort); figures disagree."
+    },
+    "callsign": {
+      "value": "5LIV9",
+      "source": "VesselFinder; Wingo Marine (AIS)",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9540065",
+      "retrieved_at": "2026-11-16T17:50:48+01:00",
+      "confidence": "high"
+    },
+    "operator": {
+      "value": "MSC",
+      "source": "AGCT sailing list (shipper column)",
+      "source_url": "https://webusercorner.ictsi.hr/?language=EN",
+      "retrieved_at": "2026-11-16T17:50:48+01:00",
+      "confidence": "high"
+    },
+    "owner": {
+      "value": "Compass Shipping 134 Corp Ltd",
+      "source": "MagicPort, as reported in a web search summary",
+      "source_url": "https://magicport.ai/vessels/container/msc-audrey-mmsi-636022450",
+      "retrieved_at": "2026-11-16T17:50:48+01:00",
+      "confidence": "low",
+      "note": "Single source, seen only through a search summary."
+    }
+  },
+  "photo": null,
+  "facts": [],
+  "research": {
+    "status": "partial",
+    "researched_at": "2026-11-16T17:50:48+01:00",
+    "missing": [
+      "teu",
+      "builder",
+      "photo"
+    ],
+    "notes": "Identified as IMO 9540065 by name match on VesselFinder and Wingo Marine (same IMO/MMSI/call sign), container ship trading Koper–Trieste in the Adriatic. TEU and shipyard not found in accessible sources; no Wikimedia Commons photo under IMO or name. Wikidata throttled (HTTP 429)."
+  }
+}
