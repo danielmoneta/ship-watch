@@ -5,7 +5,7 @@ name: Update berth data
 # Claude Code task, which this workflow starts through its API trigger when needed.
 on:
   schedule:
-    - cron: '7,22,37,52 * * * *'
+    - cron: '8,23,38,53 * * * *'
   workflow_dispatch:
     inputs:
       force:
