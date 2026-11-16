@@ -75,6 +75,14 @@
       "source_url": "https://webusercorner.ictsi.hr/?language=EN",
       "retrieved_at": "2026-11-16T16:24:23+01:00",
       "confidence": "high"
+    },
+    "builder": {
+      "value": "Hanwha Ocean",
+      "source": "Shiptrail (registry particulars); Wikidata (yard number 4195)",
+      "source_url": "https://shiptrail.io/vessel/357891000-msc-teresa",
+      "retrieved_at": "2026-11-16T19:43:59+01:00",
+      "confidence": "medium",
+      "note": "Formerly Daewoo Shipbuilding & Marine Engineering (DSME); yard number 4195."
     }
   },
   "photo": null,
@@ -90,9 +98,8 @@
     "status": "partial",
     "researched_at": "2026-11-16T16:24:23+01:00",
     "missing": [
-      "photo",
-      "builder"
+      "photo"
     ],
-    "notes": "No photograph of this ship on Wikimedia Commons (IMO category and name searched). Builder is given on Wikidata but could not be cross-checked. TEU is a class figure."
+    "notes": "No photograph of this ship on Wikimedia Commons (IMO category and name searched). TEU is a class figure."
   }
 }

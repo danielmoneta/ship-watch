@@ -415,6 +415,15 @@
           (ai.identity_warning ? '<br><b>' + esc(ai.identity_warning) + '</b>' : '') +
           '</td><td>AIS · checked ' + fmtDayTime(ai.checked_at) + '</td><td>' + link(ai.source_url, ai.source) + '</td></tr>';
       }
+      var tr = call.trail;
+      if (tr && tr.fetched_at) {
+        h += '<tr><td>AIS position &amp; port calls</td><td>' + (tr.identity_warning ? '<b>' + esc(tr.identity_warning) + '</b>' :
+          (tr.position ? (tr.quay_distance_km < 1 ? Math.round(tr.quay_distance_km * 1000) + ' m' : tr.quay_distance_km + ' km') + ' from the Brajdica quay' + (tr.position.status ? ' \u00b7 ' + esc(tr.position.status) : '') : 'No position') +
+          (tr.last_heard ? ' \u00b7 last heard ' + fmtDayTime(toLocal(tr.last_heard)) : '') +
+          (tr.destination_raw ? ' \u00b7 crew-entered destination \u201c' + esc(tr.destination_raw) + '\u201d' : '') +
+          (tr.still_in_port ? '<br><span class="muted">Still in ' + esc(tr.still_in_port.name) + ': previous port not yet determined.</span>' : '')) +
+          '</td><td>AIS \u00b7 checked ' + fmtDayTime(tr.fetched_at) + '</td><td>' + link(tr.source_url, 'Shiptrail') + '</td></tr>';
+      }
       var vy = call.voyage || {};
       var legs = [['Previous port', vy.previous_port, 'departed_at'], ['Next port', vy.next_port, 'eta']];
       for (var i = 0; i < legs.length; i++) {

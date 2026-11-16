@@ -1,0 +1,113 @@
+{
+ "mmsi": 357891000,
+ "name": "MSC TERESA",
+ "imo": 9469560,
+ "callSign": "3FZP9",
+ "type": "Cargo ship",
+ "kind": "cargo",
+ "flag": "Panama",
+ "aisClass": "A",
+ "lengthM": 366,
+ "beamM": 51,
+ "draughtM": 11.3,
+ "onMap": true,
+ "lastHeard": "2026-11-16T18:36:59.000Z",
+ "position": {
+  "lat": 45.319296666666666,
+  "lon": 14.455446666666667,
+  "at": "2026-11-16T18:36:59.000Z",
+  "speedKn": 0,
+  "courseDeg": 89.5,
+  "headingDeg": 104,
+  "status": "Moored"
+ },
+ "voyage": {
+  "destination": "HRRJK",
+  "boundFor": {
+   "locode": "HRRJK",
+   "name": "Rijeka",
+   "country": "Croatia",
+   "url": "https://shiptrail.io/port/hrrjk-rijeka"
+  },
+  "eta": "2026-11-16T08:00:00.000Z",
+  "etaPassed": true,
+  "inPort": {
+   "locode": "HRKOS",
+   "name": "Kostrena",
+   "country": "Croatia",
+   "url": "https://shiptrail.io/port/hrkos-kostrena"
+  },
+  "from": {
+   "locode": "HRKOS",
+   "name": "Kostrena",
+   "country": "Croatia",
+   "url": "https://shiptrail.io/port/hrkos-kostrena"
+  },
+  "departed": "2026-11-12T12:18:00.000Z"
+ },
+ "recentCalls": [
+  {
+   "port": {
+    "locode": "HRKOS",
+    "name": "Kostrena",
+    "country": "Croatia",
+    "url": "https://shiptrail.io/port/hrkos-kostrena"
+   },
+   "arrived": "2026-11-16T08:15:43.000Z"
+  },
+  {
+   "port": {
+    "locode": "ILHFA",
+    "name": "Haifa",
+    "country": "Israel",
+    "url": "https://shiptrail.io/port/ilhfa-haifa"
+   },
+   "arrived": "2026-11-11T05:01:04.523Z",
+   "departed": "2026-11-12T12:18:52.222Z"
+  },
+  {
+   "port": {
+    "locode": "ILASH",
+    "name": "Ashdod",
+    "country": "Israel",
+    "url": "https://shiptrail.io/port/ilash-ashdod"
+   },
+   "arrived": "2026-11-07T20:29:01.042Z",
+   "departed": "2026-11-10T21:41:53.315Z"
+  },
+  {
+   "port": {
+    "locode": "ILASH",
+    "name": "Ashdod",
+    "country": "Israel",
+    "url": "https://shiptrail.io/port/ilash-ashdod"
+   },
+   "arrived": "2026-11-07T15:12:34.803Z",
+   "departed": "2026-11-07T17:56:35.607Z"
+  },
+  {
+   "port": {
+    "locode": "ILASH",
+    "name": "Ashdod",
+    "country": "Israel",
+    "url": "https://shiptrail.io/port/ilash-ashdod"
+   },
+   "arrived": "2026-11-06T10:19:00.865Z",
+   "departed": "2026-11-07T14:33:04.672Z"
+  }
+ ],
+ "particulars": {
+  "built": "2011",
+  "grossTonnage": 153115,
+  "netTonnage": 89067,
+  "deadweight": 165501,
+  "service": "Freight Ship",
+  "builder": "Hanwha Ocean",
+  "operator": "Mediterranean Shipping Company SRL",
+  "registry": "Panama",
+  "portOfRegistry": "Panama City",
+  "yardNumber": "4195"
+ },
+ "dossier": "complete",
+ "url": "https://shiptrail.io/vessel/357891000-msc-teresa"
+}

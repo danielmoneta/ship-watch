@@ -9,6 +9,7 @@
 //   --terminal-file F     read the sailing list from a file instead of the network
 //   --wingo-file F        read the Wingo port page from a file ("none" = simulate an outage)
 //   --wingo-ship-dir DIR  read Wingo ship pages from DIR/<mmsi>.html
+//   --shiptrail-dir DIR   read Shiptrail get_ship answers from DIR/<mmsi>.json ("none" = simulate an outage)
 //   --no-ais              skip AIS entirely
 //   --now ISO             pretend it is this instant
 import fs from 'node:fs';
@@ -17,6 +18,7 @@ import { fileURLToPath } from 'node:url';
 import { fetchText, readJson, writeJson, toZagrebIso, normName, validImo } from './lib/util.mjs';
 import { parseSailingList, terminalUrl, TERMINAL_URL } from './lib/terminal.mjs';
 import { parseWingoPort, parseWingoShip, resolveDestination, WINGO_PORT_URL, WINGO_BASE, BERTH_RING_KM } from './lib/wingo.mjs';
+import { getShip, mmsiForImo, summarizeShip } from './lib/shiptrail.mjs';
 import { mergeCalls, selectBerth, researchNeeds, buildStatus, fingerprint, HEARTBEAT_MIN, STALE_GRACE_MIN } from './lib/state.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -174,6 +176,46 @@ export async function run(argv = process.argv.slice(2)) {
       // Calls keep their previous AIS record, whose checked_at shows its age.
     }
     ais.wingo = w;
+
+    // Shiptrail: AIS position and port-call history, matched by MMSI/IMO (never by name alone).
+    const tr = { name: 'Shiptrail', url: 'https://shiptrail.io/', ok: false, fetched_at: ais.shiptrail?.fetched_at || null, last_attempt_at: nowIso, error: null,
+      note: 'AIS-derived port calls and positions. Data: Shiptrail, shiptrail.io' };
+    const useTrail = opt['shiptrail-dir'] || !opt['terminal-file'];
+    if (useTrail) {
+      let okCount = 0;
+      for (const call of targets) {
+        const age = call.trail?.fetched_at ? (nowMs - new Date(call.trail.fetched_at).getTime()) / 60000 : Infinity;
+        if (age < 50) { okCount++; continue; } // refreshed at most hourly per ship
+        try {
+          if (opt['shiptrail-dir'] === 'none') throw new Error('simulated outage');
+          const prof = call.imo ? profiles[call.imo] : null;
+          let mmsi = call.ais?.mmsi || prof?.mmsi || call.trail?.mmsi || null;
+          if (!mmsi && call.imo && !opt['shiptrail-dir']) mmsi = await mmsiForImo(call.imo);
+          if (!mmsi) continue; // unidentified: left to research
+          const ship = opt['shiptrail-dir']
+            ? JSON.parse(fs.readFileSync(path.join(opt['shiptrail-dir'], `${mmsi}.json`), 'utf8'))
+            : await getShip(mmsi);
+          const sum = summarizeShip(ship, { nowIso, before: call.ata ? new Date(call.ata).getTime() : Infinity });
+          // Identity check: the record must be the same hull.
+          if (call.imo && sum.imo && sum.imo !== call.imo) {
+            call.trail = { source: 'Shiptrail', fetched_at: nowIso, mmsi: String(mmsi), identity_warning: `Shiptrail reports IMO ${sum.imo} for MMSI ${mmsi}; expected ${call.imo}. Record ignored.` };
+            continue;
+          }
+          if (!call.imo && sum.name !== normName(call.name)) continue;
+          call.trail = sum;
+          okCount++;
+          // A ship first identified here (MMSI from the Rijeka AIS list, IMO from Shiptrail).
+          if (!call.imo && sum.imo) { call.imo = sum.imo; index[normName(call.name)] = sum.imo; }
+        } catch (e) {
+          tr.error = e.message;
+          errors.push(`${e.message.startsWith('shiptrail') ? '' : 'shiptrail: '}${e.message} (${call.name})`);
+          // The previous record stays on the call; its fetched_at shows its age.
+        }
+      }
+      if (!tr.error) { tr.ok = true; tr.fetched_at = nowIso; }
+      else if (okCount) tr.ok = true;
+      ais.shiptrail = tr;
+    }
 
     // AIS-catcher: recorded for transparency. Its public page has no receiver
     // coverage of Brajdica, so "0 vessels" there says nothing about the berth.

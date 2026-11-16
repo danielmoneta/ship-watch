@@ -29,12 +29,24 @@ job every 15 minutes, with a Claude Code cloud task researching each new ship. N
    schedule as a safety net. The two never edit the same files.
 3. **GitHub Pages** republishes on every push. The page polls `data/status.json` itself.
 
-### Who decides what is at the berth
-The terminal list, and only the terminal list: a call with an ATA and no ATD is alongside.
-AIS (Wingo Marine) is recorded next to it as corroboration — "consistent with the quay", "not found",
-"stale", or "conflict" — and never changes occupancy. A ship whose AIS destination is Rijeka stays
-"expected" until the terminal gives it an ATA. AIS-catcher currently has no receiver coverage of
-Brajdica, so its zero count is logged and ignored.
+### Sources, in order of authority
+
+| # | Source | Used for | How |
+|---|---|---|---|
+| 1 | **AGCT sailing list** (official) | What is at the berth; ETA/ETD/ATA/ATD | Parsed every 15 min. A call with an ATA and no ATD is alongside. Nothing else can change occupancy |
+| 2 | **Shiptrail** (`shiptrail.io/mcp`, free, no key) | Previous port (actual AIS port call with departure time); AIS position measured against the quay; identification by MMSI/IMO | Called directly as JSON-RPC by the workflow, at most hourly per ship. Credit: *Data: Shiptrail, shiptrail.io* |
+| 3 | **ShipsGo** | Carrier schedules / next scheduled port | **Not automated**: pages are behind a Cloudflare browser challenge and the public API needs an account key and is lane-based. Useful for checking by hand |
+| 4 | Wingo Marine, VesselFinder, Wikidata, Wikimedia Commons, web search | Corroboration, particulars, photographs | Wingo each run; the rest by the research task |
+
+- The **previous port** is only ever an *actual* recorded port call. Calls in the Rijeka area itself
+  (Rijeka, Kostrena, Bakar…) belong to the current visit and are skipped. While a ship is still lying in
+  another port she has no previous port yet.
+- The **next port** is shown as *scheduled* only if research found a published schedule. Otherwise the
+  crew-entered AIS destination is shown, labelled as such, or "not established".
+- AIS corroboration is "consistent" when a fresh position is within 800 m of the quay and stationary. A
+  ship at anchor off Rijeka, or one whose destination reads Rijeka, stays "expected" until the terminal
+  gives her an ATA. AIS-catcher has no receiver coverage of Brajdica, so its zero count is logged and ignored.
+- Records are matched by MMSI and IMO. A Shiptrail record whose IMO differs from the cached one is rejected.
 
 If the terminal cannot be read, the last verified state is kept and the failure logged; once a planned
 check is well overdue the page switches to **"Occupancy unconfirmed"**.

@@ -49,7 +49,16 @@ Stop when the budget is spent and record what is still missing.
 
 ### 2b. Profile — `docs/data/vessels/<IMO>.json`
 Sources that work from this environment (others are blocked by the network policy; use WebSearch
-result summaries for anything else):
+result summaries for anything else). Always look a ship up by IMO or MMSI, never by name alone:
+- **Shiptrail** — `node scripts/shiptrail.mjs ship <IMO or MMSI>` (also `search "<name>"`). Free MCP service,
+  no key. Gives IMO/MMSI/call sign, flag, dimensions, position, `recentCalls` (actual AIS port calls with
+  arrival and departure times), and `particulars` (built, gross tonnage, builder, operator, registry).
+  Use it first. Credit it in `source` as "Shiptrail" with the ship's `url` as `source_url`.
+  Its `voyage.destination`/`eta` are crew-entered AIS values, and its `voyage.from` field is unreliable
+  once a ship has arrived: use `recentCalls`.
+- **ShipsGo** (`service-finder.shipsgo.com`) shows carrier schedules, but its pages sit behind a browser
+  challenge and its API needs an account key. Do not try to fetch it. If a WebSearch result quotes a
+  ShipsGo schedule you may use it as `kind: "scheduled"`, confidence `low`, and say so in `source`.
 - `https://www.vesselfinder.com/vessels/details/<IMO>` — flag, year built, length overall, beam,
   gross tonnage, former names, **Last Port + ATD**, AIS destination + ETA.
 - `https://wingo-marine.com/ship/<slug>-<MMSI>` — IMO/MMSI, call sign, AIS dimensions, last AIS report.
@@ -100,7 +109,10 @@ the entry for this call, keeping all other entries:
   "notes": "optional"
 }
 ```
-Do this whenever a reason mentions "voyage" or "en route". Keep these four things strictly apart —
+Do this only when a reason mentions "voyage". Normally you will not need to: the workflow takes the
+previous port from Shiptrail's port-call history by itself. A reason mentioning "voyage" means Shiptrail
+had nothing, so try the other sources (VesselFinder "Last Port", then WebSearch).
+What you write here is a fallback: whenever Shiptrail later reports a previous port, that is shown instead. Keep these four things strictly apart —
 `kind` says which one it is:
 - `actual` — a port call that happened, recorded by AIS port-call data or a port authority
   (e.g. VesselFinder "Last Port … ATD"). Only this may be shown as the previous port.

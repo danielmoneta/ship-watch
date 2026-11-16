@@ -1,0 +1,139 @@
+{
+  "mmsi": 636024014,
+  "name": "MSC EAGLE III",
+  "imo": 9302449,
+  "callSign": "5LQN7",
+  "type": "Cargo ship",
+  "kind": "cargo",
+  "flag": "Liberia",
+  "aisClass": "A",
+  "lengthM": 207,
+  "beamM": 30,
+  "draughtM": 9.9,
+  "onMap": true,
+  "lastHeard": "2026-11-16T18:39:54.000Z",
+  "position": {
+    "lat": 45.28693166666667,
+    "lon": 14.408366666666666,
+    "at": "2026-11-16T18:39:54.000Z",
+    "speedKn": 0,
+    "courseDeg": 22.6,
+    "headingDeg": 270,
+    "status": "At anchor"
+  },
+  "voyage": {
+    "destination": "HRRJK",
+    "boundFor": {
+      "locode": "HRRJK",
+      "name": "Rijeka",
+      "country": "Croatia",
+      "url": "https://shiptrail.io/port/hrrjk-rijeka"
+    },
+    "eta": "2026-11-16T13:30:00.000Z",
+    "etaPassed": true,
+    "inPort": {
+      "locode": "HRRJK",
+      "name": "Rijeka",
+      "country": "Croatia",
+      "url": "https://shiptrail.io/port/hrrjk-rijeka"
+    },
+    "from": {
+      "locode": "ITTRS",
+      "name": "Trieste",
+      "country": "Italy",
+      "url": "https://shiptrail.io/port/ittrs-trieste"
+    },
+    "departed": "2026-11-16T00:47:16.744Z"
+  },
+  "recentCalls": [
+    {
+      "port": {
+        "locode": "HRRJK",
+        "name": "Rijeka",
+        "country": "Croatia",
+        "url": "https://shiptrail.io/port/hrrjk-rijeka"
+      },
+      "arrived": "2026-11-16T14:02:38.000Z"
+    },
+    {
+      "port": {
+        "locode": "ITTRS",
+        "name": "Trieste",
+        "country": "Italy",
+        "url": "https://shiptrail.io/port/ittrs-trieste"
+      },
+      "arrived": "2026-11-14T13:22:03.991Z",
+      "departed": "2026-11-16T00:47:16.744Z"
+    },
+    {
+      "port": {
+        "locode": "SIKOP",
+        "name": "Koper",
+        "country": "Slovenia",
+        "url": "https://shiptrail.io/port/sikop-koper"
+      },
+      "arrived": "2026-11-13T11:44:52.115Z",
+      "departed": "2026-11-14T11:53:05.592Z"
+    },
+    {
+      "port": {
+        "locode": "SIKOP",
+        "name": "Koper",
+        "country": "Slovenia",
+        "url": "https://shiptrail.io/port/sikop-koper"
+      },
+      "arrived": "2026-11-11T20:22:30.102Z",
+      "departed": "2026-11-13T11:08:54.757Z"
+    },
+    {
+      "port": {
+        "locode": "ITVCE",
+        "name": "Venezia",
+        "country": "Italy",
+        "url": "https://shiptrail.io/port/itvce-venezia"
+      },
+      "arrived": "2026-11-01T15:57:44.005Z",
+      "departed": "2026-11-03T07:11:50.094Z"
+    },
+    {
+      "port": {
+        "locode": "ITVCE",
+        "name": "Venezia",
+        "country": "Italy",
+        "url": "https://shiptrail.io/port/itvce-venezia"
+      },
+      "arrived": "2026-10-31T14:17:57.386Z",
+      "departed": "2026-11-01T13:54:21.018Z"
+    },
+    {
+      "port": {
+        "locode": "ITTRS",
+        "name": "Trieste",
+        "country": "Italy",
+        "url": "https://shiptrail.io/port/ittrs-trieste"
+      },
+      "arrived": "2026-10-28T07:44:16.012Z",
+      "departed": "2026-10-30T00:02:32.604Z"
+    },
+    {
+      "port": {
+        "locode": "ITTRS",
+        "name": "Trieste",
+        "country": "Italy",
+        "url": "https://shiptrail.io/port/ittrs-trieste"
+      },
+      "arrived": "2026-10-26T20:23:06.807Z",
+      "departed": "2026-10-28T06:57:17.434Z"
+    }
+  ],
+  "particulars": {
+    "built": "2004",
+    "grossTonnage": 25406,
+    "builder": "Meyer Wismar",
+    "registry": "Singapore",
+    "portOfRegistry": "Monrovia",
+    "yardNumber": "103"
+  },
+  "dossier": "complete",
+  "url": "https://shiptrail.io/vessel/636024014-msc-eagle-iii"
+}

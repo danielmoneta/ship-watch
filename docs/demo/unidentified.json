@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-16T17:21:02+01:00",
+  "generated_at": "2026-11-16T19:45:07+01:00",
   "timezone": "Europe/Zagreb",
   "terminal": {
     "url": "https://webusercorner.ictsi.hr/?language=EN",
     "query_url": "https://webusercorner.ictsi.hr/?language=EN&from=06.11.2026&to=07.12.2026",
     "ok": true,
-    "fetched_at": "2026-11-16T17:21:02+01:00",
-    "last_attempt_at": "2026-11-16T17:21:02+01:00",
+    "fetched_at": "2026-11-16T19:43:59+01:00",
+    "last_attempt_at": "2026-11-16T19:43:59+01:00",
     "rows": 15,
     "error": null
   },
@@ -30,8 +30,79 @@
         "ais": {
           "source": "Wingo Marine",
           "source_url": "https://wingo-marine.com/port/rijeka-2263",
-          "checked_at": "2026-11-16T17:21:02+01:00",
+          "checked_at": "2026-11-16T19:45:07+01:00",
           "found": false
+        },
+        "trail": {
+          "source": "Shiptrail",
+          "source_url": "https://shiptrail.io/vessel/357891000-msc-teresa",
+          "fetched_at": "2026-11-16T19:43:59+01:00",
+          "mmsi": "357891000",
+          "imo": "9469560",
+          "name": "MSC TERESA",
+          "last_heard": "2026-11-16T18:36:59.000Z",
+          "position": {
+            "lat": 45.3193,
+            "lon": 14.45545,
+            "at": "2026-11-16T18:36:59.000Z",
+            "status": "Moored",
+            "speed_kn": 0
+          },
+          "quay_distance_km": 0.11,
+          "at_quay": true,
+          "destination_raw": "HRRJK",
+          "bound_for": {
+            "locode": "HRRJK",
+            "name": "Rijeka",
+            "country": "Croatia"
+          },
+          "destination_eta": "2026-11-16T08:00:00.000Z",
+          "previous_port": {
+            "locode": "ILHFA",
+            "name": "Haifa",
+            "country": "Israel",
+            "arrived_at": "2026-11-11T05:01:04.523Z",
+            "departed_at": "2026-11-12T12:18:52.222Z",
+            "url": "https://shiptrail.io/port/ilhfa-haifa"
+          },
+          "still_in_port": null,
+          "recent_calls": [
+            {
+              "locode": "HRKOS",
+              "name": "Kostrena",
+              "country": "Croatia",
+              "arrived_at": "2026-11-16T08:15:43.000Z",
+              "departed_at": null
+            },
+            {
+              "locode": "ILHFA",
+              "name": "Haifa",
+              "country": "Israel",
+              "arrived_at": "2026-11-11T05:01:04.523Z",
+              "departed_at": "2026-11-12T12:18:52.222Z"
+            },
+            {
+              "locode": "ILASH",
+              "name": "Ashdod",
+              "country": "Israel",
+              "arrived_at": "2026-11-07T20:29:01.042Z",
+              "departed_at": "2026-11-10T21:41:53.315Z"
+            },
+            {
+              "locode": "ILASH",
+              "name": "Ashdod",
+              "country": "Israel",
+              "arrived_at": "2026-11-07T15:12:34.803Z",
+              "departed_at": "2026-11-07T17:56:35.607Z"
+            },
+            {
+              "locode": "ILASH",
+              "name": "Ashdod",
+              "country": "Israel",
+              "arrived_at": "2026-11-06T10:19:00.865Z",
+              "departed_at": "2026-11-07T14:33:04.672Z"
+            }
+          ]
         },
         "profile": null,
         "corroboration": {
@@ -58,10 +129,10 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/msc-eagle-iii-636024014",
-        "checked_at": "2026-11-16T17:21:02+01:00",
+        "checked_at": "2026-11-16T19:43:59+01:00",
         "found": true,
         "mmsi": "636024014",
-        "distance_km": 18,
+        "distance_km": 3.5,
         "nav": null,
         "destination_raw": "HRRJK",
         "destination": {
@@ -72,17 +143,98 @@
         "berth_consistent": false,
         "last_report": null
       },
+      "trail": {
+        "source": "Shiptrail",
+        "source_url": "https://shiptrail.io/vessel/636024014-msc-eagle-iii",
+        "fetched_at": "2026-11-16T19:43:59+01:00",
+        "mmsi": "636024014",
+        "imo": "9302449",
+        "name": "MSC EAGLE III",
+        "last_heard": "2026-11-16T18:39:54.000Z",
+        "position": {
+          "lat": 45.28693,
+          "lon": 14.40837,
+          "at": "2026-11-16T18:39:54.000Z",
+          "status": "At anchor",
+          "speed_kn": 0
+        },
+        "quay_distance_km": 5.15,
+        "at_quay": false,
+        "destination_raw": "HRRJK",
+        "bound_for": {
+          "locode": "HRRJK",
+          "name": "Rijeka",
+          "country": "Croatia"
+        },
+        "destination_eta": "2026-11-16T13:30:00.000Z",
+        "previous_port": {
+          "locode": "ITTRS",
+          "name": "Trieste",
+          "country": "Italy",
+          "arrived_at": "2026-11-14T13:22:03.991Z",
+          "departed_at": "2026-11-16T00:47:16.744Z",
+          "url": "https://shiptrail.io/port/ittrs-trieste"
+        },
+        "still_in_port": null,
+        "recent_calls": [
+          {
+            "locode": "HRRJK",
+            "name": "Rijeka",
+            "country": "Croatia",
+            "arrived_at": "2026-11-16T14:02:38.000Z",
+            "departed_at": null
+          },
+          {
+            "locode": "ITTRS",
+            "name": "Trieste",
+            "country": "Italy",
+            "arrived_at": "2026-11-14T13:22:03.991Z",
+            "departed_at": "2026-11-16T00:47:16.744Z"
+          },
+          {
+            "locode": "SIKOP",
+            "name": "Koper",
+            "country": "Slovenia",
+            "arrived_at": "2026-11-13T11:44:52.115Z",
+            "departed_at": "2026-11-14T11:53:05.592Z"
+          },
+          {
+            "locode": "SIKOP",
+            "name": "Koper",
+            "country": "Slovenia",
+            "arrived_at": "2026-11-11T20:22:30.102Z",
+            "departed_at": "2026-11-13T11:08:54.757Z"
+          },
+          {
+            "locode": "ITVCE",
+            "name": "Venezia",
+            "country": "Italy",
+            "arrived_at": "2026-11-01T15:57:44.005Z",
+            "departed_at": "2026-11-03T07:11:50.094Z"
+          },
+          {
+            "locode": "ITVCE",
+            "name": "Venezia",
+            "country": "Italy",
+            "arrived_at": "2026-10-31T14:17:57.386Z",
+            "departed_at": "2026-11-01T13:54:21.018Z"
+          }
+        ]
+      },
       "voyage": {
         "researched_at": "2026-11-16T16:24:23+01:00",
         "previous_port": {
           "name": "Trieste",
           "locode": "ITTRS",
-          "departed_at": "2026-11-16T01:59:00+01:00",
+          "country": "Italy",
+          "arrived_at": "2026-11-14T14:22:03+01:00",
+          "departed_at": "2026-11-16T01:47:16+01:00",
           "kind": "actual",
-          "source": "VesselFinder (AIS port call: Last Port Trieste, ATD 16 Nov 00:59 UTC)",
-          "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
-          "retrieved_at": "2026-11-16T16:24:23+01:00",
-          "confidence": "medium"
+          "source": "Shiptrail (AIS port-call history)",
+          "source_url": "https://shiptrail.io/vessel/636024014-msc-eagle-iii",
+          "retrieved_at": "2026-11-16T19:43:59+01:00",
+          "auto": true,
+          "confidence": "high"
         },
         "next_port": null,
         "notes": "On 16 Nov ~16:00 local VesselFinder showed her at anchor in the Adriatic bound for Rijeka; Wingo placed her 18 km from the port. Next port after Rijeka not established."
@@ -207,10 +359,181 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/port/rijeka-2263",
-        "checked_at": "2026-11-16T17:21:02+01:00",
+        "checked_at": "2026-11-16T19:43:59+01:00",
         "found": false
       },
-      "profile": null
+      "imo": "9540065",
+      "trail": {
+        "source": "Shiptrail",
+        "source_url": "https://shiptrail.io/vessel/636022450-msc-audrey",
+        "fetched_at": "2026-11-16T19:43:59+01:00",
+        "mmsi": "636022450",
+        "imo": "9540065",
+        "name": "MSC AUDREY",
+        "last_heard": "2026-11-16T18:37:13.000Z",
+        "position": {
+          "lat": 45.62829,
+          "lon": 13.75912,
+          "at": "2026-11-16T18:37:13.000Z",
+          "status": "Moored",
+          "speed_kn": 0
+        },
+        "quay_distance_km": 64.15,
+        "at_quay": false,
+        "destination_raw": "ITTRS",
+        "bound_for": {
+          "locode": "ITTRS",
+          "name": "Trieste",
+          "country": "Italy"
+        },
+        "destination_eta": "2026-11-14T04:00:00.000Z",
+        "previous_port": null,
+        "still_in_port": {
+          "locode": "ITTRS",
+          "name": "Trieste"
+        },
+        "recent_calls": [
+          {
+            "locode": "ITTRS",
+            "name": "Trieste",
+            "country": "Italy",
+            "arrived_at": "2026-11-14T04:51:54.473Z",
+            "departed_at": null
+          },
+          {
+            "locode": "SIKOP",
+            "name": "Koper",
+            "country": "Slovenia",
+            "arrived_at": "2026-11-11T09:38:08.349Z",
+            "departed_at": "2026-11-13T05:49:31.671Z"
+          },
+          {
+            "locode": "SIKOP",
+            "name": "Koper",
+            "country": "Slovenia",
+            "arrived_at": "2026-11-10T17:12:55.328Z",
+            "departed_at": "2026-11-11T08:28:30.218Z"
+          },
+          {
+            "locode": "ILHFA",
+            "name": "Haifa",
+            "country": "Israel",
+            "arrived_at": "2026-11-05T08:14:19.342Z",
+            "departed_at": "2026-11-06T20:41:05.006Z"
+          },
+          {
+            "locode": "ILHFA",
+            "name": "Haifa",
+            "country": "Israel",
+            "arrived_at": "2026-11-05T06:28:46.424Z",
+            "departed_at": "2026-11-05T06:48:15.869Z"
+          },
+          {
+            "locode": "ILHFA",
+            "name": "Haifa",
+            "country": "Israel",
+            "arrived_at": "2026-11-05T04:06:36.176Z",
+            "departed_at": "2026-11-05T05:52:06.130Z"
+          }
+        ]
+      },
+      "voyage": {
+        "researched_at": "2026-11-16T17:50:48+01:00",
+        "next_port": null,
+        "notes": "AIS shows her moored at Trieste since 2026-11-14T05:49+01:00 (arrived from Koper, ATD 2026-11-13T06:46+01:00); not yet departed at research time. Port after Rijeka not found."
+      },
+      "profile": {
+        "imo": "9540065",
+        "name": "MSC AUDREY",
+        "aliases": [],
+        "mmsi": "636022450",
+        "fields": {
+          "type": {
+            "value": "Container ship",
+            "source": "VesselFinder",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9540065",
+            "retrieved_at": "2026-11-16T17:50:48+01:00",
+            "confidence": "medium"
+          },
+          "flag": {
+            "value": "Liberia",
+            "source": "VesselFinder; Wingo Marine (AIS)",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9540065",
+            "retrieved_at": "2026-11-16T17:50:48+01:00",
+            "confidence": "high"
+          },
+          "year_built": {
+            "value": 2023,
+            "source": "VesselFinder; Port of Hamburg vessel listing (via web search)",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9540065",
+            "retrieved_at": "2026-11-16T17:50:48+01:00",
+            "confidence": "high"
+          },
+          "length_m": {
+            "value": 365.99,
+            "source": "VesselFinder; Port of Hamburg lists 366 m (via web search)",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9540065",
+            "retrieved_at": "2026-11-16T17:50:48+01:00",
+            "confidence": "high"
+          },
+          "beam_m": {
+            "value": 51,
+            "source": "VesselFinder; Maritime Optima (via web search)",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9540065",
+            "retrieved_at": "2026-11-16T17:50:48+01:00",
+            "confidence": "high"
+          },
+          "gross_tonnage": {
+            "value": 150783,
+            "source": "VesselFinder",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9540065",
+            "retrieved_at": "2026-11-16T17:50:48+01:00",
+            "confidence": "medium"
+          },
+          "deadweight_t": {
+            "value": 179762,
+            "source": "VesselFinder; Maritime Optima (via web search)",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9540065",
+            "retrieved_at": "2026-11-16T17:50:48+01:00",
+            "confidence": "low",
+            "note": "Other databases give 154,700 t (Terminal49) and 159,528 t (MagicPort); figures disagree."
+          },
+          "callsign": {
+            "value": "5LIV9",
+            "source": "VesselFinder; Wingo Marine (AIS)",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9540065",
+            "retrieved_at": "2026-11-16T17:50:48+01:00",
+            "confidence": "high"
+          },
+          "operator": {
+            "value": "MSC",
+            "source": "AGCT sailing list (shipper column)",
+            "source_url": "https://webusercorner.ictsi.hr/?language=EN",
+            "retrieved_at": "2026-11-16T17:50:48+01:00",
+            "confidence": "high"
+          },
+          "owner": {
+            "value": "Compass Shipping 134 Corp Ltd",
+            "source": "MagicPort, as reported in a web search summary",
+            "source_url": "https://magicport.ai/vessels/container/msc-audrey-mmsi-636022450",
+            "retrieved_at": "2026-11-16T17:50:48+01:00",
+            "confidence": "low",
+            "note": "Single source, seen only through a search summary."
+          }
+        },
+        "photo": null,
+        "facts": [],
+        "research": {
+          "status": "partial",
+          "researched_at": "2026-11-16T17:50:48+01:00",
+          "missing": [
+            "teu",
+            "builder",
+            "photo"
+          ],
+          "notes": "Identified as IMO 9540065 by name match on VesselFinder and Wingo Marine (same IMO/MMSI/call sign), container ship trading Koper–Trieste in the Adriatic. TEU and shipyard not found in accessible sources; no Wikimedia Commons photo under IMO or name. Wikidata throttled (HTTP 429)."
+        }
+      }
     },
     {
       "call_id": "UNITY ONE|13",
@@ -224,6 +547,28 @@
       "ata": null,
       "atd": null,
       "phase": "expected",
+      "ais": {
+        "source": "Wingo Marine",
+        "source_url": "https://wingo-marine.com/port/rijeka-2263",
+        "checked_at": "2026-11-16T18:33:09+01:00",
+        "found": false
+      },
+      "imo": "9344409",
+      "voyage": {
+        "researched_at": "2026-11-16T19:25:00+01:00",
+        "previous_port": {
+          "name": "Derince",
+          "locode": "TRDRC",
+          "departed_at": "2026-11-12T14:16:00+01:00",
+          "kind": "actual",
+          "source": "VesselFinder (AIS port call)",
+          "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
+          "retrieved_at": "2026-11-16T19:25:00+01:00",
+          "confidence": "medium"
+        },
+        "next_port": null,
+        "notes": "Previous port is VesselFinder's 'Last Port' (Derince, Turkey, ATD 12 Nov 13:16 UTC). AIS destination is Rijeka, which only shows she is bound there."
+      },
       "profile": null
     },
     {
@@ -346,23 +691,32 @@
       "name": "Wingo Marine",
       "url": "https://wingo-marine.com/port/rijeka-2263",
       "ok": true,
-      "fetched_at": "2026-11-16T17:21:02+01:00",
-      "last_attempt_at": "2026-11-16T17:21:02+01:00",
+      "fetched_at": "2026-11-16T19:43:59+01:00",
+      "last_attempt_at": "2026-11-16T19:43:59+01:00",
       "error": null,
-      "summary": "24 vessels reported within 15 km in the last 24 hours",
-      "vessels_listed": 35
+      "summary": "31 vessels reported within 15 km in the last 24 hours",
+      "vessels_listed": 32
     },
     "aiscatcher": {
       "name": "AIS-catcher",
       "url": "https://www.aiscatcher.org/place/6398/brajdica-container-terminal",
       "ok": true,
-      "fetched_at": "2026-11-16T17:21:02+01:00",
-      "last_attempt_at": "2026-11-16T17:21:02+01:00",
+      "fetched_at": "2026-11-16T19:43:59+01:00",
+      "last_attempt_at": "2026-11-16T19:43:59+01:00",
       "error": null,
       "receiving_stations": 0,
       "vessels_inside": 0,
       "usable": false,
       "note": "No receiver coverage of the terminal: a zero count here is not evidence that the berth is empty."
+    },
+    "shiptrail": {
+      "name": "Shiptrail",
+      "url": "https://shiptrail.io/",
+      "ok": true,
+      "fetched_at": "2026-11-16T19:43:59+01:00",
+      "last_attempt_at": "2026-11-16T19:43:59+01:00",
+      "error": null,
+      "note": "AIS-derived port calls and positions. Data: Shiptrail, shiptrail.io"
     }
   },
   "last_events": [
@@ -376,17 +730,11 @@
     }
   ],
   "stale_after_hours": 3,
-  "research_pending": [
-    {
-      "name": "MSC AUDREY",
-      "imo": null,
-      "priority": "next_arrival"
-    }
-  ],
-  "next_check_at": "2026-11-16T20:21:02+01:00",
-  "next_check_reason": "baseline check",
+  "research_pending": [],
+  "research_needed": [],
+  "next_check_at": "2026-11-16T20:45:07+01:00",
   "stale_grace_minutes": 100,
   "simulated": true,
-  "demo_now": "2026-11-16T17:21:02+01:00",
+  "demo_now": "2026-11-16T19:45:07+01:00",
   "simulated_note": "newly arrived ship, research pending"
 }

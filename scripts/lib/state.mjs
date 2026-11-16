@@ -1,7 +1,7 @@
 // Pure state logic: merge a fresh sailing list into the stored calls, detect
 // events, decide what needs research, and build the status file the site reads.
 import { callId, phaseOf } from './terminal.mjs';
-import { normName } from './util.mjs';
+import { normName, toZagrebIso } from './util.mjs';
 
 export const PROFILE_MAX_AGE_DAYS = 365;      // re-check a complete profile once a year
 export const PARTIAL_RETRY_DAYS = 14;         // retry gaps (e.g. no photo found) every two weeks
@@ -108,23 +108,60 @@ export function researchNeeds({ atBerth, expected }, profiles, nowMs) {
     else if (st === 'auto' || !st) reasons.push('profile holds only automatic AIS data');
     else if (st === 'partial' && age > PARTIAL_RETRY_DAYS) reasons.push(`partial profile older than ${PARTIAL_RETRY_DAYS} days (missing: ${(p.research.missing || []).join(', ') || '?'})`);
     else if (age > PROFILE_MAX_AGE_DAYS) reasons.push('profile older than a year');
-    if (priority === 'at_berth' && !call.voyage?.researched_at) reasons.push('voyage (previous/next port) not yet researched for this call');
-    // The port a ship has just left is easiest to establish while she is still on her way here.
-    const hoursOut = (t(call.eta) - nowMs) / 3600000;
-    if (priority === 'next_arrival' && call === expected[0] && hoursOut < 30 && !call.voyage?.researched_at) reasons.push('en route: capture the previous port for this call now');
+    // Previous port normally comes from Shiptrail automatically. Research is the fallback when a
+    // berthed ship has none from either source and nobody has looked yet.
+    if (priority === 'at_berth' && !call.trail?.previous_port && !call.voyage?.researched_at) reasons.push('voyage: previous port not available from Shiptrail; research previous/next port for this call');
     if (reasons.length) needs.push({ name: call.name, imo: call.imo || null, call_id: call.call_id, priority, reasons });
   }
   return needs;
 }
 
+/**
+ * The voyage shown for a call. Per leg: a researched/hand-entered value (voyages.json) wins;
+ * otherwise the previous port comes from Shiptrail's AIS port-call history.
+ * The next port is never filled from AIS here: the page shows a crew-entered AIS destination
+ * separately and labels it as such.
+ */
+export function effectiveVoyage(call) {
+  const v = call.voyage ? { ...call.voyage } : {};
+  const t = call.trail;
+  // Source hierarchy for the previous port: Shiptrail's recorded port call first; research only
+  // as a fallback, and not at all while Shiptrail shows her still lying in another port.
+  if (t?.still_in_port && !t.previous_port && v.previous_port && !v.previous_port.departed_at) delete v.previous_port;
+  if (t?.previous_port) {
+    if (v.previous_port && v.previous_port.locode && v.previous_port.locode !== t.previous_port.locode) v.superseded_previous_port = v.previous_port;
+    const p = t.previous_port;
+    v.previous_port = {
+      name: p.name, locode: p.locode, country: p.country || null,
+      arrived_at: p.arrived_at ? toZagreb(p.arrived_at) : null,
+      departed_at: p.departed_at ? toZagreb(p.departed_at) : null,
+      kind: 'actual', source: 'Shiptrail (AIS port-call history)', source_url: t.source_url,
+      retrieved_at: t.fetched_at, auto: true,
+      // Two independent sources naming the same port raise the confidence.
+      confidence: call.voyage?.previous_port?.locode === p.locode && !call.voyage.previous_port.auto ? 'high' : 'medium',
+    };
+  }
+  return Object.keys(v).length ? v : undefined;
+}
+const toZagreb = iso => toZagrebIso(iso);
+
 function publicCall(call, profiles) {
   const { first_seen, last_seen, listed, ...rest } = call;
+  rest.voyage = effectiveVoyage(call);
+  if (rest.trail) { const { recent_calls, particulars, ...slim } = rest.trail; rest.trail = { ...slim, recent_calls }; }
   const profile = call.imo ? profiles[call.imo] || null : null;
   return { ...rest, profile };
 }
 
 /** How AIS relates to the terminal's claim that a ship is at the berth. */
 export function corroboration(call, nowMs) {
+  // Best evidence first: a fresh AIS position (Shiptrail) measured against the quay itself.
+  const tr = call.trail;
+  const trAgeH = tr?.last_heard ? (nowMs - t(tr.last_heard)) / 3600000 : null;
+  if (tr?.position && trAgeH != null && trAgeH <= 3) {
+    if (tr.at_quay) return { level: 'ais_consistent', note: `AIS position ${Math.round(tr.quay_distance_km * 1000)} m from the Brajdica quay, ${tr.position.status || 'stationary'} (Shiptrail).` };
+    if (tr.quay_distance_km > 5) return { level: 'ais_conflict', note: `AIS position is ${tr.quay_distance_km} km from the Brajdica quay (Shiptrail). The terminal remains the authority.` };
+  }
   const a = call.ais;
   if (!a || !a.checked_at) return { level: 'terminal_only', note: 'No AIS check has been made for this call.' };
   if (!a.found) return { level: 'terminal_only', note: 'Not found in the AIS source. Missing AIS is not evidence of absence.' };

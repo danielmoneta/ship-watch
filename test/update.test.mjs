@@ -11,6 +11,7 @@ import { parseSailingList, parseTerminalDateTime, phaseOf, callId } from '../scr
 import { parseWingoPort, parseWingoShip, resolveDestination } from '../scripts/lib/wingo.mjs';
 import { zagrebWallToIso, toZagrebIso, validImo } from '../scripts/lib/util.mjs';
 import { run } from '../scripts/update.mjs';
+import { summarizeShip } from '../scripts/lib/shiptrail.mjs';
 
 const FX = path.join(path.dirname(fileURLToPath(import.meta.url)), 'fixtures');
 const TERMINAL = fs.readFileSync(path.join(FX, 'terminal-2026-11-16.html'), 'utf8');
@@ -275,8 +276,7 @@ test('research is requested once, then not again while the cached profile is fre
   assert.deepEqual(s.research_needed.map(n => [n.name, n.priority]), [
     ['MSC TERESA', 'at_berth'], ['MSC EAGLE III', 'next_arrival'], ['MSC AUDREY', 'next_arrival'],
   ]);
-  assert.ok(s.research_needed[1].reasons.some(r => /en route/.test(r)), 'next arrival within 30 h: capture previous port');
-  assert.ok(!s.research_needed[2].reasons.some(r => /en route/.test(r)));
+
 
   // Simulate the research step: a partial profile (no photo, no TEU) and a voyage with unknown previous port.
   const data = path.join(dir, 'data');
@@ -324,4 +324,72 @@ test('heartbeat: an unchanged status is republished once the published file is 5
   s = await step(dir, TERMINAL, '2026-11-16T15:56:00Z', ['--no-ais']);
   assert.equal(s.publish, true); assert.equal(s.publish_reason, 'heartbeat');
   assert.equal(json(dir, 'data/status.json').next_check_at, '2026-11-16T17:56:00+01:00');
+});
+
+// ------------------------------------------------ Shiptrail (voyage history)
+test('LIVE FIXTURE: Shiptrail get_ship gives MSC TERESA\'s previous port (Haifa) and a position at the quay', () => {
+  const ship = JSON.parse(fs.readFileSync(path.join(FX, '357891000.json'), 'utf8'));
+  const s = summarizeShip(ship, { nowIso: '2026-11-16T19:40:00+01:00', before: new Date('2026-11-16T10:30:00+01:00').getTime() });
+  assert.equal(s.imo, '9469560');
+  assert.equal(s.previous_port.locode, 'ILHFA');
+  assert.equal(s.previous_port.departed_at, '2026-11-12T12:18:52.222Z');
+  assert.equal(s.at_quay, true);
+  assert.ok(s.quay_distance_km < 0.3);
+  // Kostrena / Rijeka entries belong to this visit and are never the previous port.
+  assert.notEqual(s.previous_port.locode, 'HRKOS');
+});
+
+test('SIMULATION: a ship still lying in another port has no previous port yet; a moving ship is not "at quay"', () => {
+  const ship = JSON.parse(fs.readFileSync(path.join(FX, '357891000.json'), 'utf8'));
+  const inHaifa = { ...ship, recentCalls: [{ ...ship.recentCalls[1], departed: undefined }, ...ship.recentCalls.slice(2)] };
+  let s = summarizeShip(inHaifa, { nowIso: 'x' });
+  assert.equal(s.previous_port, null);
+  assert.equal(s.still_in_port.locode, 'ILHFA');
+  s = summarizeShip({ ...ship, position: { ...ship.position, speedKn: 6 } }, { nowIso: 'x' });
+  assert.equal(s.at_quay, false);
+  s = summarizeShip({ ...ship, position: { lat: 45.2869, lon: 14.4084, speedKn: 0, status: 'At anchor' } }, { nowIso: 'x' });
+  assert.equal(s.at_quay, false, 'at anchor off Rijeka is not at the berth');
+});
+
+test('LIVE FIXTURE: updater takes the previous port from Shiptrail, matched by MMSI and IMO', async () => {
+  const dir = tmp();
+  const a = ['--wingo-file', WINGO_PORT, '--wingo-ship-dir', FX, '--shiptrail-dir', FX];
+  const s = await step(dir, TERMINAL, '2026-11-16T18:45:00Z', a);
+  assert.ok(!s.research_needed.some(n => n.name === 'MSC TERESA' && n.reasons.some(r => /voyage/.test(r))), 'no voyage research needed');
+  const st = json(dir, 'data/status.json');
+  const v = st.berth.vessels[0];
+  assert.equal(v.voyage.previous_port.name, 'Haifa');
+  assert.equal(v.voyage.previous_port.kind, 'actual');
+  assert.equal(v.voyage.previous_port.departed_at, '2026-11-12T13:18:52+01:00');
+  assert.match(v.voyage.previous_port.source_url, /shiptrail\.io\/vessel\/357891000/);
+  assert.equal(v.voyage.next_port, undefined, 'AIS destination is never promoted to a verified next port');
+  assert.equal(v.corroboration.level, 'ais_consistent');
+  assert.match(v.corroboration.note, /m from the Brajdica quay/);
+  assert.equal(st.ais.shiptrail.ok, true);
+  // MSC EAGLE III: at anchor 5 km out with destination Rijeka - still only expected.
+  const e = st.upcoming[0];
+  assert.equal(e.phase, 'expected');
+  assert.equal(e.trail.at_quay, false);
+  assert.equal(e.voyage.previous_port.name, 'Trieste');
+});
+
+test('SIMULATION: Shiptrail outage or an IMO mismatch leaves the previous port unknown and occupancy untouched', async () => {
+  const dir = tmp();
+  let s = await step(dir, TERMINAL, '2026-11-16T18:45:00Z', ['--wingo-file', WINGO_PORT, '--wingo-ship-dir', FX, '--shiptrail-dir', 'none']);
+  assert.match(s.errors.join(';'), /shiptrail: simulated outage/);
+  let st = json(dir, 'data/status.json');
+  assert.equal(st.berth.state, 'occupied');
+  assert.equal(st.berth.vessels[0].voyage, undefined);
+  assert.ok(s.research_needed.some(n => n.name === 'MSC TERESA' && n.reasons.some(r => /voyage/.test(r))), 'falls back to research');
+
+  // A record for the right MMSI but a different hull is rejected.
+  const wrong = path.join(dir, 'trail'); fs.mkdirSync(wrong);
+  const ship = JSON.parse(fs.readFileSync(path.join(FX, '357891000.json'), 'utf8'));
+  fs.writeFileSync(path.join(wrong, '357891000.json'), JSON.stringify({ ...ship, imo: 9302449 }));
+  fs.copyFileSync(path.join(FX, '636024014.json'), path.join(wrong, '636024014.json'));
+  const dir2 = tmp();
+  await step(dir2, TERMINAL, '2026-11-16T18:45:00Z', ['--wingo-file', WINGO_PORT, '--wingo-ship-dir', FX, '--shiptrail-dir', wrong]);
+  st = json(dir2, 'data/status.json');
+  assert.equal(st.berth.vessels[0].voyage, undefined);
+  assert.match(st.berth.vessels[0].trail.identity_warning, /expected 9469560/);
 });
