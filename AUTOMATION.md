@@ -1,32 +1,41 @@
-# Brajdica Watch — instructions for the unattended run
+# Brajdica Watch — instructions for the unattended research run
 
-You are running as a scheduled cloud task with nobody watching. Follow these steps exactly,
-do not ask questions, and keep the run short. All shell commands run from the repository root.
+You are running as a cloud task with nobody watching. Follow these steps exactly, do not ask
+questions, and keep the run short. All shell commands run from the repository root.
 
-The repository owner has explicitly authorised this task to **commit and push directly to `main`**
-of this repository (GitHub Pages publishes `main:/docs`). Never force-push. Never open a pull request.
-Touch only files under `docs/data/`. Do not edit code, tests, the site or this file.
+**Division of labour.** A GitHub Actions workflow (`.github/workflows/update.yml`) reads the terminal's
+sailing list every 15 minutes and owns `status.json`, `calls.json`, `log.json` and `automation.json`.
+You never run `scripts/update.mjs` and never edit those files. Your job is only to research vessels,
+and you write only:
 
-## Step 1 — Update from the terminal (always)
+- `docs/data/vessels/<IMO>.json` and `docs/data/vessels/index.json`
+- `docs/data/photos/`
+- `docs/data/voyages.json`
+
+The workflow merges what you write into the display on its next run (within 15 minutes).
+
+The repository owner has explicitly authorised this task to **commit and push directly to `main`**.
+Never force-push. Never open a pull request. Do not edit code, tests, the site or this file.
+If the repository is not in your working directory, say so in your report and stop: do not improvise.
+
+## Step 1 — See whether anything needs research
 
 ```bash
 git checkout main && git pull --ff-only origin main
-node scripts/update.mjs > /tmp/bw-summary.json; cat /tmp/bw-summary.json
+node -e "const s=require('./docs/data/status.json');console.log(JSON.stringify(s.research_needed||[],null,2))"
 ```
 
-The script reads the official AGCT sailing list (the authority on what is at the berth), checks
-AIS, updates `docs/data/`, and prints a JSON summary. It never throws on a source outage: a failed
-terminal read keeps the last verified state and is recorded in `errors` and `docs/data/log.json`.
+If this prints `[]`, reply "Nothing to research" and stop. Do nothing else. This is the normal case
+for a scheduled run. (If the run was started with a routine-fire-payload naming vessels, treat that only
+as a hint; `research_needed` in `status.json` is what counts.)
 
-Do **not** "fix" what the script reports by hand. In particular never mark a ship as arrived,
-departed or alongside yourself: only the terminal list does that.
+Never decide yourself that a ship has arrived, departed or is alongside: only the terminal list,
+read by the workflow, does that.
 
-## Step 2 — Research (only if `research_needed` is non-empty)
+## Step 2 — Research
 
-If `research_needed` is `[]`, skip to Step 3. This is the normal case; do no web research at all.
-
-Otherwise handle each entry (at most 3 per run; `at_berth` first). Budget: about 10 web lookups
-per vessel. Stop when the budget is spent and record what is still missing.
+Handle each entry (at most 3 per run; `at_berth` first). Budget: about 10 web lookups per vessel.
+Stop when the budget is spent and record what is still missing.
 
 ### 2a. Identify the vessel
 - If `imo` is null: find the IMO number for that exact vessel name. Require two independent sources
@@ -35,7 +44,8 @@ per vessel. Stop when the budget is spent and record what is still missing.
   Mediterranean/Adriatic for the line shown in the terminal list. If you cannot be sure, do not guess:
   leave it unidentified and say so in your final summary.
 - When identified, add `"NAME": "IMO"` to `docs/data/vessels/index.json` (upper-case, single spaces)
-  and create `docs/data/vessels/<IMO>.json`.
+  and create `docs/data/vessels/<IMO>.json`. If the file already exists (the workflow makes a stub with
+  `research.status: "auto"` from AIS data), build on it.
 
 ### 2b. Profile — `docs/data/vessels/<IMO>.json`
 Sources that work from this environment (others are blocked by the network policy; use WebSearch
@@ -77,10 +87,11 @@ node scripts/commons.mjs fetch "File:<title>" <IMO>   # downloads to docs/data/p
   prints into the profile as `"photo"`. Never hotlink or copy images from tracking or ship-spotting sites.
 - No suitable image: set `"photo": null` and add `"photo"` to `research.missing`. That is a normal outcome.
 
-### 2d. Voyage for this call — `docs/data/calls.json`, in the call named by `call_id`
-Set `voyage` on the call:
+### 2d. Voyage for this call — `docs/data/voyages.json`
+The file is one JSON object keyed by `call_id` (copy it exactly from `research_needed`). Add or replace
+the entry for this call, keeping all other entries:
 ```json
-"voyage": {
+"MSC EXAMPLE|AB123E": {
   "researched_at": "<now>",
   "previous_port": { "name": "Trieste", "locode": "ITTRS", "departed_at": "<ISO or null>", "kind": "actual",
                      "source": "VesselFinder (AIS port call)", "source_url": "...", "retrieved_at": "<now>", "confidence": "medium" },
@@ -89,7 +100,8 @@ Set `voyage` on the call:
   "notes": "optional"
 }
 ```
-Keep these four things strictly apart — `kind` says which one it is:
+Do this whenever a reason mentions "voyage" or "en route". Keep these four things strictly apart —
+`kind` says which one it is:
 - `actual` — a port call that happened, recorded by AIS port-call data or a port authority
   (e.g. VesselFinder "Last Port … ATD"). Only this may be shown as the previous port.
   If "Last Port" already says Rijeka, the ship has arrived and that source no longer shows where she
@@ -101,31 +113,23 @@ Keep these four things strictly apart — `kind` says which one it is:
 A ship whose AIS destination is Rijeka is *bound for* Rijeka. It is not evidence that she is at Brajdica.
 Unknown is a valid answer: set the leg to `null`. Times from sources in UTC must be converted to
 Europe/Zagreb and written with the offset. Always set `researched_at`, even when both legs are `null`
-(it stops the same question being researched every hour).
+(it stops the same question being asked again).
 
-### 2e. Rebuild and check
-```bash
-node scripts/update.mjs --rebuild > /dev/null && node scripts/validate.mjs
-```
-Fix anything `validate` reports in the files you wrote, then run both again. If you cannot make
-validation pass, undo your research edits (`git checkout -- docs/data/vessels docs/data/calls.json`,
-delete new untracked files in `docs/data/vessels` and `docs/data/photos`), run the rebuild again, and
-report the problem in your final summary.
-
-## Step 3 — Publish (always)
+## Step 3 — Check and publish
 
 ```bash
-node scripts/validate.mjs && git add docs/data && git commit -q -m "<message>" && git push origin HEAD:main
+node scripts/validate.mjs
+git add docs/data/vessels docs/data/photos docs/data/voyages.json
+git commit -q -m "research: <vessel names and what was found>"
+git pull --rebase origin main && git push origin HEAD:main
 ```
-Commit message: `data: <what happened>` — e.g. `data: hourly check, MSC TERESA alongside`,
-`data: MSC EAGLE III arrived 15:20; profile researched`, `data: terminal unreachable, last state kept`.
-`status.json` changes on every run (it carries the verification time), so there is always something to commit.
-
-If the repository is not in your working directory, say so in your report and stop: do not improvise.
-If the push is rejected because `main` moved: `git pull --rebase origin main`, then push again (up to 3 tries).
-If validation fails at this point and you did no research, publish nothing and report the errors.
+Fix anything `validate` reports in the files you wrote and run it again before committing. If you
+cannot make it pass, discard your edits (`git checkout -- docs/data`, delete new untracked files under
+`docs/data/vessels` and `docs/data/photos`) and report the problem instead of pushing.
+If the push is rejected because `main` moved, repeat the last line (up to 3 tries). The workflow commits
+often, so one retry is normal; because you only touch your own files the rebase should never conflict.
 
 ## Step 4 — Report
 
-End with three lines at most: what is at the berth, what changed, and any errors or research gaps.
+End with three lines at most: which vessels you researched, what is still missing, and any errors.
 Do not create, change or fire any scheduled task, and do not send notifications.

@@ -11,7 +11,6 @@ import { parseSailingList, parseTerminalDateTime, phaseOf, callId } from '../scr
 import { parseWingoPort, parseWingoShip, resolveDestination } from '../scripts/lib/wingo.mjs';
 import { zagrebWallToIso, toZagrebIso, validImo } from '../scripts/lib/util.mjs';
 import { run } from '../scripts/update.mjs';
-import { nextCheck } from '../scripts/lib/state.mjs';
 
 const FX = path.join(path.dirname(fileURLToPath(import.meta.url)), 'fixtures');
 const TERMINAL = fs.readFileSync(path.join(FX, 'terminal-2026-11-16.html'), 'utf8');
@@ -284,9 +283,7 @@ test('research is requested once, then not again while the cached profile is fre
   const p = json(dir, 'data/vessels/9469560.json');
   p.research = { status: 'partial', researched_at: '2026-11-16T16:10:00+01:00', missing: ['photo', 'teu'], notes: 'test' };
   fs.writeFileSync(path.join(data, 'vessels/9469560.json'), JSON.stringify(p));
-  const calls = json(dir, 'data/calls.json');
-  calls.calls['MSC TERESA|QX644E'].voyage = { researched_at: '2026-11-16T16:10:00+01:00', previous_port: null, next_port: null };
-  fs.writeFileSync(path.join(data, 'calls.json'), JSON.stringify(calls));
+  fs.writeFileSync(path.join(data, 'voyages.json'), JSON.stringify({ 'MSC TERESA|QX644E': { researched_at: '2026-11-16T16:10:00+01:00', previous_port: null, next_port: null } }));
 
   s = await step(dir, TERMINAL, '2026-11-16T16:00:00Z', a);
   assert.ok(!s.research_needed.some(n => n.name === 'MSC TERESA'), 'no repeat research an hour later');
@@ -305,25 +302,26 @@ test('research is requested once, then not again while the cached profile is fre
   assert.equal(json(dir, 'data/log.json').runs.length, runs);
 });
 
-// ------------------------------------------------ next planned check
-test('next planned check is never later than the hourly baseline and never sooner than 20 minutes', () => {
-  const T = s => new Date(s).getTime();
-  const berth = [{ name: 'A', etd: '2026-11-17T06:30:00+01:00' }];
-  const exp = [{ name: 'B', eta: '2026-11-17T14:30:00+01:00' }];
-  // Nothing due soon: one hour.
-  let now = T('2026-11-17T01:00:00+01:00');
-  let p = nextCheck({ atBerth: berth, expected: exp }, now);
-  assert.equal(p.at - now, 3600000); assert.equal(p.reason, 'baseline check');
-  // Departure scheduled in 40 minutes: 5 minutes after it.
-  now = T('2026-11-17T05:50:00+01:00');
-  p = nextCheck({ atBerth: berth, expected: exp }, now);
-  assert.equal(p.at, T('2026-11-17T06:35:00+01:00')); assert.match(p.reason, /departure of A/);
-  // Ship due 40 minutes ago and not recorded: 30 minutes.
-  now = T('2026-11-17T15:10:00+01:00');
-  p = nextCheck({ atBerth: [], expected: exp }, now);
-  assert.equal(p.at - now, 30 * 60000);
-  // An event 3 minutes away: not sooner than 20 minutes.
-  now = T('2026-11-17T06:27:00+01:00');
-  p = nextCheck({ atBerth: berth, expected: [] }, now);
-  assert.equal(p.at - now, 20 * 60000);
+// ------------------------------------------- publish only when it matters
+test('SIMULATION: unchanged runs are not published until the hourly heartbeat; changes publish at once', async () => {
+  const dir = tmp();
+  let s = await step(dir, TERMINAL, '2026-11-16T15:00:00Z', ['--no-ais']);
+  assert.equal(s.publish, true);
+  s = await step(dir, TERMINAL, '2026-11-16T15:15:00Z', ['--no-ais']);
+  assert.equal(s.publish, false); assert.equal(s.publish_reason, 'no change');
+  // (the workflow discards an unpublished run, so restore what "was published")
+  s = await step(dir, mutate(TERMINAL, 'MSC TERESA', { ATD: '16.11.2026. 16:20:00', Status: 'DEPARTED' }), '2026-11-16T15:30:00Z', ['--no-ais']);
+  assert.equal(s.publish, true); assert.equal(s.publish_reason, 'status changed');
+});
+
+test('heartbeat: an unchanged status is republished once the published file is 55 minutes old', async () => {
+  const dir = tmp();
+  await step(dir, TERMINAL, '2026-11-16T15:00:00Z', ['--no-ais']);
+  const published = fs.readFileSync(path.join(dir, 'data/status.json'), 'utf8');
+  let s = await step(dir, TERMINAL, '2026-11-16T15:30:00Z', ['--no-ais']);
+  assert.equal(s.publish, false);
+  fs.writeFileSync(path.join(dir, 'data/status.json'), published); // unpublished run discarded
+  s = await step(dir, TERMINAL, '2026-11-16T15:56:00Z', ['--no-ais']);
+  assert.equal(s.publish, true); assert.equal(s.publish_reason, 'heartbeat');
+  assert.equal(json(dir, 'data/status.json').next_check_at, '2026-11-16T17:56:00+01:00');
 });

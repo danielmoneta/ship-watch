@@ -163,30 +163,23 @@ export function imoForName(name, index) {
   return (index && index[normName(name)]) || null;
 }
 
-export const BASELINE_HOURS = 1;   // the recurring cloud task runs this often (the platform minimum)
-export const STALE_GRACE_MIN = 100; // page shows "unconfirmed" this long after a check was due and missed
+export const HEARTBEAT_MIN = 55;     // publish at least this often even when nothing changed
+export const STALE_GRACE_MIN = 100;  // page shows "unconfirmed" this long after a publish was due and missed
 
-/**
- * When should the berth be looked at next?
- *  - at the next scheduled arrival or departure (plus 5 minutes),
- *  - every 30 minutes while a ship is due but the terminal has not recorded it yet
- *    (hourly once it is more than 3 hours overdue; after 12 hours the baseline takes over),
- *  - and never later than the baseline interval.
- */
-export function nextCheck({ atBerth, expected }, nowMs) {
-  const MIN = 60000;
-  const cands = [{ at: nowMs + BASELINE_HOURS * 60 * MIN, reason: 'baseline check' }];
-  const consider = (when, label) => {
-    if (!Number.isFinite(when)) return;
-    const late = nowMs - when;
-    if (late < 0) cands.push({ at: when + 5 * MIN, reason: label });
-    else if (late < 3 * 60 * MIN) cands.push({ at: nowMs + 30 * MIN, reason: `${label} is due; re-checking every 30 min` });
-    else if (late < 12 * 60 * MIN) cands.push({ at: nowMs + 60 * MIN, reason: `${label} is over 3 h overdue; re-checking hourly` });
+// Fields that change on every run without meaning anything changed at the berth.
+const VOLATILE = new Set(['generated_at', 'fetched_at', 'last_attempt_at', 'checked_at', 'next_check_at', 'next_check_reason',
+  'last_report', 'query_url', 'summary', 'vessels_listed', 'distance_km', 'nav', 'note', 'observed', 'nearest_port_label']);
+
+/** A string that changes only when the published status changes in a way worth publishing. */
+export function fingerprint(status) {
+  const strip = v => {
+    if (Array.isArray(v)) return v.map(strip);
+    if (v && typeof v === 'object') {
+      const o = {};
+      for (const k of Object.keys(v).sort()) if (!VOLATILE.has(k)) o[k] = strip(v[k]);
+      return o;
+    }
+    return v;
   };
-  for (const c of atBerth) consider(t(c.etd), `scheduled departure of ${c.name}`);
-  for (const c of expected) consider(t(c.eta), `expected arrival of ${c.name}`);
-  cands.sort((a, b) => a.at - b.at);
-  const best = cands[0];
-  if (best.at < nowMs + 20 * MIN) best.at = nowMs + 20 * MIN; // never hammer the terminal
-  return best;
+  return JSON.stringify(strip(status));
 }

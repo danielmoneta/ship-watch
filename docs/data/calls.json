@@ -13,7 +13,7 @@
       "atd": "2026-11-09T03:15:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-16T17:48:40+01:00",
+      "last_seen": "2026-11-16T18:28:10+01:00",
       "listed": true
     },
     "MSC PAMIRA III|AH643A": {
@@ -29,7 +29,7 @@
       "atd": "2026-11-10T23:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-16T17:48:40+01:00",
+      "last_seen": "2026-11-16T18:28:10+01:00",
       "listed": true
     },
     "CMA CGM CYRANO|0BEOUE1MA": {
@@ -45,7 +45,7 @@
       "atd": "2026-11-13T12:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-16T17:48:40+01:00",
+      "last_seen": "2026-11-16T18:28:10+01:00",
       "listed": true
     },
     "MERIC|14": {
@@ -61,7 +61,7 @@
       "atd": "2026-11-11T13:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-16T17:48:40+01:00",
+      "last_seen": "2026-11-16T18:28:10+01:00",
       "listed": true
     },
     "ARIFE|15": {
@@ -77,7 +77,7 @@
       "atd": "2026-11-11T18:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-16T17:48:40+01:00",
+      "last_seen": "2026-11-16T18:28:10+01:00",
       "listed": true
     },
     "PIERRE A|BMS0T0E19": {
@@ -93,7 +93,7 @@
       "atd": "2026-11-15T02:45:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-16T17:48:40+01:00",
+      "last_seen": "2026-11-16T18:28:10+01:00",
       "listed": true
     },
     "MSC RENEE XIII|QX642E": {
@@ -109,7 +109,7 @@
       "atd": "2026-11-15T13:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-16T17:48:40+01:00",
+      "last_seen": "2026-11-16T18:28:10+01:00",
       "listed": true
     },
     "SC MEDFORD|152W": {
@@ -125,7 +125,7 @@
       "atd": "2026-11-16T08:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-16T17:48:40+01:00",
+      "last_seen": "2026-11-16T18:28:10+01:00",
       "listed": true
     },
     "MSC TERESA|QX644E": {
@@ -141,13 +141,13 @@
       "atd": null,
       "phase": "at_berth",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-16T17:48:40+01:00",
+      "last_seen": "2026-11-16T18:28:10+01:00",
       "listed": true,
       "imo": "9469560",
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/msc-teresa-357891000",
-        "checked_at": "2026-11-16T17:48:40+01:00",
+        "checked_at": "2026-11-16T18:28:10+01:00",
         "found": true,
         "mmsi": "357891000",
         "distance_km": 4.3,
@@ -159,24 +159,9 @@
         },
         "destination_kind": "ais_destination",
         "berth_consistent": true,
-        "last_report": "2026-11-16T16:34:00.000Z",
+        "last_report": "2026-11-16T16:59:00.000Z",
         "nearest_port_label": "Kostrena",
         "imo": "9469560"
-      },
-      "voyage": {
-        "researched_at": "2026-11-16T16:24:23+01:00",
-        "previous_port": null,
-        "next_port": {
-          "name": "Trieste",
-          "locode": "ITTRS",
-          "eta": "2026-11-17T22:00:00+01:00",
-          "kind": "ais_destination",
-          "source": "VesselFinder; Wingo Marine (AIS destination \"ITTRS\")",
-          "source_url": "https://www.vesselfinder.com/vessels/details/9469560",
-          "retrieved_at": "2026-11-16T16:24:23+01:00",
-          "confidence": "medium"
-        },
-        "notes": "Previous port could not be established: by the time of research the free AIS sources already showed Rijeka as her last port. The Trieste ETA (17 Nov 21:00 UTC) is the crew-entered AIS value, not a carrier schedule. VesselFinder logged her AIS arrival in the Rijeka port area at 09:19 local, ahead of the terminal ATA of 10:30."
       }
     },
     "MSC EAGLE III|AH644A": {
@@ -192,16 +177,16 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-16T17:48:40+01:00",
+      "last_seen": "2026-11-16T18:28:10+01:00",
       "listed": true,
       "imo": "9302449",
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/msc-eagle-iii-636024014",
-        "checked_at": "2026-11-16T17:48:40+01:00",
+        "checked_at": "2026-11-16T18:28:10+01:00",
         "found": true,
         "mmsi": "636024014",
-        "distance_km": 18,
+        "distance_km": 3.5,
         "nav": null,
         "destination_raw": "HRRJK",
         "destination": {
@@ -211,21 +196,6 @@
         "destination_kind": "ais_destination",
         "berth_consistent": false,
         "last_report": null
-      },
-      "voyage": {
-        "researched_at": "2026-11-16T16:24:23+01:00",
-        "previous_port": {
-          "name": "Trieste",
-          "locode": "ITTRS",
-          "departed_at": "2026-11-16T01:59:00+01:00",
-          "kind": "actual",
-          "source": "VesselFinder (AIS port call: Last Port Trieste, ATD 16 Nov 00:59 UTC)",
-          "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
-          "retrieved_at": "2026-11-16T16:24:23+01:00",
-          "confidence": "medium"
-        },
-        "next_port": null,
-        "notes": "On 16 Nov ~16:00 local VesselFinder showed her at anchor in the Adriatic bound for Rijeka; Wingo placed her 18 km from the port. Next port after Rijeka not established."
       }
     },
     "MSC AUDREY|QX645E": {
@@ -241,28 +211,13 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-16T17:48:40+01:00",
+      "last_seen": "2026-11-16T18:28:10+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/port/rijeka-2263",
-        "checked_at": "2026-11-16T17:48:40+01:00",
+        "checked_at": "2026-11-16T18:28:10+01:00",
         "found": false
-      },
-      "voyage": {
-        "researched_at": "2026-11-16T17:50:48+01:00",
-        "previous_port": {
-          "name": "Trieste",
-          "locode": "ITTRS",
-          "departed_at": null,
-          "kind": "actual",
-          "source": "VesselFinder (AIS port call)",
-          "source_url": "https://www.vesselfinder.com/vessels/details/9540065",
-          "retrieved_at": "2026-11-16T17:50:48+01:00",
-          "confidence": "medium"
-        },
-        "next_port": null,
-        "notes": "AIS shows her moored at Trieste since 2026-11-14T05:49+01:00 (arrived from Koper, ATD 2026-11-13T06:46+01:00); not yet departed at research time. Port after Rijeka not found."
       },
       "imo": "9540065"
     },
@@ -279,7 +234,7 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-16T17:48:40+01:00",
+      "last_seen": "2026-11-16T18:28:10+01:00",
       "listed": true
     },
     "MSC CAITLIN II|AH645A": {
@@ -295,7 +250,7 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-16T17:48:40+01:00",
+      "last_seen": "2026-11-16T18:28:10+01:00",
       "listed": true
     },
     "CMA CGM ALTAMIRA|BMS0V0E19": {
@@ -311,7 +266,7 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-16T17:48:40+01:00",
+      "last_seen": "2026-11-16T18:28:10+01:00",
       "listed": true
     },
     "CMA CGM ANTIGONE|0BEOWE1MA": {
@@ -327,7 +282,7 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-16T17:48:40+01:00",
+      "last_seen": "2026-11-16T18:28:10+01:00",
       "listed": true
     }
   }

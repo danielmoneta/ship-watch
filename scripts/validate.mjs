@@ -31,18 +31,23 @@ export function validate(dataDir) {
   if (!calls || typeof calls.calls !== 'object') err('calls.json', 'missing or malformed');
   else for (const [id, c] of Object.entries(calls.calls)) {
     if (c.imo && !validImo(c.imo)) err(`calls ${id}`, `invalid IMO ${c.imo}`);
-    const v = c.voyage;
-    if (!v) continue;
-    if (!ISO.test(v.researched_at || '')) err(`calls ${id}`, 'voyage.researched_at must be an ISO timestamp');
+  }
+  const voyagesPath = path.join(dataDir, 'voyages.json');
+  const voyages = fs.existsSync(voyagesPath) ? readJson(voyagesPath, null) : {};
+  if (!voyages || typeof voyages !== 'object' || Array.isArray(voyages)) err('voyages.json', 'not a JSON object keyed by call_id');
+  else for (const [id, v] of Object.entries(voyages)) {
+    if (calls?.calls && !calls.calls[id]) err(`voyages ${id}`, 'no such call_id in calls.json (copy call_id exactly from research_needed)');
+    if (!v || typeof v !== 'object') { err(`voyages ${id}`, 'must be an object'); continue; }
+    if (!ISO.test(v.researched_at || '')) err(`voyages ${id}`, 'researched_at must be an ISO timestamp');
     for (const leg of ['previous_port', 'next_port']) {
       const p = v[leg];
       if (p == null) continue;
-      if (!p.name) err(`calls ${id}`, `${leg}.name missing (use null for the whole leg when unknown)`);
-      if (!KINDS[leg].includes(p.kind)) err(`calls ${id}`, `${leg}.kind must be one of ${KINDS[leg].join(', ')}`);
-      if (!p.source || !isUrl(p.source_url)) err(`calls ${id}`, `${leg} needs source and source_url`);
-      if (!CONF.includes(p.confidence)) err(`calls ${id}`, `${leg}.confidence must be high/medium/low`);
-      if (!ISO.test(p.retrieved_at || '')) err(`calls ${id}`, `${leg}.retrieved_at must be an ISO timestamp`);
-      for (const k of ['departed_at', 'eta']) if (p[k] != null && !ISO.test(p[k])) err(`calls ${id}`, `${leg}.${k} is not an ISO timestamp`);
+      if (!p.name) err(`voyages ${id}`, `${leg}.name missing (use null for the whole leg when unknown)`);
+      if (!KINDS[leg].includes(p.kind)) err(`voyages ${id}`, `${leg}.kind must be one of ${KINDS[leg].join(', ')}`);
+      if (!p.source || !isUrl(p.source_url)) err(`voyages ${id}`, `${leg} needs source and source_url`);
+      if (!CONF.includes(p.confidence)) err(`voyages ${id}`, `${leg}.confidence must be high/medium/low`);
+      if (!ISO.test(p.retrieved_at || '')) err(`voyages ${id}`, `${leg}.retrieved_at must be an ISO timestamp`);
+      for (const k of ['departed_at', 'eta']) if (p[k] != null && !ISO.test(p[k])) err(`voyages ${id}`, `${leg}.${k} is not an ISO timestamp`);
     }
   }
 

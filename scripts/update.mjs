@@ -17,7 +17,7 @@ import { fileURLToPath } from 'node:url';
 import { fetchText, readJson, writeJson, toZagrebIso, normName, validImo } from './lib/util.mjs';
 import { parseSailingList, terminalUrl, TERMINAL_URL } from './lib/terminal.mjs';
 import { parseWingoPort, parseWingoShip, resolveDestination, WINGO_PORT_URL, WINGO_BASE, BERTH_RING_KM } from './lib/wingo.mjs';
-import { mergeCalls, selectBerth, researchNeeds, buildStatus, nextCheck, STALE_GRACE_MIN } from './lib/state.mjs';
+import { mergeCalls, selectBerth, researchNeeds, buildStatus, fingerprint, HEARTBEAT_MIN, STALE_GRACE_MIN } from './lib/state.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const AISCATCHER_URL = 'https://www.aiscatcher.org/place/6398/brajdica-container-terminal';
@@ -78,6 +78,16 @@ export async function run(argv = process.argv.slice(2)) {
   let profiles = loadProfiles(dataDir);
 
   let calls = store.calls || {};
+  // Researched voyages live in their own file (written only by the research task) and are
+  // merged in here. Older data kept them inside calls.json: move those across once.
+  const voyagesFile = path.join(dataDir, 'voyages.json');
+  const voyages = readJson(voyagesFile, {});
+  let voyagesMoved = false;
+  for (const [id, c] of Object.entries(calls)) {
+    if (c.voyage && !voyages[id]) { voyages[id] = c.voyage; voyagesMoved = true; }
+  }
+  if (voyagesMoved) writeJson(voyagesFile, voyages);
+  const applyVoyages = () => { for (const [id, c] of Object.entries(calls)) { if (voyages[id]) c.voyage = voyages[id]; else delete c.voyage; } };
   let events = [];
   let terminal = prevStatus?.terminal || { url: TERMINAL_URL, ok: false, fetched_at: null, last_attempt_at: null, rows: 0, error: null };
   let ais = prevStatus?.ais || {};
@@ -104,6 +114,7 @@ export async function run(argv = process.argv.slice(2)) {
   for (const c of Object.values(calls)) {
     if (!c.imo && index[normName(c.name)]) c.imo = index[normName(c.name)];
   }
+  applyVoyages();
 
   // ---- 2. AIS corroboration (secondary; never overrides the terminal) ----
   const sel0 = selectBerth(calls, nowMs);
@@ -193,13 +204,16 @@ export async function run(argv = process.argv.slice(2)) {
   log.events = [...(log.events || []), ...events].slice(-500);
   const status = buildStatus({ calls, profiles, terminal, ais, nowIso, events: log.events });
   status.research_pending = needs.map(n => ({ name: n.name, imo: n.imo, priority: n.priority }));
-  // Plan the next look. On a rebuild the earlier plan stands.
-  const plan = opt.rebuild && prevStatus?.next_check_at
-    ? { at: new Date(prevStatus.next_check_at).getTime(), reason: prevStatus.next_check_reason }
-    : nextCheck(sel, nowMs);
-  status.next_check_at = toZagrebIso(plan.at);
-  status.next_check_reason = plan.reason;
+  status.research_needed = needs;
+  // The published file is refreshed at least every HEARTBEAT_MIN minutes; the page treats
+  // a file that is STALE_GRACE_MIN minutes past that as unconfirmed.
+  status.next_check_at = toZagrebIso(nowMs + 60 * 60000);
   status.stale_grace_minutes = STALE_GRACE_MIN;
+
+  // Publish only when something changed, or as an hourly heartbeat.
+  const prevAgeMin = prevStatus?.generated_at ? (nowMs - new Date(prevStatus.generated_at).getTime()) / 60000 : Infinity;
+  const changed = !prevStatus || fingerprint(prevStatus) !== fingerprint(status);
+  const publish = !!opt.rebuild || changed || prevAgeMin >= HEARTBEAT_MIN;
 
   const summary = {
     ran_at: nowIso,
@@ -211,13 +225,14 @@ export async function run(argv = process.argv.slice(2)) {
     next_expected: sel.expected.slice(0, 3).map(c => ({ name: c.name, imo: c.imo || null, eta: c.eta })),
     events,
     research_needed: needs,
-    next_check_at: status.next_check_at,
-    next_check_at_utc: new Date(plan.at).toISOString().slice(0, 16) + ':00Z',
-    next_check_reason: plan.reason,
+    publish,
+    publish_reason: changed ? 'status changed' : (publish ? 'heartbeat' : 'no change'),
     errors,
   };
 
-  writeJson(path.join(dataDir, 'calls.json'), { calls });
+  // voyage is stored in voyages.json only
+  const callsOut = Object.fromEntries(Object.entries(calls).map(([id, c]) => { const { voyage, ...rest } = c; return [id, rest]; }));
+  writeJson(path.join(dataDir, 'calls.json'), { calls: callsOut });
   writeJson(path.join(dataDir, 'vessels', 'index.json'), Object.fromEntries(Object.entries(index).sort()));
   writeJson(path.join(dataDir, 'status.json'), status);
   if (!opt.rebuild) {

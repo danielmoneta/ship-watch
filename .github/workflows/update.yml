@@ -1,0 +1,62 @@
+name: Update berth data
+
+# Reads the terminal's sailing list every 15 minutes and publishes when something changed
+# (or hourly as a heartbeat). No AI involved: research of new ships is done by a separate
+# Claude Code task, which this workflow starts through its API trigger when needed.
+on:
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-berth-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read terminal and AIS, update data
+        run: |
+          node --version
+          node scripts/update.mjs > "$RUNNER_TEMP/summary.json"
+          cat "$RUNNER_TEMP/summary.json"
+
+      - name: Start research task if a ship needs it
+        id: fire
+        env:
+          CLAUDE_FIRE_URL: ${{ secrets.CLAUDE_FIRE_URL }}
+          CLAUDE_FIRE_TOKEN: ${{ secrets.CLAUDE_FIRE_TOKEN }}
+        run: |
+          node scripts/fire-research.mjs "$RUNNER_TEMP/summary.json" | tee "$RUNNER_TEMP/fire.txt"
+          if grep -q '^FIRED=1' "$RUNNER_TEMP/fire.txt"; then echo "fired=true" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Publish
+        run: |
+          publish=$(node -p "JSON.parse(require('fs').readFileSync('$RUNNER_TEMP/summary.json','utf8')).publish")
+          if [ "$publish" != "true" ] && [ "${{ steps.fire.outputs.fired }}" != "true" ]; then
+            echo "No change since the last publish; nothing to commit."
+            exit 0
+          fi
+          node scripts/validate.mjs
+          msg=$(node -e "
+            const s = JSON.parse(require('fs').readFileSync('$RUNNER_TEMP/summary.json','utf8'));
+            const ev = s.events.filter(e => ['arrived','departed'].includes(e.type)).map(e => e.name + ' ' + e.type);
+            const berth = s.at_berth.map(v => v.name).join(' + ') || 'berth clear';
+            const what = !s.terminal_ok ? 'terminal unreachable, last state kept' : ev.length ? ev.join(', ') : berth + (s.publish_reason === 'heartbeat' ? ' (heartbeat)' : '');
+            console.log('data: ' + what);")
+          git config user.name "brajdica-watch[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data
+          git commit -q -m "$msg"
+          for i in 1 2 3; do
+            git push origin HEAD:main && exit 0
+            git pull --rebase origin main
+          done
+          exit 1
