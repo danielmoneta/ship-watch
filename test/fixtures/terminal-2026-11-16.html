@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Sailing lista</title>
+    <link href="/Content/css?v=ndss73WHwABRnIQSKu7Pzs2Ufd4xWJPr3OW6LGFL8401" rel="stylesheet"/>
+
+    <script src="/bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1"></script>
+
+</head>
+<body>
+    <div style="overflow:hidden">
+        <img src="/Content/AGCT_logo.png" style="margin-left:40px; margin-bottom:30px;" />
+        <select id="languageSelector" style="float:right; margin:50px;">
+                <option value="/?language=HR" >Hrvatski</option>
+                <option value="/?language=EN" selected>English</option>
+        </select>
+    </div>
+    <style>
+        .env {
+            font-size: x-large;
+            font-weight: bold;
+            color: red;
+            display: block;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 34px;
+            line-height: 24px;
+            padding-top: 10px;
+            padding-bottom: 0px;
+            background-color: white;
+        }
+
+        #divFooter {
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            background-color: #ff6600;
+            background-image: url('/Images/banner_1.png?x=2');
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+        }
+    </style>
+    <div class="container body-content" style="max-width:100%; padding:0px">
+        
+
+
+<link href="/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+<body style="font-family: 'Roboto',Roboto;">
+    <div>
+        <h2 style="background-color:#F96302; color:white; text-align: center;
+            background-position: center;
+            width:100%">
+            SAILING LIST
+        </h2>
+        <hr />
+    </div>
+    <div class="container" style="overflow:auto">
+<form action="/" method="get">            <div >
+
+                <font size="2">
+                    <input type="hidden" name="language" value="EN" />
+                    <div >
+                        <label for="from">From:</label>
+                        <input type="text" id="from" name="from" value="01.11.2026" />
+                        <label for="to">to:</label>
+                        <input type="text" id="to" name="to" value="10.12.2026" />
+
+                        <input type="text" id="search" name="search" placeholder=Search style="border-radius:4px" />
+                        <input type="submit" name="submit" value=Search style="border-radius:4px;  border: 2px solid #e7e7e7; background-color:#e7e7e7" />
+                    </div>
+                    <div style="display:inline-block;">
+                        <label for="Status">Show ANNOUNCED status:</label>
+                        <input data-val="true" data-val-required="Created" id="created" name="created" type="checkbox"  /> 
+                    </div>
+                </font>
+            </div>
+            <script>
+
+
+
+                $("#from").datepicker({
+                    dateFormat: 'dd.mm.yy',
+                    //minDate: '0d',
+                    beforeShow: function (textbox, instance) {
+                        instance.dpDiv.css({
+                            marginTop: '4px',
+                            //marginLeft: (-textbox.offsetWidth) + 'px'
+                            marginLeft: '0px'
+                        });
+                    },
+                    regional: 'hr'
+                });
+
+
+
+                $("#to").datepicker({
+                    dateFormat: 'dd.mm.yy',
+                    //minDate: '0d',
+                    beforeShow: function (textbox, instance) {
+                        instance.dpDiv.css({
+                            marginTop: '4px',
+                            //marginLeft: (-textbox.offsetWidth) + 'px'
+                            marginLeft: '0px'
+                        });
+                    },
+                    regional: 'hr'
+                });
+
+                function OnChange(el) {
+                    /* if ($("#created").checked) {
+
+                         $("#created").val("true")
+                     }
+                     else $("#created").val("false")*/
+
+                    if (el.checked == true) {
+
+                        el.value = "true";
+                    }
+                    else el.value = "false";
+
+
+                }
+
+                $(document).ready(function () {
+                    //Iterate through each of the rows
+                    $('tr').each(function () {
+                        //Check the value of the last <td> element in the row (trimmed to ignore white-space)
+                        if ($(this).find('td:last').text().trim() === "DEPARTED") {
+                            //Set the row to green
+                            $(this).css('color', '#707072');
+                        }
+                    });
+                });
+
+                $('#languageSelector').change(function () {
+                    var langPart = $(this).val();
+                    window.location.replace(window.location.origin +"/Home/Index" + langPart);
+                });
+
+            </script>
+</form>
+
+
+        <p>
+
+        </p>
+        <div>
+
+            <font size="2">
+                <table class="table">
+
+
+
+
+                    <tr bgcolor="#F96302" style="color:white;">
+                        <th>
+                            Vessel
+                        </th>
+                        <th>
+                            Shipper
+                        </th>
+                        <th>
+                            Arrival voyage
+                        </th>
+                        <th>
+                            Departure voyage
+                        </th>
+                        <th>
+                            ETA
+                        </th>
+                        <th>
+                            ETD
+                        </th>
+                        <th>
+                            ATA
+                        </th>
+                        <th>
+                            ATD
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                        <th>
+                            Truck Gate Open
+                        </th>
+
+                    </tr>
+
+
+                    
+                    <tr class=even>
+                        <td>
+                            CMA CGM SAO PAULO
+                        </td>
+                        <td>
+                            CMA
+                        </td>
+                        <td>
+                            0BEOSE1MA
+                        </td>
+                        <td>
+                            0BEOSE1MA
+                        </td>
+                        <td>
+                            1.11.2026. 6:30:00
+                        </td>
+                        <td>
+                            3.11.2026. 5:00:00
+                        </td>
+                        <td>
+                            1.11.2026. 7:15:00
+                        </td>
+                        <td>
+                            3.11.2026. 5:30:00
+                        </td>
+                        <td>
+                            DEPARTED
+                        </td>
+                        <td>
+                            25.10.2026.
+                        </td>
+                        
+
+                    </tr>
+                    <tr class=odd>
+                        <td>
+                            CMA CGM SINTRA
+                        </td>
+                        <td>
+                            CMA
+                        </td>
+                        <td>
+                            BMS0L0E19
+                        </td>
+                        <td>
+                            BMS0L0E19
+                        </td>
+                        <td>
+                            3.11.2026. 6:30:00
+                        </td>
+                        <td>
+                            3.11.2026. 18:00:00
+                        </td>
+                        <td>
+                            3.11.2026. 7:15:00
+                        </td>
+                        <td>
+                            3.11.2026. 22:30:00
+                        </td>
+                        <td>
+                            DEPARTED
+                        </td>
+                        <td>
+                            27.10.2026.
+                        </td>
+                        
+
+                    </tr>
+                    <tr class=even>
+                        <td>
+                            MSC CAITLIN II
+                        </td>
+                        <td>
+                            MSC
+                        </td>
+                        <td>
+                            AH642A
+                        </td>
+                        <td>
+                            AH642A
+                        </td>
+                        <td>
+                            3.11.2026. 20:30:00
+                        </td>
+                        <td>
+                            4.11.2026. 22:00:00
+                        </td>
+                        <td>
+                            3.11.2026. 23:50:00
+                        </td>
+                        <td>
+                            5.11.2026. 1:15:00
+                        </td>
+                        <td>
+                            DEPARTED
+                        </td>
+                        <td>
+                            27.10.2026.
+                        </td>
+                        
+
+                    </tr>
+                    <tr class=odd>
+                        <td>
+                            CMA CGM PLATINUM
+                        </td>
+                        <td>
+                            CMA
+                        </td>
+                        <td>
+                            0BEOQE1MA.
+                        </td>
+                        <td>
+                            0BEOQE1MA.
+                        </td>
+                        <td>
+                            4.11.2026. 21:15:00
+                        </td>
+                        <td>
+                            5.11.2026. 22:30:00
+                        </td>
+                        <td>
+                            5.11.2026. 3:40:00
+                        </td>
+                        <td>
+                            5.11.2026. 18:30:00
+                        </td>
+                        <td>
+                            DEPARTED
+                        </td>
+                        <td>
+                            28.10.2026.
+                        </td>
+                        
+
+                    </tr>
+                    <tr class=even>
+                        <td>
+                            SC MEDFORD
+                        </td>
+                        <td>
+                            COS
+                        </td>
+                        <td>
+                            151W
+                        </td>
+                        <td>
+                            151E
+                        </td>
+                        <td>
+                            8.11.2026. 6:30:00
+                        </td>
+                        <td>
+                            9.11.2026. 4:00:00
+                        </td>
+                        <td>
+                            8.11.2026. 6:00:00
+                        </td>
+                        <td>
+                            9.11.2026. 3:15:00
+                        </td>
+                        <td>
+                            DEPARTED
+                        </td>
+                        <td>
+                            1.11.2026.
+                        </td>
+                        
+
+                    </tr>
+                    <tr class=odd>
+                        <td>
+                            MSC PAMIRA III
+                        </td>
+                        <td>
+                            MSC
+                        </td>
+                        <td>
+                            AH643A
+                        </td>
+                        <td>
+                            AH643A
+                        </td>
+                        <td>
+                            9.11.2026. 9:00:00
+                        </td>
+                        <td>
+                            10.11.2026. 7:30:00
+                        </td>
+                        <td>
+                            9.11.2026. 9:00:00
+                        </td>
+                        <td>
+                            10.11.2026. 23:30:00
+                        </td>
+                        <td>
+                            DEPARTED
+                        </td>
+                        <td>
+                            2.11.2026.
+                        </td>
+                        
+
+                    </tr>
+                    <tr class=even>
+                        <td>
+                            CMA CGM CYRANO
+                        </td>
+                        <td>
+                            CMA
+                        </td>
+                        <td>
+                            0BEOUE1MA
+                        </td>
+                        <td>
+                            0BEOUE1MA
+                        </td>
+                        <td>
+                            10.11.2026. 14:30:00
+                        </td>
+                        <td>
+                            13.11.2026. 14:30:00
+                        </td>
+                        <td>
+                            11.11.2026. 1:30:00
+                        </td>
+                        <td>
+                            13.11.2026. 12:00:00
+                        </td>
+                        <td>
+                            DEPARTED
+                        </td>
+                        <td>
+                            3.11.2026.
+                        </td>
+                        
+
+                    </tr>
+                    <tr class=odd>
+                        <td>
+                            MERIC
+                        </td>
+                        <td>
+                            SOC
+                        </td>
+                        <td>
+                            14
+                        </td>
+                        <td>
+                            14
+                        </td>
+                        <td>
+                            11.11.2026. 6:30:00
+                        </td>
+                        <td>
+                            11.11.2026. 14:30:00
+                        </td>
+                        <td>
+                            11.11.2026. 6:45:00
+                        </td>
+                        <td>
+                            11.11.2026. 13:30:00
+                        </td>
+                        <td>
+                            DEPARTED
+                        </td>
+                        <td>
+                            4.11.2026.
+                        </td>
+                        
+
+                    </tr>
+                    <tr class=even>
+                        <td>
+                            ARIFE
+                        </td>
+                        <td>
+                            SOC
+                        </td>
+                        <td>
+                            15
+                        </td>
+                        <td>
+                            15
+                        </td>
+                        <td>
+                            10.11.2026. 6:30:00
+                        </td>
+                        <td>
+                            10.11.2026. 14:30:00
+                        </td>
+                        <td>
+                            11.11.2026. 15:00:00
+                        </td>
+                        <td>
+                            11.11.2026. 18:30:00
+                        </td>
+                        <td>
+                            DEPARTED
+                        </td>
+                        <td>
+                            3.11.2026.
+                        </td>
+                        
+
+                    </tr>
+                    <tr class=odd>
+                        <td>
+                            PIERRE A
+                        </td>
+                        <td>
+                            CMA
+                        </td>
+                        <td>
+                            BMS0T0E19
+                        </td>
+                        <td>
+                            BMS0T0E19
+                        </td>
+                        <td>
+                            14.11.2026. 14:30:00
+                        </td>
+                        <td>
+                            15.11.2026. 6:30:00
+                        </td>
+                        <td>
+                            14.11.2026. 10:00:00
+                        </td>
+                        <td>
+                            15.11.2026. 2:45:00
+                        </td>
+                        <td>
+                            DEPARTED
+                        </td>
+                        <td>
+                            7.11.2026.
+                        </td>
+                        
+
+                    </tr>
+                    <tr class=even>
+                        <td>
+                            MSC RENEE XIII
+                        </td>
+                        <td>
+                            MSC
+                        </td>
+                        <td>
+                            QX642E
+                        </td>
+                        <td>
+                            QX642E
+                        </td>
+                        <td>
+                            14.11.2026. 22:30:00
+                        </td>
+                        <td>
+                            15.11.2026. 14:30:00
+                        </td>
+                        <td>
+                            15.11.2026. 6:00:00
+                        </td>
+                        <td>
+                            15.11.2026. 13:30:00
+                        </td>
+                        <td>
+                            DEPARTED
+                        </td>
+                        <td>
+                            7.11.2026.
+                        </td>
+                        
+
+                    </tr>
+                    <tr class=odd>
+                        <td>
+                            SC MEDFORD
+                        </td>
+                        <td>
+                            COS
+                        </td>
+                        <td>
+                            152W
+                        </td>
+                        <td>
+                            152E
+                        </td>
+                        <td>
+                            15.11.2026. 14:30:00
+                        </td>
+                        <td>
+                            16.11.2026. 6:30:00
+                        </td>
+                        <td>
+                            15.11.2026. 16:45:00
+                        </td>
+                        <td>
+                            16.11.2026. 8:00:00
+                        </td>
+                        <td>
+                            DEPARTED
+                        </td>
+                        <td>
+                            8.11.2026.
+                        </td>
+                        
+
+                    </tr>
+                    <tr class=even>
+                        <td>
+                            MSC TERESA
+                        </td>
+                        <td>
+                            MSC
+                        </td>
+                        <td>
+                            QX644E
+                        </td>
+                        <td>
+                            QX644E
+                        </td>
+                        <td>
+                            16.11.2026. 6:30:00
+                        </td>
+                        <td>
+                            17.11.2026. 6:30:00
+                        </td>
+                        <td>
+                            16.11.2026. 10:30:00
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            UNDER OPS
+                        </td>
+                        <td>
+                            9.11.2026.
+                        </td>
+                        
+
+                    </tr>
+                    <tr class=odd>
+                        <td>
+                            MSC EAGLE III
+                        </td>
+                        <td>
+                            MSC
+                        </td>
+                        <td>
+                            AH644A
+                        </td>
+                        <td>
+                            AH644A
+                        </td>
+                        <td>
+                            17.11.2026. 14:30:00
+                        </td>
+                        <td>
+                            18.11.2026. 5:00:00
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            IN ARRIVAL
+                        </td>
+                        <td>
+                            10.11.2026.
+                        </td>
+                        
+
+                    </tr>
+                    <tr class=even>
+                        <td>
+                            MSC AUDREY
+                        </td>
+                        <td>
+                            MSC
+                        </td>
+                        <td>
+                            QX645E
+                        </td>
+                        <td>
+                            QX645E
+                        </td>
+                        <td>
+                            18.11.2026. 6:30:00
+                        </td>
+                        <td>
+                            19.11.2026. 14:30:00
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            IN ARRIVAL
+                        </td>
+                        <td>
+                            11.11.2026.
+                        </td>
+                        
+
+                    </tr>
+                    <tr class=odd>
+                        <td>
+                            UNITY ONE
+                        </td>
+                        <td>
+                            SOC
+                        </td>
+                        <td>
+                            13
+                        </td>
+                        <td>
+                            13
+                        </td>
+                        <td>
+                            18.11.2026. 6:30:00
+                        </td>
+                        <td>
+                            18.11.2026. 14:30:00
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            IN ARRIVAL
+                        </td>
+                        <td>
+                            11.11.2026.
+                        </td>
+                        
+
+                    </tr>
+                    <tr class=even>
+                        <td>
+                            MSC CAITLIN II
+                        </td>
+                        <td>
+                            MSC
+                        </td>
+                        <td>
+                            AH645A
+                        </td>
+                        <td>
+                            AH645A
+                        </td>
+                        <td>
+                            19.11.2026. 14:30:00
+                        </td>
+                        <td>
+                            20.11.2026. 6:30:00
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            IN ARRIVAL
+                        </td>
+                        <td>
+                            12.11.2026.
+                        </td>
+                        
+
+                    </tr>
+                    <tr class=odd>
+                        <td>
+                            CMA CGM  ALTAMIRA
+                        </td>
+                        <td>
+                            CMA
+                        </td>
+                        <td>
+                            BMS0V0E19
+                        </td>
+                        <td>
+                            BMS0V0E19
+                        </td>
+                        <td>
+                            20.11.2026. 6:30:00
+                        </td>
+                        <td>
+                            20.11.2026. 22:30:00
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            IN ARRIVAL
+                        </td>
+                        <td>
+                            13.11.2026.
+                        </td>
+                        
+
+                    </tr>
+                    <tr class=even>
+                        <td>
+                            CMA CGM ANTIGONE
+                        </td>
+                        <td>
+                            CMA
+                        </td>
+                        <td>
+                            0BEOWE1MA
+                        </td>
+                        <td>
+                            0BEOWE1MA
+                        </td>
+                        <td>
+                            24.11.2026. 22:30:00
+                        </td>
+                        <td>
+                            26.11.2026. 22:30:00
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            IN ARRIVAL
+                        </td>
+                        <td>
+                            17.11.2026.
+                        </td>
+                        
+
+                    </tr>
+
+                </table>
+
+            </font>
+        </div>
+    </div>
+</body>
+        <hr />
+        <footer>
+            <p>&copy; 2026 - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    <script src="/bundles/jquery?v=LhlFJpUDiiWD4x_Z7qvK0fIqHgOrRqhw-MrNYoDbMbM1"></script>
+
+    
+    
+    <footer>
+        <div id="divFooter"><span>© Adriatic Gate Container Terminal 2026</span></div>
+    </footer>
+</body>
+</html>

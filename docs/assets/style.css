@@ -1,0 +1,211 @@
+/* Brajdica Watch - display styles.
+   Two themes share one layout: body.colour (tablet / monitor) and body.eink (e-paper).
+   To restyle, start with the palette block below; see README "Changing the design". */
+
+/* ---------- Palette (colour mode) ----------
+   paper  #f4eee2   ink    #16222e   navy  #0f1c2a
+   brass  #9a7836   muted  #6b6558   rule  #d6ccb8
+   alert  #a4432b                                  */
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; }
+body {
+  background: #0f1c2a;
+  color: #16222e;
+  font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+a { color: inherit; }
+
+/* ---------- Boot / error ---------- */
+.boot { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #f4eee2; text-align: center; padding: 24px; }
+.boot-kicker { letter-spacing: .32em; text-transform: uppercase; font-size: 14px; color: #c9a45c; margin-bottom: 14px; }
+.boot-msg { font-family: "Cormorant Garamond", Georgia, serif; font-size: 34px; }
+
+/* ---------- Stage ---------- */
+.stage { display: flex; min-height: 100vh; height: 100vh; }
+.photo {
+  position: relative; flex: 1 1 54%; min-width: 0; overflow: hidden;
+  background: #0f1c2a;
+}
+.photo img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.photo:after { /* soft vignette so the credit stays legible */
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 26%;
+  background: linear-gradient(to top, rgba(8, 15, 23, .72), rgba(8, 15, 23, 0)); pointer-events: none;
+}
+.photo .credit {
+  position: absolute; z-index: 2; left: 2.2vmin; bottom: 1.8vmin; right: 2.2vmin;
+  color: #efe8d8; font-size: 12px; font-size: clamp(10px, 1.35vmin, 15px); line-height: 1.35; opacity: .92;
+}
+.photo .credit a { text-decoration: none; border-bottom: 1px solid rgba(239, 232, 216, .45); }
+.photo .tag {
+  position: absolute; z-index: 2; top: 2.4vmin; left: 2.4vmin;
+  background: #f4eee2; color: #16222e; padding: .5em .9em;
+  font-size: 13px; font-size: clamp(11px, 1.7vmin, 20px); font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
+}
+.photo .nophoto { position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 6%; }
+.photo .nophoto svg { width: 86%; max-width: 1100px; height: auto; }
+.photo .nophoto .scale { margin-top: 3vmin; color: #c9a45c; letter-spacing: .22em; text-transform: uppercase; font-size: 13px; font-size: clamp(11px, 1.7vmin, 20px); text-align: center; }
+.photo .nophoto .note { margin-top: 1.2vmin; color: #8fa0b3; font-size: 12px; font-size: clamp(10px, 1.35vmin, 15px); text-align: center; }
+
+.placard {
+  flex: 0 0 46%; max-width: 46%; min-width: 0;
+  background: #f4eee2;
+  padding: 3.2vmin 3.6vmin 2.2vmin;
+  display: flex; flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.placard:before { /* museum-label inner rule */
+  content: ""; position: absolute; top: 1.3vmin; left: 1.3vmin; right: 1.3vmin; bottom: 1.3vmin;
+  border: 1px solid #d6ccb8; pointer-events: none;
+}
+.placard > * { position: relative; }
+
+.kicker {
+  font-size: 12px; font-size: clamp(10px, 1.45vmin, 17px);
+  letter-spacing: .26em; text-transform: uppercase; color: #9a7836; font-weight: 600;
+}
+.state {
+  margin-top: 1.6vmin; display: flex; align-items: center; flex-wrap: wrap;
+  font-size: 15px; font-size: clamp(12px, 2vmin, 24px); font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+}
+.state .dot { width: .72em; height: .72em; border-radius: 50%; background: #2f7d5b; margin-right: .6em; flex: none; }
+.state.expected .dot { background: transparent; border: .16em solid #9a7836; }
+.state.empty .dot { background: transparent; border: .16em solid #6b6558; }
+.state.stale .dot, .state.unknown .dot { background: #a4432b; }
+.state.stale, .state.unknown { color: #a4432b; }
+.state .sub { font-weight: 500; letter-spacing: .08em; color: #6b6558; margin-left: .8em; text-transform: none; }
+
+.name {
+  font-family: "Cormorant Garamond", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  font-weight: 700; line-height: .98; letter-spacing: .005em;
+  margin: 1.4vmin 0 0; color: #16222e;
+  font-size: 64px; /* JS fits this to the placard width */
+  overflow-wrap: break-word;
+}
+.subname { margin-top: .9vmin; font-size: 15px; font-size: clamp(12px, 1.9vmin, 23px); color: #6b6558; }
+
+.rule { height: 1px; background: #d6ccb8; margin: 2vmin 0; flex: none; }
+.rule.brass { height: 2px; background: #9a7836; width: 9vmin; margin: 2vmin 0 0; }
+
+/* Route: previous port -> Rijeka -> next port */
+.route { display: flex; align-items: stretch; margin-top: 2.2vmin; }
+.route .leg { flex: 1 1 0; min-width: 0; }
+.route .leg.mid { text-align: center; }
+.route .leg.next { text-align: right; }
+.route .arrow { flex: 0 0 auto; align-self: center; padding: 0 1.2vmin; color: #9a7836; font-size: 22px; font-size: clamp(16px, 3vmin, 36px); line-height: 1; }
+.label { font-size: 11px; font-size: clamp(9.5px, 1.3vmin, 15px); letter-spacing: .2em; text-transform: uppercase; color: #6b6558; font-weight: 600; }
+.route .port {
+  font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; line-height: 1.05; margin-top: .5vmin;
+  font-size: 24px; font-size: clamp(18px, 3.5vmin, 44px);
+}
+.route .port.none { color: #9c9585; font-style: italic; font-weight: 500; }
+.route .when { font-size: 13px; font-size: clamp(11px, 1.65vmin, 20px); margin-top: .5vmin; color: #16222e; }
+.route .kind { font-size: 10.5px; font-size: clamp(9px, 1.2vmin, 14px); letter-spacing: .08em; color: #9a7836; margin-top: .45vmin; text-transform: uppercase; font-weight: 600; }
+
+/* Arrival / departure */
+.times { display: flex; margin-top: .4vmin; }
+.times .t { flex: 1 1 0; min-width: 0; }
+.times .t + .t { padding-left: 2.4vmin; border-left: 1px solid #d6ccb8; margin-left: 2.4vmin; }
+.times .big {
+  font-family: "Cormorant Garamond", Georgia, serif; font-weight: 700; line-height: 1;
+  font-size: 40px; font-size: clamp(26px, 5.6vmin, 72px); margin-top: .7vmin; font-variant-numeric: lining-nums;
+}
+.times .day { font-size: 14px; font-size: clamp(12px, 1.9vmin, 23px); margin-top: .5vmin; font-weight: 500; }
+.times .note { font-size: 11px; font-size: clamp(9.5px, 1.3vmin, 15px); color: #a4432b; margin-top: .4vmin; font-weight: 600; letter-spacing: .04em; }
+
+/* Specifications */
+.specs { display: flex; flex-wrap: wrap; margin: 0 -1.2vmin; }
+.spec { flex: 0 0 33.333%; padding: .7vmin 1.2vmin; min-width: 0; }
+.spec .v { font-size: 19px; font-size: clamp(15px, 2.7vmin, 33px); font-weight: 600; margin-top: .3vmin; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.spec .v small { font-size: .62em; font-weight: 500; color: #6b6558; }
+
+.fact {
+  font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-weight: 500;
+  font-size: 18px; font-size: clamp(14px, 2.35vmin, 29px); line-height: 1.25; color: #2c3a47; margin-top: .4vmin;
+}
+.also { margin-top: 1.2vmin; font-size: 13px; font-size: clamp(11px, 1.65vmin, 20px); color: #16222e; }
+.also b { letter-spacing: .04em; }
+
+.spacer { flex: 1 1 auto; min-height: 1vmin; }
+
+.foot { display: flex; align-items: flex-end; justify-content: space-between; font-size: 12px; font-size: clamp(10px, 1.45vmin, 17px); color: #6b6558; }
+.foot .verified b { color: #16222e; font-weight: 600; }
+.foot .verified.stale b, .foot .verified.stale { color: #a4432b; }
+.foot .links { text-align: right; white-space: nowrap; margin-left: 2vmin; }
+.foot .links a { text-decoration: none; border-bottom: 1px solid #c9bfa9; cursor: pointer; }
+.foot .links a + a { margin-left: 1.4em; }
+
+.ribbon { position: fixed; z-index: 20; top: 0; left: 0; right: 0; background: #a4432b; color: #fff; text-align: center; font-size: 13px; font-weight: 700; letter-spacing: .2em; padding: 6px 10px; text-transform: uppercase; }
+
+/* ---------- Sources drawer ---------- */
+.sources { background: #f4eee2; color: #16222e; padding: 0 3.6vmin; }
+.sources.closed { display: none; }
+.sources .inner { max-width: 1100px; margin: 0 auto; padding: 28px 0 60px; font-size: 14px; line-height: 1.5; }
+.sources h2 { font-family: "Cormorant Garamond", Georgia, serif; font-size: 28px; margin: 0 0 4px; }
+.sources h3 { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: #9a7836; margin: 26px 0 8px; }
+.sources table { border-collapse: collapse; width: 100%; }
+.sources th, .sources td { text-align: left; padding: 6px 12px 6px 0; border-bottom: 1px solid #d6ccb8; vertical-align: top; }
+.sources th { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #6b6558; font-weight: 600; }
+.sources .ok { color: #2f7d5b; font-weight: 600; }
+.sources .bad { color: #a4432b; font-weight: 600; }
+.sources p { margin: 6px 0; }
+.sources .muted { color: #6b6558; }
+
+/* ---------- Portrait ---------- */
+@media (orientation: portrait) {
+  .stage { flex-direction: column; height: auto; min-height: 100vh; }
+  .photo { flex: 0 0 34vh; height: 34vh; }
+  .placard { flex: 1 1 auto; max-width: none; min-height: 66vh; padding: 3.4vmin 4.4vmin 2.6vmin; }
+  .spec { flex-basis: 33.333%; }
+}
+/* Short, wide screens (small landscape tablets): tighten vertical rhythm. */
+@media (orientation: landscape) and (max-height: 620px) {
+  .rule { margin: 1.4vmin 0; }
+  .fact { display: none; }
+}
+
+/* ======================================================================
+   E-ink mode: pure black on white, no photo, no animation, heavier type.
+   ====================================================================== */
+body.eink { background: #fff; color: #000; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+body.eink .stage { display: block; height: auto; min-height: 100vh; }
+body.eink .photo { display: none; }
+body.eink.withphoto .photo { display: block; height: 30vh; }
+body.eink.withphoto .photo img { -webkit-filter: grayscale(1) contrast(1.25); filter: grayscale(1) contrast(1.25); }
+body.eink .placard { max-width: none; min-height: 100vh; background: #fff; padding: 4vmin 5vmin 3vmin; border: 0; }
+body.eink .placard:before { border: 3px solid #000; top: 1.2vmin; left: 1.2vmin; right: 1.2vmin; bottom: 1.2vmin; }
+body.eink .kicker, body.eink .label, body.eink .route .kind, body.eink .subname,
+body.eink .foot, body.eink .state .sub, body.eink .spec .v small, body.eink .route .arrow,
+body.eink .fact, body.eink .times .note, body.eink .route .port.none { color: #000; }
+body.eink .kicker { font-weight: 700; font-size: clamp(11px, 1.8vmin, 20px); }
+body.eink .label { font-weight: 700; font-size: clamp(11px, 1.7vmin, 19px); }
+body.eink .name { font-family: Georgia, "Times New Roman", serif; color: #000; }
+body.eink .route .port, body.eink .times .big, body.eink .fact { font-family: Georgia, "Times New Roman", serif; }
+body.eink .route .port { font-weight: 700; font-size: clamp(20px, 4vmin, 48px); }
+body.eink .route .when { font-size: clamp(13px, 2.1vmin, 24px); font-weight: 600; color: #000; }
+body.eink .times .day, body.eink .also, body.eink .spec .v { color: #000; }
+body.eink .route .kind { font-size: clamp(10px, 1.5vmin, 16px); font-weight: 700; }
+body.eink .times .big { font-size: clamp(30px, 7vmin, 84px); }
+body.eink .times .day { font-size: clamp(14px, 2.4vmin, 27px); font-weight: 600; }
+body.eink .spec .v { font-size: clamp(17px, 3.1vmin, 36px); font-weight: 700; }
+body.eink .rule { background: #000; height: 2px; }
+body.eink .rule.brass { background: #000; height: 5px; }
+body.eink .times .t + .t { border-left: 2px solid #000; }
+body.eink .state { color: #000; font-size: clamp(14px, 2.5vmin, 28px); }
+body.eink .state .dot { background: #000; border-radius: 0; }
+body.eink .state.expected .dot, body.eink .state.empty .dot { background: #fff; border: .18em solid #000; }
+body.eink .state.stale, body.eink .state.unknown { background: #000; color: #fff; padding: .45em .7em; }
+body.eink .state.stale .dot, body.eink .state.unknown .dot { display: none; }
+body.eink .state.stale .sub, body.eink .state.unknown .sub { color: #fff; }
+body.eink .foot .verified b, body.eink .foot .verified.stale, body.eink .foot .verified.stale b { color: #000; }
+body.eink .foot { font-size: clamp(11px, 1.7vmin, 19px); font-weight: 600; }
+body.eink .foot .links a { border-bottom: 1px solid #000; }
+body.eink .sources { background: #fff; color: #000; }
+body.eink .sources h3, body.eink .sources .muted, body.eink .sources th, body.eink .sources .ok, body.eink .sources .bad { color: #000; }
+body.eink .sources th, body.eink .sources td { border-bottom: 1px solid #000; }
+body.eink .ribbon { background: #000; }
+body.eink .boot { color: #000; }
+body.eink .boot-kicker { color: #000; }

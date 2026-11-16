@@ -1,0 +1,98 @@
+{
+  "imo": "9469560",
+  "name": "MSC TERESA",
+  "aliases": [],
+  "mmsi": "357891000",
+  "fields": {
+    "type": {
+      "value": "Container ship",
+      "source": "VesselFinder; Wikidata",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9469560",
+      "retrieved_at": "2026-11-16T16:24:23+01:00",
+      "confidence": "high"
+    },
+    "flag": {
+      "value": "Panama",
+      "source": "VesselFinder; Wingo Marine (AIS); Wikidata",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9469560",
+      "retrieved_at": "2026-11-16T16:24:23+01:00",
+      "confidence": "high"
+    },
+    "year_built": {
+      "value": 2011,
+      "source": "VesselFinder; Wikidata",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9469560",
+      "retrieved_at": "2026-11-16T16:24:23+01:00",
+      "confidence": "high"
+    },
+    "length_m": {
+      "value": 365.8,
+      "source": "VesselFinder; Wikidata (AIS broadcasts 366 m)",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9469560",
+      "retrieved_at": "2026-11-16T16:24:23+01:00",
+      "confidence": "high"
+    },
+    "beam_m": {
+      "value": 51.2,
+      "source": "VesselFinder (Wikidata gives 51.3 m; AIS broadcasts 51 m)",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9469560",
+      "retrieved_at": "2026-11-16T16:24:23+01:00",
+      "confidence": "high"
+    },
+    "teu": {
+      "value": 13800,
+      "source": "Web search summary of a Wikipedia-derived list of large container ships",
+      "source_url": "https://en.wikipedia.org/wiki/MSC_Danit",
+      "retrieved_at": "2026-11-16T16:24:23+01:00",
+      "confidence": "low",
+      "note": "Nominal figure for her class. Not confirmed by a registry; the class lead ship MSC Danit is quoted at 14,000 TEU maximum."
+    },
+    "gross_tonnage": {
+      "value": 153115,
+      "source": "VesselFinder; Wikidata",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9469560",
+      "retrieved_at": "2026-11-16T16:24:23+01:00",
+      "confidence": "high"
+    },
+    "deadweight_t": {
+      "value": 166101,
+      "source": "Wikidata; Wingo Marine",
+      "source_url": "https://www.wikidata.org/wiki/Q84262648",
+      "retrieved_at": "2026-11-16T16:24:23+01:00",
+      "confidence": "medium",
+      "note": "VesselFinder lists 190,734 t; two sources agree on 166,101 t."
+    },
+    "callsign": {
+      "value": "3FZP9",
+      "source": "VesselFinder; Wingo Marine (AIS); Wikidata",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9469560",
+      "retrieved_at": "2026-11-16T16:24:23+01:00",
+      "confidence": "high"
+    },
+    "operator": {
+      "value": "MSC",
+      "source": "AGCT sailing list (shipper column)",
+      "source_url": "https://webusercorner.ictsi.hr/?language=EN",
+      "retrieved_at": "2026-11-16T16:24:23+01:00",
+      "confidence": "high"
+    }
+  },
+  "photo": null,
+  "facts": [
+    {
+      "text": "She arrived drawing 11.3 m of water against a maximum draught of 16 m, so she came in well short of fully laden.",
+      "source": "Wingo Marine (AIS draught, 16 Nov 2026); Wikidata (maximum draught)",
+      "source_url": "https://wingo-marine.com/ship/msc-teresa-357891000",
+      "confidence": "medium"
+    }
+  ],
+  "research": {
+    "status": "partial",
+    "researched_at": "2026-11-16T16:24:23+01:00",
+    "missing": [
+      "photo",
+      "builder"
+    ],
+    "notes": "No photograph of this ship on Wikimedia Commons (IMO category and name searched). Builder is given on Wikidata but could not be cross-checked. TEU is a class figure."
+  }
+}

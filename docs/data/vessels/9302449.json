@@ -1,0 +1,104 @@
+{
+  "imo": "9302449",
+  "name": "MSC EAGLE III",
+  "aliases": [],
+  "mmsi": "636024014",
+  "fields": {
+    "type": {
+      "value": "Container ship",
+      "source": "VesselFinder",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+      "retrieved_at": "2026-11-16T16:24:23+01:00",
+      "confidence": "medium"
+    },
+    "flag": {
+      "value": "Liberia",
+      "source": "VesselFinder; Wingo Marine (AIS)",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+      "retrieved_at": "2026-11-16T16:24:23+01:00",
+      "confidence": "high"
+    },
+    "year_built": {
+      "value": 2004,
+      "source": "VesselFinder; Flexport Atlas (via web search)",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+      "retrieved_at": "2026-11-16T16:24:23+01:00",
+      "confidence": "high"
+    },
+    "length_m": {
+      "value": 207.5,
+      "source": "VesselFinder (AIS broadcasts 207 m)",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+      "retrieved_at": "2026-11-16T16:24:23+01:00",
+      "confidence": "high"
+    },
+    "beam_m": {
+      "value": 29.8,
+      "source": "VesselFinder (AIS broadcasts 30 m)",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+      "retrieved_at": "2026-11-16T16:24:23+01:00",
+      "confidence": "high"
+    },
+    "teu": {
+      "value": 2478,
+      "source": "Flexport Atlas, as reported in a web search summary",
+      "source_url": "https://atlas.flexport.com/vessel/imo:9302449/mmsi:636024014/name:msc-eagle-iii",
+      "retrieved_at": "2026-11-16T16:24:23+01:00",
+      "confidence": "low",
+      "note": "Single source, seen only through a search summary."
+    },
+    "gross_tonnage": {
+      "value": 25406,
+      "source": "VesselFinder",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+      "retrieved_at": "2026-11-16T16:24:23+01:00",
+      "confidence": "medium"
+    },
+    "deadweight_t": {
+      "value": 33781,
+      "source": "VesselFinder; Maritime Optima (via web search)",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+      "retrieved_at": "2026-11-16T16:24:23+01:00",
+      "confidence": "high"
+    },
+    "callsign": {
+      "value": "5LQN7",
+      "source": "VesselFinder; Wingo Marine (AIS)",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+      "retrieved_at": "2026-11-16T16:24:23+01:00",
+      "confidence": "high"
+    },
+    "former_names": {
+      "value": "Maersk Dakar, Frisia Lübeck, CSAV Rio Lontue",
+      "source": "VesselFinder (name history)",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+      "retrieved_at": "2026-11-16T16:24:23+01:00",
+      "confidence": "medium"
+    },
+    "operator": {
+      "value": "MSC",
+      "source": "AGCT sailing list (shipper column)",
+      "source_url": "https://webusercorner.ictsi.hr/?language=EN",
+      "retrieved_at": "2026-11-16T16:24:23+01:00",
+      "confidence": "high"
+    }
+  },
+  "photo": null,
+  "facts": [
+    {
+      "text": "She is on at least her fourth name: earlier in her career she sailed as CSAV Rio Lontue, Frisia Lübeck and Maersk Dakar.",
+      "source": "VesselFinder (name history)",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+      "confidence": "medium"
+    }
+  ],
+  "research": {
+    "status": "partial",
+    "researched_at": "2026-11-16T16:24:23+01:00",
+    "missing": [
+      "photo",
+      "builder"
+    ],
+    "notes": "No photograph on Wikimedia Commons under her IMO category or current name. Built in Germany per one source; shipyard not established."
+  }
+}

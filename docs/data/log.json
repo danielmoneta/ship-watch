@@ -1,0 +1,44 @@
+{
+  "runs": [
+    {
+      "at": "2026-11-16T16:12:47+01:00",
+      "terminal_ok": true,
+      "rows": 15,
+      "berth": [
+        "MSC TERESA"
+      ],
+      "events": 1,
+      "research_needed": [
+        "MSC TERESA",
+        "MSC EAGLE III",
+        "MSC AUDREY"
+      ],
+      "errors": []
+    },
+    {
+      "at": "2026-11-16T16:18:14+01:00",
+      "terminal_ok": true,
+      "rows": 15,
+      "berth": [
+        "MSC TERESA"
+      ],
+      "events": 0,
+      "research_needed": [
+        "MSC TERESA",
+        "MSC EAGLE III",
+        "MSC AUDREY"
+      ],
+      "errors": []
+    }
+  ],
+  "events": [
+    {
+      "type": "arrived",
+      "call_id": "MSC TERESA|QX644E",
+      "name": "MSC TERESA",
+      "at": "2026-11-16T10:30:00+01:00",
+      "observed": "2026-11-16T16:12:47+01:00",
+      "backfilled": true
+    }
+  ]
+}
