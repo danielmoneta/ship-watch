@@ -1,0 +1,101 @@
+{
+  "imo": "9344409",
+  "name": "UNITY ONE",
+  "aliases": [
+    "KARL-JACOB K"
+  ],
+  "mmsi": "352005466",
+  "fields": {
+    "type": {
+      "value": "General cargo ship",
+      "source": "VesselFinder; Maritime Optima",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
+      "retrieved_at": "2026-11-16T19:25:00+01:00",
+      "confidence": "high",
+      "note": "Not a purpose-built container ship; the terminal lists her with shipper SOC (shipper-owned containers)."
+    },
+    "flag": {
+      "value": "Panama",
+      "source": "VesselFinder; Maritime Optima",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
+      "retrieved_at": "2026-11-16T19:25:00+01:00",
+      "confidence": "high"
+    },
+    "year_built": {
+      "value": 2006,
+      "source": "VesselFinder; Maritime Optima",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
+      "retrieved_at": "2026-11-16T19:25:00+01:00",
+      "confidence": "high"
+    },
+    "length_m": {
+      "value": 90.25,
+      "source": "VesselFinder; Maritime Optima (about 90 m)",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
+      "retrieved_at": "2026-11-16T19:25:00+01:00",
+      "confidence": "high"
+    },
+    "beam_m": {
+      "value": 15.2,
+      "source": "VesselFinder",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
+      "retrieved_at": "2026-11-16T19:25:00+01:00",
+      "confidence": "medium"
+    },
+    "gross_tonnage": {
+      "value": 2997,
+      "source": "VesselFinder",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
+      "retrieved_at": "2026-11-16T19:25:00+01:00",
+      "confidence": "medium"
+    },
+    "deadweight_t": {
+      "value": 4745,
+      "source": "VesselFinder; Maritime Optima",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
+      "retrieved_at": "2026-11-16T19:25:00+01:00",
+      "confidence": "high"
+    },
+    "callsign": {
+      "value": "3E8724",
+      "source": "MarineLink",
+      "source_url": "https://ports.marinelink.com/vessels/vessel/352005466",
+      "retrieved_at": "2026-11-16T19:25:00+01:00",
+      "confidence": "medium"
+    },
+    "former_names": {
+      "value": "Karl-Jacob K",
+      "source": "Wikimedia Commons (file filed under IMO 9344409)",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Karl-Jacob_K_(ship,_2006)_IMO_9344409_Calandkanaal.JPG",
+      "retrieved_at": "2026-11-16T19:25:00+01:00",
+      "confidence": "medium"
+    }
+  },
+  "photo": {
+    "file": "data/photos/9344409.jpg",
+    "title": "Karl-Jacob K (ship, 2006) IMO 9344409 Calandkanaal.JPG",
+    "author": "Alf van Beem",
+    "license": "Public domain",
+    "license_url": null,
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Karl-Jacob_K_(ship,_2006)_IMO_9344409_Calandkanaal.JPG",
+    "taken": "2017-08-20 08:39:17",
+    "width": 4608,
+    "height": 3456,
+    "retrieved_at": "2026-11-16T19:20:24+01:00",
+    "caption": "Photographed as KARL-JACOB K, 2017"
+  },
+  "facts": [],
+  "research": {
+    "status": "partial",
+    "researched_at": "2026-11-16T19:25:00+01:00",
+    "missing": [
+      "teu",
+      "builder",
+      "operator",
+      "owner",
+      "class"
+    ],
+    "notes": "Identified by name via MarineLink, Maritime Optima and VesselFinder (IMO 9344409, MMSI 352005466); VesselFinder shows her bound for Rijeka with an ETA matching the terminal list. She is a small general cargo ship, not a container ship, so identification rests on the Rijeka destination/ETA match. Owner (one source: MagicPort) not recorded."
+  }
+}

@@ -43,5 +43,20 @@
     },
     "next_port": null,
     "notes": "AIS shows her moored at Trieste since 2026-11-14T05:49+01:00 (arrived from Koper, ATD 2026-11-13T06:46+01:00); not yet departed at research time. Port after Rijeka not found."
+  },
+  "UNITY ONE|13": {
+    "researched_at": "2026-11-16T19:25:00+01:00",
+    "previous_port": {
+      "name": "Derince",
+      "locode": "TRDRC",
+      "departed_at": "2026-11-12T14:16:00+01:00",
+      "kind": "actual",
+      "source": "VesselFinder (AIS port call)",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
+      "retrieved_at": "2026-11-16T19:25:00+01:00",
+      "confidence": "medium"
+    },
+    "next_port": null,
+    "notes": "Previous port is VesselFinder's 'Last Port' (Derince, Turkey, ATD 12 Nov 13:16 UTC). AIS destination is Rijeka, which only shows she is bound there."
   }
 }
