@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-16T16:24:23+01:00",
+  "generated_at": "2026-11-16T17:21:02+01:00",
   "timezone": "Europe/Zagreb",
   "terminal": {
     "url": "https://webusercorner.ictsi.hr/?language=EN",
     "query_url": "https://webusercorner.ictsi.hr/?language=EN&from=06.11.2026&to=07.12.2026",
     "ok": true,
-    "fetched_at": "2026-11-16T16:18:14+01:00",
-    "last_attempt_at": "2026-11-16T16:18:14+01:00",
+    "fetched_at": "2026-11-16T17:21:02+01:00",
+    "last_attempt_at": "2026-11-16T17:21:02+01:00",
     "rows": 15,
     "error": null
   },
@@ -30,7 +30,7 @@
         "ais": {
           "source": "Wingo Marine",
           "source_url": "https://wingo-marine.com/ship/msc-teresa-357891000",
-          "checked_at": "2026-11-16T16:18:14+01:00",
+          "checked_at": "2026-11-16T17:21:02+01:00",
           "found": true,
           "mmsi": "357891000",
           "distance_km": 4.3,
@@ -42,7 +42,7 @@
           },
           "destination_kind": "ais_destination",
           "berth_consistent": true,
-          "last_report": "2026-11-16T13:56:00.000Z",
+          "last_report": "2026-11-16T15:28:00.000Z",
           "nearest_port_label": "Kostrena",
           "imo": "9469560"
         },
@@ -183,7 +183,7 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/msc-eagle-iii-636024014",
-        "checked_at": "2026-11-16T16:18:14+01:00",
+        "checked_at": "2026-11-16T17:21:02+01:00",
         "found": true,
         "mmsi": "636024014",
         "distance_km": 18,
@@ -332,7 +332,7 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/port/rijeka-2263",
-        "checked_at": "2026-11-16T16:18:14+01:00",
+        "checked_at": "2026-11-16T17:21:02+01:00",
         "found": false
       },
       "profile": null
@@ -471,18 +471,18 @@
       "name": "Wingo Marine",
       "url": "https://wingo-marine.com/port/rijeka-2263",
       "ok": true,
-      "fetched_at": "2026-11-16T16:18:14+01:00",
-      "last_attempt_at": "2026-11-16T16:18:14+01:00",
+      "fetched_at": "2026-11-16T17:21:02+01:00",
+      "last_attempt_at": "2026-11-16T17:21:02+01:00",
       "error": null,
-      "summary": "27 vessels reported within 15 km in the last 24 hours",
-      "vessels_listed": 33
+      "summary": "24 vessels reported within 15 km in the last 24 hours",
+      "vessels_listed": 35
     },
     "aiscatcher": {
       "name": "AIS-catcher",
       "url": "https://www.aiscatcher.org/place/6398/brajdica-container-terminal",
       "ok": true,
-      "fetched_at": "2026-11-16T16:18:14+01:00",
-      "last_attempt_at": "2026-11-16T16:18:14+01:00",
+      "fetched_at": "2026-11-16T17:21:02+01:00",
+      "last_attempt_at": "2026-11-16T17:21:02+01:00",
       "error": null,
       "receiving_stations": 0,
       "vessels_inside": 0,
@@ -507,5 +507,8 @@
       "imo": null,
       "priority": "next_arrival"
     }
-  ]
+  ],
+  "next_check_at": "2026-11-16T20:21:02+01:00",
+  "next_check_reason": "baseline check",
+  "stale_grace_minutes": 100
 }

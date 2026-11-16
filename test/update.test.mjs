@@ -11,6 +11,7 @@ import { parseSailingList, parseTerminalDateTime, phaseOf, callId } from '../scr
 import { parseWingoPort, parseWingoShip, resolveDestination } from '../scripts/lib/wingo.mjs';
 import { zagrebWallToIso, toZagrebIso, validImo } from '../scripts/lib/util.mjs';
 import { run } from '../scripts/update.mjs';
+import { nextCheck } from '../scripts/lib/state.mjs';
 
 const FX = path.join(path.dirname(fileURLToPath(import.meta.url)), 'fixtures');
 const TERMINAL = fs.readFileSync(path.join(FX, 'terminal-2026-11-16.html'), 'utf8');
@@ -160,7 +161,7 @@ test('SIMULATION: terminal outage keeps the last verified vessel and records the
   assert.equal(status.generated_at, '2026-11-16T20:30:00+01:00');
   assert.equal(json(dir, 'data/log.json').runs.at(-1).terminal_ok, false);
   // (The page itself turns this into "occupancy unconfirmed" once fetched_at is older than stale_after_hours.)
-  assert.equal(status.stale_after_hours, 3);
+  assert.ok(status.next_check_at && status.stale_grace_minutes === 100);
 });
 
 test('an empty table is treated as a failed read, never as "berth empty"', async () => {
@@ -302,4 +303,29 @@ test('research is requested once, then not again while the cached profile is fre
   const r = await run(['--data-dir', data, '--rebuild', '--now', '2026-12-02T16:05:00Z']);
   assert.equal(r.mode, 'rebuild');
   assert.equal(json(dir, 'data/log.json').runs.length, runs);
+});
+
+// ------------------------------------------------ adaptive check scheduling
+test('next check is timed to ETD/ETA, tightens to 30 min when a ship is due, and never exceeds the baseline', () => {
+  const T = s => new Date(s).getTime();
+  const berth = [{ name: 'A', etd: '2026-11-17T06:30:00+01:00' }];
+  const exp = [{ name: 'B', eta: '2026-11-17T14:30:00+01:00' }];
+  const iso = p => new Date(p.at).toISOString();
+  // 2 h before ETD: check 5 min after it.
+  let p = nextCheck({ atBerth: berth, expected: exp }, T('2026-11-17T04:30:00+01:00'));
+  assert.equal(iso(p), '2026-11-17T05:35:00.000Z'); assert.match(p.reason, /departure of A/);
+  // 10 h before anything: baseline (3 h).
+  p = nextCheck({ atBerth: [], expected: exp }, T('2026-11-17T04:30:00+01:00'));
+  assert.equal(p.at - T('2026-11-17T04:30:00+01:00'), 3 * 3600000);
+  // ETA passed 40 min ago, not arrived: 30 min.
+  p = nextCheck({ atBerth: [], expected: exp }, T('2026-11-17T15:10:00+01:00'));
+  assert.equal(p.at - T('2026-11-17T15:10:00+01:00'), 30 * 60000); assert.match(p.reason, /every 30 min/);
+  // 5 h overdue: hourly.  20 h overdue: baseline only.
+  p = nextCheck({ atBerth: [], expected: exp }, T('2026-11-17T19:30:00+01:00'));
+  assert.equal(p.at - T('2026-11-17T19:30:00+01:00'), 3600000);
+  p = nextCheck({ atBerth: [], expected: exp }, T('2026-11-18T10:30:00+01:00'));
+  assert.equal(p.reason, 'baseline check');
+  // An event 3 minutes away is not checked sooner than 20 minutes from now.
+  p = nextCheck({ atBerth: berth, expected: [] }, T('2026-11-17T06:27:00+01:00'));
+  assert.equal(p.at - T('2026-11-17T06:27:00+01:00'), 20 * 60000);
 });

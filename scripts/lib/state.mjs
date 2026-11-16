@@ -154,11 +154,39 @@ export function buildStatus({ calls, profiles, terminal, ais, nowIso, events }) 
     recent_departures: sel.departed.slice(0, 5).map(c => publicCall(c, {})),
     ais,
     last_events: (events || []).slice(-10),
-    stale_after_hours: 3,
+    stale_after_hours: 3, // used only when next_check_at is absent
   };
 }
 
 /** Find a known IMO for a vessel name using the curated name index. */
 export function imoForName(name, index) {
   return (index && index[normName(name)]) || null;
+}
+
+export const BASELINE_HOURS = 3;   // the recurring safety-net task runs this often
+export const STALE_GRACE_MIN = 100; // page shows "unconfirmed" this long after a check was due and missed
+
+/**
+ * When should the berth be looked at next?
+ *  - at the next scheduled arrival or departure (plus 5 minutes),
+ *  - every 30 minutes while a ship is due but the terminal has not recorded it yet
+ *    (hourly once it is more than 3 hours overdue; after 12 hours the baseline takes over),
+ *  - and never later than the baseline interval.
+ */
+export function nextCheck({ atBerth, expected }, nowMs) {
+  const MIN = 60000;
+  const cands = [{ at: nowMs + BASELINE_HOURS * 60 * MIN, reason: 'baseline check' }];
+  const consider = (when, label) => {
+    if (!Number.isFinite(when)) return;
+    const late = nowMs - when;
+    if (late < 0) cands.push({ at: when + 5 * MIN, reason: label });
+    else if (late < 3 * 60 * MIN) cands.push({ at: nowMs + 30 * MIN, reason: `${label} is due; re-checking every 30 min` });
+    else if (late < 12 * 60 * MIN) cands.push({ at: nowMs + 60 * MIN, reason: `${label} is over 3 h overdue; re-checking hourly` });
+  };
+  for (const c of atBerth) consider(t(c.etd), `scheduled departure of ${c.name}`);
+  for (const c of expected) consider(t(c.eta), `expected arrival of ${c.name}`);
+  cands.sort((a, b) => a.at - b.at);
+  const best = cands[0];
+  if (best.at < nowMs + 20 * MIN) best.at = nowMs + 20 * MIN; // never hammer the terminal
+  return best;
 }

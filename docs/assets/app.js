@@ -117,6 +117,10 @@
     var p = parts(t.fetched_at);
     if (!p) return { stale: true, never: true };
     var hours = (nowMs() - p.ms) / 3600000;
+    // Checks are timed around arrivals and departures, so "stale" means a planned check
+    // was missed by more than the grace period - not simply that the data is a few hours old.
+    var due = parts(data.next_check_at);
+    if (due) return { stale: nowMs() > due.ms + (data.stale_grace_minutes || 100) * 60000, hours: hours };
     return { stale: hours > (data.stale_after_hours || 3), hours: hours };
   }
 
@@ -387,7 +391,8 @@
     h += '<h3>Berth occupancy</h3><table><tr><th>Source</th><th>State</th><th>Last successful read</th><th>Notes</th></tr>';
     h += '<tr><td>' + link(t.url, 'AGCT sailing list (official)') + '</td><td>' + okBadge(t.ok) + '</td><td>' + (t.fetched_at ? fmtDayTime(t.fetched_at) + ' (' + ago(t.fetched_at) + ')' : 'never') + '</td><td>' +
       (t.error ? 'Last attempt ' + fmtDayTime(t.last_attempt_at) + ' failed: ' + esc(t.error) : (t.rows || 0) + ' calls listed') +
-      (st.stale && !st.never ? '<br><b>Older than ' + (data.stale_after_hours || 3) + ' h: occupancy shown as unconfirmed.</b>' : '') + '</td></tr>';
+      (data.next_check_at ? '<br>Next check planned ' + fmtDayTime(data.next_check_at) + (data.next_check_reason ? ' (' + esc(data.next_check_reason) + ')' : '') : '') +
+      (st.stale && !st.never ? '<br><b>A planned check is overdue: occupancy shown as unconfirmed.</b>' : '') + '</td></tr>';
     for (k in a) {
       if (!a.hasOwnProperty(k)) continue;
       var s = a[k];

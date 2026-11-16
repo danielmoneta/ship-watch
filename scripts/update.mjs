@@ -17,7 +17,7 @@ import { fileURLToPath } from 'node:url';
 import { fetchText, readJson, writeJson, toZagrebIso, normName, validImo } from './lib/util.mjs';
 import { parseSailingList, terminalUrl, TERMINAL_URL } from './lib/terminal.mjs';
 import { parseWingoPort, parseWingoShip, resolveDestination, WINGO_PORT_URL, WINGO_BASE, BERTH_RING_KM } from './lib/wingo.mjs';
-import { mergeCalls, selectBerth, researchNeeds, buildStatus } from './lib/state.mjs';
+import { mergeCalls, selectBerth, researchNeeds, buildStatus, nextCheck, STALE_GRACE_MIN } from './lib/state.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const AISCATCHER_URL = 'https://www.aiscatcher.org/place/6398/brajdica-container-terminal';
@@ -193,6 +193,13 @@ export async function run(argv = process.argv.slice(2)) {
   log.events = [...(log.events || []), ...events].slice(-500);
   const status = buildStatus({ calls, profiles, terminal, ais, nowIso, events: log.events });
   status.research_pending = needs.map(n => ({ name: n.name, imo: n.imo, priority: n.priority }));
+  // Plan the next look. On a rebuild the earlier plan stands.
+  const plan = opt.rebuild && prevStatus?.next_check_at
+    ? { at: new Date(prevStatus.next_check_at).getTime(), reason: prevStatus.next_check_reason }
+    : nextCheck(sel, nowMs);
+  status.next_check_at = toZagrebIso(plan.at);
+  status.next_check_reason = plan.reason;
+  status.stale_grace_minutes = STALE_GRACE_MIN;
 
   const summary = {
     ran_at: nowIso,
@@ -204,6 +211,9 @@ export async function run(argv = process.argv.slice(2)) {
     next_expected: sel.expected.slice(0, 3).map(c => ({ name: c.name, imo: c.imo || null, eta: c.eta })),
     events,
     research_needed: needs,
+    next_check_at: status.next_check_at,
+    next_check_at_utc: new Date(plan.at).toISOString().slice(0, 16) + ':00Z',
+    next_check_reason: plan.reason,
     errors,
   };
 

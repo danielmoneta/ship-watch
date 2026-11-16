@@ -25,6 +25,7 @@ out('empty', s, 'empty berth');
 // Stale: the terminal has not been reachable for 7 hours.
 s = base();
 s.terminal.ok = false; s.terminal.error = 'HTTP 503'; s.terminal.last_attempt_at = live.generated_at;
+s.next_check_at = live.terminal.fetched_at;
 s.demo_now = new Date(new Date(live.terminal.fetched_at).getTime() + 7 * 3600000).toISOString().replace('.000Z', 'Z');
 out('stale', s, 'terminal unreachable for 7 hours');
 

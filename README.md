@@ -1,8 +1,8 @@
 # Brajdica Watch
 
 A wall display for the container ship currently alongside at the Brajdica / Adriatic Gate
-Container Terminal in Rijeka. One static page, refreshed by an hourly unattended Claude Code
-cloud task. No server, no database, no AIS receiver.
+Container Terminal in Rijeka. One static page, refreshed by unattended Claude Code
+cloud tasks timed around ship arrivals and departures. No server, no database, no AIS receiver.
 
 - **Display:** `https://danielmoneta.github.io/ship-watch/` (GitHub Pages, `main` branch, `/docs` folder)
 - **E-ink:** add `?mode=eink` &nbsp;·&nbsp; **Colour:** `?mode=colour` (the choice is remembered on the device)
@@ -10,7 +10,7 @@ cloud task. No server, no database, no AIS receiver.
 ## How it works
 
 ```
- hourly Claude Code cloud task  ──►  node scripts/update.mjs  ──►  docs/data/*.json  ──►  git push main
+ Claude Code cloud task         ──►  node scripts/update.mjs  ──►  docs/data/*.json  ──►  git push main
  (reads AUTOMATION.md)               terminal list + AIS check      (state + history)      │
         │                                                                                   ▼
         └─ only when a ship is new: web research ─► docs/data/vessels/<IMO>.json     GitHub Pages
@@ -32,8 +32,8 @@ AIS (Wingo Marine) is recorded next to it as corroboration — "consistent with 
 "expected" until the terminal gives it an ATA. AIS-catcher currently has no receiver coverage of
 Brajdica, so its zero count is logged and ignored.
 
-If the terminal cannot be read, the last verified state is kept and the failure logged. Once the last
-successful read is older than 3 hours the page switches to **"Occupancy unconfirmed"**.
+If the terminal cannot be read, the last verified state is kept and the failure logged; once a planned
+check is well overdue the page switches to **"Occupancy unconfirmed"**.
 
 ## Data (all in `docs/data/`, published with the site)
 
@@ -49,23 +49,32 @@ successful read is older than 3 hours the page switches to **"Occupancy unconfir
 Profiles are cached by IMO: a returning ship is not researched again. Partial profiles (e.g. no free
 photo exists) are retried after 14 days; complete ones after a year.
 
-## The scheduled task
+## The scheduled tasks
 
-Runs hourly in the Claude Code cloud environment `ship-watch` (which allow-lists the terminal, AIS and
-Wikimedia hosts). Its whole prompt is "follow `AUTOMATION.md`" — edit that file to change its behaviour.
-Manage it at <https://claude.ai/code/routines>: pause, run now, change the schedule or the model.
+Two Claude Code cloud tasks, both running in the cloud environment `ship-watch` (which allow-lists the
+terminal, AIS and Wikimedia hosts). Their whole prompt is "follow `AUTOMATION.md`" — edit that file to
+change what a run does. Manage them at <https://claude.ai/code/routines> (pause, run now, change model).
 
-**Cost.** GitHub Pages and the repository are free. The task uses your Claude subscription allowance
-(no separate bill): 24 short runs a day, plus a longer research run when a new ship appears (a few per
-week). If that is more usage than you want, switch the task to a smaller model or to every 2–3 hours.
+| Task | When | Purpose |
+|---|---|---|
+| **Brajdica Watch – timed check** | One-shot, re-armed by every run | Fires 5 min after the next scheduled arrival or departure; then every 30 min while that ship is due but not yet recorded by the terminal (hourly after 3 h overdue) |
+| **Brajdica Watch – baseline check** | Every 3 hours | Safety net: catches early arrivals and schedule changes, and re-arms the timed check if the chain ever breaks |
+
+`scripts/update.mjs` decides the next check time (`nextCheck()` in `scripts/lib/state.mjs`) and writes it
+to `status.json` as `next_check_at`. The page turns to **"Occupancy unconfirmed"** when a planned check is
+more than 100 minutes overdue.
+
+**Cost.** GitHub Pages and the repository are free. The tasks use your Claude subscription allowance
+(no separate bill): roughly 10–25 short runs a day depending on traffic, plus a longer research run when
+a new ship appears (a few per week). To use less, switch the tasks to a smaller model or lengthen the baseline.
 
 **Limits worth knowing**
-- Cloud tasks cannot run more often than hourly, so an arrival can take up to an hour to appear
-  (plus however long the terminal takes to post the ATA).
-- Scheduled tasks are a research-preview feature. If the task stops, the page says so within 3 hours
-  ("Occupancy unconfirmed") rather than showing stale data as current.
-- The terminal's ETAs are shift-slot placeholders (06:30 / 14:30 / 22:30); real arrivals differ by hours.
-  That is why checks are not timed around ETAs.
+- A recurring cloud task cannot run more often than hourly; one-shot runs can be set to any minute,
+  which is what the timed check uses.
+- Scheduled tasks are a research-preview feature. If they stop, the page says so
+  ("Occupancy unconfirmed") rather than showing old data as current.
+- The terminal's ETAs are shift-slot placeholders (06:30 / 14:30 / 22:30). In November 2026 real arrivals
+  ranged from 4½ hours early to more than a day late, so an early ship is only noticed by the baseline check.
 - Free sources rarely expose a ship's previous port after she has arrived; it is captured while she is
   still en route, otherwise shown as "not established".
 
