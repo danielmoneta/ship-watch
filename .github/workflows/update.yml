@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       force:
-        description: Publish even if nothing changed
+        description: Publish even if nothing changed, and re-read Shiptrail now
         type: boolean
         default: false
 
@@ -30,7 +30,7 @@ jobs:
       - name: Read terminal and AIS, update data
         run: |
           node --version
-          node scripts/update.mjs > "$RUNNER_TEMP/summary.json"
+          node scripts/update.mjs ${{ inputs.force && '--refresh' || '' }} > "$RUNNER_TEMP/summary.json"
           cat "$RUNNER_TEMP/summary.json"
 
       - name: Start research task if a ship needs it

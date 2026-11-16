@@ -10,6 +10,7 @@
 //   --wingo-file F        read the Wingo port page from a file ("none" = simulate an outage)
 //   --wingo-ship-dir DIR  read Wingo ship pages from DIR/<mmsi>.html
 //   --shiptrail-dir DIR   read Shiptrail get_ship answers from DIR/<mmsi>.json ("none" = simulate an outage)
+//   --refresh             ignore the hourly Shiptrail cache
 //   --no-ais              skip AIS entirely
 //   --now ISO             pretend it is this instant
 import fs from 'node:fs';
@@ -30,7 +31,7 @@ function args(argv) {
     const a = argv[i];
     if (!a.startsWith('--')) continue;
     const k = a.slice(2);
-    if (['rebuild', 'no-ais'].includes(k)) o[k] = true; else o[k] = argv[++i];
+    if (['rebuild', 'no-ais', 'refresh'].includes(k)) o[k] = true; else o[k] = argv[++i];
   }
   return o;
 }
@@ -185,7 +186,7 @@ export async function run(argv = process.argv.slice(2)) {
       let okCount = 0;
       for (const call of targets) {
         const age = call.trail?.fetched_at ? (nowMs - new Date(call.trail.fetched_at).getTime()) / 60000 : Infinity;
-        if (age < 50) { okCount++; continue; } // refreshed at most hourly per ship
+        if (age < 50 && !opt.refresh) { okCount++; continue; } // refreshed at most hourly per ship
         try {
           if (opt['shiptrail-dir'] === 'none') throw new Error('simulated outage');
           const prof = call.imo ? profiles[call.imo] : null;
