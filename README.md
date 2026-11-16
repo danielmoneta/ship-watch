@@ -1,8 +1,8 @@
 # Brajdica Watch
 
 A wall display for the container ship currently alongside at the Brajdica / Adriatic Gate
-Container Terminal in Rijeka. One static page, refreshed by unattended Claude Code
-cloud tasks timed around ship arrivals and departures. No server, no database, no AIS receiver.
+Container Terminal in Rijeka. One static page, refreshed by an hourly unattended Claude Code
+cloud task. No server, no database, no AIS receiver.
 
 - **Display:** `https://danielmoneta.github.io/ship-watch/` (GitHub Pages, `main` branch, `/docs` folder)
 - **E-ink:** add `?mode=eink` &nbsp;·&nbsp; **Colour:** `?mode=colour` (the choice is remembered on the device)
@@ -49,32 +49,31 @@ check is well overdue the page switches to **"Occupancy unconfirmed"**.
 Profiles are cached by IMO: a returning ship is not researched again. Partial profiles (e.g. no free
 photo exists) are retried after 14 days; complete ones after a year.
 
-## The scheduled tasks
+## The scheduled task
 
-Two Claude Code cloud tasks, both running in the cloud environment `ship-watch` (which allow-lists the
-terminal, AIS and Wikimedia hosts). Their whole prompt is "follow `AUTOMATION.md`" — edit that file to
-change what a run does. Manage them at <https://claude.ai/code/routines> (pause, run now, change model).
+One Claude Code cloud task, **"Brajdica Watch – hourly check"**, runs every hour in the cloud
+environment `ship-watch` (which allow-lists the terminal, AIS and Wikimedia hosts) with this repository
+attached. Its whole prompt is "follow `AUTOMATION.md`" — edit that file to change what a run does.
+Manage it at <https://claude.ai/code/routines> (pause, run now, change schedule or model).
 
-| Task | When | Purpose |
-|---|---|---|
-| **Brajdica Watch – timed check** | One-shot, re-armed by every run | Fires 5 min after the next scheduled arrival or departure; then every 30 min while that ship is due but not yet recorded by the terminal (hourly after 3 h overdue) |
-| **Brajdica Watch – baseline check** | Every 3 hours | Safety net: catches early arrivals and schedule changes, and re-arms the timed check if the chain ever breaks |
+`status.json` carries `next_check_at`; the page turns to **"Occupancy unconfirmed"** when that check is
+more than 100 minutes overdue (i.e. after roughly two missed runs).
 
-`scripts/update.mjs` decides the next check time (`nextCheck()` in `scripts/lib/state.mjs`) and writes it
-to `status.json` as `next_check_at`. The page turns to **"Occupancy unconfirmed"** when a planned check is
-more than 100 minutes overdue.
+**Why not timed to each ship's ETA?** It was built and tested (16 Nov 2026): a one-shot task can fire at
+any minute, but a run can only re-arm the next one through the Claude Code Remote connector, which this
+account cannot attach to a task. `nextCheck()` in `scripts/lib/state.mjs` still computes the ideal time,
+so the chain can be switched on if that connector becomes available.
 
-**Cost.** GitHub Pages and the repository are free. The tasks use your Claude subscription allowance
-(no separate bill): roughly 10–25 short runs a day depending on traffic, plus a longer research run when
-a new ship appears (a few per week). To use less, switch the tasks to a smaller model or lengthen the baseline.
+**Cost.** GitHub Pages and the repository are free. The task uses your Claude subscription allowance
+(no separate bill): 24 short runs a day, plus a longer research run when
+a new ship appears (a few per week). To use less, switch the task to a smaller model or run it every 2–3 hours.
 
 **Limits worth knowing**
-- A recurring cloud task cannot run more often than hourly; one-shot runs can be set to any minute,
-  which is what the timed check uses.
+- A recurring cloud task cannot run more often than hourly, so a change can take up to an hour to appear.
 - Scheduled tasks are a research-preview feature. If they stop, the page says so
   ("Occupancy unconfirmed") rather than showing old data as current.
 - The terminal's ETAs are shift-slot placeholders (06:30 / 14:30 / 22:30). In November 2026 real arrivals
-  ranged from 4½ hours early to more than a day late, so an early ship is only noticed by the baseline check.
+  ranged from 4½ hours early to more than a day late, so timing checks to ETAs would gain little.
 - Free sources rarely expose a ship's previous port after she has arrived; it is captured while she is
   still en route, otherwise shown as "not established".
 

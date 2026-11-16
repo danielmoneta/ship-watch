@@ -305,27 +305,25 @@ test('research is requested once, then not again while the cached profile is fre
   assert.equal(json(dir, 'data/log.json').runs.length, runs);
 });
 
-// ------------------------------------------------ adaptive check scheduling
-test('next check is timed to ETD/ETA, tightens to 30 min when a ship is due, and never exceeds the baseline', () => {
+// ------------------------------------------------ next planned check
+test('next planned check is never later than the hourly baseline and never sooner than 20 minutes', () => {
   const T = s => new Date(s).getTime();
   const berth = [{ name: 'A', etd: '2026-11-17T06:30:00+01:00' }];
   const exp = [{ name: 'B', eta: '2026-11-17T14:30:00+01:00' }];
-  const iso = p => new Date(p.at).toISOString();
-  // 2 h before ETD: check 5 min after it.
-  let p = nextCheck({ atBerth: berth, expected: exp }, T('2026-11-17T04:30:00+01:00'));
-  assert.equal(iso(p), '2026-11-17T05:35:00.000Z'); assert.match(p.reason, /departure of A/);
-  // 10 h before anything: baseline (3 h).
-  p = nextCheck({ atBerth: [], expected: exp }, T('2026-11-17T04:30:00+01:00'));
-  assert.equal(p.at - T('2026-11-17T04:30:00+01:00'), 3 * 3600000);
-  // ETA passed 40 min ago, not arrived: 30 min.
-  p = nextCheck({ atBerth: [], expected: exp }, T('2026-11-17T15:10:00+01:00'));
-  assert.equal(p.at - T('2026-11-17T15:10:00+01:00'), 30 * 60000); assert.match(p.reason, /every 30 min/);
-  // 5 h overdue: hourly.  20 h overdue: baseline only.
-  p = nextCheck({ atBerth: [], expected: exp }, T('2026-11-17T19:30:00+01:00'));
-  assert.equal(p.at - T('2026-11-17T19:30:00+01:00'), 3600000);
-  p = nextCheck({ atBerth: [], expected: exp }, T('2026-11-18T10:30:00+01:00'));
-  assert.equal(p.reason, 'baseline check');
-  // An event 3 minutes away is not checked sooner than 20 minutes from now.
-  p = nextCheck({ atBerth: berth, expected: [] }, T('2026-11-17T06:27:00+01:00'));
-  assert.equal(p.at - T('2026-11-17T06:27:00+01:00'), 20 * 60000);
+  // Nothing due soon: one hour.
+  let now = T('2026-11-17T01:00:00+01:00');
+  let p = nextCheck({ atBerth: berth, expected: exp }, now);
+  assert.equal(p.at - now, 3600000); assert.equal(p.reason, 'baseline check');
+  // Departure scheduled in 40 minutes: 5 minutes after it.
+  now = T('2026-11-17T05:50:00+01:00');
+  p = nextCheck({ atBerth: berth, expected: exp }, now);
+  assert.equal(p.at, T('2026-11-17T06:35:00+01:00')); assert.match(p.reason, /departure of A/);
+  // Ship due 40 minutes ago and not recorded: 30 minutes.
+  now = T('2026-11-17T15:10:00+01:00');
+  p = nextCheck({ atBerth: [], expected: exp }, now);
+  assert.equal(p.at - now, 30 * 60000);
+  // An event 3 minutes away: not sooner than 20 minutes.
+  now = T('2026-11-17T06:27:00+01:00');
+  p = nextCheck({ atBerth: berth, expected: [] }, now);
+  assert.equal(p.at - now, 20 * 60000);
 });

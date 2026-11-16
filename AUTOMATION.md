@@ -125,22 +125,7 @@ If the repository is not in your working directory, say so in your report and st
 If the push is rejected because `main` moved: `git pull --rebase origin main`, then push again (up to 3 tries).
 If validation fails at this point and you did no research, publish nothing and report the errors.
 
-## Step 4 — Schedule the next timed check (always, best effort)
+## Step 4 — Report
 
-The summary from Step 1 contains `next_check_at_utc` and `next_check_reason` (the next scheduled
-arrival/departure, 30 minutes from now while a ship is overdue, or the baseline).
-Re-arm the one-shot scheduled task **"Brajdica Watch – timed check"** to that time:
-
-- tool: `update_trigger` of the `claude-code-remote` server (`mcp__claude-code-remote__update_trigger`;
-  load it with ToolSearch if it is listed as deferred)
-- arguments: `trigger_id: "trig_01Fd8wtv8qvAsaBPMYNWzbbb"`, `run_once_at: "<next_check_at_utc>"`, `enabled: true`
-
-Change nothing else about that task, never create, delete or fire any task, and never touch any other
-task. If the tool is not available in this session or the call fails, try once more at most, then
-carry on: the recurring "Brajdica Watch – baseline check" task still runs every 3 hours. Say in your
-report whether the re-arm worked.
-
-## Step 5 — Report
-
-End with four lines at most: what is at the berth, what changed, when the next check is armed for,
-and any errors or research gaps. Do not send notifications.
+End with three lines at most: what is at the berth, what changed, and any errors or research gaps.
+Do not create, change or fire any scheduled task, and do not send notifications.

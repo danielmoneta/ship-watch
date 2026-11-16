@@ -163,7 +163,7 @@ export function imoForName(name, index) {
   return (index && index[normName(name)]) || null;
 }
 
-export const BASELINE_HOURS = 3;   // the recurring safety-net task runs this often
+export const BASELINE_HOURS = 1;   // the recurring cloud task runs this often (the platform minimum)
 export const STALE_GRACE_MIN = 100; // page shows "unconfirmed" this long after a check was due and missed
 
 /**
