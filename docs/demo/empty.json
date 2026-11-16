@@ -1,0 +1,416 @@
+{
+  "schema": 1,
+  "generated_at": "2026-11-16T16:24:23+01:00",
+  "timezone": "Europe/Zagreb",
+  "terminal": {
+    "url": "https://webusercorner.ictsi.hr/?language=EN",
+    "query_url": "https://webusercorner.ictsi.hr/?language=EN&from=06.11.2026&to=07.12.2026",
+    "ok": true,
+    "fetched_at": "2026-11-16T16:18:14+01:00",
+    "last_attempt_at": "2026-11-16T16:18:14+01:00",
+    "rows": 15,
+    "error": null
+  },
+  "berth": {
+    "state": "empty",
+    "vessels": []
+  },
+  "upcoming": [
+    {
+      "call_id": "MSC EAGLE III|AH644A",
+      "name": "MSC EAGLE III",
+      "shipper": "MSC",
+      "voyage_in": "AH644A",
+      "voyage_out": "AH644A",
+      "status": "IN ARRIVAL",
+      "eta": "2026-11-17T14:30:00+01:00",
+      "etd": "2026-11-18T05:00:00+01:00",
+      "ata": null,
+      "atd": null,
+      "phase": "expected",
+      "imo": "9302449",
+      "ais": {
+        "source": "Wingo Marine",
+        "source_url": "https://wingo-marine.com/ship/msc-eagle-iii-636024014",
+        "checked_at": "2026-11-16T16:18:14+01:00",
+        "found": true,
+        "mmsi": "636024014",
+        "distance_km": 18,
+        "nav": null,
+        "destination_raw": "HRRJK",
+        "destination": {
+          "locode": "HRRJK",
+          "name": "Rijeka, Croatia"
+        },
+        "destination_kind": "ais_destination",
+        "berth_consistent": false,
+        "last_report": null
+      },
+      "voyage": {
+        "researched_at": "2026-11-16T16:24:23+01:00",
+        "previous_port": {
+          "name": "Trieste",
+          "locode": "ITTRS",
+          "departed_at": "2026-11-16T01:59:00+01:00",
+          "kind": "actual",
+          "source": "VesselFinder (AIS port call: Last Port Trieste, ATD 16 Nov 00:59 UTC)",
+          "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+          "retrieved_at": "2026-11-16T16:24:23+01:00",
+          "confidence": "medium"
+        },
+        "next_port": null,
+        "notes": "On 16 Nov ~16:00 local VesselFinder showed her at anchor in the Adriatic bound for Rijeka; Wingo placed her 18 km from the port. Next port after Rijeka not established."
+      },
+      "profile": {
+        "imo": "9302449",
+        "name": "MSC EAGLE III",
+        "aliases": [],
+        "mmsi": "636024014",
+        "fields": {
+          "type": {
+            "value": "Container ship",
+            "source": "VesselFinder",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+            "retrieved_at": "2026-11-16T16:24:23+01:00",
+            "confidence": "medium"
+          },
+          "flag": {
+            "value": "Liberia",
+            "source": "VesselFinder; Wingo Marine (AIS)",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+            "retrieved_at": "2026-11-16T16:24:23+01:00",
+            "confidence": "high"
+          },
+          "year_built": {
+            "value": 2004,
+            "source": "VesselFinder; Flexport Atlas (via web search)",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+            "retrieved_at": "2026-11-16T16:24:23+01:00",
+            "confidence": "high"
+          },
+          "length_m": {
+            "value": 207.5,
+            "source": "VesselFinder (AIS broadcasts 207 m)",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+            "retrieved_at": "2026-11-16T16:24:23+01:00",
+            "confidence": "high"
+          },
+          "beam_m": {
+            "value": 29.8,
+            "source": "VesselFinder (AIS broadcasts 30 m)",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+            "retrieved_at": "2026-11-16T16:24:23+01:00",
+            "confidence": "high"
+          },
+          "teu": {
+            "value": 2478,
+            "source": "Flexport Atlas, as reported in a web search summary",
+            "source_url": "https://atlas.flexport.com/vessel/imo:9302449/mmsi:636024014/name:msc-eagle-iii",
+            "retrieved_at": "2026-11-16T16:24:23+01:00",
+            "confidence": "low",
+            "note": "Single source, seen only through a search summary."
+          },
+          "gross_tonnage": {
+            "value": 25406,
+            "source": "VesselFinder",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+            "retrieved_at": "2026-11-16T16:24:23+01:00",
+            "confidence": "medium"
+          },
+          "deadweight_t": {
+            "value": 33781,
+            "source": "VesselFinder; Maritime Optima (via web search)",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+            "retrieved_at": "2026-11-16T16:24:23+01:00",
+            "confidence": "high"
+          },
+          "callsign": {
+            "value": "5LQN7",
+            "source": "VesselFinder; Wingo Marine (AIS)",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+            "retrieved_at": "2026-11-16T16:24:23+01:00",
+            "confidence": "high"
+          },
+          "former_names": {
+            "value": "Maersk Dakar, Frisia Lübeck, CSAV Rio Lontue",
+            "source": "VesselFinder (name history)",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+            "retrieved_at": "2026-11-16T16:24:23+01:00",
+            "confidence": "medium"
+          },
+          "operator": {
+            "value": "MSC",
+            "source": "AGCT sailing list (shipper column)",
+            "source_url": "https://webusercorner.ictsi.hr/?language=EN",
+            "retrieved_at": "2026-11-16T16:24:23+01:00",
+            "confidence": "high"
+          }
+        },
+        "photo": null,
+        "facts": [
+          {
+            "text": "She is on at least her fourth name: earlier in her career she sailed as CSAV Rio Lontue, Frisia Lübeck and Maersk Dakar.",
+            "source": "VesselFinder (name history)",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+            "confidence": "medium"
+          }
+        ],
+        "research": {
+          "status": "partial",
+          "researched_at": "2026-11-16T16:24:23+01:00",
+          "missing": [
+            "photo",
+            "builder"
+          ],
+          "notes": "No photograph on Wikimedia Commons under her IMO category or current name. Built in Germany per one source; shipyard not established."
+        }
+      }
+    },
+    {
+      "call_id": "MSC AUDREY|QX645E",
+      "name": "MSC AUDREY",
+      "shipper": "MSC",
+      "voyage_in": "QX645E",
+      "voyage_out": "QX645E",
+      "status": "IN ARRIVAL",
+      "eta": "2026-11-18T06:30:00+01:00",
+      "etd": "2026-11-19T14:30:00+01:00",
+      "ata": null,
+      "atd": null,
+      "phase": "expected",
+      "ais": {
+        "source": "Wingo Marine",
+        "source_url": "https://wingo-marine.com/port/rijeka-2263",
+        "checked_at": "2026-11-16T16:18:14+01:00",
+        "found": false
+      },
+      "profile": null
+    },
+    {
+      "call_id": "UNITY ONE|13",
+      "name": "UNITY ONE",
+      "shipper": "SOC",
+      "voyage_in": "13",
+      "voyage_out": "13",
+      "status": "IN ARRIVAL",
+      "eta": "2026-11-18T06:30:00+01:00",
+      "etd": "2026-11-18T14:30:00+01:00",
+      "ata": null,
+      "atd": null,
+      "phase": "expected",
+      "profile": null
+    },
+    {
+      "call_id": "MSC CAITLIN II|AH645A",
+      "name": "MSC CAITLIN II",
+      "shipper": "MSC",
+      "voyage_in": "AH645A",
+      "voyage_out": "AH645A",
+      "status": "IN ARRIVAL",
+      "eta": "2026-11-19T14:30:00+01:00",
+      "etd": "2026-11-20T06:30:00+01:00",
+      "ata": null,
+      "atd": null,
+      "phase": "expected",
+      "profile": null
+    },
+    {
+      "call_id": "CMA CGM ALTAMIRA|BMS0V0E19",
+      "name": "CMA CGM ALTAMIRA",
+      "shipper": "CMA",
+      "voyage_in": "BMS0V0E19",
+      "voyage_out": "BMS0V0E19",
+      "status": "IN ARRIVAL",
+      "eta": "2026-11-20T06:30:00+01:00",
+      "etd": "2026-11-20T22:30:00+01:00",
+      "ata": null,
+      "atd": null,
+      "phase": "expected",
+      "profile": null
+    },
+    {
+      "call_id": "CMA CGM ANTIGONE|0BEOWE1MA",
+      "name": "CMA CGM ANTIGONE",
+      "shipper": "CMA",
+      "voyage_in": "0BEOWE1MA",
+      "voyage_out": "0BEOWE1MA",
+      "status": "IN ARRIVAL",
+      "eta": "2026-11-24T22:30:00+01:00",
+      "etd": "2026-11-26T22:30:00+01:00",
+      "ata": null,
+      "atd": null,
+      "phase": "expected",
+      "profile": null
+    }
+  ],
+  "recent_departures": [
+    {
+      "call_id": "MSC TERESA|QX644E",
+      "name": "MSC TERESA",
+      "shipper": "MSC",
+      "voyage_in": "QX644E",
+      "voyage_out": "QX644E",
+      "status": "DEPARTED",
+      "eta": "2026-11-16T06:30:00+01:00",
+      "etd": "2026-11-17T06:30:00+01:00",
+      "ata": "2026-11-16T10:30:00+01:00",
+      "atd": "2026-11-16T16:24:23+01:00",
+      "phase": "departed",
+      "imo": "9469560",
+      "ais": {
+        "source": "Wingo Marine",
+        "source_url": "https://wingo-marine.com/ship/msc-teresa-357891000",
+        "checked_at": "2026-11-16T16:18:14+01:00",
+        "found": true,
+        "mmsi": "357891000",
+        "distance_km": 4.3,
+        "nav": null,
+        "destination_raw": "ITTRS",
+        "destination": {
+          "locode": "ITTRS",
+          "name": "Trieste, Italy"
+        },
+        "destination_kind": "ais_destination",
+        "berth_consistent": true,
+        "last_report": "2026-11-16T13:56:00.000Z",
+        "nearest_port_label": "Kostrena",
+        "imo": "9469560"
+      },
+      "voyage": {
+        "researched_at": "2026-11-16T16:24:23+01:00",
+        "previous_port": null,
+        "next_port": {
+          "name": "Trieste",
+          "locode": "ITTRS",
+          "eta": "2026-11-17T22:00:00+01:00",
+          "kind": "ais_destination",
+          "source": "VesselFinder; Wingo Marine (AIS destination \"ITTRS\")",
+          "source_url": "https://www.vesselfinder.com/vessels/details/9469560",
+          "retrieved_at": "2026-11-16T16:24:23+01:00",
+          "confidence": "medium"
+        },
+        "notes": "Previous port could not be established: by the time of research the free AIS sources already showed Rijeka as her last port. The Trieste ETA (17 Nov 21:00 UTC) is the crew-entered AIS value, not a carrier schedule. VesselFinder logged her AIS arrival in the Rijeka port area at 09:19 local, ahead of the terminal ATA of 10:30."
+      },
+      "profile": null,
+      "corroboration": {
+        "level": "ais_consistent",
+        "note": "AIS places the ship at a distance consistent with the Brajdica quay."
+      }
+    },
+    {
+      "call_id": "SC MEDFORD|152W",
+      "name": "SC MEDFORD",
+      "shipper": "COS",
+      "voyage_in": "152W",
+      "voyage_out": "152E",
+      "status": "DEPARTED",
+      "eta": "2026-11-15T14:30:00+01:00",
+      "etd": "2026-11-16T06:30:00+01:00",
+      "ata": "2026-11-15T16:45:00+01:00",
+      "atd": "2026-11-16T08:00:00+01:00",
+      "phase": "departed",
+      "profile": null
+    },
+    {
+      "call_id": "MSC RENEE XIII|QX642E",
+      "name": "MSC RENEE XIII",
+      "shipper": "MSC",
+      "voyage_in": "QX642E",
+      "voyage_out": "QX642E",
+      "status": "DEPARTED",
+      "eta": "2026-11-14T22:30:00+01:00",
+      "etd": "2026-11-15T14:30:00+01:00",
+      "ata": "2026-11-15T06:00:00+01:00",
+      "atd": "2026-11-15T13:30:00+01:00",
+      "phase": "departed",
+      "profile": null
+    },
+    {
+      "call_id": "PIERRE A|BMS0T0E19",
+      "name": "PIERRE A",
+      "shipper": "CMA",
+      "voyage_in": "BMS0T0E19",
+      "voyage_out": "BMS0T0E19",
+      "status": "DEPARTED",
+      "eta": "2026-11-14T14:30:00+01:00",
+      "etd": "2026-11-15T06:30:00+01:00",
+      "ata": "2026-11-14T10:00:00+01:00",
+      "atd": "2026-11-15T02:45:00+01:00",
+      "phase": "departed",
+      "profile": null
+    },
+    {
+      "call_id": "CMA CGM CYRANO|0BEOUE1MA",
+      "name": "CMA CGM CYRANO",
+      "shipper": "CMA",
+      "voyage_in": "0BEOUE1MA",
+      "voyage_out": "0BEOUE1MA",
+      "status": "DEPARTED",
+      "eta": "2026-11-10T14:30:00+01:00",
+      "etd": "2026-11-13T14:30:00+01:00",
+      "ata": "2026-11-11T01:30:00+01:00",
+      "atd": "2026-11-13T12:00:00+01:00",
+      "phase": "departed",
+      "profile": null
+    },
+    {
+      "call_id": "ARIFE|15",
+      "name": "ARIFE",
+      "shipper": "SOC",
+      "voyage_in": "15",
+      "voyage_out": "15",
+      "status": "DEPARTED",
+      "eta": "2026-11-10T06:30:00+01:00",
+      "etd": "2026-11-10T14:30:00+01:00",
+      "ata": "2026-11-11T15:00:00+01:00",
+      "atd": "2026-11-11T18:30:00+01:00",
+      "phase": "departed",
+      "profile": null
+    }
+  ],
+  "ais": {
+    "wingo": {
+      "name": "Wingo Marine",
+      "url": "https://wingo-marine.com/port/rijeka-2263",
+      "ok": true,
+      "fetched_at": "2026-11-16T16:18:14+01:00",
+      "last_attempt_at": "2026-11-16T16:18:14+01:00",
+      "error": null,
+      "summary": "27 vessels reported within 15 km in the last 24 hours",
+      "vessels_listed": 33
+    },
+    "aiscatcher": {
+      "name": "AIS-catcher",
+      "url": "https://www.aiscatcher.org/place/6398/brajdica-container-terminal",
+      "ok": true,
+      "fetched_at": "2026-11-16T16:18:14+01:00",
+      "last_attempt_at": "2026-11-16T16:18:14+01:00",
+      "error": null,
+      "receiving_stations": 0,
+      "vessels_inside": 0,
+      "usable": false,
+      "note": "No receiver coverage of the terminal: a zero count here is not evidence that the berth is empty."
+    }
+  },
+  "last_events": [
+    {
+      "type": "arrived",
+      "call_id": "MSC TERESA|QX644E",
+      "name": "MSC TERESA",
+      "at": "2026-11-16T10:30:00+01:00",
+      "observed": "2026-11-16T16:12:47+01:00",
+      "backfilled": true
+    }
+  ],
+  "stale_after_hours": 3,
+  "research_pending": [
+    {
+      "name": "MSC AUDREY",
+      "imo": null,
+      "priority": "next_arrival"
+    }
+  ],
+  "simulated": true,
+  "demo_now": "2026-11-16T16:24:23+01:00",
+  "simulated_note": "empty berth"
+}

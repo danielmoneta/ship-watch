@@ -138,7 +138,11 @@ a { color: inherit; }
 .foot .links a { text-decoration: none; border-bottom: 1px solid #c9bfa9; cursor: pointer; }
 .foot .links a + a { margin-left: 1.4em; }
 
-.ribbon { position: fixed; z-index: 20; top: 0; left: 0; right: 0; background: #a4432b; color: #fff; text-align: center; font-size: 13px; font-weight: 700; letter-spacing: .2em; padding: 6px 10px; text-transform: uppercase; }
+.ribbon { height: 28px; line-height: 28px; overflow: hidden; white-space: nowrap; background: #a4432b; color: #fff; text-align: center; font-size: 12px; font-weight: 700; letter-spacing: .18em; padding: 0 10px; text-transform: uppercase; }
+.stage.ribboned { height: calc(100vh - 28px); min-height: calc(100vh - 28px); }
+.subname .nextname { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.9em; line-height: 1.15; color: #16222e; }
+body.eink .subname .nextname { font-family: Georgia, serif; color: #000; }
+body.eink .stage.ribboned .placard { min-height: calc(100vh - 28px); }
 
 /* ---------- Sources drawer ---------- */
 .sources { background: #f4eee2; color: #16222e; padding: 0 3.6vmin; }
@@ -171,7 +175,7 @@ a { color: inherit; }
    E-ink mode: pure black on white, no photo, no animation, heavier type.
    ====================================================================== */
 body.eink { background: #fff; color: #000; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
-body.eink .stage { display: block; height: auto; min-height: 100vh; }
+body.eink .stage, body.eink .stage.ribboned { display: block; height: auto; min-height: 0; }
 body.eink .photo { display: none; }
 body.eink.withphoto .photo { display: block; height: 30vh; }
 body.eink.withphoto .photo img { -webkit-filter: grayscale(1) contrast(1.25); filter: grayscale(1) contrast(1.25); }
@@ -209,3 +213,6 @@ body.eink .sources th, body.eink .sources td { border-bottom: 1px solid #000; }
 body.eink .ribbon { background: #000; }
 body.eink .boot { color: #000; }
 body.eink .boot-kicker { color: #000; }
+
+/* Simulation ribbon takes 28px off the top in every layout. */
+@media (orientation: portrait) { .stage.ribboned { height: auto; min-height: calc(100vh - 28px); } .stage.ribboned .placard { min-height: calc(66vh - 28px); } }

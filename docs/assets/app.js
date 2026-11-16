@@ -316,9 +316,10 @@
         o = { stateClass: 'stale', stateText: 'Occupancy unconfirmed', stateSub: 'berth was clear when last checked ' + Math.round(st.hours) + ' h ago',
           call: nextUp, isExpected: true, title: 'Berth status unconfirmed', subtitle: nextUp ? 'Next expected: <b>' + esc(nextUp.name) + '</b> · ' + subtitleFor(nextUp) : '', st: st };
       } else {
-        o = { stateClass: 'empty', stateText: 'Berth clear', stateSub: 'no vessel alongside',
-          call: nextUp, isExpected: true, title: nextUp ? nextUp.name : 'No vessel alongside',
-          subtitle: nextUp ? '<b>Expected — not yet arrived</b> · ' + subtitleFor(nextUp) : 'No arrivals are listed by the terminal', st: st };
+        // The big title says the berth is clear; the next ship is named in smaller type below it.
+        o = { stateClass: 'empty', stateText: 'No vessel alongside', stateSub: '',
+          call: nextUp, isExpected: true, title: 'Berth clear',
+          subtitle: nextUp ? '<span class="nextname">Next expected: <b>' + esc(nextUp.name) + '</b></span><br>' + subtitleFor(nextUp) : 'No arrivals are listed by the terminal', st: st };
         var after = upcoming[1];
         if (after) o.also = '<span class="label">Then</span> &nbsp;<b>' + esc(after.name) + '</b> · ' + fmtDayTime(after.eta);
       }
@@ -327,7 +328,7 @@
 
     var ribbon = '';
     if (params.demo || data.simulated) ribbon = '<div class="ribbon">Simulation — not live data' + (data.simulated_note ? ' · ' + esc(data.simulated_note) : '') + '</div>';
-    app.innerHTML = ribbon + '<div class="stage">' + html + '</div>' + sourcesPanel(call || nextUp, st);
+    app.innerHTML = ribbon + '<div class="stage' + (ribbon ? ' ribboned' : '') + '">' + html + '</div>' + sourcesPanel(call || nextUp, st);
     document.body.className = document.body.className.replace(/\s*loading/, '');
     document.title = (vessels.length ? vessels[idx].name + ' — ' : '') + 'Brajdica Watch';
     var tg = document.getElementById('src-toggle');
@@ -352,14 +353,25 @@
     // If the content still overflows the screen, shrink the name a little more.
     var pl = el.parentNode;
     function overflows() {
-      if (sourcesOpen) return false;
-      if (mode === 'eink') return pl.offsetHeight > window.innerHeight + 2;
-      return !portrait && pl.scrollHeight > pl.clientHeight + 2;
+      if (mode === 'eink' || portrait) return !sourcesOpen && document.documentElement.scrollHeight > window.innerHeight + 2;
+      return pl.scrollHeight > pl.clientHeight + 2;
     }
+    // Vertical overflow: give back a little name size, then (portrait) some photo height.
+    var floor = Math.max(min, Math.floor(size * (mode === 'eink' ? 0.4 : 0.62)));
     guard = 0;
-    while (size > min && guard++ < 40 && overflows()) {
-      size = Math.floor(size * 0.93);
+    while (size > floor && guard++ < 40 && overflows()) {
+      size = Math.floor(size * 0.95);
       el.style.fontSize = size + 'px';
+    }
+    var ph = document.querySelector ? document.querySelector('.photo') : null;
+    if (ph && portrait && mode === 'colour') {
+      var h = ph.offsetHeight, minH = Math.round(window.innerHeight * 0.18);
+      guard = 0;
+      while (h > minH && guard++ < 60 && overflows()) {
+        h -= 10;
+        ph.style.height = h + 'px';
+        ph.style.flex = '0 0 ' + h + 'px';
+      }
     }
   }
 
