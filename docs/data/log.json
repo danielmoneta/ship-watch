@@ -444,6 +444,15 @@
       "events": 0,
       "research_needed": [],
       "errors": []
+    },
+    {
+      "at": "2026-11-17T11:45:01+01:00",
+      "terminal_ok": true,
+      "rows": 15,
+      "berth": [],
+      "events": 1,
+      "research_needed": [],
+      "errors": []
     }
   ],
   "events": [
@@ -454,6 +463,13 @@
       "at": "2026-11-16T10:30:00+01:00",
       "observed": "2026-11-16T16:12:47+01:00",
       "backfilled": true
+    },
+    {
+      "type": "departed",
+      "call_id": "MSC TERESA|QX644E",
+      "name": "MSC TERESA",
+      "at": "2026-11-17T12:30:00+01:00",
+      "observed": "2026-11-17T11:45:01+01:00"
     }
   ]
 }
