@@ -691,6 +691,19 @@
       "errors": [
         "aiscatcher: HTTP 403"
       ]
+    },
+    {
+      "at": "2026-11-17T19:45:00+01:00",
+      "terminal_ok": true,
+      "rows": 15,
+      "berth": [
+        "MSC EAGLE III"
+      ],
+      "events": 1,
+      "research_needed": [],
+      "errors": [
+        "aiscatcher: HTTP 403"
+      ]
     }
   ],
   "events": [
@@ -731,6 +744,14 @@
       "from": "ARRIVED",
       "to": "UNDER OPS",
       "observed": "2026-11-17T15:30:00+01:00"
+    },
+    {
+      "type": "eta_changed",
+      "call_id": "CMA CGM ANTIGONE|0BEOWE1MA",
+      "name": "CMA CGM ANTIGONE",
+      "from": "2026-11-24T22:30:00+01:00",
+      "to": "2026-11-25T05:00:00+01:00",
+      "observed": "2026-11-17T19:45:00+01:00"
     }
   ]
 }
