@@ -535,6 +535,19 @@
       "errors": [
         "aiscatcher: HTTP 403"
       ]
+    },
+    {
+      "at": "2026-11-17T15:30:00+01:00",
+      "terminal_ok": true,
+      "rows": 15,
+      "berth": [
+        "MSC EAGLE III"
+      ],
+      "events": 1,
+      "research_needed": [],
+      "errors": [
+        "aiscatcher: HTTP 403"
+      ]
     }
   ],
   "events": [
@@ -567,6 +580,14 @@
       "name": "MSC EAGLE III",
       "at": "2026-11-17T14:00:00+01:00",
       "observed": "2026-11-17T14:45:00+01:00"
+    },
+    {
+      "type": "status_changed",
+      "call_id": "MSC EAGLE III|AH644A",
+      "name": "MSC EAGLE III",
+      "from": "ARRIVED",
+      "to": "UNDER OPS",
+      "observed": "2026-11-17T15:30:00+01:00"
     }
   ]
 }
