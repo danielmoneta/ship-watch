@@ -737,6 +737,17 @@
       "events": 0,
       "research_needed": [],
       "errors": []
+    },
+    {
+      "at": "2026-11-17T22:45:01+01:00",
+      "terminal_ok": true,
+      "rows": 15,
+      "berth": [
+        "MSC EAGLE III"
+      ],
+      "events": 0,
+      "research_needed": [],
+      "errors": []
     }
   ],
   "events": [
