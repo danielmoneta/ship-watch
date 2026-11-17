@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-17T02:30:00+01:00",
+  "generated_at": "2026-11-17T03:30:00+01:00",
   "timezone": "Europe/Zagreb",
   "terminal": {
     "url": "https://webusercorner.ictsi.hr/?language=EN",
     "query_url": "https://webusercorner.ictsi.hr/?language=EN&from=07.11.2026&to=08.12.2026",
     "ok": true,
-    "fetched_at": "2026-11-17T02:30:00+01:00",
-    "last_attempt_at": "2026-11-17T02:30:00+01:00",
+    "fetched_at": "2026-11-17T03:30:00+01:00",
+    "last_attempt_at": "2026-11-17T03:30:00+01:00",
     "rows": 15,
     "error": null
   },
@@ -30,7 +30,7 @@
         "ais": {
           "source": "Wingo Marine",
           "source_url": "https://wingo-marine.com/ship/msc-teresa-357891000",
-          "checked_at": "2026-11-17T02:30:00+01:00",
+          "checked_at": "2026-11-17T03:30:00+01:00",
           "found": true,
           "mmsi": "357891000",
           "distance_km": 4.3,
@@ -42,26 +42,26 @@
           },
           "destination_kind": "ais_destination",
           "berth_consistent": true,
-          "last_report": "2026-11-17T01:03:00.000Z",
+          "last_report": "2026-11-17T02:24:00.000Z",
           "nearest_port_label": "Kostrena",
           "imo": "9469560"
         },
         "trail": {
           "source": "Shiptrail",
           "source_url": "https://shiptrail.io/vessel/357891000-msc-teresa",
-          "fetched_at": "2026-11-17T02:30:00+01:00",
+          "fetched_at": "2026-11-17T03:30:00+01:00",
           "mmsi": "357891000",
           "imo": "9469560",
           "name": "MSC TERESA",
-          "last_heard": "2026-11-17T01:28:04.000Z",
+          "last_heard": "2026-11-17T02:28:01.000Z",
           "position": {
-            "lat": 45.31933,
-            "lon": 14.45545,
-            "at": "2026-11-17T01:28:04.000Z",
+            "lat": 45.31936,
+            "lon": 14.45541,
+            "at": "2026-11-17T02:28:01.000Z",
             "status": "Moored",
             "speed_kn": 0
           },
-          "quay_distance_km": 0.11,
+          "quay_distance_km": 0.1,
           "at_quay": true,
           "destination_raw": "HRRJK",
           "bound_for": {
@@ -128,7 +128,7 @@
             "kind": "actual",
             "source": "Shiptrail (AIS port-call history)",
             "source_url": "https://shiptrail.io/vessel/357891000-msc-teresa",
-            "retrieved_at": "2026-11-17T02:30:00+01:00",
+            "retrieved_at": "2026-11-17T03:30:00+01:00",
             "auto": true,
             "confidence": "medium"
           },
@@ -251,7 +251,7 @@
         },
         "corroboration": {
           "level": "ais_consistent",
-          "note": "AIS position 110 m from the Brajdica quay, Moored (Shiptrail)."
+          "note": "AIS position 100 m from the Brajdica quay, Moored (Shiptrail)."
         }
       }
     ]
@@ -273,7 +273,7 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/msc-eagle-iii-636024014",
-        "checked_at": "2026-11-17T02:30:00+01:00",
+        "checked_at": "2026-11-17T03:30:00+01:00",
         "found": true,
         "mmsi": "636024014",
         "distance_km": 3.5,
@@ -290,19 +290,19 @@
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/636024014-msc-eagle-iii",
-        "fetched_at": "2026-11-17T02:30:00+01:00",
+        "fetched_at": "2026-11-17T03:30:00+01:00",
         "mmsi": "636024014",
         "imo": "9302449",
         "name": "MSC EAGLE III",
-        "last_heard": "2026-11-17T01:28:00.000Z",
+        "last_heard": "2026-11-17T02:28:01.000Z",
         "position": {
-          "lat": 45.28552,
-          "lon": 14.40578,
-          "at": "2026-11-17T01:28:00.000Z",
+          "lat": 45.28574,
+          "lon": 14.40478,
+          "at": "2026-11-17T02:28:01.000Z",
           "status": "At anchor",
           "speed_kn": 0
         },
-        "quay_distance_km": 5.41,
+        "quay_distance_km": 5.44,
         "at_quay": false,
         "destination_raw": "HRRJK",
         "bound_for": {
@@ -376,7 +376,7 @@
           "kind": "actual",
           "source": "Shiptrail (AIS port-call history)",
           "source_url": "https://shiptrail.io/vessel/636024014-msc-eagle-iii",
-          "retrieved_at": "2026-11-17T02:30:00+01:00",
+          "retrieved_at": "2026-11-17T03:30:00+01:00",
           "auto": true,
           "confidence": "high"
         },
@@ -503,34 +503,34 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/port/rijeka-2263",
-        "checked_at": "2026-11-17T02:30:00+01:00",
+        "checked_at": "2026-11-17T03:30:00+01:00",
         "found": false
       },
       "imo": "9540065",
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/636022450-msc-audrey",
-        "fetched_at": "2026-11-17T02:30:00+01:00",
+        "fetched_at": "2026-11-17T03:30:00+01:00",
         "mmsi": "636022450",
         "imo": "9540065",
         "name": "MSC AUDREY",
-        "last_heard": "2026-11-17T01:28:13.000Z",
+        "last_heard": "2026-11-17T02:28:13.000Z",
         "position": {
-          "lat": 45.62927,
-          "lon": 13.75937,
-          "at": "2026-11-17T01:28:13.000Z",
+          "lat": 45.6282,
+          "lon": 13.75906,
+          "at": "2026-11-17T02:28:13.000Z",
           "status": "Moored",
           "speed_kn": 0
         },
-        "quay_distance_km": 64.19,
+        "quay_distance_km": 64.15,
         "at_quay": false,
-        "destination_raw": "ITTRS",
+        "destination_raw": "HRRJK",
         "bound_for": {
-          "locode": "ITTRS",
-          "name": "Trieste",
-          "country": "Italy"
+          "locode": "HRRJK",
+          "name": "Rijeka",
+          "country": "Croatia"
         },
-        "destination_eta": "2026-11-14T04:00:00.000Z",
+        "destination_eta": "2026-11-18T23:00:00.000Z",
         "previous_port": null,
         "still_in_port": {
           "locode": "ITTRS",
@@ -886,8 +886,8 @@
       "name": "Wingo Marine",
       "url": "https://wingo-marine.com/port/rijeka-2263",
       "ok": true,
-      "fetched_at": "2026-11-17T02:30:00+01:00",
-      "last_attempt_at": "2026-11-17T02:30:00+01:00",
+      "fetched_at": "2026-11-17T03:30:00+01:00",
+      "last_attempt_at": "2026-11-17T03:30:00+01:00",
       "error": null,
       "summary": "30 vessels reported within 15 km in the last 24 hours",
       "vessels_listed": 33
@@ -896,8 +896,8 @@
       "name": "AIS-catcher",
       "url": "https://www.aiscatcher.org/place/6398/brajdica-container-terminal",
       "ok": true,
-      "fetched_at": "2026-11-17T02:30:00+01:00",
-      "last_attempt_at": "2026-11-17T02:30:00+01:00",
+      "fetched_at": "2026-11-17T03:30:00+01:00",
+      "last_attempt_at": "2026-11-17T03:30:00+01:00",
       "error": null,
       "receiving_stations": 0,
       "vessels_inside": 0,
@@ -908,8 +908,8 @@
       "name": "Shiptrail",
       "url": "https://shiptrail.io/",
       "ok": true,
-      "fetched_at": "2026-11-17T02:30:00+01:00",
-      "last_attempt_at": "2026-11-17T02:30:00+01:00",
+      "fetched_at": "2026-11-17T03:30:00+01:00",
+      "last_attempt_at": "2026-11-17T03:30:00+01:00",
       "error": null,
       "note": "AIS-derived port calls and positions. Data: Shiptrail, shiptrail.io"
     }
@@ -927,6 +927,6 @@
   "stale_after_hours": 3,
   "research_pending": [],
   "research_needed": [],
-  "next_check_at": "2026-11-17T03:30:00+01:00",
+  "next_check_at": "2026-11-17T04:30:00+01:00",
   "stale_grace_minutes": 100
 }
