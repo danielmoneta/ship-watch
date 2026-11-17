@@ -1,252 +1,259 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-17T14:30:01+01:00",
+  "generated_at": "2026-11-17T14:45:00+01:00",
   "timezone": "Europe/Zagreb",
   "terminal": {
     "url": "https://webusercorner.ictsi.hr/?language=EN",
     "query_url": "https://webusercorner.ictsi.hr/?language=EN&from=07.11.2026&to=08.12.2026",
     "ok": true,
-    "fetched_at": "2026-11-17T14:30:01+01:00",
-    "last_attempt_at": "2026-11-17T14:30:01+01:00",
+    "fetched_at": "2026-11-17T14:45:00+01:00",
+    "last_attempt_at": "2026-11-17T14:45:00+01:00",
     "rows": 15,
     "error": null
   },
   "berth": {
-    "state": "empty",
-    "vessels": []
-  },
-  "upcoming": [
-    {
-      "call_id": "MSC EAGLE III|AH644A",
-      "name": "MSC EAGLE III",
-      "shipper": "MSC",
-      "voyage_in": "AH644A",
-      "voyage_out": "AH644A",
-      "status": "IN ARRIVAL",
-      "eta": "2026-11-17T14:30:00+01:00",
-      "etd": "2026-11-18T05:00:00+01:00",
-      "ata": null,
-      "atd": null,
-      "phase": "expected",
-      "imo": "9302449",
-      "ais": {
-        "source": "Wingo Marine",
-        "source_url": "https://wingo-marine.com/ship/msc-eagle-iii-636024014",
-        "checked_at": "2026-11-17T14:30:01+01:00",
-        "found": true,
-        "mmsi": "636024014",
-        "distance_km": 3.3,
-        "nav": null,
-        "destination_raw": "HRRJK",
-        "destination": {
-          "locode": "HRRJK",
-          "name": "Rijeka, Croatia"
-        },
-        "destination_kind": "ais_destination",
-        "berth_consistent": false,
-        "last_report": null
-      },
-      "trail": {
-        "source": "Shiptrail",
-        "source_url": "https://shiptrail.io/vessel/636024014-msc-eagle-iii",
-        "fetched_at": "2026-11-17T14:30:01+01:00",
-        "mmsi": "636024014",
-        "imo": "9302449",
+    "state": "occupied",
+    "vessels": [
+      {
+        "call_id": "MSC EAGLE III|AH644A",
         "name": "MSC EAGLE III",
-        "last_heard": "2026-11-17T13:28:34.000Z",
-        "position": {
-          "lat": 45.31981,
-          "lon": 14.45365,
-          "at": "2026-11-17T13:28:34.000Z",
-          "status": "Moored",
-          "speed_kn": 0
-        },
-        "quay_distance_km": 0.07,
-        "at_quay": true,
-        "destination_raw": "HRRJK",
-        "bound_for": {
-          "locode": "HRRJK",
-          "name": "Rijeka",
-          "country": "Croatia"
-        },
-        "destination_eta": "2026-11-16T13:30:00.000Z",
-        "previous_port": {
-          "locode": "ITTRS",
-          "name": "Trieste",
-          "country": "Italy",
-          "arrived_at": "2026-11-14T13:22:03.991Z",
-          "departed_at": "2026-11-16T00:47:16.744Z",
-          "url": "https://shiptrail.io/port/ittrs-trieste"
-        },
-        "still_in_port": null,
-        "recent_calls": [
-          {
-            "locode": "HRKOS",
-            "name": "Kostrena",
-            "country": "Croatia",
-            "arrived_at": "2026-11-17T12:51:22.000Z",
-            "departed_at": null
+        "shipper": "MSC",
+        "voyage_in": "AH644A",
+        "voyage_out": "AH644A",
+        "status": "ARRIVED",
+        "eta": "2026-11-17T14:30:00+01:00",
+        "etd": "2026-11-18T05:00:00+01:00",
+        "ata": "2026-11-17T14:00:00+01:00",
+        "atd": null,
+        "phase": "at_berth",
+        "imo": "9302449",
+        "ais": {
+          "source": "Wingo Marine",
+          "source_url": "https://wingo-marine.com/ship/msc-eagle-iii-636024014",
+          "checked_at": "2026-11-17T14:45:00+01:00",
+          "found": true,
+          "mmsi": "636024014",
+          "distance_km": 4.2,
+          "nav": null,
+          "destination_raw": "HRRJK",
+          "destination": {
+            "locode": "HRRJK",
+            "name": "Rijeka, Croatia"
           },
-          {
+          "destination_kind": "ais_destination",
+          "berth_consistent": true,
+          "last_report": "2026-11-17T13:06:00.000Z",
+          "nearest_port_label": "Rijeka",
+          "imo": "9302449"
+        },
+        "trail": {
+          "source": "Shiptrail",
+          "source_url": "https://shiptrail.io/vessel/636024014-msc-eagle-iii",
+          "fetched_at": "2026-11-17T14:30:01+01:00",
+          "mmsi": "636024014",
+          "imo": "9302449",
+          "name": "MSC EAGLE III",
+          "last_heard": "2026-11-17T13:28:34.000Z",
+          "position": {
+            "lat": 45.31981,
+            "lon": 14.45365,
+            "at": "2026-11-17T13:28:34.000Z",
+            "status": "Moored",
+            "speed_kn": 0
+          },
+          "quay_distance_km": 0.07,
+          "at_quay": true,
+          "destination_raw": "HRRJK",
+          "bound_for": {
             "locode": "HRRJK",
             "name": "Rijeka",
-            "country": "Croatia",
-            "arrived_at": "2026-11-16T14:02:38.000Z",
-            "departed_at": "2026-11-17T12:21:15.000Z"
+            "country": "Croatia"
           },
-          {
+          "destination_eta": "2026-11-16T13:30:00.000Z",
+          "previous_port": {
             "locode": "ITTRS",
             "name": "Trieste",
             "country": "Italy",
             "arrived_at": "2026-11-14T13:22:03.991Z",
-            "departed_at": "2026-11-16T00:47:16.744Z"
+            "departed_at": "2026-11-16T00:47:16.744Z",
+            "url": "https://shiptrail.io/port/ittrs-trieste"
           },
-          {
-            "locode": "SIKOP",
-            "name": "Koper",
-            "country": "Slovenia",
-            "arrived_at": "2026-11-13T11:44:52.115Z",
-            "departed_at": "2026-11-14T11:53:05.592Z"
-          },
-          {
-            "locode": "SIKOP",
-            "name": "Koper",
-            "country": "Slovenia",
-            "arrived_at": "2026-11-11T20:22:30.102Z",
-            "departed_at": "2026-11-13T11:08:54.757Z"
-          },
-          {
-            "locode": "ITVCE",
-            "name": "Venezia",
-            "country": "Italy",
-            "arrived_at": "2026-11-01T15:57:44.005Z",
-            "departed_at": "2026-11-03T07:11:50.094Z"
-          }
-        ]
-      },
-      "voyage": {
-        "researched_at": "2026-11-16T16:24:23+01:00",
-        "previous_port": {
-          "name": "Trieste",
-          "locode": "ITTRS",
-          "country": "Italy",
-          "arrived_at": "2026-11-14T14:22:03+01:00",
-          "departed_at": "2026-11-16T01:47:16+01:00",
-          "kind": "actual",
-          "source": "Shiptrail (AIS port-call history)",
-          "source_url": "https://shiptrail.io/vessel/636024014-msc-eagle-iii",
-          "retrieved_at": "2026-11-17T14:30:01+01:00",
-          "auto": true,
-          "confidence": "high"
+          "still_in_port": null,
+          "recent_calls": [
+            {
+              "locode": "HRKOS",
+              "name": "Kostrena",
+              "country": "Croatia",
+              "arrived_at": "2026-11-17T12:51:22.000Z",
+              "departed_at": null
+            },
+            {
+              "locode": "HRRJK",
+              "name": "Rijeka",
+              "country": "Croatia",
+              "arrived_at": "2026-11-16T14:02:38.000Z",
+              "departed_at": "2026-11-17T12:21:15.000Z"
+            },
+            {
+              "locode": "ITTRS",
+              "name": "Trieste",
+              "country": "Italy",
+              "arrived_at": "2026-11-14T13:22:03.991Z",
+              "departed_at": "2026-11-16T00:47:16.744Z"
+            },
+            {
+              "locode": "SIKOP",
+              "name": "Koper",
+              "country": "Slovenia",
+              "arrived_at": "2026-11-13T11:44:52.115Z",
+              "departed_at": "2026-11-14T11:53:05.592Z"
+            },
+            {
+              "locode": "SIKOP",
+              "name": "Koper",
+              "country": "Slovenia",
+              "arrived_at": "2026-11-11T20:22:30.102Z",
+              "departed_at": "2026-11-13T11:08:54.757Z"
+            },
+            {
+              "locode": "ITVCE",
+              "name": "Venezia",
+              "country": "Italy",
+              "arrived_at": "2026-11-01T15:57:44.005Z",
+              "departed_at": "2026-11-03T07:11:50.094Z"
+            }
+          ]
         },
-        "next_port": null,
-        "notes": "On 16 Nov ~16:00 local VesselFinder showed her at anchor in the Adriatic bound for Rijeka; Wingo placed her 18 km from the port. Next port after Rijeka not established."
-      },
-      "profile": {
-        "imo": "9302449",
-        "name": "MSC EAGLE III",
-        "aliases": [],
-        "mmsi": "636024014",
-        "fields": {
-          "type": {
-            "value": "Container ship",
-            "source": "VesselFinder",
-            "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
-            "retrieved_at": "2026-11-16T16:24:23+01:00",
-            "confidence": "medium"
-          },
-          "flag": {
-            "value": "Liberia",
-            "source": "VesselFinder; Wingo Marine (AIS)",
-            "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
-            "retrieved_at": "2026-11-16T16:24:23+01:00",
-            "confidence": "high"
-          },
-          "year_built": {
-            "value": 2004,
-            "source": "VesselFinder; Flexport Atlas (via web search)",
-            "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
-            "retrieved_at": "2026-11-16T16:24:23+01:00",
-            "confidence": "high"
-          },
-          "length_m": {
-            "value": 207.5,
-            "source": "VesselFinder (AIS broadcasts 207 m)",
-            "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
-            "retrieved_at": "2026-11-16T16:24:23+01:00",
-            "confidence": "high"
-          },
-          "beam_m": {
-            "value": 29.8,
-            "source": "VesselFinder (AIS broadcasts 30 m)",
-            "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
-            "retrieved_at": "2026-11-16T16:24:23+01:00",
-            "confidence": "high"
-          },
-          "teu": {
-            "value": 2478,
-            "source": "Flexport Atlas, as reported in a web search summary",
-            "source_url": "https://atlas.flexport.com/vessel/imo:9302449/mmsi:636024014/name:msc-eagle-iii",
-            "retrieved_at": "2026-11-16T16:24:23+01:00",
-            "confidence": "low",
-            "note": "Single source, seen only through a search summary."
-          },
-          "gross_tonnage": {
-            "value": 25406,
-            "source": "VesselFinder",
-            "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
-            "retrieved_at": "2026-11-16T16:24:23+01:00",
-            "confidence": "medium"
-          },
-          "deadweight_t": {
-            "value": 33781,
-            "source": "VesselFinder; Maritime Optima (via web search)",
-            "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
-            "retrieved_at": "2026-11-16T16:24:23+01:00",
-            "confidence": "high"
-          },
-          "callsign": {
-            "value": "5LQN7",
-            "source": "VesselFinder; Wingo Marine (AIS)",
-            "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
-            "retrieved_at": "2026-11-16T16:24:23+01:00",
-            "confidence": "high"
-          },
-          "former_names": {
-            "value": "Maersk Dakar, Frisia Lübeck, CSAV Rio Lontue",
-            "source": "VesselFinder (name history)",
-            "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
-            "retrieved_at": "2026-11-16T16:24:23+01:00",
-            "confidence": "medium"
-          },
-          "operator": {
-            "value": "MSC",
-            "source": "AGCT sailing list (shipper column)",
-            "source_url": "https://webusercorner.ictsi.hr/?language=EN",
-            "retrieved_at": "2026-11-16T16:24:23+01:00",
-            "confidence": "high"
-          }
-        },
-        "photo": null,
-        "facts": [
-          {
-            "text": "She is on at least her fourth name: earlier in her career she sailed as CSAV Rio Lontue, Frisia Lübeck and Maersk Dakar.",
-            "source": "VesselFinder (name history)",
-            "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
-            "confidence": "medium"
-          }
-        ],
-        "research": {
-          "status": "partial",
+        "voyage": {
           "researched_at": "2026-11-16T16:24:23+01:00",
-          "missing": [
-            "photo",
-            "builder"
+          "previous_port": {
+            "name": "Trieste",
+            "locode": "ITTRS",
+            "country": "Italy",
+            "arrived_at": "2026-11-14T14:22:03+01:00",
+            "departed_at": "2026-11-16T01:47:16+01:00",
+            "kind": "actual",
+            "source": "Shiptrail (AIS port-call history)",
+            "source_url": "https://shiptrail.io/vessel/636024014-msc-eagle-iii",
+            "retrieved_at": "2026-11-17T14:30:01+01:00",
+            "auto": true,
+            "confidence": "high"
+          },
+          "next_port": null,
+          "notes": "On 16 Nov ~16:00 local VesselFinder showed her at anchor in the Adriatic bound for Rijeka; Wingo placed her 18 km from the port. Next port after Rijeka not established."
+        },
+        "profile": {
+          "imo": "9302449",
+          "name": "MSC EAGLE III",
+          "aliases": [],
+          "mmsi": "636024014",
+          "fields": {
+            "type": {
+              "value": "Container ship",
+              "source": "VesselFinder",
+              "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+              "retrieved_at": "2026-11-16T16:24:23+01:00",
+              "confidence": "medium"
+            },
+            "flag": {
+              "value": "Liberia",
+              "source": "VesselFinder; Wingo Marine (AIS)",
+              "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+              "retrieved_at": "2026-11-16T16:24:23+01:00",
+              "confidence": "high"
+            },
+            "year_built": {
+              "value": 2004,
+              "source": "VesselFinder; Flexport Atlas (via web search)",
+              "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+              "retrieved_at": "2026-11-16T16:24:23+01:00",
+              "confidence": "high"
+            },
+            "length_m": {
+              "value": 207.5,
+              "source": "VesselFinder (AIS broadcasts 207 m)",
+              "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+              "retrieved_at": "2026-11-16T16:24:23+01:00",
+              "confidence": "high"
+            },
+            "beam_m": {
+              "value": 29.8,
+              "source": "VesselFinder (AIS broadcasts 30 m)",
+              "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+              "retrieved_at": "2026-11-16T16:24:23+01:00",
+              "confidence": "high"
+            },
+            "teu": {
+              "value": 2478,
+              "source": "Flexport Atlas, as reported in a web search summary",
+              "source_url": "https://atlas.flexport.com/vessel/imo:9302449/mmsi:636024014/name:msc-eagle-iii",
+              "retrieved_at": "2026-11-16T16:24:23+01:00",
+              "confidence": "low",
+              "note": "Single source, seen only through a search summary."
+            },
+            "gross_tonnage": {
+              "value": 25406,
+              "source": "VesselFinder",
+              "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+              "retrieved_at": "2026-11-16T16:24:23+01:00",
+              "confidence": "medium"
+            },
+            "deadweight_t": {
+              "value": 33781,
+              "source": "VesselFinder; Maritime Optima (via web search)",
+              "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+              "retrieved_at": "2026-11-16T16:24:23+01:00",
+              "confidence": "high"
+            },
+            "callsign": {
+              "value": "5LQN7",
+              "source": "VesselFinder; Wingo Marine (AIS)",
+              "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+              "retrieved_at": "2026-11-16T16:24:23+01:00",
+              "confidence": "high"
+            },
+            "former_names": {
+              "value": "Maersk Dakar, Frisia Lübeck, CSAV Rio Lontue",
+              "source": "VesselFinder (name history)",
+              "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+              "retrieved_at": "2026-11-16T16:24:23+01:00",
+              "confidence": "medium"
+            },
+            "operator": {
+              "value": "MSC",
+              "source": "AGCT sailing list (shipper column)",
+              "source_url": "https://webusercorner.ictsi.hr/?language=EN",
+              "retrieved_at": "2026-11-16T16:24:23+01:00",
+              "confidence": "high"
+            }
+          },
+          "photo": null,
+          "facts": [
+            {
+              "text": "She is on at least her fourth name: earlier in her career she sailed as CSAV Rio Lontue, Frisia Lübeck and Maersk Dakar.",
+              "source": "VesselFinder (name history)",
+              "source_url": "https://www.vesselfinder.com/vessels/details/9302449",
+              "confidence": "medium"
+            }
           ],
-          "notes": "No photograph on Wikimedia Commons under her IMO category or current name. Built in Germany per one source; shipyard not established."
+          "research": {
+            "status": "partial",
+            "researched_at": "2026-11-16T16:24:23+01:00",
+            "missing": [
+              "photo",
+              "builder"
+            ],
+            "notes": "No photograph on Wikimedia Commons under her IMO category or current name. Built in Germany per one source; shipyard not established."
+          }
+        },
+        "corroboration": {
+          "level": "ais_consistent",
+          "note": "AIS position 70 m from the Brajdica quay, Moored (Shiptrail)."
         }
       }
-    },
+    ]
+  },
+  "upcoming": [
     {
       "call_id": "MSC AUDREY|QX645E",
       "name": "MSC AUDREY",
@@ -262,7 +269,7 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/msc-audrey-636022450",
-        "checked_at": "2026-11-17T14:30:01+01:00",
+        "checked_at": "2026-11-17T14:45:00+01:00",
         "found": true,
         "mmsi": "636022450",
         "distance_km": null,
@@ -481,7 +488,7 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/port/rijeka-2263",
-        "checked_at": "2026-11-17T14:15:00+01:00",
+        "checked_at": "2026-11-17T14:45:00+01:00",
         "found": false
       },
       "imo": "9344409",
@@ -551,7 +558,107 @@
         "next_port": null,
         "notes": "Previous port is VesselFinder's 'Last Port' (Derince, Turkey, ATD 12 Nov 13:16 UTC). AIS destination is Rijeka, which only shows she is bound there."
       },
-      "profile": null
+      "profile": {
+        "imo": "9344409",
+        "name": "UNITY ONE",
+        "aliases": [
+          "KARL-JACOB K"
+        ],
+        "mmsi": "352005466",
+        "fields": {
+          "type": {
+            "value": "General cargo ship",
+            "source": "VesselFinder; Maritime Optima",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
+            "retrieved_at": "2026-11-16T19:25:00+01:00",
+            "confidence": "high",
+            "note": "Not a purpose-built container ship; the terminal lists her with shipper SOC (shipper-owned containers)."
+          },
+          "flag": {
+            "value": "Panama",
+            "source": "VesselFinder; Maritime Optima",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
+            "retrieved_at": "2026-11-16T19:25:00+01:00",
+            "confidence": "high"
+          },
+          "year_built": {
+            "value": 2006,
+            "source": "VesselFinder; Maritime Optima",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
+            "retrieved_at": "2026-11-16T19:25:00+01:00",
+            "confidence": "high"
+          },
+          "length_m": {
+            "value": 90.25,
+            "source": "VesselFinder; Maritime Optima (about 90 m)",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
+            "retrieved_at": "2026-11-16T19:25:00+01:00",
+            "confidence": "high"
+          },
+          "beam_m": {
+            "value": 15.2,
+            "source": "VesselFinder",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
+            "retrieved_at": "2026-11-16T19:25:00+01:00",
+            "confidence": "medium"
+          },
+          "gross_tonnage": {
+            "value": 2997,
+            "source": "VesselFinder",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
+            "retrieved_at": "2026-11-16T19:25:00+01:00",
+            "confidence": "medium"
+          },
+          "deadweight_t": {
+            "value": 4745,
+            "source": "VesselFinder; Maritime Optima",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
+            "retrieved_at": "2026-11-16T19:25:00+01:00",
+            "confidence": "high"
+          },
+          "callsign": {
+            "value": "3E8724",
+            "source": "MarineLink",
+            "source_url": "https://ports.marinelink.com/vessels/vessel/352005466",
+            "retrieved_at": "2026-11-16T19:25:00+01:00",
+            "confidence": "medium"
+          },
+          "former_names": {
+            "value": "Karl-Jacob K",
+            "source": "Wikimedia Commons (file filed under IMO 9344409)",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Karl-Jacob_K_(ship,_2006)_IMO_9344409_Calandkanaal.JPG",
+            "retrieved_at": "2026-11-16T19:25:00+01:00",
+            "confidence": "medium"
+          }
+        },
+        "photo": {
+          "file": "data/photos/9344409.jpg",
+          "title": "Karl-Jacob K (ship, 2006) IMO 9344409 Calandkanaal.JPG",
+          "author": "Alf van Beem",
+          "license": "Public domain",
+          "license_url": null,
+          "source_name": "Wikimedia Commons",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Karl-Jacob_K_(ship,_2006)_IMO_9344409_Calandkanaal.JPG",
+          "taken": "2017-08-20 08:39:17",
+          "width": 4608,
+          "height": 3456,
+          "retrieved_at": "2026-11-16T19:20:24+01:00",
+          "caption": "Photographed as KARL-JACOB K, 2017"
+        },
+        "facts": [],
+        "research": {
+          "status": "partial",
+          "researched_at": "2026-11-16T19:25:00+01:00",
+          "missing": [
+            "teu",
+            "builder",
+            "operator",
+            "owner",
+            "class"
+          ],
+          "notes": "Identified by name via MarineLink, Maritime Optima and VesselFinder (IMO 9344409, MMSI 352005466); VesselFinder shows her bound for Rijeka with an ETA matching the terminal list. She is a small general cargo ship, not a container ship, so identification rests on the Rijeka destination/ETA match. Owner (one source: MagicPort) not recorded."
+        }
+      }
     },
     {
       "call_id": "MSC CAITLIN II|AH645A",
@@ -791,18 +898,18 @@
       "name": "Wingo Marine",
       "url": "https://wingo-marine.com/port/rijeka-2263",
       "ok": true,
-      "fetched_at": "2026-11-17T14:30:01+01:00",
-      "last_attempt_at": "2026-11-17T14:30:01+01:00",
+      "fetched_at": "2026-11-17T14:45:00+01:00",
+      "last_attempt_at": "2026-11-17T14:45:00+01:00",
       "error": null,
       "summary": "29 vessels reported within 15 km in the last 24 hours",
-      "vessels_listed": 34
+      "vessels_listed": 33
     },
     "aiscatcher": {
       "name": "AIS-catcher",
       "url": "https://www.aiscatcher.org/place/6398/brajdica-container-terminal",
       "ok": true,
-      "fetched_at": "2026-11-17T14:30:01+01:00",
-      "last_attempt_at": "2026-11-17T14:30:01+01:00",
+      "fetched_at": "2026-11-17T14:45:00+01:00",
+      "last_attempt_at": "2026-11-17T14:45:00+01:00",
       "error": null,
       "receiving_stations": 0,
       "vessels_inside": 0,
@@ -813,8 +920,8 @@
       "name": "Shiptrail",
       "url": "https://shiptrail.io/",
       "ok": true,
-      "fetched_at": "2026-11-17T14:30:01+01:00",
-      "last_attempt_at": "2026-11-17T14:30:01+01:00",
+      "fetched_at": "2026-11-17T14:45:00+01:00",
+      "last_attempt_at": "2026-11-17T14:45:00+01:00",
       "error": null,
       "note": "AIS-derived port calls and positions. Data: Shiptrail, shiptrail.io"
     }
@@ -842,11 +949,18 @@
       "from": "COMPLETE",
       "to": "DEPARTED",
       "observed": "2026-11-17T13:30:01+01:00"
+    },
+    {
+      "type": "arrived",
+      "call_id": "MSC EAGLE III|AH644A",
+      "name": "MSC EAGLE III",
+      "at": "2026-11-17T14:00:00+01:00",
+      "observed": "2026-11-17T14:45:00+01:00"
     }
   ],
   "stale_after_hours": 3,
   "research_pending": [],
   "research_needed": [],
-  "next_check_at": "2026-11-17T15:30:01+01:00",
+  "next_check_at": "2026-11-17T15:45:00+01:00",
   "stale_grace_minutes": 100
 }
