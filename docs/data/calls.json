@@ -13,7 +13,7 @@
       "atd": "2026-11-09T03:15:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-17T14:15:00+01:00",
+      "last_seen": "2026-11-17T14:30:01+01:00",
       "listed": true
     },
     "MSC PAMIRA III|AH643A": {
@@ -29,7 +29,7 @@
       "atd": "2026-11-10T23:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-17T14:15:00+01:00",
+      "last_seen": "2026-11-17T14:30:01+01:00",
       "listed": true
     },
     "CMA CGM CYRANO|0BEOUE1MA": {
@@ -45,7 +45,7 @@
       "atd": "2026-11-13T12:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-17T14:15:00+01:00",
+      "last_seen": "2026-11-17T14:30:01+01:00",
       "listed": true
     },
     "MERIC|14": {
@@ -61,7 +61,7 @@
       "atd": "2026-11-11T13:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-17T14:15:00+01:00",
+      "last_seen": "2026-11-17T14:30:01+01:00",
       "listed": true
     },
     "ARIFE|15": {
@@ -77,7 +77,7 @@
       "atd": "2026-11-11T18:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-17T14:15:00+01:00",
+      "last_seen": "2026-11-17T14:30:01+01:00",
       "listed": true
     },
     "PIERRE A|BMS0T0E19": {
@@ -93,7 +93,7 @@
       "atd": "2026-11-15T02:45:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-17T14:15:00+01:00",
+      "last_seen": "2026-11-17T14:30:01+01:00",
       "listed": true
     },
     "MSC RENEE XIII|QX642E": {
@@ -109,7 +109,7 @@
       "atd": "2026-11-15T13:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-17T14:15:00+01:00",
+      "last_seen": "2026-11-17T14:30:01+01:00",
       "listed": true
     },
     "SC MEDFORD|152W": {
@@ -125,7 +125,7 @@
       "atd": "2026-11-16T08:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-17T14:15:00+01:00",
+      "last_seen": "2026-11-17T14:30:01+01:00",
       "listed": true
     },
     "MSC TERESA|QX644E": {
@@ -141,7 +141,7 @@
       "atd": "2026-11-17T12:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-17T14:15:00+01:00",
+      "last_seen": "2026-11-17T14:30:01+01:00",
       "listed": true,
       "imo": "9469560",
       "ais": {
@@ -260,13 +260,13 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-17T14:15:00+01:00",
+      "last_seen": "2026-11-17T14:30:01+01:00",
       "listed": true,
       "imo": "9302449",
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/msc-eagle-iii-636024014",
-        "checked_at": "2026-11-17T14:15:00+01:00",
+        "checked_at": "2026-11-17T14:30:01+01:00",
         "found": true,
         "mmsi": "636024014",
         "distance_km": 3.3,
@@ -283,20 +283,20 @@
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/636024014-msc-eagle-iii",
-        "fetched_at": "2026-11-17T13:30:01+01:00",
+        "fetched_at": "2026-11-17T14:30:01+01:00",
         "mmsi": "636024014",
         "imo": "9302449",
         "name": "MSC EAGLE III",
-        "last_heard": "2026-11-17T12:29:22.000Z",
+        "last_heard": "2026-11-17T13:28:34.000Z",
         "position": {
-          "lat": 45.30248,
-          "lon": 14.41754,
-          "at": "2026-11-17T12:29:22.000Z",
-          "status": "Under way under engine power",
-          "speed_kn": 9
+          "lat": 45.31981,
+          "lon": 14.45365,
+          "at": "2026-11-17T13:28:34.000Z",
+          "status": "Moored",
+          "speed_kn": 0
         },
-        "quay_distance_km": 3.49,
-        "at_quay": false,
+        "quay_distance_km": 0.07,
+        "at_quay": true,
         "destination_raw": "HRRJK",
         "bound_for": {
           "locode": "HRRJK",
@@ -313,6 +313,13 @@
           "url": "https://shiptrail.io/port/ittrs-trieste"
         },
         "recent_calls": [
+          {
+            "locode": "HRKOS",
+            "name": "Kostrena",
+            "country": "Croatia",
+            "arrived_at": "2026-11-17T12:51:22.000Z",
+            "departed_at": null
+          },
           {
             "locode": "HRRJK",
             "name": "Rijeka",
@@ -347,13 +354,6 @@
             "country": "Italy",
             "arrived_at": "2026-11-01T15:57:44.005Z",
             "departed_at": "2026-11-03T07:11:50.094Z"
-          },
-          {
-            "locode": "ITVCE",
-            "name": "Venezia",
-            "country": "Italy",
-            "arrived_at": "2026-10-31T14:17:57.386Z",
-            "departed_at": "2026-11-01T13:54:21.018Z"
           }
         ],
         "particulars": {
@@ -363,6 +363,124 @@
           "registry": "Singapore",
           "portOfRegistry": "Monrovia",
           "yardNumber": "103"
+        },
+        "still_in_port": null
+      }
+    },
+    "MSC AUDREY|QX645E": {
+      "call_id": "MSC AUDREY|QX645E",
+      "name": "MSC AUDREY",
+      "shipper": "MSC",
+      "voyage_in": "QX645E",
+      "voyage_out": "QX645E",
+      "status": "IN ARRIVAL",
+      "eta": "2026-11-18T06:30:00+01:00",
+      "etd": "2026-11-19T14:30:00+01:00",
+      "ata": null,
+      "atd": null,
+      "phase": "expected",
+      "first_seen": "2026-11-16T16:12:47+01:00",
+      "last_seen": "2026-11-17T14:30:01+01:00",
+      "listed": true,
+      "ais": {
+        "source": "Wingo Marine",
+        "source_url": "https://wingo-marine.com/ship/msc-audrey-636022450",
+        "checked_at": "2026-11-17T14:30:01+01:00",
+        "found": true,
+        "mmsi": "636022450",
+        "distance_km": null,
+        "nav": "Underway",
+        "destination_raw": "HRRJK",
+        "destination": {
+          "locode": "HRRJK",
+          "name": "Rijeka, Croatia"
+        },
+        "destination_kind": "ais_destination",
+        "berth_consistent": false,
+        "last_report": null
+      },
+      "imo": "9540065",
+      "trail": {
+        "source": "Shiptrail",
+        "source_url": "https://shiptrail.io/vessel/636022450-msc-audrey",
+        "fetched_at": "2026-11-17T14:30:01+01:00",
+        "mmsi": "636022450",
+        "imo": "9540065",
+        "name": "MSC AUDREY",
+        "last_heard": "2026-11-17T13:29:09.000Z",
+        "position": {
+          "lat": 45.03597,
+          "lon": 13.04424,
+          "at": "2026-11-17T13:29:09.000Z",
+          "status": "Under way under engine power",
+          "speed_kn": 11.3
+        },
+        "quay_distance_km": 114.96,
+        "at_quay": false,
+        "destination_raw": "HRRJK",
+        "bound_for": {
+          "locode": "HRRJK",
+          "name": "Rijeka",
+          "country": "Croatia"
+        },
+        "destination_eta": "2026-11-18T04:00:00.000Z",
+        "previous_port": {
+          "locode": "ITTRS",
+          "name": "Trieste",
+          "country": "Italy",
+          "arrived_at": "2026-11-14T04:51:54.473Z",
+          "departed_at": "2026-11-17T08:16:21.568Z",
+          "url": "https://shiptrail.io/port/ittrs-trieste"
+        },
+        "recent_calls": [
+          {
+            "locode": "ITTRS",
+            "name": "Trieste",
+            "country": "Italy",
+            "arrived_at": "2026-11-14T04:51:54.473Z",
+            "departed_at": "2026-11-17T08:16:21.568Z"
+          },
+          {
+            "locode": "SIKOP",
+            "name": "Koper",
+            "country": "Slovenia",
+            "arrived_at": "2026-11-11T09:38:08.349Z",
+            "departed_at": "2026-11-13T05:49:31.671Z"
+          },
+          {
+            "locode": "SIKOP",
+            "name": "Koper",
+            "country": "Slovenia",
+            "arrived_at": "2026-11-10T17:12:55.328Z",
+            "departed_at": "2026-11-11T08:28:30.218Z"
+          },
+          {
+            "locode": "ILHFA",
+            "name": "Haifa",
+            "country": "Israel",
+            "arrived_at": "2026-11-05T08:14:19.342Z",
+            "departed_at": "2026-11-06T20:41:05.006Z"
+          },
+          {
+            "locode": "ILHFA",
+            "name": "Haifa",
+            "country": "Israel",
+            "arrived_at": "2026-11-05T06:28:46.424Z",
+            "departed_at": "2026-11-05T06:48:15.869Z"
+          },
+          {
+            "locode": "ILHFA",
+            "name": "Haifa",
+            "country": "Israel",
+            "arrived_at": "2026-11-05T04:06:36.176Z",
+            "departed_at": "2026-11-05T05:52:06.130Z"
+          }
+        ],
+        "particulars": {
+          "grossTonnage": 150783,
+          "netTonnage": 65402,
+          "deadweight": 135574,
+          "service": "Freight Ship"
         },
         "still_in_port": null
       }
@@ -380,7 +498,7 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-17T14:15:00+01:00",
+      "last_seen": "2026-11-17T14:30:01+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
@@ -452,124 +570,6 @@
         "still_in_port": null
       }
     },
-    "MSC AUDREY|QX645E": {
-      "call_id": "MSC AUDREY|QX645E",
-      "name": "MSC AUDREY",
-      "shipper": "MSC",
-      "voyage_in": "QX645E",
-      "voyage_out": "QX645E",
-      "status": "IN ARRIVAL",
-      "eta": "2026-11-18T06:30:00+01:00",
-      "etd": "2026-11-19T14:30:00+01:00",
-      "ata": null,
-      "atd": null,
-      "phase": "expected",
-      "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-17T14:15:00+01:00",
-      "listed": true,
-      "ais": {
-        "source": "Wingo Marine",
-        "source_url": "https://wingo-marine.com/ship/msc-audrey-636022450",
-        "checked_at": "2026-11-17T13:30:01+01:00",
-        "found": true,
-        "mmsi": "636022450",
-        "distance_km": null,
-        "nav": "Underway",
-        "destination_raw": "HRRJK",
-        "destination": {
-          "locode": "HRRJK",
-          "name": "Rijeka, Croatia"
-        },
-        "destination_kind": "ais_destination",
-        "berth_consistent": false,
-        "last_report": null
-      },
-      "imo": "9540065",
-      "trail": {
-        "source": "Shiptrail",
-        "source_url": "https://shiptrail.io/vessel/636022450-msc-audrey",
-        "fetched_at": "2026-11-17T13:30:01+01:00",
-        "mmsi": "636022450",
-        "imo": "9540065",
-        "name": "MSC AUDREY",
-        "last_heard": "2026-11-17T12:29:10.000Z",
-        "position": {
-          "lat": 45.22619,
-          "lon": 13.02073,
-          "at": "2026-11-17T12:29:10.000Z",
-          "status": "Under way under engine power",
-          "speed_kn": 11.4
-        },
-        "quay_distance_km": 112.68,
-        "at_quay": false,
-        "destination_raw": "HRRJK",
-        "bound_for": {
-          "locode": "HRRJK",
-          "name": "Rijeka",
-          "country": "Croatia"
-        },
-        "destination_eta": "2026-11-18T04:00:00.000Z",
-        "previous_port": {
-          "locode": "ITTRS",
-          "name": "Trieste",
-          "country": "Italy",
-          "arrived_at": "2026-11-14T04:51:54.473Z",
-          "departed_at": "2026-11-17T08:16:21.568Z",
-          "url": "https://shiptrail.io/port/ittrs-trieste"
-        },
-        "recent_calls": [
-          {
-            "locode": "ITTRS",
-            "name": "Trieste",
-            "country": "Italy",
-            "arrived_at": "2026-11-14T04:51:54.473Z",
-            "departed_at": "2026-11-17T08:16:21.568Z"
-          },
-          {
-            "locode": "SIKOP",
-            "name": "Koper",
-            "country": "Slovenia",
-            "arrived_at": "2026-11-11T09:38:08.349Z",
-            "departed_at": "2026-11-13T05:49:31.671Z"
-          },
-          {
-            "locode": "SIKOP",
-            "name": "Koper",
-            "country": "Slovenia",
-            "arrived_at": "2026-11-10T17:12:55.328Z",
-            "departed_at": "2026-11-11T08:28:30.218Z"
-          },
-          {
-            "locode": "ILHFA",
-            "name": "Haifa",
-            "country": "Israel",
-            "arrived_at": "2026-11-05T08:14:19.342Z",
-            "departed_at": "2026-11-06T20:41:05.006Z"
-          },
-          {
-            "locode": "ILHFA",
-            "name": "Haifa",
-            "country": "Israel",
-            "arrived_at": "2026-11-05T06:28:46.424Z",
-            "departed_at": "2026-11-05T06:48:15.869Z"
-          },
-          {
-            "locode": "ILHFA",
-            "name": "Haifa",
-            "country": "Israel",
-            "arrived_at": "2026-11-05T04:06:36.176Z",
-            "departed_at": "2026-11-05T05:52:06.130Z"
-          }
-        ],
-        "particulars": {
-          "grossTonnage": 150783,
-          "netTonnage": 65402,
-          "deadweight": 135574,
-          "service": "Freight Ship"
-        },
-        "still_in_port": null
-      }
-    },
     "MSC CAITLIN II|AH645A": {
       "call_id": "MSC CAITLIN II|AH645A",
       "name": "MSC CAITLIN II",
@@ -583,7 +583,7 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-17T14:15:00+01:00",
+      "last_seen": "2026-11-17T14:30:01+01:00",
       "listed": true
     },
     "CMA CGM ALTAMIRA|BMS0V0E19": {
@@ -599,7 +599,7 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-17T14:15:00+01:00",
+      "last_seen": "2026-11-17T14:30:01+01:00",
       "listed": true
     },
     "CMA CGM ANTIGONE|0BEOWE1MA": {
@@ -615,7 +615,7 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-17T14:15:00+01:00",
+      "last_seen": "2026-11-17T14:30:01+01:00",
       "listed": true
     }
   }
