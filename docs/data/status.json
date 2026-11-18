@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-18T16:30:00+01:00",
+  "generated_at": "2026-11-18T16:45:01+01:00",
   "timezone": "Europe/Zagreb",
   "terminal": {
     "url": "https://webusercorner.ictsi.hr/?language=EN",
     "query_url": "https://webusercorner.ictsi.hr/?language=EN&from=08.11.2026&to=09.12.2026",
     "ok": true,
-    "fetched_at": "2026-11-18T16:30:00+01:00",
-    "last_attempt_at": "2026-11-18T16:30:00+01:00",
+    "fetched_at": "2026-11-18T16:45:01+01:00",
+    "last_attempt_at": "2026-11-18T16:45:01+01:00",
     "rows": 15,
     "error": null
   },
@@ -29,7 +29,7 @@
         "ais": {
           "source": "Wingo Marine",
           "source_url": "https://wingo-marine.com/port/rijeka-2263",
-          "checked_at": "2026-11-18T16:30:00+01:00",
+          "checked_at": "2026-11-18T16:45:01+01:00",
           "found": false
         },
         "imo": "9540065",
@@ -245,7 +245,7 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/msc-caitlin-ii-636018323",
-        "checked_at": "2026-11-18T16:30:00+01:00",
+        "checked_at": "2026-11-18T16:45:01+01:00",
         "found": true,
         "mmsi": "636018323",
         "distance_km": null,
@@ -262,19 +262,19 @@
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/636018323-msc-caitlin-ii",
-        "fetched_at": "2026-11-18T15:45:00+01:00",
+        "fetched_at": "2026-11-18T16:45:01+01:00",
         "mmsi": "636018323",
         "imo": "9169043",
         "name": "MSC CAITLIN II",
-        "last_heard": "2026-11-18T13:20:49.000Z",
+        "last_heard": "2026-11-18T15:43:00.000Z",
         "position": {
-          "lat": 44.83986,
-          "lon": 14.11864,
-          "at": "2026-11-18T13:20:49.000Z",
+          "lat": 45.28608,
+          "lon": 14.37459,
+          "at": "2026-11-18T15:43:00.000Z",
           "status": "Under way under engine power",
-          "speed_kn": 12.6
+          "speed_kn": 9
         },
-        "quay_distance_km": 59.55,
+        "quay_distance_km": 7.3,
         "at_quay": false,
         "destination_raw": "SIKOP > HRRJK",
         "bound_for": {
@@ -340,7 +340,7 @@
           "kind": "actual",
           "source": "Shiptrail (AIS port-call history)",
           "source_url": "https://shiptrail.io/vessel/636018323-msc-caitlin-ii",
-          "retrieved_at": "2026-11-18T15:45:00+01:00",
+          "retrieved_at": "2026-11-18T16:45:01+01:00",
           "auto": true,
           "confidence": "medium"
         }
@@ -406,7 +406,7 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/cma-cgm-altamira-249157000",
-        "checked_at": "2026-11-18T16:30:00+01:00",
+        "checked_at": "2026-11-18T16:45:01+01:00",
         "found": true,
         "mmsi": "249157000",
         "distance_km": 462,
@@ -423,7 +423,7 @@
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/249157000-cma-cgm-altamira",
-        "fetched_at": "2026-11-18T15:45:00+01:00",
+        "fetched_at": "2026-11-18T16:45:01+01:00",
         "mmsi": "249157000",
         "imo": "9961350",
         "name": "CMA CGM ALTAMIRA",
@@ -508,7 +508,7 @@
           "kind": "actual",
           "source": "Shiptrail (AIS port-call history)",
           "source_url": "https://shiptrail.io/vessel/249157000-cma-cgm-altamira",
-          "retrieved_at": "2026-11-18T15:45:00+01:00",
+          "retrieved_at": "2026-11-18T16:45:01+01:00",
           "auto": true,
           "confidence": "medium"
         }
@@ -989,8 +989,8 @@
       "name": "Wingo Marine",
       "url": "https://wingo-marine.com/port/rijeka-2263",
       "ok": true,
-      "fetched_at": "2026-11-18T16:30:00+01:00",
-      "last_attempt_at": "2026-11-18T16:30:00+01:00",
+      "fetched_at": "2026-11-18T16:45:01+01:00",
+      "last_attempt_at": "2026-11-18T16:45:01+01:00",
       "error": null,
       "summary": "46 vessels reported within 15 km in the last 24 hours",
       "vessels_listed": 30
@@ -999,8 +999,8 @@
       "name": "AIS-catcher",
       "url": "https://www.aiscatcher.org/place/6398/brajdica-container-terminal",
       "ok": true,
-      "fetched_at": "2026-11-18T16:30:00+01:00",
-      "last_attempt_at": "2026-11-18T16:30:00+01:00",
+      "fetched_at": "2026-11-18T16:45:01+01:00",
+      "last_attempt_at": "2026-11-18T16:45:01+01:00",
       "error": null,
       "receiving_stations": 0,
       "vessels_inside": 0,
@@ -1011,8 +1011,8 @@
       "name": "Shiptrail",
       "url": "https://shiptrail.io/",
       "ok": true,
-      "fetched_at": "2026-11-18T16:30:00+01:00",
-      "last_attempt_at": "2026-11-18T16:30:00+01:00",
+      "fetched_at": "2026-11-18T16:45:01+01:00",
+      "last_attempt_at": "2026-11-18T16:45:01+01:00",
       "error": null,
       "note": "AIS-derived port calls and positions. Data: Shiptrail, shiptrail.io"
     }
@@ -1129,6 +1129,6 @@
       ]
     }
   ],
-  "next_check_at": "2026-11-18T17:30:00+01:00",
+  "next_check_at": "2026-11-18T17:45:01+01:00",
   "stale_grace_minutes": 100
 }
