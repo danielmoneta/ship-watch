@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-18T02:45:01+01:00",
+  "generated_at": "2026-11-18T03:00:01+01:00",
   "timezone": "Europe/Zagreb",
   "terminal": {
     "url": "https://webusercorner.ictsi.hr/?language=EN",
     "query_url": "https://webusercorner.ictsi.hr/?language=EN&from=08.11.2026&to=09.12.2026",
     "ok": true,
-    "fetched_at": "2026-11-18T02:45:01+01:00",
-    "last_attempt_at": "2026-11-18T02:45:01+01:00",
+    "fetched_at": "2026-11-18T03:00:01+01:00",
+    "last_attempt_at": "2026-11-18T03:00:01+01:00",
     "rows": 15,
     "error": null
   },
@@ -30,7 +30,7 @@
         "ais": {
           "source": "Wingo Marine",
           "source_url": "https://wingo-marine.com/ship/msc-eagle-iii-636024014",
-          "checked_at": "2026-11-18T02:45:01+01:00",
+          "checked_at": "2026-11-18T03:00:01+01:00",
           "found": true,
           "mmsi": "636024014",
           "distance_km": 4.2,
@@ -42,7 +42,7 @@
           },
           "destination_kind": "ais_destination",
           "berth_consistent": true,
-          "last_report": "2026-11-17T22:23:00.000Z",
+          "last_report": "2026-11-18T01:24:00.000Z",
           "nearest_port_label": "Rijeka",
           "imo": "9302449"
         },
@@ -255,6 +255,193 @@
   },
   "upcoming": [
     {
+      "call_id": "UNITY ONE|13",
+      "name": "UNITY ONE",
+      "shipper": "SOC",
+      "voyage_in": "13",
+      "voyage_out": "13",
+      "status": "IN ARRIVAL",
+      "eta": "2026-11-18T06:30:00+01:00",
+      "etd": "2026-11-18T14:30:00+01:00",
+      "ata": null,
+      "atd": null,
+      "phase": "expected",
+      "ais": {
+        "source": "Wingo Marine",
+        "source_url": "https://wingo-marine.com/port/rijeka-2263",
+        "checked_at": "2026-11-18T03:00:01+01:00",
+        "found": false
+      },
+      "imo": "9344409",
+      "trail": {
+        "source": "Shiptrail",
+        "source_url": "https://shiptrail.io/vessel/352005466-unity-one",
+        "fetched_at": "2026-11-18T02:30:00+01:00",
+        "mmsi": "352005466",
+        "imo": "9344409",
+        "name": "UNITY ONE",
+        "last_heard": "2026-11-15T06:04:00.000Z",
+        "position": {
+          "lat": 37.1776,
+          "lon": 23.8669,
+          "at": "2026-11-15T06:16:00.000Z",
+          "status": null,
+          "speed_kn": null
+        },
+        "quay_distance_km": 1197.87,
+        "at_quay": false,
+        "destination_raw": "BGVAR",
+        "bound_for": {
+          "locode": "BGVAR",
+          "name": "Varna",
+          "country": "Bulgaria"
+        },
+        "destination_eta": "2026-11-02T15:30:00.000Z",
+        "previous_port": {
+          "locode": "BGVAR",
+          "name": "Varna",
+          "country": "Bulgaria",
+          "arrived_at": "2026-11-02T13:20:31.890Z",
+          "departed_at": "2026-11-04T14:22:37.250Z",
+          "url": "https://shiptrail.io/port/bgvar-varna"
+        },
+        "still_in_port": null,
+        "recent_calls": [
+          {
+            "locode": "BGVAR",
+            "name": "Varna",
+            "country": "Bulgaria",
+            "arrived_at": "2026-11-02T13:20:31.890Z",
+            "departed_at": "2026-11-04T14:22:37.250Z"
+          },
+          {
+            "locode": "BGVAR",
+            "name": "Varna",
+            "country": "Bulgaria",
+            "arrived_at": "2026-11-02T10:16:03.154Z",
+            "departed_at": "2026-11-02T12:09:23.112Z"
+          }
+        ]
+      },
+      "voyage": {
+        "researched_at": "2026-11-16T19:25:00+01:00",
+        "previous_port": {
+          "name": "Derince",
+          "locode": "TRDRC",
+          "departed_at": "2026-11-12T14:16:00+01:00",
+          "kind": "actual",
+          "source": "VesselFinder (AIS port call)",
+          "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
+          "retrieved_at": "2026-11-16T19:25:00+01:00",
+          "confidence": "medium",
+          "note": "Shiptrail's latest recorded call is earlier (Varna); it may have missed this one."
+        },
+        "next_port": null,
+        "notes": "Previous port is VesselFinder's 'Last Port' (Derince, Turkey, ATD 12 Nov 13:16 UTC). AIS destination is Rijeka, which only shows she is bound there."
+      },
+      "profile": {
+        "imo": "9344409",
+        "name": "UNITY ONE",
+        "aliases": [
+          "KARL-JACOB K"
+        ],
+        "mmsi": "352005466",
+        "fields": {
+          "type": {
+            "value": "General cargo ship",
+            "source": "VesselFinder; Maritime Optima",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
+            "retrieved_at": "2026-11-16T19:25:00+01:00",
+            "confidence": "high",
+            "note": "Not a purpose-built container ship; the terminal lists her with shipper SOC (shipper-owned containers)."
+          },
+          "flag": {
+            "value": "Panama",
+            "source": "VesselFinder; Maritime Optima",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
+            "retrieved_at": "2026-11-16T19:25:00+01:00",
+            "confidence": "high"
+          },
+          "year_built": {
+            "value": 2006,
+            "source": "VesselFinder; Maritime Optima",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
+            "retrieved_at": "2026-11-16T19:25:00+01:00",
+            "confidence": "high"
+          },
+          "length_m": {
+            "value": 90.25,
+            "source": "VesselFinder; Maritime Optima (about 90 m)",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
+            "retrieved_at": "2026-11-16T19:25:00+01:00",
+            "confidence": "high"
+          },
+          "beam_m": {
+            "value": 15.2,
+            "source": "VesselFinder",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
+            "retrieved_at": "2026-11-16T19:25:00+01:00",
+            "confidence": "medium"
+          },
+          "gross_tonnage": {
+            "value": 2997,
+            "source": "VesselFinder",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
+            "retrieved_at": "2026-11-16T19:25:00+01:00",
+            "confidence": "medium"
+          },
+          "deadweight_t": {
+            "value": 4745,
+            "source": "VesselFinder; Maritime Optima",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
+            "retrieved_at": "2026-11-16T19:25:00+01:00",
+            "confidence": "high"
+          },
+          "callsign": {
+            "value": "3E8724",
+            "source": "MarineLink",
+            "source_url": "https://ports.marinelink.com/vessels/vessel/352005466",
+            "retrieved_at": "2026-11-16T19:25:00+01:00",
+            "confidence": "medium"
+          },
+          "former_names": {
+            "value": "Karl-Jacob K",
+            "source": "Wikimedia Commons (file filed under IMO 9344409)",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Karl-Jacob_K_(ship,_2006)_IMO_9344409_Calandkanaal.JPG",
+            "retrieved_at": "2026-11-16T19:25:00+01:00",
+            "confidence": "medium"
+          }
+        },
+        "photo": {
+          "file": "data/photos/9344409.jpg",
+          "title": "Karl-Jacob K (ship, 2006) IMO 9344409 Calandkanaal.JPG",
+          "author": "Alf van Beem",
+          "license": "Public domain",
+          "license_url": null,
+          "source_name": "Wikimedia Commons",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Karl-Jacob_K_(ship,_2006)_IMO_9344409_Calandkanaal.JPG",
+          "taken": "2017-08-20 08:39:17",
+          "width": 4608,
+          "height": 3456,
+          "retrieved_at": "2026-11-16T19:20:24+01:00",
+          "caption": "Photographed as KARL-JACOB K, 2017"
+        },
+        "facts": [],
+        "research": {
+          "status": "partial",
+          "researched_at": "2026-11-16T19:25:00+01:00",
+          "missing": [
+            "teu",
+            "builder",
+            "operator",
+            "owner",
+            "class"
+          ],
+          "notes": "Identified by name via MarineLink, Maritime Optima and VesselFinder (IMO 9344409, MMSI 352005466); VesselFinder shows her bound for Rijeka with an ETA matching the terminal list. She is a small general cargo ship, not a container ship, so identification rests on the Rijeka destination/ETA match. Owner (one source: MagicPort) not recorded."
+        }
+      }
+    },
+    {
       "call_id": "MSC AUDREY|QX645E",
       "name": "MSC AUDREY",
       "shipper": "MSC",
@@ -269,7 +456,7 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/msc-audrey-636022450",
-        "checked_at": "2026-11-18T02:45:01+01:00",
+        "checked_at": "2026-11-18T03:00:01+01:00",
         "found": true,
         "mmsi": "636022450",
         "distance_km": null,
@@ -470,193 +657,6 @@
             "photo"
           ],
           "notes": "Identified as IMO 9540065 by name match on VesselFinder and Wingo Marine (same IMO/MMSI/call sign), container ship trading Koper–Trieste in the Adriatic. TEU and shipyard not found in accessible sources; no Wikimedia Commons photo under IMO or name. Wikidata throttled (HTTP 429)."
-        }
-      }
-    },
-    {
-      "call_id": "UNITY ONE|13",
-      "name": "UNITY ONE",
-      "shipper": "SOC",
-      "voyage_in": "13",
-      "voyage_out": "13",
-      "status": "IN ARRIVAL",
-      "eta": "2026-11-18T06:30:00+01:00",
-      "etd": "2026-11-18T14:30:00+01:00",
-      "ata": null,
-      "atd": null,
-      "phase": "expected",
-      "ais": {
-        "source": "Wingo Marine",
-        "source_url": "https://wingo-marine.com/port/rijeka-2263",
-        "checked_at": "2026-11-18T02:45:01+01:00",
-        "found": false
-      },
-      "imo": "9344409",
-      "trail": {
-        "source": "Shiptrail",
-        "source_url": "https://shiptrail.io/vessel/352005466-unity-one",
-        "fetched_at": "2026-11-18T02:30:00+01:00",
-        "mmsi": "352005466",
-        "imo": "9344409",
-        "name": "UNITY ONE",
-        "last_heard": "2026-11-15T06:04:00.000Z",
-        "position": {
-          "lat": 37.1776,
-          "lon": 23.8669,
-          "at": "2026-11-15T06:16:00.000Z",
-          "status": null,
-          "speed_kn": null
-        },
-        "quay_distance_km": 1197.87,
-        "at_quay": false,
-        "destination_raw": "BGVAR",
-        "bound_for": {
-          "locode": "BGVAR",
-          "name": "Varna",
-          "country": "Bulgaria"
-        },
-        "destination_eta": "2026-11-02T15:30:00.000Z",
-        "previous_port": {
-          "locode": "BGVAR",
-          "name": "Varna",
-          "country": "Bulgaria",
-          "arrived_at": "2026-11-02T13:20:31.890Z",
-          "departed_at": "2026-11-04T14:22:37.250Z",
-          "url": "https://shiptrail.io/port/bgvar-varna"
-        },
-        "still_in_port": null,
-        "recent_calls": [
-          {
-            "locode": "BGVAR",
-            "name": "Varna",
-            "country": "Bulgaria",
-            "arrived_at": "2026-11-02T13:20:31.890Z",
-            "departed_at": "2026-11-04T14:22:37.250Z"
-          },
-          {
-            "locode": "BGVAR",
-            "name": "Varna",
-            "country": "Bulgaria",
-            "arrived_at": "2026-11-02T10:16:03.154Z",
-            "departed_at": "2026-11-02T12:09:23.112Z"
-          }
-        ]
-      },
-      "voyage": {
-        "researched_at": "2026-11-16T19:25:00+01:00",
-        "previous_port": {
-          "name": "Derince",
-          "locode": "TRDRC",
-          "departed_at": "2026-11-12T14:16:00+01:00",
-          "kind": "actual",
-          "source": "VesselFinder (AIS port call)",
-          "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
-          "retrieved_at": "2026-11-16T19:25:00+01:00",
-          "confidence": "medium",
-          "note": "Shiptrail's latest recorded call is earlier (Varna); it may have missed this one."
-        },
-        "next_port": null,
-        "notes": "Previous port is VesselFinder's 'Last Port' (Derince, Turkey, ATD 12 Nov 13:16 UTC). AIS destination is Rijeka, which only shows she is bound there."
-      },
-      "profile": {
-        "imo": "9344409",
-        "name": "UNITY ONE",
-        "aliases": [
-          "KARL-JACOB K"
-        ],
-        "mmsi": "352005466",
-        "fields": {
-          "type": {
-            "value": "General cargo ship",
-            "source": "VesselFinder; Maritime Optima",
-            "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
-            "retrieved_at": "2026-11-16T19:25:00+01:00",
-            "confidence": "high",
-            "note": "Not a purpose-built container ship; the terminal lists her with shipper SOC (shipper-owned containers)."
-          },
-          "flag": {
-            "value": "Panama",
-            "source": "VesselFinder; Maritime Optima",
-            "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
-            "retrieved_at": "2026-11-16T19:25:00+01:00",
-            "confidence": "high"
-          },
-          "year_built": {
-            "value": 2006,
-            "source": "VesselFinder; Maritime Optima",
-            "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
-            "retrieved_at": "2026-11-16T19:25:00+01:00",
-            "confidence": "high"
-          },
-          "length_m": {
-            "value": 90.25,
-            "source": "VesselFinder; Maritime Optima (about 90 m)",
-            "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
-            "retrieved_at": "2026-11-16T19:25:00+01:00",
-            "confidence": "high"
-          },
-          "beam_m": {
-            "value": 15.2,
-            "source": "VesselFinder",
-            "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
-            "retrieved_at": "2026-11-16T19:25:00+01:00",
-            "confidence": "medium"
-          },
-          "gross_tonnage": {
-            "value": 2997,
-            "source": "VesselFinder",
-            "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
-            "retrieved_at": "2026-11-16T19:25:00+01:00",
-            "confidence": "medium"
-          },
-          "deadweight_t": {
-            "value": 4745,
-            "source": "VesselFinder; Maritime Optima",
-            "source_url": "https://www.vesselfinder.com/vessels/details/9344409",
-            "retrieved_at": "2026-11-16T19:25:00+01:00",
-            "confidence": "high"
-          },
-          "callsign": {
-            "value": "3E8724",
-            "source": "MarineLink",
-            "source_url": "https://ports.marinelink.com/vessels/vessel/352005466",
-            "retrieved_at": "2026-11-16T19:25:00+01:00",
-            "confidence": "medium"
-          },
-          "former_names": {
-            "value": "Karl-Jacob K",
-            "source": "Wikimedia Commons (file filed under IMO 9344409)",
-            "source_url": "https://commons.wikimedia.org/wiki/File:Karl-Jacob_K_(ship,_2006)_IMO_9344409_Calandkanaal.JPG",
-            "retrieved_at": "2026-11-16T19:25:00+01:00",
-            "confidence": "medium"
-          }
-        },
-        "photo": {
-          "file": "data/photos/9344409.jpg",
-          "title": "Karl-Jacob K (ship, 2006) IMO 9344409 Calandkanaal.JPG",
-          "author": "Alf van Beem",
-          "license": "Public domain",
-          "license_url": null,
-          "source_name": "Wikimedia Commons",
-          "source_url": "https://commons.wikimedia.org/wiki/File:Karl-Jacob_K_(ship,_2006)_IMO_9344409_Calandkanaal.JPG",
-          "taken": "2017-08-20 08:39:17",
-          "width": 4608,
-          "height": 3456,
-          "retrieved_at": "2026-11-16T19:20:24+01:00",
-          "caption": "Photographed as KARL-JACOB K, 2017"
-        },
-        "facts": [],
-        "research": {
-          "status": "partial",
-          "researched_at": "2026-11-16T19:25:00+01:00",
-          "missing": [
-            "teu",
-            "builder",
-            "operator",
-            "owner",
-            "class"
-          ],
-          "notes": "Identified by name via MarineLink, Maritime Optima and VesselFinder (IMO 9344409, MMSI 352005466); VesselFinder shows her bound for Rijeka with an ETA matching the terminal list. She is a small general cargo ship, not a container ship, so identification rests on the Rijeka destination/ETA match. Owner (one source: MagicPort) not recorded."
         }
       }
     },
@@ -898,18 +898,18 @@
       "name": "Wingo Marine",
       "url": "https://wingo-marine.com/port/rijeka-2263",
       "ok": true,
-      "fetched_at": "2026-11-18T02:45:01+01:00",
-      "last_attempt_at": "2026-11-18T02:45:01+01:00",
+      "fetched_at": "2026-11-18T03:00:01+01:00",
+      "last_attempt_at": "2026-11-18T03:00:01+01:00",
       "error": null,
-      "summary": "29 vessels reported within 15 km in the last 24 hours",
+      "summary": "31 vessels reported within 15 km in the last 24 hours",
       "vessels_listed": 33
     },
     "aiscatcher": {
       "name": "AIS-catcher",
       "url": "https://www.aiscatcher.org/place/6398/brajdica-container-terminal",
       "ok": true,
-      "fetched_at": "2026-11-18T02:45:01+01:00",
-      "last_attempt_at": "2026-11-18T02:45:01+01:00",
+      "fetched_at": "2026-11-18T03:00:01+01:00",
+      "last_attempt_at": "2026-11-18T03:00:01+01:00",
       "error": null,
       "receiving_stations": 0,
       "vessels_inside": 0,
@@ -920,8 +920,8 @@
       "name": "Shiptrail",
       "url": "https://shiptrail.io/",
       "ok": true,
-      "fetched_at": "2026-11-18T02:45:01+01:00",
-      "last_attempt_at": "2026-11-18T02:45:01+01:00",
+      "fetched_at": "2026-11-18T03:00:01+01:00",
+      "last_attempt_at": "2026-11-18T03:00:01+01:00",
       "error": null,
       "note": "AIS-derived port calls and positions. Data: Shiptrail, shiptrail.io"
     }
@@ -977,6 +977,6 @@
   "stale_after_hours": 3,
   "research_pending": [],
   "research_needed": [],
-  "next_check_at": "2026-11-18T03:45:01+01:00",
+  "next_check_at": "2026-11-18T04:00:01+01:00",
   "stale_grace_minutes": 100
 }
