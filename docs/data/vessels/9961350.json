@@ -1,0 +1,44 @@
+{
+  "imo": "9961350",
+  "name": "CMA CGM ALTAMIRA",
+  "aliases": [],
+  "mmsi": "249157000",
+  "fields": {
+    "flag": {
+      "value": "Malta",
+      "source": "Wingo Marine (AIS)",
+      "source_url": "https://wingo-marine.com/ship/cma-cgm-altamira-249157000",
+      "retrieved_at": "2026-11-18T10:45:01+01:00",
+      "confidence": "medium"
+    },
+    "length_m": {
+      "value": 205,
+      "source": "Wingo Marine (AIS broadcast dimensions)",
+      "source_url": "https://wingo-marine.com/ship/cma-cgm-altamira-249157000",
+      "retrieved_at": "2026-11-18T10:45:01+01:00",
+      "confidence": "medium"
+    },
+    "beam_m": {
+      "value": 30,
+      "source": "Wingo Marine (AIS broadcast dimensions)",
+      "source_url": "https://wingo-marine.com/ship/cma-cgm-altamira-249157000",
+      "retrieved_at": "2026-11-18T10:45:01+01:00",
+      "confidence": "medium"
+    },
+    "callsign": {
+      "value": "9HA6133",
+      "source": "Wingo Marine (AIS)",
+      "source_url": "https://wingo-marine.com/ship/cma-cgm-altamira-249157000",
+      "retrieved_at": "2026-11-18T10:45:01+01:00",
+      "confidence": "medium"
+    }
+  },
+  "photo": null,
+  "facts": [],
+  "research": {
+    "status": "auto",
+    "researched_at": null,
+    "missing": [],
+    "notes": "Created automatically from AIS data; awaiting research."
+  }
+}
