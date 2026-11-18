@@ -31,14 +31,59 @@
       "source_url": "https://wingo-marine.com/ship/cma-cgm-altamira-249157000",
       "retrieved_at": "2026-11-18T10:45:01+01:00",
       "confidence": "medium"
+    },
+    "type": {
+      "value": "Container ship (LNG-powered)",
+      "source": "Malta Freeport",
+      "source_url": "https://maltafreeport.com.mt/news/cma-cgm-altamira-the-next-generation-lng-powered-container-ships-call-at-malta-freeport/",
+      "retrieved_at": "2026-11-18T17:00:37+01:00",
+      "confidence": "medium"
+    },
+    "year_built": {
+      "value": 2024,
+      "source": "Web search summary of tracker listings (VesselFinder et al.)",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9961350",
+      "retrieved_at": "2026-11-18T17:00:37+01:00",
+      "confidence": "medium"
+    },
+    "teu": {
+      "value": 2000,
+      "source": "Malta Freeport",
+      "source_url": "https://maltafreeport.com.mt/news/cma-cgm-altamira-the-next-generation-lng-powered-container-ships-call-at-malta-freeport/",
+      "retrieved_at": "2026-11-18T17:00:37+01:00",
+      "confidence": "medium",
+      "note": "Single source; trackers leave TEU blank"
+    },
+    "builder": {
+      "value": "HD Hyundai Mipo",
+      "source": "Offshore Energy",
+      "source_url": "https://offshore-energy.biz/?p=740151",
+      "retrieved_at": "2026-11-18T17:00:37+01:00",
+      "confidence": "medium"
+    },
+    "operator": {
+      "value": "CMA CGM",
+      "source": "Offshore Energy",
+      "source_url": "https://offshore-energy.biz/?p=740151",
+      "retrieved_at": "2026-11-18T17:00:37+01:00",
+      "confidence": "medium"
     }
   },
   "photo": null,
-  "facts": [],
+  "facts": [
+    {
+      "text": "Ninth in a series of ten 2,000 TEU LNG-powered feeders built by HD Hyundai Mipo for CMA CGM.",
+      "source": "Offshore Energy",
+      "source_url": "https://offshore-energy.biz/?p=740151",
+      "confidence": "medium"
+    }
+  ],
   "research": {
-    "status": "auto",
-    "researched_at": null,
-    "missing": [],
-    "notes": "Created automatically from AIS data; awaiting research."
+    "status": "partial",
+    "researched_at": "2026-11-18T17:00:37+01:00",
+    "missing": [
+      "photo"
+    ],
+    "notes": "Not on Shiptrail. TEU from a single source. No Commons photo."
   }
 }
