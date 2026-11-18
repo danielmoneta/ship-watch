@@ -13,7 +13,7 @@
       "atd": "2026-11-09T03:15:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-18T09:45:00+01:00",
+      "last_seen": "2026-11-18T10:30:01+01:00",
       "listed": true
     },
     "MSC PAMIRA III|AH643A": {
@@ -29,7 +29,7 @@
       "atd": "2026-11-10T23:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-18T09:45:00+01:00",
+      "last_seen": "2026-11-18T10:30:01+01:00",
       "listed": true
     },
     "CMA CGM CYRANO|0BEOUE1MA": {
@@ -45,7 +45,7 @@
       "atd": "2026-11-13T12:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-18T09:45:00+01:00",
+      "last_seen": "2026-11-18T10:30:01+01:00",
       "listed": true
     },
     "MERIC|14": {
@@ -61,7 +61,7 @@
       "atd": "2026-11-11T13:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-18T09:45:00+01:00",
+      "last_seen": "2026-11-18T10:30:01+01:00",
       "listed": true
     },
     "ARIFE|15": {
@@ -77,7 +77,7 @@
       "atd": "2026-11-11T18:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-18T09:45:00+01:00",
+      "last_seen": "2026-11-18T10:30:01+01:00",
       "listed": true
     },
     "PIERRE A|BMS0T0E19": {
@@ -93,7 +93,7 @@
       "atd": "2026-11-15T02:45:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-18T09:45:00+01:00",
+      "last_seen": "2026-11-18T10:30:01+01:00",
       "listed": true
     },
     "MSC RENEE XIII|QX642E": {
@@ -109,7 +109,7 @@
       "atd": "2026-11-15T13:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-18T09:45:00+01:00",
+      "last_seen": "2026-11-18T10:30:01+01:00",
       "listed": true
     },
     "SC MEDFORD|152W": {
@@ -125,7 +125,7 @@
       "atd": "2026-11-16T08:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-18T09:45:00+01:00",
+      "last_seen": "2026-11-18T10:30:01+01:00",
       "listed": true
     },
     "MSC TERESA|QX644E": {
@@ -141,7 +141,7 @@
       "atd": "2026-11-17T12:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-18T09:45:00+01:00",
+      "last_seen": "2026-11-18T10:30:01+01:00",
       "listed": true,
       "imo": "9469560",
       "ais": {
@@ -260,7 +260,7 @@
       "atd": "2026-11-18T08:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-18T09:45:00+01:00",
+      "last_seen": "2026-11-18T10:30:01+01:00",
       "listed": true,
       "imo": "9302449",
       "ais": {
@@ -382,15 +382,15 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-18T09:45:00+01:00",
+      "last_seen": "2026-11-18T10:30:01+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/msc-audrey-636022450",
-        "checked_at": "2026-11-18T09:45:00+01:00",
+        "checked_at": "2026-11-18T10:30:01+01:00",
         "found": true,
         "mmsi": "636022450",
-        "distance_km": 9.6,
+        "distance_km": 3.1,
         "nav": null,
         "destination_raw": "HRRJK",
         "destination": {
@@ -405,20 +405,20 @@
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/636022450-msc-audrey",
-        "fetched_at": "2026-11-18T09:30:00+01:00",
+        "fetched_at": "2026-11-18T10:30:01+01:00",
         "mmsi": "636022450",
         "imo": "9540065",
         "name": "MSC AUDREY",
-        "last_heard": "2026-11-18T08:29:24.000Z",
+        "last_heard": "2026-11-18T09:29:23.000Z",
         "position": {
-          "lat": 45.29796,
-          "lon": 14.39667,
-          "at": "2026-11-18T08:29:24.000Z",
+          "lat": 45.31914,
+          "lon": 14.45559,
+          "at": "2026-11-18T09:29:23.000Z",
           "status": "Under way under engine power",
-          "speed_kn": 8.1
+          "speed_kn": 0
         },
-        "quay_distance_km": 5.14,
-        "at_quay": false,
+        "quay_distance_km": 0.13,
+        "at_quay": true,
         "destination_raw": "HRRJK",
         "bound_for": {
           "locode": "HRRJK",
@@ -435,6 +435,13 @@
           "url": "https://shiptrail.io/port/ittrs-trieste"
         },
         "recent_calls": [
+          {
+            "locode": "HRKOS",
+            "name": "Kostrena",
+            "country": "Croatia",
+            "arrived_at": "2026-11-18T09:21:13.000Z",
+            "departed_at": null
+          },
           {
             "locode": "ITTRS",
             "name": "Trieste",
@@ -469,13 +476,6 @@
             "country": "Israel",
             "arrived_at": "2026-11-05T06:28:46.424Z",
             "departed_at": "2026-11-05T06:48:15.869Z"
-          },
-          {
-            "locode": "ILHFA",
-            "name": "Haifa",
-            "country": "Israel",
-            "arrived_at": "2026-11-05T04:06:36.176Z",
-            "departed_at": "2026-11-05T05:52:06.130Z"
           }
         ],
         "particulars": {
@@ -500,15 +500,15 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-18T09:45:00+01:00",
+      "last_seen": "2026-11-18T10:30:01+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/unity-one-352005466",
-        "checked_at": "2026-11-18T09:45:00+01:00",
+        "checked_at": "2026-11-18T10:30:01+01:00",
         "found": true,
         "mmsi": "352005466",
-        "distance_km": 7.6,
+        "distance_km": 6.4,
         "nav": null,
         "destination_raw": "RIJEKA",
         "destination": {
@@ -523,19 +523,19 @@
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/352005466-unity-one",
-        "fetched_at": "2026-11-18T09:30:00+01:00",
+        "fetched_at": "2026-11-18T10:30:01+01:00",
         "mmsi": "352005466",
         "imo": "9344409",
         "name": "UNITY ONE",
-        "last_heard": "2026-11-18T08:29:22.000Z",
+        "last_heard": "2026-11-18T09:28:33.000Z",
         "position": {
-          "lat": 45.25061,
-          "lon": 14.41244,
-          "at": "2026-11-18T08:29:22.000Z",
-          "status": "Under way under engine power",
-          "speed_kn": 10.9
+          "lat": 45.26515,
+          "lon": 14.434,
+          "at": "2026-11-18T09:28:33.000Z",
+          "status": "At anchor",
+          "speed_kn": 0
         },
-        "quay_distance_km": 8.39,
+        "quay_distance_km": 6.31,
         "at_quay": false,
         "destination_raw": "RIJEKA",
         "bound_for": {
@@ -553,6 +553,13 @@
           "url": "https://shiptrail.io/port/bgvar-varna"
         },
         "recent_calls": [
+          {
+            "locode": "HRKOS",
+            "name": "Kostrena",
+            "country": "Croatia",
+            "arrived_at": "2026-11-18T08:51:12.000Z",
+            "departed_at": null
+          },
           {
             "locode": "BGVAR",
             "name": "Varna",
@@ -596,7 +603,7 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-18T09:45:00+01:00",
+      "last_seen": "2026-11-18T10:30:01+01:00",
       "listed": true
     },
     "CMA CGM ALTAMIRA|BMS0V0E19": {
@@ -612,7 +619,7 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-18T09:45:00+01:00",
+      "last_seen": "2026-11-18T10:30:01+01:00",
       "listed": true
     },
     "CMA CGM ANTIGONE|0BEOWE1MA": {
@@ -628,7 +635,7 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-18T09:45:00+01:00",
+      "last_seen": "2026-11-18T10:30:01+01:00",
       "listed": true
     }
   }
