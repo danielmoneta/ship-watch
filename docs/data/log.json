@@ -1012,6 +1012,15 @@
       "events": 0,
       "research_needed": [],
       "errors": []
+    },
+    {
+      "at": "2026-11-18T08:15:01+01:00",
+      "terminal_ok": true,
+      "rows": 15,
+      "berth": [],
+      "events": 1,
+      "research_needed": [],
+      "errors": []
     }
   ],
   "events": [
@@ -1060,6 +1069,13 @@
       "from": "2026-11-24T22:30:00+01:00",
       "to": "2026-11-25T05:00:00+01:00",
       "observed": "2026-11-17T19:45:00+01:00"
+    },
+    {
+      "type": "departed",
+      "call_id": "MSC EAGLE III|AH644A",
+      "name": "MSC EAGLE III",
+      "at": "2026-11-18T08:30:00+01:00",
+      "observed": "2026-11-18T08:15:01+01:00"
     }
   ]
 }
