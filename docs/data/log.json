@@ -1122,6 +1122,20 @@
         "CMA CGM ALTAMIRA"
       ],
       "errors": []
+    },
+    {
+      "at": "2026-11-18T11:45:01+01:00",
+      "terminal_ok": true,
+      "rows": 15,
+      "berth": [
+        "MSC AUDREY"
+      ],
+      "events": 0,
+      "research_needed": [
+        "MSC CAITLIN II",
+        "CMA CGM ALTAMIRA"
+      ],
+      "errors": []
     }
   ],
   "events": [
