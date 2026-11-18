@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-18T08:45:00+01:00",
+  "generated_at": "2026-11-18T09:30:00+01:00",
   "timezone": "Europe/Zagreb",
   "terminal": {
     "url": "https://webusercorner.ictsi.hr/?language=EN",
     "query_url": "https://webusercorner.ictsi.hr/?language=EN&from=08.11.2026&to=09.12.2026",
     "ok": true,
-    "fetched_at": "2026-11-18T08:45:00+01:00",
-    "last_attempt_at": "2026-11-18T08:45:00+01:00",
+    "fetched_at": "2026-11-18T09:30:00+01:00",
+    "last_attempt_at": "2026-11-18T09:30:00+01:00",
     "rows": 15,
     "error": null
   },
@@ -31,7 +31,7 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/msc-audrey-636022450",
-        "checked_at": "2026-11-18T08:45:00+01:00",
+        "checked_at": "2026-11-18T09:30:00+01:00",
         "found": true,
         "mmsi": "636022450",
         "distance_km": 36,
@@ -49,19 +49,19 @@
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/636022450-msc-audrey",
-        "fetched_at": "2026-11-18T08:30:00+01:00",
+        "fetched_at": "2026-11-18T09:30:00+01:00",
         "mmsi": "636022450",
         "imo": "9540065",
         "name": "MSC AUDREY",
-        "last_heard": "2026-11-18T07:29:01.000Z",
+        "last_heard": "2026-11-18T08:29:24.000Z",
         "position": {
-          "lat": 45.16396,
-          "lon": 14.2787,
-          "at": "2026-11-18T07:29:01.000Z",
+          "lat": 45.29796,
+          "lon": 14.39667,
+          "at": "2026-11-18T08:29:24.000Z",
           "status": "Under way under engine power",
-          "speed_kn": 15.4
+          "speed_kn": 8.1
         },
-        "quay_distance_km": 22.15,
+        "quay_distance_km": 5.14,
         "at_quay": false,
         "destination_raw": "HRRJK",
         "bound_for": {
@@ -135,7 +135,7 @@
           "kind": "actual",
           "source": "Shiptrail (AIS port-call history)",
           "source_url": "https://shiptrail.io/vessel/636022450-msc-audrey",
-          "retrieved_at": "2026-11-18T08:30:00+01:00",
+          "retrieved_at": "2026-11-18T09:30:00+01:00",
           "auto": true,
           "confidence": "high"
         },
@@ -250,26 +250,26 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/port/rijeka-2263",
-        "checked_at": "2026-11-18T08:45:00+01:00",
+        "checked_at": "2026-11-18T09:30:00+01:00",
         "found": false
       },
       "imo": "9344409",
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/352005466-unity-one",
-        "fetched_at": "2026-11-18T08:30:00+01:00",
+        "fetched_at": "2026-11-18T09:30:00+01:00",
         "mmsi": "352005466",
         "imo": "9344409",
         "name": "UNITY ONE",
-        "last_heard": "2026-11-18T07:25:33.000Z",
+        "last_heard": "2026-11-18T08:29:22.000Z",
         "position": {
-          "lat": 45.10178,
-          "lon": 14.25183,
-          "at": "2026-11-18T07:25:33.000Z",
+          "lat": 45.25061,
+          "lon": 14.41244,
+          "at": "2026-11-18T08:29:22.000Z",
           "status": "Under way under engine power",
-          "speed_kn": 10.8
+          "speed_kn": 10.9
         },
-        "quay_distance_km": 29,
+        "quay_distance_km": 8.39,
         "at_quay": false,
         "destination_raw": "RIJEKA",
         "bound_for": {
@@ -776,18 +776,18 @@
       "name": "Wingo Marine",
       "url": "https://wingo-marine.com/port/rijeka-2263",
       "ok": true,
-      "fetched_at": "2026-11-18T08:45:00+01:00",
-      "last_attempt_at": "2026-11-18T08:45:00+01:00",
+      "fetched_at": "2026-11-18T09:30:00+01:00",
+      "last_attempt_at": "2026-11-18T09:30:00+01:00",
       "error": null,
-      "summary": "29 vessels reported within 15 km in the last 24 hours",
-      "vessels_listed": 34
+      "summary": "25 vessels reported within 15 km in the last 24 hours",
+      "vessels_listed": 35
     },
     "aiscatcher": {
       "name": "AIS-catcher",
       "url": "https://www.aiscatcher.org/place/6398/brajdica-container-terminal",
       "ok": true,
-      "fetched_at": "2026-11-18T08:45:00+01:00",
-      "last_attempt_at": "2026-11-18T08:45:00+01:00",
+      "fetched_at": "2026-11-18T09:30:00+01:00",
+      "last_attempt_at": "2026-11-18T09:30:00+01:00",
       "error": null,
       "receiving_stations": 0,
       "vessels_inside": 0,
@@ -798,8 +798,8 @@
       "name": "Shiptrail",
       "url": "https://shiptrail.io/",
       "ok": true,
-      "fetched_at": "2026-11-18T08:45:00+01:00",
-      "last_attempt_at": "2026-11-18T08:45:00+01:00",
+      "fetched_at": "2026-11-18T09:30:00+01:00",
+      "last_attempt_at": "2026-11-18T09:30:00+01:00",
       "error": null,
       "note": "AIS-derived port calls and positions. Data: Shiptrail, shiptrail.io"
     }
@@ -870,6 +870,6 @@
   "stale_after_hours": 3,
   "research_pending": [],
   "research_needed": [],
-  "next_check_at": "2026-11-18T09:45:00+01:00",
+  "next_check_at": "2026-11-18T10:30:00+01:00",
   "stale_grace_minutes": 100
 }
