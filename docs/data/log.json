@@ -1811,6 +1811,20 @@
       "errors": [
         "aiscatcher: HTTP 403"
       ]
+    },
+    {
+      "at": "2026-11-19T12:30:00+01:00",
+      "terminal_ok": true,
+      "rows": 14,
+      "berth": [
+        "UNITY ONE",
+        "MSC AUDREY"
+      ],
+      "events": 0,
+      "research_needed": [],
+      "errors": [
+        "aiscatcher: HTTP 403"
+      ]
     }
   ],
   "events": [
