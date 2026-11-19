@@ -1587,6 +1587,17 @@
       "events": 0,
       "research_needed": [],
       "errors": []
+    },
+    {
+      "at": "2026-11-19T05:29:57+01:00",
+      "terminal_ok": true,
+      "rows": 14,
+      "berth": [
+        "MSC AUDREY"
+      ],
+      "events": 0,
+      "research_needed": [],
+      "errors": []
     }
   ],
   "events": [
