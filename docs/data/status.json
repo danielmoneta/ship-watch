@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-19T12:30:00+01:00",
+  "generated_at": "2026-11-19T12:45:00+01:00",
   "timezone": "Europe/Zagreb",
   "terminal": {
     "url": "https://webusercorner.ictsi.hr/?language=EN",
     "query_url": "https://webusercorner.ictsi.hr/?language=EN&from=09.11.2026&to=10.12.2026",
     "ok": true,
-    "fetched_at": "2026-11-19T12:30:00+01:00",
-    "last_attempt_at": "2026-11-19T12:30:00+01:00",
+    "fetched_at": "2026-11-19T12:45:00+01:00",
+    "last_attempt_at": "2026-11-19T12:45:00+01:00",
     "rows": 14,
     "error": null
   },
@@ -28,9 +28,22 @@
         "phase": "at_berth",
         "ais": {
           "source": "Wingo Marine",
-          "source_url": "https://wingo-marine.com/port/rijeka-2263",
-          "checked_at": "2026-11-19T12:30:00+01:00",
-          "found": false
+          "source_url": "https://wingo-marine.com/ship/unity-one-352005466",
+          "checked_at": "2026-11-19T12:45:00+01:00",
+          "found": true,
+          "mmsi": "352005466",
+          "distance_km": 6.3,
+          "nav": null,
+          "destination_raw": "RIJEKA",
+          "destination": {
+            "locode": "HRRJK",
+            "name": "Rijeka, Croatia"
+          },
+          "destination_kind": "ais_destination",
+          "berth_consistent": false,
+          "last_report": "2026-11-19T07:20:00.000Z",
+          "nearest_port_label": null,
+          "imo": "9344409"
         },
         "imo": "9344409",
         "trail": {
@@ -227,10 +240,10 @@
         "ais": {
           "source": "Wingo Marine",
           "source_url": "https://wingo-marine.com/ship/msc-audrey-636022450",
-          "checked_at": "2026-11-19T12:30:00+01:00",
+          "checked_at": "2026-11-19T12:45:00+01:00",
           "found": true,
           "mmsi": "636022450",
-          "distance_km": 57,
+          "distance_km": 62,
           "nav": "Underway",
           "destination_raw": "HRRJK",
           "destination": {
@@ -239,7 +252,7 @@
           },
           "destination_kind": "ais_destination",
           "berth_consistent": false,
-          "last_report": "2026-11-19T11:25:00.000Z",
+          "last_report": "2026-11-19T11:44:00.000Z",
           "nearest_port_label": null,
           "imo": "9540065"
         },
@@ -456,7 +469,7 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/msc-caitlin-ii-636018323",
-        "checked_at": "2026-11-19T12:30:00+01:00",
+        "checked_at": "2026-11-19T12:45:00+01:00",
         "found": true,
         "mmsi": "636018323",
         "distance_km": 2.9,
@@ -473,19 +486,19 @@
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/636018323-msc-caitlin-ii",
-        "fetched_at": "2026-11-19T11:45:01+01:00",
+        "fetched_at": "2026-11-19T12:45:00+01:00",
         "mmsi": "636018323",
         "imo": "9169043",
         "name": "MSC CAITLIN II",
-        "last_heard": "2026-11-19T10:43:28.000Z",
+        "last_heard": "2026-11-19T11:43:19.000Z",
         "position": {
-          "lat": 45.29089,
-          "lon": 14.40411,
-          "at": "2026-11-19T10:43:28.000Z",
-          "status": "At anchor",
-          "speed_kn": 0.4
+          "lat": 45.18346,
+          "lon": 14.27016,
+          "at": "2026-11-19T11:43:19.000Z",
+          "status": "Under way under engine power",
+          "speed_kn": 10.8
         },
-        "quay_distance_km": 5.1,
+        "quay_distance_km": 20.95,
         "at_quay": false,
         "destination_raw": "SIKOP > HRRJK",
         "bound_for": {
@@ -509,7 +522,7 @@
             "name": "Rijeka",
             "country": "Croatia",
             "arrived_at": "2026-11-18T16:05:20.000Z",
-            "departed_at": null
+            "departed_at": "2026-11-19T10:51:19.000Z"
           },
           {
             "locode": "SIKOP",
@@ -558,7 +571,7 @@
           "kind": "actual",
           "source": "Shiptrail (AIS port-call history)",
           "source_url": "https://shiptrail.io/vessel/636018323-msc-caitlin-ii",
-          "retrieved_at": "2026-11-19T11:45:01+01:00",
+          "retrieved_at": "2026-11-19T12:45:00+01:00",
           "auto": true,
           "confidence": "medium"
         }
@@ -662,7 +675,7 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/cma-cgm-altamira-249157000",
-        "checked_at": "2026-11-19T12:30:00+01:00",
+        "checked_at": "2026-11-19T12:45:00+01:00",
         "found": true,
         "mmsi": "249157000",
         "distance_km": 217,
@@ -679,7 +692,7 @@
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/249157000-cma-cgm-altamira",
-        "fetched_at": "2026-11-19T11:45:01+01:00",
+        "fetched_at": "2026-11-19T12:45:00+01:00",
         "mmsi": "249157000",
         "imo": "9961350",
         "name": "CMA CGM ALTAMIRA",
@@ -764,7 +777,7 @@
           "kind": "actual",
           "source": "Shiptrail (AIS port-call history)",
           "source_url": "https://shiptrail.io/vessel/249157000-cma-cgm-altamira",
-          "retrieved_at": "2026-11-19T11:45:01+01:00",
+          "retrieved_at": "2026-11-19T12:45:00+01:00",
           "auto": true,
           "confidence": "medium"
         }
@@ -1185,26 +1198,26 @@
       "name": "Wingo Marine",
       "url": "https://wingo-marine.com/port/rijeka-2263",
       "ok": true,
-      "fetched_at": "2026-11-19T12:30:00+01:00",
-      "last_attempt_at": "2026-11-19T12:30:00+01:00",
+      "fetched_at": "2026-11-19T12:45:00+01:00",
+      "last_attempt_at": "2026-11-19T12:45:00+01:00",
       "error": null,
-      "summary": "47 vessels reported within 15 km in the last 24 hours",
-      "vessels_listed": 29
+      "summary": "36 vessels reported within 15 km in the last 24 hours",
+      "vessels_listed": 33
     },
     "aiscatcher": {
       "name": "AIS-catcher",
       "url": "https://www.aiscatcher.org/place/6398/brajdica-container-terminal",
       "ok": false,
       "fetched_at": "2026-11-19T10:45:00+01:00",
-      "last_attempt_at": "2026-11-19T12:30:00+01:00",
+      "last_attempt_at": "2026-11-19T12:45:00+01:00",
       "error": "HTTP 403"
     },
     "shiptrail": {
       "name": "Shiptrail",
       "url": "https://shiptrail.io/",
       "ok": true,
-      "fetched_at": "2026-11-19T12:30:00+01:00",
-      "last_attempt_at": "2026-11-19T12:30:00+01:00",
+      "fetched_at": "2026-11-19T12:45:00+01:00",
+      "last_attempt_at": "2026-11-19T12:45:00+01:00",
       "error": null,
       "note": "AIS-derived port calls and positions. Data: Shiptrail, shiptrail.io"
     }
@@ -1291,6 +1304,6 @@
   "stale_after_hours": 3,
   "research_pending": [],
   "research_needed": [],
-  "next_check_at": "2026-11-19T13:30:00+01:00",
+  "next_check_at": "2026-11-19T13:45:00+01:00",
   "stale_grace_minutes": 100
 }
