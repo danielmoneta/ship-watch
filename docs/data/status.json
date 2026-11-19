@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-19T19:45:00+01:00",
+  "generated_at": "2026-11-19T20:15:00+01:00",
   "timezone": "Europe/Zagreb",
   "terminal": {
     "url": "https://webusercorner.ictsi.hr/?language=EN",
     "query_url": "https://webusercorner.ictsi.hr/?language=EN&from=09.11.2026&to=10.12.2026",
     "ok": true,
-    "fetched_at": "2026-11-19T19:45:00+01:00",
-    "last_attempt_at": "2026-11-19T19:45:00+01:00",
+    "fetched_at": "2026-11-19T20:15:00+01:00",
+    "last_attempt_at": "2026-11-19T20:15:00+01:00",
     "rows": 15,
     "error": null
   },
@@ -29,7 +29,7 @@
         "ais": {
           "source": "Wingo Marine",
           "source_url": "https://wingo-marine.com/port/rijeka-2263",
-          "checked_at": "2026-11-19T19:45:00+01:00",
+          "checked_at": "2026-11-19T20:15:00+01:00",
           "found": false
         },
         "imo": "9344409",
@@ -226,22 +226,9 @@
         "phase": "at_berth",
         "ais": {
           "source": "Wingo Marine",
-          "source_url": "https://wingo-marine.com/ship/msc-audrey-636022450",
-          "checked_at": "2026-11-19T19:45:00+01:00",
-          "found": true,
-          "mmsi": "636022450",
-          "distance_km": 23,
-          "nav": null,
-          "destination_raw": "HRRJK",
-          "destination": {
-            "locode": "HRRJK",
-            "name": "Rijeka, Croatia"
-          },
-          "destination_kind": "ais_destination",
-          "berth_consistent": false,
-          "last_report": "2026-11-19T17:55:00.000Z",
-          "nearest_port_label": null,
-          "imo": "9540065"
+          "source_url": "https://wingo-marine.com/port/rijeka-2263",
+          "checked_at": "2026-11-19T20:15:00+01:00",
+          "found": false
         },
         "imo": "9540065",
         "trail": {
@@ -456,7 +443,7 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/port/rijeka-2263",
-        "checked_at": "2026-11-19T19:45:00+01:00",
+        "checked_at": "2026-11-19T20:15:00+01:00",
         "found": false
       },
       "trail": {
@@ -651,10 +638,10 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/cma-cgm-altamira-249157000",
-        "checked_at": "2026-11-19T19:45:00+01:00",
+        "checked_at": "2026-11-19T20:15:00+01:00",
         "found": true,
         "mmsi": "249157000",
-        "distance_km": 139,
+        "distance_km": 134,
         "nav": null,
         "destination_raw": "HRRJK",
         "destination": {
@@ -1188,18 +1175,18 @@
       "name": "Wingo Marine",
       "url": "https://wingo-marine.com/port/rijeka-2263",
       "ok": true,
-      "fetched_at": "2026-11-19T19:45:00+01:00",
-      "last_attempt_at": "2026-11-19T19:45:00+01:00",
+      "fetched_at": "2026-11-19T20:15:00+01:00",
+      "last_attempt_at": "2026-11-19T20:15:00+01:00",
       "error": null,
-      "summary": "47 vessels reported within 15 km in the last 24 hours",
-      "vessels_listed": 28
+      "summary": "48 vessels reported within 15 km in the last 24 hours",
+      "vessels_listed": 27
     },
     "aiscatcher": {
       "name": "AIS-catcher",
       "url": "https://www.aiscatcher.org/place/6398/brajdica-container-terminal",
       "ok": true,
-      "fetched_at": "2026-11-19T19:45:00+01:00",
-      "last_attempt_at": "2026-11-19T19:45:00+01:00",
+      "fetched_at": "2026-11-19T20:15:00+01:00",
+      "last_attempt_at": "2026-11-19T20:15:00+01:00",
       "error": null,
       "receiving_stations": 0,
       "vessels_inside": 0,
@@ -1210,8 +1197,8 @@
       "name": "Shiptrail",
       "url": "https://shiptrail.io/",
       "ok": true,
-      "fetched_at": "2026-11-19T19:45:00+01:00",
-      "last_attempt_at": "2026-11-19T19:45:00+01:00",
+      "fetched_at": "2026-11-19T20:15:00+01:00",
+      "last_attempt_at": "2026-11-19T20:15:00+01:00",
       "error": null,
       "note": "AIS-derived port calls and positions. Data: Shiptrail, shiptrail.io"
     }
@@ -1298,6 +1285,6 @@
   "stale_after_hours": 3,
   "research_pending": [],
   "research_needed": [],
-  "next_check_at": "2026-11-19T20:45:00+01:00",
+  "next_check_at": "2026-11-19T21:15:00+01:00",
   "stale_grace_minutes": 100
 }
