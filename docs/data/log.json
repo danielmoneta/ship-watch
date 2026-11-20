@@ -2461,6 +2461,20 @@
       "events": 0,
       "research_needed": [],
       "errors": []
+    },
+    {
+      "at": "2026-11-20T10:45:00+01:00",
+      "terminal_ok": true,
+      "rows": 14,
+      "berth": [
+        "MSC CAITLIN II",
+        "UNITY ONE"
+      ],
+      "events": 1,
+      "research_needed": [
+        "CMA CGM ANTIGONE"
+      ],
+      "errors": []
     }
   ],
   "events": [
@@ -2623,6 +2637,14 @@
       "from": "ARRIVED",
       "to": "UNDER OPS",
       "observed": "2026-11-20T06:30:00+01:00"
+    },
+    {
+      "type": "eta_changed",
+      "call_id": "GANDA|15",
+      "name": "GANDA",
+      "from": "2026-11-24T06:30:00+01:00",
+      "to": "2026-11-25T06:30:00+01:00",
+      "observed": "2026-11-20T10:45:00+01:00"
     }
   ]
 }
