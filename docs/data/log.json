@@ -2754,6 +2754,18 @@
       "events": 0,
       "research_needed": [],
       "errors": []
+    },
+    {
+      "at": "2026-11-20T19:45:00+01:00",
+      "terminal_ok": true,
+      "rows": 14,
+      "berth": [
+        "CMA CGM ALTAMIRA",
+        "UNITY ONE"
+      ],
+      "events": 1,
+      "research_needed": [],
+      "errors": []
     }
   ],
   "events": [
@@ -2939,6 +2951,13 @@
       "from": "COMPLETE",
       "to": "DEPARTED",
       "observed": "2026-11-20T18:30:01+01:00"
+    },
+    {
+      "type": "arrived",
+      "call_id": "CMA CGM ALTAMIRA|BMS0V0E19",
+      "name": "CMA CGM ALTAMIRA",
+      "at": "2026-11-20T19:30:00+01:00",
+      "observed": "2026-11-20T19:45:00+01:00"
     }
   ]
 }
