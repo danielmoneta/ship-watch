@@ -2389,6 +2389,18 @@
         "GANDA"
       ],
       "errors": []
+    },
+    {
+      "at": "2026-11-20T05:45:00+01:00",
+      "terminal_ok": true,
+      "rows": 14,
+      "berth": [
+        "MSC CAITLIN II",
+        "UNITY ONE"
+      ],
+      "events": 0,
+      "research_needed": [],
+      "errors": []
     }
   ],
   "events": [
