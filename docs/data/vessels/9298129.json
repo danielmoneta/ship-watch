@@ -1,0 +1,44 @@
+{
+  "imo": "9298129",
+  "name": "GANDA",
+  "aliases": [],
+  "mmsi": "256387000",
+  "fields": {
+    "flag": {
+      "value": "Malta",
+      "source": "Wingo Marine (AIS)",
+      "source_url": "https://wingo-marine.com/ship/ganda-256387000",
+      "retrieved_at": "2026-11-20T05:30:00+01:00",
+      "confidence": "medium"
+    },
+    "length_m": {
+      "value": 80,
+      "source": "Wingo Marine (AIS broadcast dimensions)",
+      "source_url": "https://wingo-marine.com/ship/ganda-256387000",
+      "retrieved_at": "2026-11-20T05:30:00+01:00",
+      "confidence": "medium"
+    },
+    "beam_m": {
+      "value": 13,
+      "source": "Wingo Marine (AIS broadcast dimensions)",
+      "source_url": "https://wingo-marine.com/ship/ganda-256387000",
+      "retrieved_at": "2026-11-20T05:30:00+01:00",
+      "confidence": "medium"
+    },
+    "callsign": {
+      "value": "9HA3897",
+      "source": "Wingo Marine (AIS)",
+      "source_url": "https://wingo-marine.com/ship/ganda-256387000",
+      "retrieved_at": "2026-11-20T05:30:00+01:00",
+      "confidence": "medium"
+    }
+  },
+  "photo": null,
+  "facts": [],
+  "research": {
+    "status": "auto",
+    "researched_at": null,
+    "missing": [],
+    "notes": "Created automatically from AIS data; awaiting research."
+  }
+}
