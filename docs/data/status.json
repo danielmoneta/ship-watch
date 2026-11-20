@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-20T08:45:00+01:00",
+  "generated_at": "2026-11-20T09:45:00+01:00",
   "timezone": "Europe/Zagreb",
   "terminal": {
     "url": "https://webusercorner.ictsi.hr/?language=EN",
     "query_url": "https://webusercorner.ictsi.hr/?language=EN&from=10.11.2026&to=11.12.2026",
     "ok": true,
-    "fetched_at": "2026-11-20T08:45:00+01:00",
-    "last_attempt_at": "2026-11-20T08:45:00+01:00",
+    "fetched_at": "2026-11-20T09:45:00+01:00",
+    "last_attempt_at": "2026-11-20T09:45:00+01:00",
     "rows": 14,
     "error": null
   },
@@ -30,7 +30,7 @@
         "ais": {
           "source": "Wingo Marine",
           "source_url": "https://wingo-marine.com/ship/msc-caitlin-ii-636018323",
-          "checked_at": "2026-11-20T08:45:00+01:00",
+          "checked_at": "2026-11-20T09:45:00+01:00",
           "found": true,
           "mmsi": "636018323",
           "distance_km": 4.2,
@@ -42,14 +42,14 @@
           },
           "destination_kind": "ais_destination",
           "berth_consistent": true,
-          "last_report": "2026-11-20T05:06:00.000Z",
+          "last_report": "2026-11-20T08:06:00.000Z",
           "nearest_port_label": "Rijeka",
           "imo": "9169043"
         },
         "trail": {
           "source": "Shiptrail",
           "source_url": "https://shiptrail.io/vessel/636018323-msc-caitlin-ii",
-          "fetched_at": "2026-11-20T08:45:00+01:00",
+          "fetched_at": "2026-11-20T09:45:00+01:00",
           "mmsi": "636018323",
           "imo": "9169043",
           "name": "MSC CAITLIN II",
@@ -134,7 +134,7 @@
             "kind": "actual",
             "source": "Shiptrail (AIS port-call history)",
             "source_url": "https://shiptrail.io/vessel/636018323-msc-caitlin-ii",
-            "retrieved_at": "2026-11-20T08:45:00+01:00",
+            "retrieved_at": "2026-11-20T09:45:00+01:00",
             "auto": true,
             "confidence": "medium"
           }
@@ -241,14 +241,14 @@
         "ais": {
           "source": "Wingo Marine",
           "source_url": "https://wingo-marine.com/port/rijeka-2263",
-          "checked_at": "2026-11-20T08:45:00+01:00",
+          "checked_at": "2026-11-20T09:45:00+01:00",
           "found": false
         },
         "imo": "9344409",
         "trail": {
           "source": "Shiptrail",
           "source_url": "https://shiptrail.io/vessel/352005466-unity-one",
-          "fetched_at": "2026-11-20T08:45:00+01:00",
+          "fetched_at": "2026-11-20T09:45:00+01:00",
           "mmsi": "352005466",
           "imo": "9344409",
           "name": "UNITY ONE",
@@ -443,11 +443,11 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/cma-cgm-altamira-249157000",
-        "checked_at": "2026-11-20T08:45:00+01:00",
+        "checked_at": "2026-11-20T09:45:00+01:00",
         "found": true,
         "mmsi": "249157000",
         "distance_km": 119,
-        "nav": "1.7 kn",
+        "nav": "2.5 kn",
         "destination_raw": "HRRJK",
         "destination": {
           "locode": "HRRJK",
@@ -460,7 +460,7 @@
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/249157000-cma-cgm-altamira",
-        "fetched_at": "2026-11-20T08:45:00+01:00",
+        "fetched_at": "2026-11-20T09:45:00+01:00",
         "mmsi": "249157000",
         "imo": "9961350",
         "name": "CMA CGM ALTAMIRA",
@@ -545,7 +545,7 @@
           "kind": "actual",
           "source": "Shiptrail (AIS port-call history)",
           "source_url": "https://shiptrail.io/vessel/249157000-cma-cgm-altamira",
-          "retrieved_at": "2026-11-20T08:45:00+01:00",
+          "retrieved_at": "2026-11-20T09:45:00+01:00",
           "auto": true,
           "confidence": "medium"
         }
@@ -656,11 +656,11 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/ganda-256387000",
-        "checked_at": "2026-11-20T08:45:00+01:00",
+        "checked_at": "2026-11-20T09:45:00+01:00",
         "found": true,
         "mmsi": "256387000",
         "distance_km": null,
-        "nav": "8.8 kn",
+        "nav": "8.0 kn",
         "destination_raw": "HRRJK",
         "destination": {
           "locode": "HRRJK",
@@ -673,7 +673,7 @@
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/256387000-ganda",
-        "fetched_at": "2026-11-20T08:45:00+01:00",
+        "fetched_at": "2026-11-20T09:45:00+01:00",
         "mmsi": "256387000",
         "imo": "9298129",
         "name": "GANDA",
@@ -1200,8 +1200,8 @@
       "name": "Wingo Marine",
       "url": "https://wingo-marine.com/port/rijeka-2263",
       "ok": true,
-      "fetched_at": "2026-11-20T08:45:00+01:00",
-      "last_attempt_at": "2026-11-20T08:45:00+01:00",
+      "fetched_at": "2026-11-20T09:45:00+01:00",
+      "last_attempt_at": "2026-11-20T09:45:00+01:00",
       "error": null,
       "summary": "44 vessels reported within 15 km in the last 24 hours",
       "vessels_listed": 28
@@ -1210,8 +1210,8 @@
       "name": "AIS-catcher",
       "url": "https://www.aiscatcher.org/place/6398/brajdica-container-terminal",
       "ok": true,
-      "fetched_at": "2026-11-20T08:45:00+01:00",
-      "last_attempt_at": "2026-11-20T08:45:00+01:00",
+      "fetched_at": "2026-11-20T09:45:00+01:00",
+      "last_attempt_at": "2026-11-20T09:45:00+01:00",
       "error": null,
       "receiving_stations": 0,
       "vessels_inside": 0,
@@ -1222,8 +1222,8 @@
       "name": "Shiptrail",
       "url": "https://shiptrail.io/",
       "ok": true,
-      "fetched_at": "2026-11-20T08:45:00+01:00",
-      "last_attempt_at": "2026-11-20T08:45:00+01:00",
+      "fetched_at": "2026-11-20T09:45:00+01:00",
+      "last_attempt_at": "2026-11-20T09:45:00+01:00",
       "error": null,
       "note": "AIS-derived port calls and positions. Data: Shiptrail, shiptrail.io"
     }
@@ -1309,6 +1309,6 @@
   "stale_after_hours": 3,
   "research_pending": [],
   "research_needed": [],
-  "next_check_at": "2026-11-20T09:45:00+01:00",
+  "next_check_at": "2026-11-20T10:45:00+01:00",
   "stale_grace_minutes": 100
 }
