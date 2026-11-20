@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-20T03:45:01+01:00",
+  "generated_at": "2026-11-20T04:15:01+01:00",
   "timezone": "Europe/Zagreb",
   "terminal": {
     "url": "https://webusercorner.ictsi.hr/?language=EN",
     "query_url": "https://webusercorner.ictsi.hr/?language=EN&from=10.11.2026&to=11.12.2026",
     "ok": true,
-    "fetched_at": "2026-11-20T03:45:01+01:00",
-    "last_attempt_at": "2026-11-20T03:45:01+01:00",
+    "fetched_at": "2026-11-20T04:15:01+01:00",
+    "last_attempt_at": "2026-11-20T04:15:01+01:00",
     "rows": 14,
     "error": null
   },
@@ -29,7 +29,7 @@
         "ais": {
           "source": "Wingo Marine",
           "source_url": "https://wingo-marine.com/port/rijeka-2263",
-          "checked_at": "2026-11-20T03:45:01+01:00",
+          "checked_at": "2026-11-20T04:15:01+01:00",
           "found": false
         },
         "imo": "9344409",
@@ -231,7 +231,7 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/msc-caitlin-ii-636018323",
-        "checked_at": "2026-11-20T03:45:01+01:00",
+        "checked_at": "2026-11-20T04:15:01+01:00",
         "found": true,
         "mmsi": "636018323",
         "distance_km": 3.3,
@@ -437,7 +437,7 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/cma-cgm-altamira-249157000",
-        "checked_at": "2026-11-20T03:45:01+01:00",
+        "checked_at": "2026-11-20T04:15:01+01:00",
         "found": true,
         "mmsi": "249157000",
         "distance_km": 122,
@@ -670,7 +670,7 @@
       "shipper": "MSC",
       "voyage_in": "QX645E",
       "voyage_out": "QX645E",
-      "status": "COMPLETE",
+      "status": "DEPARTED",
       "eta": "2026-11-18T06:30:00+01:00",
       "etd": "2026-11-20T03:00:00+01:00",
       "ata": "2026-11-18T11:10:00+01:00",
@@ -1077,8 +1077,8 @@
       "name": "Wingo Marine",
       "url": "https://wingo-marine.com/port/rijeka-2263",
       "ok": true,
-      "fetched_at": "2026-11-20T03:45:01+01:00",
-      "last_attempt_at": "2026-11-20T03:45:01+01:00",
+      "fetched_at": "2026-11-20T04:15:01+01:00",
+      "last_attempt_at": "2026-11-20T04:15:01+01:00",
       "error": null,
       "summary": "48 vessels reported within 15 km in the last 24 hours",
       "vessels_listed": 28
@@ -1087,8 +1087,8 @@
       "name": "AIS-catcher",
       "url": "https://www.aiscatcher.org/place/6398/brajdica-container-terminal",
       "ok": true,
-      "fetched_at": "2026-11-20T03:45:01+01:00",
-      "last_attempt_at": "2026-11-20T03:45:01+01:00",
+      "fetched_at": "2026-11-20T04:15:01+01:00",
+      "last_attempt_at": "2026-11-20T04:15:01+01:00",
       "error": null,
       "receiving_stations": 0,
       "vessels_inside": 0,
@@ -1099,20 +1099,13 @@
       "name": "Shiptrail",
       "url": "https://shiptrail.io/",
       "ok": true,
-      "fetched_at": "2026-11-20T03:45:01+01:00",
-      "last_attempt_at": "2026-11-20T03:45:01+01:00",
+      "fetched_at": "2026-11-20T04:15:01+01:00",
+      "last_attempt_at": "2026-11-20T04:15:01+01:00",
       "error": null,
       "note": "AIS-derived port calls and positions. Data: Shiptrail, shiptrail.io"
     }
   },
   "last_events": [
-    {
-      "type": "arrived",
-      "call_id": "MSC AUDREY|QX645E",
-      "name": "MSC AUDREY",
-      "at": "2026-11-18T11:00:00+01:00",
-      "observed": "2026-11-18T10:45:01+01:00"
-    },
     {
       "type": "eta_changed",
       "call_id": "UNITY ONE|13",
@@ -1181,11 +1174,19 @@
       "name": "MSC AUDREY",
       "at": "2026-11-20T03:30:00+01:00",
       "observed": "2026-11-20T03:30:00+01:00"
+    },
+    {
+      "type": "status_changed",
+      "call_id": "MSC AUDREY|QX645E",
+      "name": "MSC AUDREY",
+      "from": "COMPLETE",
+      "to": "DEPARTED",
+      "observed": "2026-11-20T04:15:01+01:00"
     }
   ],
   "stale_after_hours": 3,
   "research_pending": [],
   "research_needed": [],
-  "next_check_at": "2026-11-20T04:45:01+01:00",
+  "next_check_at": "2026-11-20T05:15:01+01:00",
   "stale_grace_minutes": 100
 }

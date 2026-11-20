@@ -2353,6 +2353,17 @@
       "events": 0,
       "research_needed": [],
       "errors": []
+    },
+    {
+      "at": "2026-11-20T04:15:01+01:00",
+      "terminal_ok": true,
+      "rows": 14,
+      "berth": [
+        "UNITY ONE"
+      ],
+      "events": 1,
+      "research_needed": [],
+      "errors": []
     }
   ],
   "events": [
@@ -2492,6 +2503,14 @@
       "name": "MSC AUDREY",
       "at": "2026-11-20T03:30:00+01:00",
       "observed": "2026-11-20T03:30:00+01:00"
+    },
+    {
+      "type": "status_changed",
+      "call_id": "MSC AUDREY|QX645E",
+      "name": "MSC AUDREY",
+      "from": "COMPLETE",
+      "to": "DEPARTED",
+      "observed": "2026-11-20T04:15:01+01:00"
     }
   ]
 }
