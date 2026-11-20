@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-20T21:45:00+01:00",
+  "generated_at": "2026-11-20T22:00:01+01:00",
   "timezone": "Europe/Zagreb",
   "terminal": {
     "url": "https://webusercorner.ictsi.hr/?language=EN",
     "query_url": "https://webusercorner.ictsi.hr/?language=EN&from=10.11.2026&to=11.12.2026",
     "ok": true,
-    "fetched_at": "2026-11-20T21:45:00+01:00",
-    "last_attempt_at": "2026-11-20T21:45:00+01:00",
+    "fetched_at": "2026-11-20T22:00:01+01:00",
+    "last_attempt_at": "2026-11-20T22:00:01+01:00",
     "rows": 14,
     "error": null
   },
@@ -30,7 +30,7 @@
         "ais": {
           "source": "Wingo Marine",
           "source_url": "https://wingo-marine.com/ship/cma-cgm-altamira-249157000",
-          "checked_at": "2026-11-20T21:45:00+01:00",
+          "checked_at": "2026-11-20T22:00:01+01:00",
           "found": true,
           "mmsi": "249157000",
           "distance_km": 4.4,
@@ -248,7 +248,7 @@
         "ais": {
           "source": "Wingo Marine",
           "source_url": "https://wingo-marine.com/ship/unity-one-352005466",
-          "checked_at": "2026-11-20T21:45:00+01:00",
+          "checked_at": "2026-11-20T22:00:01+01:00",
           "found": true,
           "mmsi": "352005466",
           "distance_km": 6.3,
@@ -448,6 +448,180 @@
   },
   "upcoming": [
     {
+      "call_id": "CMA CGM ANTIGONE|0BEOWE1MA",
+      "name": "CMA CGM ANTIGONE",
+      "shipper": "CMA",
+      "voyage_in": "0BEOWE1MA",
+      "voyage_out": "0BEOWE1MA",
+      "status": "IN ARRIVAL",
+      "eta": "2026-11-25T06:30:00+01:00",
+      "etd": "2026-11-26T22:30:00+01:00",
+      "ata": null,
+      "atd": null,
+      "phase": "expected",
+      "ais": {
+        "source": "Wingo Marine",
+        "source_url": "https://wingo-marine.com/port/rijeka-2263",
+        "checked_at": "2026-11-20T22:00:01+01:00",
+        "found": false
+      },
+      "imo": "9996989",
+      "trail": {
+        "source": "Shiptrail",
+        "source_url": "https://shiptrail.io/vessel/249787000-cma-cgm-antigone",
+        "fetched_at": "2026-11-20T22:00:01+01:00",
+        "mmsi": "249787000",
+        "imo": "9996989",
+        "name": "CMA CGM ANTIGONE",
+        "last_heard": "2026-11-20T20:59:30.000Z",
+        "position": {
+          "lat": 44.31811,
+          "lon": 13.93432,
+          "at": "2026-11-20T20:59:30.000Z",
+          "status": "Under way under engine power",
+          "speed_kn": 15.7
+        },
+        "quay_distance_km": 118.72,
+        "at_quay": false,
+        "destination_raw": "SIKOP",
+        "bound_for": {
+          "locode": "SIKOP",
+          "name": "Koper",
+          "country": "Slovenia"
+        },
+        "destination_eta": "2026-11-21T04:00:00.000Z",
+        "previous_port": {
+          "locode": "LBKYE",
+          "name": "Tripoli",
+          "country": "Lebanon",
+          "arrived_at": "2026-11-14T13:46:13.712Z",
+          "departed_at": "2026-11-14T15:26:12.335Z",
+          "url": "https://shiptrail.io/port/lbkye-tripoli"
+        },
+        "still_in_port": null,
+        "recent_calls": [
+          {
+            "locode": "LBKYE",
+            "name": "Tripoli",
+            "country": "Lebanon",
+            "arrived_at": "2026-11-14T13:46:13.712Z",
+            "departed_at": "2026-11-14T15:26:12.335Z"
+          }
+        ]
+      },
+      "voyage": {
+        "previous_port": {
+          "name": "Tripoli",
+          "locode": "LBKYE",
+          "country": "Lebanon",
+          "arrived_at": "2026-11-14T14:46:13+01:00",
+          "departed_at": "2026-11-14T16:26:12+01:00",
+          "kind": "actual",
+          "source": "Shiptrail (AIS port-call history)",
+          "source_url": "https://shiptrail.io/vessel/249787000-cma-cgm-antigone",
+          "retrieved_at": "2026-11-20T22:00:01+01:00",
+          "auto": true,
+          "confidence": "medium"
+        }
+      },
+      "profile": {
+        "imo": "9996989",
+        "name": "CMA CGM ANTIGONE",
+        "aliases": [],
+        "mmsi": "249787000",
+        "fields": {
+          "flag": {
+            "value": "Malta",
+            "source": "Shiptrail",
+            "source_url": "https://shiptrail.io/vessel/249787000-cma-cgm-antigone",
+            "retrieved_at": "2026-11-20T09:46:22+01:00",
+            "confidence": "medium"
+          },
+          "length_m": {
+            "value": 366,
+            "source": "Shiptrail (AIS dimensions)",
+            "source_url": "https://shiptrail.io/vessel/249787000-cma-cgm-antigone",
+            "retrieved_at": "2026-11-20T09:46:22+01:00",
+            "confidence": "medium"
+          },
+          "beam_m": {
+            "value": 51,
+            "source": "Shiptrail (AIS dimensions)",
+            "source_url": "https://shiptrail.io/vessel/249787000-cma-cgm-antigone",
+            "retrieved_at": "2026-11-20T09:46:22+01:00",
+            "confidence": "medium"
+          },
+          "callsign": {
+            "value": "9HA6384",
+            "source": "Shiptrail",
+            "source_url": "https://shiptrail.io/vessel/249787000-cma-cgm-antigone",
+            "retrieved_at": "2026-11-20T09:46:22+01:00",
+            "confidence": "medium"
+          },
+          "type": {
+            "value": "Container ship (methanol dual-fuel)",
+            "source": "Bureau Veritas",
+            "source_url": "https://marine-offshore.bureauveritas.com/newsroom/bureau-veritas-classes-its-first-methanol-dual-fueled-container-ship-cma-cgm-antigone",
+            "retrieved_at": "2026-11-20T09:46:22+01:00",
+            "confidence": "medium"
+          },
+          "year_built": {
+            "value": 2025,
+            "source": "Web search summary of tracker listings (VesselFinder et al.)",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9996989",
+            "retrieved_at": "2026-11-20T09:46:22+01:00",
+            "confidence": "medium"
+          },
+          "teu": {
+            "value": 15000,
+            "source": "Web search summary of tracker listings",
+            "source_url": "https://www.vesselfinder.com/vessels/details/9996989",
+            "retrieved_at": "2026-11-20T09:46:22+01:00",
+            "confidence": "low",
+            "note": "Capacity quoted as 15,000 TEU class; exact nominal TEU not confirmed"
+          },
+          "builder": {
+            "value": "CSSC Jiangnan Shipyard",
+            "source": "Bureau Veritas",
+            "source_url": "https://marine-offshore.bureauveritas.com/newsroom/bureau-veritas-classes-its-first-methanol-dual-fueled-container-ship-cma-cgm-antigone",
+            "retrieved_at": "2026-11-20T09:46:22+01:00",
+            "confidence": "medium"
+          },
+          "class": {
+            "value": "Bureau Veritas",
+            "source": "Bureau Veritas",
+            "source_url": "https://marine-offshore.bureauveritas.com/newsroom/bureau-veritas-classes-its-first-methanol-dual-fueled-container-ship-cma-cgm-antigone",
+            "retrieved_at": "2026-11-20T09:46:22+01:00",
+            "confidence": "medium"
+          },
+          "operator": {
+            "value": "CMA CGM",
+            "source": "Bureau Veritas",
+            "source_url": "https://marine-offshore.bureauveritas.com/newsroom/bureau-veritas-classes-its-first-methanol-dual-fueled-container-ship-cma-cgm-antigone",
+            "retrieved_at": "2026-11-20T09:46:22+01:00",
+            "confidence": "medium"
+          }
+        },
+        "photo": null,
+        "facts": [
+          {
+            "text": "Lead ship of CSSC Jiangnan's 15,000 TEU-class methanol dual-fuel container ships; Bureau Veritas classed it as its first methanol dual-fuel container ship.",
+            "source": "Bureau Veritas",
+            "source_url": "https://marine-offshore.bureauveritas.com/newsroom/bureau-veritas-classes-its-first-methanol-dual-fueled-container-ship-cma-cgm-antigone",
+            "confidence": "medium"
+          }
+        ],
+        "research": {
+          "status": "partial",
+          "researched_at": "2026-11-20T09:46:22+01:00",
+          "missing": [
+            "photo"
+          ],
+          "notes": "IMO confirmed by Shiptrail, VesselFinder, Flexport and Bureau Veritas coverage. TEU and year built from search summaries only. No Commons photo."
+        }
+      }
+    },
+    {
       "call_id": "GANDA|15",
       "name": "GANDA",
       "shipper": "SOC",
@@ -463,11 +637,11 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/ganda-256387000",
-        "checked_at": "2026-11-20T21:45:00+01:00",
+        "checked_at": "2026-11-20T22:00:01+01:00",
         "found": true,
         "mmsi": "256387000",
         "distance_km": null,
-        "nav": "8.5 kn",
+        "nav": "7.6 kn",
         "destination_raw": "HRRJK",
         "destination": {
           "locode": "HRRJK",
@@ -575,180 +749,6 @@
             "teu"
           ],
           "notes": "GANDA is a general cargo ship (80 m), not a container ship, so TEU does not apply. Shiptrail particulars gave type and year built only; no builder, tonnage or operator found."
-        }
-      }
-    },
-    {
-      "call_id": "CMA CGM ANTIGONE|0BEOWE1MA",
-      "name": "CMA CGM ANTIGONE",
-      "shipper": "CMA",
-      "voyage_in": "0BEOWE1MA",
-      "voyage_out": "0BEOWE1MA",
-      "status": "IN ARRIVAL",
-      "eta": "2026-11-25T06:30:00+01:00",
-      "etd": "2026-11-26T22:30:00+01:00",
-      "ata": null,
-      "atd": null,
-      "phase": "expected",
-      "ais": {
-        "source": "Wingo Marine",
-        "source_url": "https://wingo-marine.com/port/rijeka-2263",
-        "checked_at": "2026-11-20T21:45:00+01:00",
-        "found": false
-      },
-      "imo": "9996989",
-      "trail": {
-        "source": "Shiptrail",
-        "source_url": "https://shiptrail.io/vessel/249787000-cma-cgm-antigone",
-        "fetched_at": "2026-11-20T21:00:01+01:00",
-        "mmsi": "249787000",
-        "imo": "9996989",
-        "name": "CMA CGM ANTIGONE",
-        "last_heard": "2026-11-19T18:38:00.000Z",
-        "position": {
-          "lat": 39.0694,
-          "lon": 19.4723,
-          "at": "2026-11-19T18:33:00.000Z",
-          "status": null,
-          "speed_kn": null
-        },
-        "quay_distance_km": 808.28,
-        "at_quay": false,
-        "destination_raw": "SIKOP",
-        "bound_for": {
-          "locode": "SIKOP",
-          "name": "Koper",
-          "country": "Slovenia"
-        },
-        "destination_eta": "2026-11-21T04:00:00.000Z",
-        "previous_port": {
-          "locode": "LBKYE",
-          "name": "Tripoli",
-          "country": "Lebanon",
-          "arrived_at": "2026-11-14T13:46:13.712Z",
-          "departed_at": "2026-11-14T15:26:12.335Z",
-          "url": "https://shiptrail.io/port/lbkye-tripoli"
-        },
-        "still_in_port": null,
-        "recent_calls": [
-          {
-            "locode": "LBKYE",
-            "name": "Tripoli",
-            "country": "Lebanon",
-            "arrived_at": "2026-11-14T13:46:13.712Z",
-            "departed_at": "2026-11-14T15:26:12.335Z"
-          }
-        ]
-      },
-      "voyage": {
-        "previous_port": {
-          "name": "Tripoli",
-          "locode": "LBKYE",
-          "country": "Lebanon",
-          "arrived_at": "2026-11-14T14:46:13+01:00",
-          "departed_at": "2026-11-14T16:26:12+01:00",
-          "kind": "actual",
-          "source": "Shiptrail (AIS port-call history)",
-          "source_url": "https://shiptrail.io/vessel/249787000-cma-cgm-antigone",
-          "retrieved_at": "2026-11-20T21:00:01+01:00",
-          "auto": true,
-          "confidence": "medium"
-        }
-      },
-      "profile": {
-        "imo": "9996989",
-        "name": "CMA CGM ANTIGONE",
-        "aliases": [],
-        "mmsi": "249787000",
-        "fields": {
-          "flag": {
-            "value": "Malta",
-            "source": "Shiptrail",
-            "source_url": "https://shiptrail.io/vessel/249787000-cma-cgm-antigone",
-            "retrieved_at": "2026-11-20T09:46:22+01:00",
-            "confidence": "medium"
-          },
-          "length_m": {
-            "value": 366,
-            "source": "Shiptrail (AIS dimensions)",
-            "source_url": "https://shiptrail.io/vessel/249787000-cma-cgm-antigone",
-            "retrieved_at": "2026-11-20T09:46:22+01:00",
-            "confidence": "medium"
-          },
-          "beam_m": {
-            "value": 51,
-            "source": "Shiptrail (AIS dimensions)",
-            "source_url": "https://shiptrail.io/vessel/249787000-cma-cgm-antigone",
-            "retrieved_at": "2026-11-20T09:46:22+01:00",
-            "confidence": "medium"
-          },
-          "callsign": {
-            "value": "9HA6384",
-            "source": "Shiptrail",
-            "source_url": "https://shiptrail.io/vessel/249787000-cma-cgm-antigone",
-            "retrieved_at": "2026-11-20T09:46:22+01:00",
-            "confidence": "medium"
-          },
-          "type": {
-            "value": "Container ship (methanol dual-fuel)",
-            "source": "Bureau Veritas",
-            "source_url": "https://marine-offshore.bureauveritas.com/newsroom/bureau-veritas-classes-its-first-methanol-dual-fueled-container-ship-cma-cgm-antigone",
-            "retrieved_at": "2026-11-20T09:46:22+01:00",
-            "confidence": "medium"
-          },
-          "year_built": {
-            "value": 2025,
-            "source": "Web search summary of tracker listings (VesselFinder et al.)",
-            "source_url": "https://www.vesselfinder.com/vessels/details/9996989",
-            "retrieved_at": "2026-11-20T09:46:22+01:00",
-            "confidence": "medium"
-          },
-          "teu": {
-            "value": 15000,
-            "source": "Web search summary of tracker listings",
-            "source_url": "https://www.vesselfinder.com/vessels/details/9996989",
-            "retrieved_at": "2026-11-20T09:46:22+01:00",
-            "confidence": "low",
-            "note": "Capacity quoted as 15,000 TEU class; exact nominal TEU not confirmed"
-          },
-          "builder": {
-            "value": "CSSC Jiangnan Shipyard",
-            "source": "Bureau Veritas",
-            "source_url": "https://marine-offshore.bureauveritas.com/newsroom/bureau-veritas-classes-its-first-methanol-dual-fueled-container-ship-cma-cgm-antigone",
-            "retrieved_at": "2026-11-20T09:46:22+01:00",
-            "confidence": "medium"
-          },
-          "class": {
-            "value": "Bureau Veritas",
-            "source": "Bureau Veritas",
-            "source_url": "https://marine-offshore.bureauveritas.com/newsroom/bureau-veritas-classes-its-first-methanol-dual-fueled-container-ship-cma-cgm-antigone",
-            "retrieved_at": "2026-11-20T09:46:22+01:00",
-            "confidence": "medium"
-          },
-          "operator": {
-            "value": "CMA CGM",
-            "source": "Bureau Veritas",
-            "source_url": "https://marine-offshore.bureauveritas.com/newsroom/bureau-veritas-classes-its-first-methanol-dual-fueled-container-ship-cma-cgm-antigone",
-            "retrieved_at": "2026-11-20T09:46:22+01:00",
-            "confidence": "medium"
-          }
-        },
-        "photo": null,
-        "facts": [
-          {
-            "text": "Lead ship of CSSC Jiangnan's 15,000 TEU-class methanol dual-fuel container ships; Bureau Veritas classed it as its first methanol dual-fuel container ship.",
-            "source": "Bureau Veritas",
-            "source_url": "https://marine-offshore.bureauveritas.com/newsroom/bureau-veritas-classes-its-first-methanol-dual-fueled-container-ship-cma-cgm-antigone",
-            "confidence": "medium"
-          }
-        ],
-        "research": {
-          "status": "partial",
-          "researched_at": "2026-11-20T09:46:22+01:00",
-          "missing": [
-            "photo"
-          ],
-          "notes": "IMO confirmed by Shiptrail, VesselFinder, Flexport and Bureau Veritas coverage. TEU and year built from search summaries only. No Commons photo."
         }
       }
     }
@@ -1280,8 +1280,8 @@
       "name": "Wingo Marine",
       "url": "https://wingo-marine.com/port/rijeka-2263",
       "ok": true,
-      "fetched_at": "2026-11-20T21:45:00+01:00",
-      "last_attempt_at": "2026-11-20T21:45:00+01:00",
+      "fetched_at": "2026-11-20T22:00:01+01:00",
+      "last_attempt_at": "2026-11-20T22:00:01+01:00",
       "error": null,
       "summary": "21 vessels reported within 15 km in the last 24 hours",
       "vessels_listed": 32
@@ -1290,8 +1290,8 @@
       "name": "AIS-catcher",
       "url": "https://www.aiscatcher.org/place/6398/brajdica-container-terminal",
       "ok": true,
-      "fetched_at": "2026-11-20T21:45:00+01:00",
-      "last_attempt_at": "2026-11-20T21:45:00+01:00",
+      "fetched_at": "2026-11-20T22:00:01+01:00",
+      "last_attempt_at": "2026-11-20T22:00:01+01:00",
       "error": null,
       "receiving_stations": 0,
       "vessels_inside": 0,
@@ -1302,8 +1302,8 @@
       "name": "Shiptrail",
       "url": "https://shiptrail.io/",
       "ok": true,
-      "fetched_at": "2026-11-20T21:45:00+01:00",
-      "last_attempt_at": "2026-11-20T21:45:00+01:00",
+      "fetched_at": "2026-11-20T22:00:01+01:00",
+      "last_attempt_at": "2026-11-20T22:00:01+01:00",
       "error": null,
       "note": "AIS-derived port calls and positions. Data: Shiptrail, shiptrail.io"
     }
@@ -1388,6 +1388,6 @@
   "stale_after_hours": 3,
   "research_pending": [],
   "research_needed": [],
-  "next_check_at": "2026-11-20T22:45:00+01:00",
+  "next_check_at": "2026-11-20T23:00:01+01:00",
   "stale_grace_minutes": 100
 }
