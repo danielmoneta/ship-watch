@@ -31,14 +31,42 @@
       "source_url": "https://wingo-marine.com/ship/ganda-256387000",
       "retrieved_at": "2026-11-20T05:30:00+01:00",
       "confidence": "medium"
+    },
+    "type": {
+      "value": "General cargo ship",
+      "source": "Shiptrail",
+      "source_url": "https://shiptrail.io/vessel/256387000-ganda",
+      "retrieved_at": "2026-11-20T05:32:00+01:00",
+      "confidence": "medium"
+    },
+    "year_built": {
+      "value": 2003,
+      "source": "Shiptrail",
+      "source_url": "https://shiptrail.io/vessel/256387000-ganda",
+      "retrieved_at": "2026-11-20T05:32:00+01:00",
+      "confidence": "medium"
     }
   },
-  "photo": null,
+  "photo": {
+    "file": "data/photos/9298129.jpg",
+    "title": "Navire GANDA au port.jpg",
+    "author": "Farid mernissi",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Navire_GANDA_au_port.jpg",
+    "taken": "2020-11-11",
+    "width": 4160,
+    "height": 3120,
+    "retrieved_at": "2026-11-20T05:31:06+01:00"
+  },
   "facts": [],
   "research": {
-    "status": "auto",
-    "researched_at": null,
-    "missing": [],
-    "notes": "Created automatically from AIS data; awaiting research."
+    "status": "partial",
+    "researched_at": "2026-11-20T05:32:00+01:00",
+    "missing": [
+      "teu"
+    ],
+    "notes": "GANDA is a general cargo ship (80 m), not a container ship, so TEU does not apply. Shiptrail particulars gave type and year built only; no builder, tonnage or operator found."
   }
 }
