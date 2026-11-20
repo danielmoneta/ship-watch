@@ -2655,6 +2655,17 @@
       "events": 0,
       "research_needed": [],
       "errors": []
+    },
+    {
+      "at": "2026-11-20T17:15:01+01:00",
+      "terminal_ok": true,
+      "rows": 14,
+      "berth": [
+        "UNITY ONE"
+      ],
+      "events": 1,
+      "research_needed": [],
+      "errors": []
     }
   ],
   "events": [
@@ -2825,6 +2836,13 @@
       "from": "2026-11-24T06:30:00+01:00",
       "to": "2026-11-25T06:30:00+01:00",
       "observed": "2026-11-20T10:45:00+01:00"
+    },
+    {
+      "type": "departed",
+      "call_id": "MSC CAITLIN II|AH645A",
+      "name": "MSC CAITLIN II",
+      "at": "2026-11-20T18:00:00+01:00",
+      "observed": "2026-11-20T17:15:01+01:00"
     }
   ]
 }
