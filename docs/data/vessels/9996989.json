@@ -1,0 +1,96 @@
+{
+  "imo": "9996989",
+  "name": "CMA CGM ANTIGONE",
+  "aliases": [],
+  "mmsi": "249787000",
+  "fields": {
+    "flag": {
+      "value": "Malta",
+      "source": "Shiptrail",
+      "source_url": "https://shiptrail.io/vessel/249787000-cma-cgm-antigone",
+      "retrieved_at": "2026-11-20T09:46:22+01:00",
+      "confidence": "medium"
+    },
+    "length_m": {
+      "value": 366,
+      "source": "Shiptrail (AIS dimensions)",
+      "source_url": "https://shiptrail.io/vessel/249787000-cma-cgm-antigone",
+      "retrieved_at": "2026-11-20T09:46:22+01:00",
+      "confidence": "medium"
+    },
+    "beam_m": {
+      "value": 51,
+      "source": "Shiptrail (AIS dimensions)",
+      "source_url": "https://shiptrail.io/vessel/249787000-cma-cgm-antigone",
+      "retrieved_at": "2026-11-20T09:46:22+01:00",
+      "confidence": "medium"
+    },
+    "callsign": {
+      "value": "9HA6384",
+      "source": "Shiptrail",
+      "source_url": "https://shiptrail.io/vessel/249787000-cma-cgm-antigone",
+      "retrieved_at": "2026-11-20T09:46:22+01:00",
+      "confidence": "medium"
+    },
+    "type": {
+      "value": "Container ship (methanol dual-fuel)",
+      "source": "Bureau Veritas",
+      "source_url": "https://marine-offshore.bureauveritas.com/newsroom/bureau-veritas-classes-its-first-methanol-dual-fueled-container-ship-cma-cgm-antigone",
+      "retrieved_at": "2026-11-20T09:46:22+01:00",
+      "confidence": "medium"
+    },
+    "year_built": {
+      "value": 2025,
+      "source": "Web search summary of tracker listings (VesselFinder et al.)",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9996989",
+      "retrieved_at": "2026-11-20T09:46:22+01:00",
+      "confidence": "medium"
+    },
+    "teu": {
+      "value": 15000,
+      "source": "Web search summary of tracker listings",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9996989",
+      "retrieved_at": "2026-11-20T09:46:22+01:00",
+      "confidence": "low",
+      "note": "Capacity quoted as 15,000 TEU class; exact nominal TEU not confirmed"
+    },
+    "builder": {
+      "value": "CSSC Jiangnan Shipyard",
+      "source": "Bureau Veritas",
+      "source_url": "https://marine-offshore.bureauveritas.com/newsroom/bureau-veritas-classes-its-first-methanol-dual-fueled-container-ship-cma-cgm-antigone",
+      "retrieved_at": "2026-11-20T09:46:22+01:00",
+      "confidence": "medium"
+    },
+    "class": {
+      "value": "Bureau Veritas",
+      "source": "Bureau Veritas",
+      "source_url": "https://marine-offshore.bureauveritas.com/newsroom/bureau-veritas-classes-its-first-methanol-dual-fueled-container-ship-cma-cgm-antigone",
+      "retrieved_at": "2026-11-20T09:46:22+01:00",
+      "confidence": "medium"
+    },
+    "operator": {
+      "value": "CMA CGM",
+      "source": "Bureau Veritas",
+      "source_url": "https://marine-offshore.bureauveritas.com/newsroom/bureau-veritas-classes-its-first-methanol-dual-fueled-container-ship-cma-cgm-antigone",
+      "retrieved_at": "2026-11-20T09:46:22+01:00",
+      "confidence": "medium"
+    }
+  },
+  "photo": null,
+  "facts": [
+    {
+      "text": "Lead ship of CSSC Jiangnan's 15,000 TEU-class methanol dual-fuel container ships; Bureau Veritas classed it as its first methanol dual-fuel container ship.",
+      "source": "Bureau Veritas",
+      "source_url": "https://marine-offshore.bureauveritas.com/newsroom/bureau-veritas-classes-its-first-methanol-dual-fueled-container-ship-cma-cgm-antigone",
+      "confidence": "medium"
+    }
+  ],
+  "research": {
+    "status": "partial",
+    "researched_at": "2026-11-20T09:46:22+01:00",
+    "missing": [
+      "photo"
+    ],
+    "notes": "IMO confirmed by Shiptrail, VesselFinder, Flexport and Bureau Veritas coverage. TEU and year built from search summaries only. No Commons photo."
+  }
+}
