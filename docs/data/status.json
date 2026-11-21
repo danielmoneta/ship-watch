@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-21T10:30:00+01:00",
+  "generated_at": "2026-11-21T10:45:01+01:00",
   "timezone": "Europe/Zagreb",
   "terminal": {
     "url": "https://webusercorner.ictsi.hr/?language=EN",
     "query_url": "https://webusercorner.ictsi.hr/?language=EN&from=11.11.2026&to=12.12.2026",
     "ok": true,
-    "fetched_at": "2026-11-21T10:30:00+01:00",
-    "last_attempt_at": "2026-11-21T10:30:00+01:00",
+    "fetched_at": "2026-11-21T10:45:01+01:00",
+    "last_attempt_at": "2026-11-21T10:45:01+01:00",
     "rows": 12,
     "error": null
   },
@@ -29,7 +29,7 @@
         "ais": {
           "source": "Wingo Marine",
           "source_url": "https://wingo-marine.com/ship/unity-one-352005466",
-          "checked_at": "2026-11-21T10:30:00+01:00",
+          "checked_at": "2026-11-21T10:45:01+01:00",
           "found": true,
           "mmsi": "352005466",
           "distance_km": 6.3,
@@ -49,7 +49,7 @@
         "trail": {
           "source": "Shiptrail",
           "source_url": "https://shiptrail.io/vessel/352005466-unity-one",
-          "fetched_at": "2026-11-21T09:45:00+01:00",
+          "fetched_at": "2026-11-21T10:45:01+01:00",
           "mmsi": "352005466",
           "imo": "9344409",
           "name": "UNITY ONE",
@@ -229,137 +229,6 @@
   },
   "upcoming": [
     {
-      "call_id": "GANDA|15",
-      "name": "GANDA",
-      "shipper": "SOC",
-      "voyage_in": "15",
-      "voyage_out": "15",
-      "status": "IN ARRIVAL",
-      "eta": "2026-11-25T06:30:00+01:00",
-      "etd": "2026-11-25T14:30:00+01:00",
-      "ata": null,
-      "atd": null,
-      "phase": "expected",
-      "imo": "9298129",
-      "ais": {
-        "source": "Wingo Marine",
-        "source_url": "https://wingo-marine.com/ship/ganda-256387000",
-        "checked_at": "2026-11-21T10:30:00+01:00",
-        "found": true,
-        "mmsi": "256387000",
-        "distance_km": null,
-        "nav": "8.8 kn",
-        "destination_raw": "HRRJK",
-        "destination": {
-          "locode": "HRRJK",
-          "name": "Rijeka, Croatia"
-        },
-        "destination_kind": "ais_destination",
-        "berth_consistent": false,
-        "last_report": null
-      },
-      "trail": {
-        "source": "Shiptrail",
-        "source_url": "https://shiptrail.io/vessel/256387000-ganda",
-        "fetched_at": "2026-11-21T09:45:00+01:00",
-        "mmsi": "256387000",
-        "imo": "9298129",
-        "name": "GANDA",
-        "last_heard": "2026-11-21T01:27:51.759Z",
-        "position": {
-          "lat": 38.0306,
-          "lon": 20.3742,
-          "at": "2026-11-21T01:35:13.000Z",
-          "status": null,
-          "speed_kn": null
-        },
-        "quay_distance_km": 947.37,
-        "at_quay": false,
-        "destination_raw": "HRRJK",
-        "bound_for": {
-          "locode": "HRRJK",
-          "name": "Rijeka",
-          "country": "Croatia"
-        },
-        "destination_eta": "2026-11-23T16:00:00.000Z",
-        "previous_port": null,
-        "still_in_port": null,
-        "recent_calls": []
-      },
-      "profile": {
-        "imo": "9298129",
-        "name": "GANDA",
-        "aliases": [],
-        "mmsi": "256387000",
-        "fields": {
-          "flag": {
-            "value": "Malta",
-            "source": "Wingo Marine (AIS)",
-            "source_url": "https://wingo-marine.com/ship/ganda-256387000",
-            "retrieved_at": "2026-11-20T05:30:00+01:00",
-            "confidence": "medium"
-          },
-          "length_m": {
-            "value": 80,
-            "source": "Wingo Marine (AIS broadcast dimensions)",
-            "source_url": "https://wingo-marine.com/ship/ganda-256387000",
-            "retrieved_at": "2026-11-20T05:30:00+01:00",
-            "confidence": "medium"
-          },
-          "beam_m": {
-            "value": 13,
-            "source": "Wingo Marine (AIS broadcast dimensions)",
-            "source_url": "https://wingo-marine.com/ship/ganda-256387000",
-            "retrieved_at": "2026-11-20T05:30:00+01:00",
-            "confidence": "medium"
-          },
-          "callsign": {
-            "value": "9HA3897",
-            "source": "Wingo Marine (AIS)",
-            "source_url": "https://wingo-marine.com/ship/ganda-256387000",
-            "retrieved_at": "2026-11-20T05:30:00+01:00",
-            "confidence": "medium"
-          },
-          "type": {
-            "value": "General cargo ship",
-            "source": "Shiptrail",
-            "source_url": "https://shiptrail.io/vessel/256387000-ganda",
-            "retrieved_at": "2026-11-20T05:32:00+01:00",
-            "confidence": "medium"
-          },
-          "year_built": {
-            "value": 2003,
-            "source": "Shiptrail",
-            "source_url": "https://shiptrail.io/vessel/256387000-ganda",
-            "retrieved_at": "2026-11-20T05:32:00+01:00",
-            "confidence": "medium"
-          }
-        },
-        "photo": {
-          "file": "data/photos/9298129.jpg",
-          "title": "Navire GANDA au port.jpg",
-          "author": "Farid mernissi",
-          "license": "CC BY-SA 4.0",
-          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-          "source_name": "Wikimedia Commons",
-          "source_url": "https://commons.wikimedia.org/wiki/File:Navire_GANDA_au_port.jpg",
-          "taken": "2020-11-11",
-          "width": 4160,
-          "height": 3120,
-          "retrieved_at": "2026-11-20T05:31:06+01:00"
-        },
-        "facts": [],
-        "research": {
-          "status": "partial",
-          "researched_at": "2026-11-20T05:32:00+01:00",
-          "missing": [
-            "teu"
-          ],
-          "notes": "GANDA is a general cargo ship (80 m), not a container ship, so TEU does not apply. Shiptrail particulars gave type and year built only; no builder, tonnage or operator found."
-        }
-      }
-    },
-    {
       "call_id": "CMA CGM ANTIGONE|0BEOWE1MA",
       "name": "CMA CGM ANTIGONE",
       "shipper": "CMA",
@@ -374,7 +243,7 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/port/rijeka-2263",
-        "checked_at": "2026-11-21T10:30:00+01:00",
+        "checked_at": "2026-11-21T10:45:01+01:00",
         "found": false
       },
       "imo": "9996989",
@@ -520,6 +389,137 @@
           "notes": "IMO confirmed by Shiptrail, VesselFinder, Flexport and Bureau Veritas coverage. TEU and year built from search summaries only. No Commons photo."
         }
       }
+    },
+    {
+      "call_id": "GANDA|15",
+      "name": "GANDA",
+      "shipper": "SOC",
+      "voyage_in": "15",
+      "voyage_out": "15",
+      "status": "IN ARRIVAL",
+      "eta": "2026-11-25T06:30:00+01:00",
+      "etd": "2026-11-25T14:30:00+01:00",
+      "ata": null,
+      "atd": null,
+      "phase": "expected",
+      "imo": "9298129",
+      "ais": {
+        "source": "Wingo Marine",
+        "source_url": "https://wingo-marine.com/ship/ganda-256387000",
+        "checked_at": "2026-11-21T10:45:01+01:00",
+        "found": true,
+        "mmsi": "256387000",
+        "distance_km": null,
+        "nav": "8.8 kn",
+        "destination_raw": "HRRJK",
+        "destination": {
+          "locode": "HRRJK",
+          "name": "Rijeka, Croatia"
+        },
+        "destination_kind": "ais_destination",
+        "berth_consistent": false,
+        "last_report": null
+      },
+      "trail": {
+        "source": "Shiptrail",
+        "source_url": "https://shiptrail.io/vessel/256387000-ganda",
+        "fetched_at": "2026-11-21T10:45:01+01:00",
+        "mmsi": "256387000",
+        "imo": "9298129",
+        "name": "GANDA",
+        "last_heard": "2026-11-21T01:27:51.759Z",
+        "position": {
+          "lat": 38.0306,
+          "lon": 20.3742,
+          "at": "2026-11-21T01:35:13.000Z",
+          "status": null,
+          "speed_kn": null
+        },
+        "quay_distance_km": 947.37,
+        "at_quay": false,
+        "destination_raw": "HRRJK",
+        "bound_for": {
+          "locode": "HRRJK",
+          "name": "Rijeka",
+          "country": "Croatia"
+        },
+        "destination_eta": "2026-11-23T16:00:00.000Z",
+        "previous_port": null,
+        "still_in_port": null,
+        "recent_calls": []
+      },
+      "profile": {
+        "imo": "9298129",
+        "name": "GANDA",
+        "aliases": [],
+        "mmsi": "256387000",
+        "fields": {
+          "flag": {
+            "value": "Malta",
+            "source": "Wingo Marine (AIS)",
+            "source_url": "https://wingo-marine.com/ship/ganda-256387000",
+            "retrieved_at": "2026-11-20T05:30:00+01:00",
+            "confidence": "medium"
+          },
+          "length_m": {
+            "value": 80,
+            "source": "Wingo Marine (AIS broadcast dimensions)",
+            "source_url": "https://wingo-marine.com/ship/ganda-256387000",
+            "retrieved_at": "2026-11-20T05:30:00+01:00",
+            "confidence": "medium"
+          },
+          "beam_m": {
+            "value": 13,
+            "source": "Wingo Marine (AIS broadcast dimensions)",
+            "source_url": "https://wingo-marine.com/ship/ganda-256387000",
+            "retrieved_at": "2026-11-20T05:30:00+01:00",
+            "confidence": "medium"
+          },
+          "callsign": {
+            "value": "9HA3897",
+            "source": "Wingo Marine (AIS)",
+            "source_url": "https://wingo-marine.com/ship/ganda-256387000",
+            "retrieved_at": "2026-11-20T05:30:00+01:00",
+            "confidence": "medium"
+          },
+          "type": {
+            "value": "General cargo ship",
+            "source": "Shiptrail",
+            "source_url": "https://shiptrail.io/vessel/256387000-ganda",
+            "retrieved_at": "2026-11-20T05:32:00+01:00",
+            "confidence": "medium"
+          },
+          "year_built": {
+            "value": 2003,
+            "source": "Shiptrail",
+            "source_url": "https://shiptrail.io/vessel/256387000-ganda",
+            "retrieved_at": "2026-11-20T05:32:00+01:00",
+            "confidence": "medium"
+          }
+        },
+        "photo": {
+          "file": "data/photos/9298129.jpg",
+          "title": "Navire GANDA au port.jpg",
+          "author": "Farid mernissi",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "source_name": "Wikimedia Commons",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Navire_GANDA_au_port.jpg",
+          "taken": "2020-11-11",
+          "width": 4160,
+          "height": 3120,
+          "retrieved_at": "2026-11-20T05:31:06+01:00"
+        },
+        "facts": [],
+        "research": {
+          "status": "partial",
+          "researched_at": "2026-11-20T05:32:00+01:00",
+          "missing": [
+            "teu"
+          ],
+          "notes": "GANDA is a general cargo ship (80 m), not a container ship, so TEU does not apply. Shiptrail particulars gave type and year built only; no builder, tonnage or operator found."
+        }
+      }
     }
   ],
   "recent_departures": [
@@ -529,7 +529,7 @@
       "shipper": "CMA",
       "voyage_in": "BMS0V0E19",
       "voyage_out": "BMS0V0E19",
-      "status": "COMPLETE",
+      "status": "DEPARTED",
       "eta": "2026-11-20T19:30:00+01:00",
       "etd": "2026-11-21T12:30:00+01:00",
       "ata": "2026-11-20T19:30:00+01:00",
@@ -1162,8 +1162,8 @@
       "name": "Wingo Marine",
       "url": "https://wingo-marine.com/port/rijeka-2263",
       "ok": true,
-      "fetched_at": "2026-11-21T10:30:00+01:00",
-      "last_attempt_at": "2026-11-21T10:30:00+01:00",
+      "fetched_at": "2026-11-21T10:45:01+01:00",
+      "last_attempt_at": "2026-11-21T10:45:01+01:00",
       "error": null,
       "summary": "25 vessels reported within 15 km in the last 24 hours",
       "vessels_listed": 31
@@ -1173,27 +1173,20 @@
       "url": "https://www.aiscatcher.org/place/6398/brajdica-container-terminal",
       "ok": false,
       "fetched_at": "2026-11-21T07:00:00+01:00",
-      "last_attempt_at": "2026-11-21T10:30:00+01:00",
+      "last_attempt_at": "2026-11-21T10:45:01+01:00",
       "error": "HTTP 403"
     },
     "shiptrail": {
       "name": "Shiptrail",
       "url": "https://shiptrail.io/",
       "ok": true,
-      "fetched_at": "2026-11-21T10:30:00+01:00",
-      "last_attempt_at": "2026-11-21T10:30:00+01:00",
+      "fetched_at": "2026-11-21T10:45:01+01:00",
+      "last_attempt_at": "2026-11-21T10:45:01+01:00",
       "error": null,
       "note": "AIS-derived port calls and positions. Data: Shiptrail, shiptrail.io"
     }
   },
   "last_events": [
-    {
-      "type": "departed",
-      "call_id": "MSC AUDREY|QX645E",
-      "name": "MSC AUDREY",
-      "at": "2026-11-20T03:30:00+01:00",
-      "observed": "2026-11-20T03:30:00+01:00"
-    },
     {
       "type": "status_changed",
       "call_id": "MSC AUDREY|QX645E",
@@ -1261,11 +1254,19 @@
       "name": "CMA CGM ALTAMIRA",
       "at": "2026-11-21T11:00:00+01:00",
       "observed": "2026-11-21T10:00:01+01:00"
+    },
+    {
+      "type": "status_changed",
+      "call_id": "CMA CGM ALTAMIRA|BMS0V0E19",
+      "name": "CMA CGM ALTAMIRA",
+      "from": "COMPLETE",
+      "to": "DEPARTED",
+      "observed": "2026-11-21T10:45:01+01:00"
     }
   ],
   "stale_after_hours": 3,
   "research_pending": [],
   "research_needed": [],
-  "next_check_at": "2026-11-21T11:30:00+01:00",
+  "next_check_at": "2026-11-21T11:45:01+01:00",
   "stale_grace_minutes": 100
 }
