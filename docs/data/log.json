@@ -3358,6 +3358,19 @@
       "errors": [
         "aiscatcher: HTTP 403"
       ]
+    },
+    {
+      "at": "2026-11-21T10:00:01+01:00",
+      "terminal_ok": true,
+      "rows": 12,
+      "berth": [
+        "UNITY ONE"
+      ],
+      "events": 1,
+      "research_needed": [],
+      "errors": [
+        "aiscatcher: HTTP 403"
+      ]
     }
   ],
   "events": [
@@ -3558,6 +3571,13 @@
       "from": "ARRIVED",
       "to": "UNDER OPS",
       "observed": "2026-11-20T20:15:00+01:00"
+    },
+    {
+      "type": "departed",
+      "call_id": "CMA CGM ALTAMIRA|BMS0V0E19",
+      "name": "CMA CGM ALTAMIRA",
+      "at": "2026-11-21T11:00:00+01:00",
+      "observed": "2026-11-21T10:00:01+01:00"
     }
   ]
 }
