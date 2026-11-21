@@ -3423,6 +3423,17 @@
       "errors": [
         "aiscatcher: HTTP 403"
       ]
+    },
+    {
+      "at": "2026-11-21T12:31:53+01:00",
+      "terminal_ok": true,
+      "rows": 12,
+      "berth": [
+        "UNITY ONE"
+      ],
+      "events": 0,
+      "research_needed": [],
+      "errors": []
     }
   ],
   "events": [
