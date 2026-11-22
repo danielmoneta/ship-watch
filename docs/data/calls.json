@@ -13,7 +13,7 @@
       "atd": "2026-11-15T02:45:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-22T15:45:00+01:00",
+      "last_seen": "2026-11-22T16:00:00+01:00",
       "listed": true
     },
     "MSC RENEE XIII|QX642E": {
@@ -29,7 +29,7 @@
       "atd": "2026-11-15T13:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-22T15:45:00+01:00",
+      "last_seen": "2026-11-22T16:00:00+01:00",
       "listed": true
     },
     "SC MEDFORD|152W": {
@@ -45,7 +45,7 @@
       "atd": "2026-11-16T08:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-22T15:45:00+01:00",
+      "last_seen": "2026-11-22T16:00:00+01:00",
       "listed": true
     },
     "MSC TERESA|QX644E": {
@@ -61,7 +61,7 @@
       "atd": "2026-11-17T12:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-22T15:45:00+01:00",
+      "last_seen": "2026-11-22T16:00:00+01:00",
       "listed": true,
       "imo": "9469560",
       "ais": {
@@ -180,7 +180,7 @@
       "atd": "2026-11-18T08:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-22T15:45:00+01:00",
+      "last_seen": "2026-11-22T16:00:00+01:00",
       "listed": true,
       "imo": "9302449",
       "ais": {
@@ -302,7 +302,7 @@
       "atd": "2026-11-20T03:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-22T15:45:00+01:00",
+      "last_seen": "2026-11-22T16:00:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
@@ -409,12 +409,12 @@
       "atd": null,
       "phase": "at_berth",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-22T15:45:00+01:00",
+      "last_seen": "2026-11-22T16:00:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/unity-one-352005466",
-        "checked_at": "2026-11-22T15:45:00+01:00",
+        "checked_at": "2026-11-22T16:00:00+01:00",
         "found": true,
         "mmsi": "352005466",
         "distance_km": 6.4,
@@ -434,7 +434,7 @@
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/352005466-unity-one",
-        "fetched_at": "2026-11-22T15:00:00+01:00",
+        "fetched_at": "2026-11-22T16:00:00+01:00",
         "mmsi": "352005466",
         "imo": "9344409",
         "name": "UNITY ONE",
@@ -514,7 +514,7 @@
       "atd": "2026-11-20T18:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-22T15:45:00+01:00",
+      "last_seen": "2026-11-22T16:00:00+01:00",
       "listed": true,
       "imo": "9169043",
       "ais": {
@@ -637,7 +637,7 @@
       "atd": "2026-11-21T11:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-22T15:45:00+01:00",
+      "last_seen": "2026-11-22T16:00:00+01:00",
       "listed": true,
       "imo": "9961350",
       "ais": {
@@ -739,75 +739,6 @@
         "still_in_port": null
       }
     },
-    "GANDA|15": {
-      "call_id": "GANDA|15",
-      "name": "GANDA",
-      "shipper": "SOC",
-      "voyage_in": "15",
-      "voyage_out": "15",
-      "status": "IN ARRIVAL",
-      "eta": "2026-11-25T06:30:00+01:00",
-      "etd": "2026-11-25T14:30:00+01:00",
-      "ata": null,
-      "atd": null,
-      "phase": "expected",
-      "first_seen": "2026-11-19T13:00:00+01:00",
-      "last_seen": "2026-11-22T15:45:00+01:00",
-      "listed": true,
-      "imo": "9298129",
-      "ais": {
-        "source": "Wingo Marine",
-        "source_url": "https://wingo-marine.com/ship/ganda-256387000",
-        "checked_at": "2026-11-22T15:45:00+01:00",
-        "found": true,
-        "mmsi": "256387000",
-        "distance_km": null,
-        "nav": "8.8 kn",
-        "destination_raw": "HRRJK",
-        "destination": {
-          "locode": "HRRJK",
-          "name": "Rijeka, Croatia"
-        },
-        "destination_kind": "ais_destination",
-        "berth_consistent": false,
-        "last_report": null
-      },
-      "trail": {
-        "source": "Shiptrail",
-        "source_url": "https://shiptrail.io/vessel/256387000-ganda",
-        "fetched_at": "2026-11-22T15:00:00+01:00",
-        "mmsi": "256387000",
-        "imo": "9298129",
-        "name": "GANDA",
-        "last_heard": "2026-11-21T01:27:00.000Z",
-        "position": {
-          "lat": 38.0306,
-          "lon": 20.3742,
-          "at": "2026-11-21T01:35:00.000Z",
-          "status": null,
-          "speed_kn": null
-        },
-        "quay_distance_km": 947.37,
-        "at_quay": false,
-        "destination_raw": "HRRJK",
-        "bound_for": {
-          "locode": "HRRJK",
-          "name": "Rijeka",
-          "country": "Croatia"
-        },
-        "destination_eta": "2026-11-23T16:00:00.000Z",
-        "previous_port": null,
-        "recent_calls": [],
-        "particulars": {
-          "built": "2003",
-          "registry": "Malta",
-          "portOfRegistry": "Valletta",
-          "description": "general cargo ship",
-          "yardNumber": "010"
-        },
-        "still_in_port": null
-      }
-    },
     "CMA CGM ANTIGONE|0BEOWE1MA": {
       "call_id": "CMA CGM ANTIGONE|0BEOWE1MA",
       "name": "CMA CGM ANTIGONE",
@@ -821,31 +752,31 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-22T15:45:00+01:00",
+      "last_seen": "2026-11-22T16:00:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/port/rijeka-2263",
-        "checked_at": "2026-11-22T15:45:00+01:00",
+        "checked_at": "2026-11-22T16:00:00+01:00",
         "found": false
       },
       "imo": "9996989",
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/249787000-cma-cgm-antigone",
-        "fetched_at": "2026-11-22T15:00:00+01:00",
+        "fetched_at": "2026-11-22T16:00:00+01:00",
         "mmsi": "249787000",
         "imo": "9996989",
         "name": "CMA CGM ANTIGONE",
-        "last_heard": "2026-11-22T13:58:02.000Z",
+        "last_heard": "2026-11-22T14:56:25.000Z",
         "position": {
-          "lat": 45.55295,
-          "lon": 13.73247,
-          "at": "2026-11-22T13:58:02.000Z",
+          "lat": 45.55294,
+          "lon": 13.73251,
+          "at": "2026-11-22T14:56:25.000Z",
           "status": "Moored",
-          "speed_kn": 0.3
+          "speed_kn": 0.1
         },
-        "quay_distance_km": 62.01,
+        "quay_distance_km": 62,
         "at_quay": false,
         "destination_raw": "SIKOP",
         "bound_for": {
@@ -876,6 +807,75 @@
           "locode": "SIKOP",
           "name": "Koper"
         }
+      }
+    },
+    "GANDA|15": {
+      "call_id": "GANDA|15",
+      "name": "GANDA",
+      "shipper": "SOC",
+      "voyage_in": "15",
+      "voyage_out": "15",
+      "status": "IN ARRIVAL",
+      "eta": "2026-11-25T06:30:00+01:00",
+      "etd": "2026-11-25T14:30:00+01:00",
+      "ata": null,
+      "atd": null,
+      "phase": "expected",
+      "first_seen": "2026-11-19T13:00:00+01:00",
+      "last_seen": "2026-11-22T16:00:00+01:00",
+      "listed": true,
+      "imo": "9298129",
+      "ais": {
+        "source": "Wingo Marine",
+        "source_url": "https://wingo-marine.com/ship/ganda-256387000",
+        "checked_at": "2026-11-22T16:00:00+01:00",
+        "found": true,
+        "mmsi": "256387000",
+        "distance_km": null,
+        "nav": "8.8 kn",
+        "destination_raw": "HRRJK",
+        "destination": {
+          "locode": "HRRJK",
+          "name": "Rijeka, Croatia"
+        },
+        "destination_kind": "ais_destination",
+        "berth_consistent": false,
+        "last_report": null
+      },
+      "trail": {
+        "source": "Shiptrail",
+        "source_url": "https://shiptrail.io/vessel/256387000-ganda",
+        "fetched_at": "2026-11-22T16:00:00+01:00",
+        "mmsi": "256387000",
+        "imo": "9298129",
+        "name": "GANDA",
+        "last_heard": "2026-11-21T01:27:00.000Z",
+        "position": {
+          "lat": 38.0306,
+          "lon": 20.3742,
+          "at": "2026-11-21T01:35:00.000Z",
+          "status": null,
+          "speed_kn": null
+        },
+        "quay_distance_km": 947.37,
+        "at_quay": false,
+        "destination_raw": "HRRJK",
+        "bound_for": {
+          "locode": "HRRJK",
+          "name": "Rijeka",
+          "country": "Croatia"
+        },
+        "destination_eta": "2026-11-23T16:00:00.000Z",
+        "previous_port": null,
+        "recent_calls": [],
+        "particulars": {
+          "built": "2003",
+          "registry": "Malta",
+          "portOfRegistry": "Valletta",
+          "description": "general cargo ship",
+          "yardNumber": "010"
+        },
+        "still_in_port": null
       }
     },
     "MERIC|14": {
