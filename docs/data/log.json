@@ -4531,6 +4531,17 @@
       "events": 0,
       "research_needed": [],
       "errors": []
+    },
+    {
+      "at": "2026-11-23T01:45:00+01:00",
+      "terminal_ok": true,
+      "rows": 11,
+      "berth": [
+        "UNITY ONE"
+      ],
+      "events": 0,
+      "research_needed": [],
+      "errors": []
     }
   ],
   "events": [
