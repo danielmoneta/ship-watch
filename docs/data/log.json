@@ -4817,6 +4817,15 @@
       "events": 0,
       "research_needed": [],
       "errors": []
+    },
+    {
+      "at": "2026-11-23T12:45:00+01:00",
+      "terminal_ok": true,
+      "rows": 15,
+      "berth": [],
+      "events": 3,
+      "research_needed": [],
+      "errors": []
     }
   ],
   "events": [
@@ -5076,6 +5085,29 @@
       "from": "UNDER OPS",
       "to": "COMPLETE",
       "observed": "2026-11-23T11:15:01+01:00"
+    },
+    {
+      "type": "departed",
+      "call_id": "UNITY ONE|13",
+      "name": "UNITY ONE",
+      "at": "2026-11-23T12:30:00+01:00",
+      "observed": "2026-11-23T12:45:00+01:00"
+    },
+    {
+      "type": "eta_changed",
+      "call_id": "CMA CGM QUEST|BMS0X0E19",
+      "name": "CMA CGM QUEST",
+      "from": "2026-11-28T06:30:00+01:00",
+      "to": "2026-11-27T14:30:00+01:00",
+      "observed": "2026-11-23T12:45:00+01:00"
+    },
+    {
+      "type": "eta_changed",
+      "call_id": "SC MEDFORD|153W",
+      "name": "SC MEDFORD",
+      "from": "2026-11-27T14:30:00+01:00",
+      "to": "2026-11-28T06:30:00+01:00",
+      "observed": "2026-11-23T12:45:00+01:00"
     }
   ]
 }
