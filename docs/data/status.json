@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-23T05:30:00+01:00",
+  "generated_at": "2026-11-23T06:00:01+01:00",
   "timezone": "Europe/Zagreb",
   "terminal": {
     "url": "https://webusercorner.ictsi.hr/?language=EN",
     "query_url": "https://webusercorner.ictsi.hr/?language=EN&from=13.11.2026&to=14.12.2026",
     "ok": true,
-    "fetched_at": "2026-11-23T05:30:00+01:00",
-    "last_attempt_at": "2026-11-23T05:30:00+01:00",
+    "fetched_at": "2026-11-23T06:00:01+01:00",
+    "last_attempt_at": "2026-11-23T06:00:01+01:00",
     "rows": 11,
     "error": null
   },
@@ -29,7 +29,7 @@
         "ais": {
           "source": "Wingo Marine",
           "source_url": "https://wingo-marine.com/ship/unity-one-352005466",
-          "checked_at": "2026-11-23T05:30:00+01:00",
+          "checked_at": "2026-11-23T06:00:01+01:00",
           "found": true,
           "mmsi": "352005466",
           "distance_km": 6.4,
@@ -49,19 +49,19 @@
         "trail": {
           "source": "Shiptrail",
           "source_url": "https://shiptrail.io/vessel/352005466-unity-one",
-          "fetched_at": "2026-11-23T05:00:01+01:00",
+          "fetched_at": "2026-11-23T06:00:01+01:00",
           "mmsi": "352005466",
           "imo": "9344409",
           "name": "UNITY ONE",
-          "last_heard": "2026-11-23T03:58:34.000Z",
+          "last_heard": "2026-11-23T04:58:25.000Z",
           "position": {
-            "lat": 45.26384,
-            "lon": 14.43047,
-            "at": "2026-11-23T03:58:34.000Z",
-            "status": "At anchor",
-            "speed_kn": 0.3
+            "lat": 45.29548,
+            "lon": 14.42323,
+            "at": "2026-11-23T04:58:25.000Z",
+            "status": "Under way under engine power",
+            "speed_kn": 5.7
           },
-          "quay_distance_km": 6.52,
+          "quay_distance_km": 3.66,
           "at_quay": false,
           "destination_raw": "RIJEKA",
           "bound_for": {
@@ -85,7 +85,7 @@
               "name": "Kostrena",
               "country": "Croatia",
               "arrived_at": "2026-11-22T19:01:34.000Z",
-              "departed_at": null
+              "departed_at": "2026-11-23T04:36:54.000Z"
             },
             {
               "locode": "HRKOS",
@@ -228,8 +228,8 @@
           }
         },
         "corroboration": {
-          "level": "ais_conflict",
-          "note": "AIS position is 6.52 km from the Brajdica quay (Shiptrail). The terminal remains the authority."
+          "level": "terminal_only",
+          "note": "AIS position is stale (11 h old)."
         }
       }
     ]
@@ -250,24 +250,24 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/port/rijeka-2263",
-        "checked_at": "2026-11-23T05:30:00+01:00",
+        "checked_at": "2026-11-23T06:00:01+01:00",
         "found": false
       },
       "imo": "9996989",
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/249787000-cma-cgm-antigone",
-        "fetched_at": "2026-11-23T05:00:01+01:00",
+        "fetched_at": "2026-11-23T06:00:01+01:00",
         "mmsi": "249787000",
         "imo": "9996989",
         "name": "CMA CGM ANTIGONE",
-        "last_heard": "2026-11-23T03:56:56.000Z",
+        "last_heard": "2026-11-23T04:56:55.000Z",
         "position": {
-          "lat": 45.55287,
-          "lon": 13.73251,
-          "at": "2026-11-23T03:56:56.000Z",
+          "lat": 45.55289,
+          "lon": 13.73247,
+          "at": "2026-11-23T04:56:55.000Z",
           "status": "Moored",
-          "speed_kn": 0.1
+          "speed_kn": 0
         },
         "quay_distance_km": 62,
         "at_quay": false,
@@ -413,7 +413,7 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/ganda-256387000",
-        "checked_at": "2026-11-23T05:30:00+01:00",
+        "checked_at": "2026-11-23T06:00:01+01:00",
         "found": true,
         "mmsi": "256387000",
         "distance_km": null,
@@ -430,7 +430,7 @@
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/256387000-ganda",
-        "fetched_at": "2026-11-23T05:00:01+01:00",
+        "fetched_at": "2026-11-23T06:00:01+01:00",
         "mmsi": "256387000",
         "imo": "9298129",
         "name": "GANDA",
@@ -1169,8 +1169,8 @@
       "name": "Wingo Marine",
       "url": "https://wingo-marine.com/port/rijeka-2263",
       "ok": true,
-      "fetched_at": "2026-11-23T05:30:00+01:00",
-      "last_attempt_at": "2026-11-23T05:30:00+01:00",
+      "fetched_at": "2026-11-23T06:00:01+01:00",
+      "last_attempt_at": "2026-11-23T06:00:01+01:00",
       "error": null,
       "summary": "19 vessels reported within 15 km in the last 24 hours",
       "vessels_listed": 29
@@ -1179,8 +1179,8 @@
       "name": "AIS-catcher",
       "url": "https://www.aiscatcher.org/place/6398/brajdica-container-terminal",
       "ok": true,
-      "fetched_at": "2026-11-23T05:30:00+01:00",
-      "last_attempt_at": "2026-11-23T05:30:00+01:00",
+      "fetched_at": "2026-11-23T06:00:01+01:00",
+      "last_attempt_at": "2026-11-23T06:00:01+01:00",
       "error": null,
       "receiving_stations": null,
       "vessels_inside": 0,
@@ -1191,8 +1191,8 @@
       "name": "Shiptrail",
       "url": "https://shiptrail.io/",
       "ok": true,
-      "fetched_at": "2026-11-23T05:30:00+01:00",
-      "last_attempt_at": "2026-11-23T05:30:00+01:00",
+      "fetched_at": "2026-11-23T06:00:01+01:00",
+      "last_attempt_at": "2026-11-23T06:00:01+01:00",
       "error": null,
       "note": "AIS-derived port calls and positions. Data: Shiptrail, shiptrail.io"
     }
@@ -1278,6 +1278,6 @@
   "stale_after_hours": 3,
   "research_pending": [],
   "research_needed": [],
-  "next_check_at": "2026-11-23T06:30:00+01:00",
+  "next_check_at": "2026-11-23T07:00:01+01:00",
   "stale_grace_minutes": 100
 }
