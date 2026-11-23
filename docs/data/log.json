@@ -4707,6 +4707,17 @@
       "events": 0,
       "research_needed": [],
       "errors": []
+    },
+    {
+      "at": "2026-11-23T08:15:00+01:00",
+      "terminal_ok": true,
+      "rows": 15,
+      "berth": [
+        "UNITY ONE"
+      ],
+      "events": 1,
+      "research_needed": [],
+      "errors": []
     }
   ],
   "events": [
@@ -4943,6 +4954,13 @@
       "name": "CMA CGM QUEST",
       "at": "2026-11-28T06:30:00+01:00",
       "observed": "2026-11-23T06:45:00+01:00"
+    },
+    {
+      "type": "listed",
+      "call_id": "CMA CGM CARMEN|PHX010E19",
+      "name": "CMA CGM CARMEN",
+      "at": "2026-11-29T06:30:00+01:00",
+      "observed": "2026-11-23T08:15:00+01:00"
     }
   ]
 }
