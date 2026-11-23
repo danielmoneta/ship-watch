@@ -4729,6 +4729,17 @@
       "events": 0,
       "research_needed": [],
       "errors": []
+    },
+    {
+      "at": "2026-11-23T09:30:00+01:00",
+      "terminal_ok": true,
+      "rows": 15,
+      "berth": [
+        "UNITY ONE"
+      ],
+      "events": 1,
+      "research_needed": [],
+      "errors": []
     }
   ],
   "events": [
@@ -4972,6 +4983,14 @@
       "name": "CMA CGM CARMEN",
       "at": "2026-11-29T06:30:00+01:00",
       "observed": "2026-11-23T08:15:00+01:00"
+    },
+    {
+      "type": "status_changed",
+      "call_id": "UNITY ONE|13",
+      "name": "UNITY ONE",
+      "from": "ARRIVED",
+      "to": "UNDER OPS",
+      "observed": "2026-11-23T09:30:00+01:00"
     }
   ]
 }
