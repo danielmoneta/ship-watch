@@ -1,37 +1,5 @@
 {
   "calls": {
-    "PIERRE A|BMS0T0E19": {
-      "call_id": "PIERRE A|BMS0T0E19",
-      "name": "PIERRE A",
-      "shipper": "CMA",
-      "voyage_in": "BMS0T0E19",
-      "voyage_out": "BMS0T0E19",
-      "status": "DEPARTED",
-      "eta": "2026-11-14T14:30:00+01:00",
-      "etd": "2026-11-15T06:30:00+01:00",
-      "ata": "2026-11-14T10:00:00+01:00",
-      "atd": "2026-11-15T02:45:00+01:00",
-      "phase": "departed",
-      "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-24T23:15:00+01:00",
-      "listed": true
-    },
-    "MSC RENEE XIII|QX642E": {
-      "call_id": "MSC RENEE XIII|QX642E",
-      "name": "MSC RENEE XIII",
-      "shipper": "MSC",
-      "voyage_in": "QX642E",
-      "voyage_out": "QX642E",
-      "status": "DEPARTED",
-      "eta": "2026-11-14T22:30:00+01:00",
-      "etd": "2026-11-15T14:30:00+01:00",
-      "ata": "2026-11-15T06:00:00+01:00",
-      "atd": "2026-11-15T13:30:00+01:00",
-      "phase": "departed",
-      "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-24T23:15:00+01:00",
-      "listed": true
-    },
     "SC MEDFORD|152W": {
       "call_id": "SC MEDFORD|152W",
       "name": "SC MEDFORD",
@@ -45,7 +13,7 @@
       "atd": "2026-11-16T08:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-24T23:15:00+01:00",
+      "last_seen": "2026-11-25T00:00:00+01:00",
       "listed": true
     },
     "MSC TERESA|QX644E": {
@@ -61,7 +29,7 @@
       "atd": "2026-11-17T12:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-24T23:15:00+01:00",
+      "last_seen": "2026-11-25T00:00:00+01:00",
       "listed": true,
       "imo": "9469560",
       "ais": {
@@ -180,7 +148,7 @@
       "atd": "2026-11-18T08:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-24T23:15:00+01:00",
+      "last_seen": "2026-11-25T00:00:00+01:00",
       "listed": true,
       "imo": "9302449",
       "ais": {
@@ -302,7 +270,7 @@
       "atd": "2026-11-20T03:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-24T23:15:00+01:00",
+      "last_seen": "2026-11-25T00:00:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
@@ -409,7 +377,7 @@
       "atd": "2026-11-23T12:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-24T23:15:00+01:00",
+      "last_seen": "2026-11-25T00:00:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
@@ -528,7 +496,7 @@
       "atd": "2026-11-20T18:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-24T23:15:00+01:00",
+      "last_seen": "2026-11-25T00:00:00+01:00",
       "listed": true,
       "imo": "9169043",
       "ais": {
@@ -651,7 +619,7 @@
       "atd": "2026-11-21T11:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-24T23:15:00+01:00",
+      "last_seen": "2026-11-25T00:00:00+01:00",
       "listed": true,
       "imo": "9961350",
       "ais": {
@@ -766,16 +734,16 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-24T23:15:00+01:00",
+      "last_seen": "2026-11-25T00:00:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/cma-cgm-antigone-249787000",
-        "checked_at": "2026-11-24T23:15:00+01:00",
+        "checked_at": "2026-11-25T00:00:00+01:00",
         "found": true,
         "mmsi": "249787000",
         "distance_km": null,
-        "nav": "14.8 kn",
+        "nav": "15.1 kn",
         "destination_raw": "HRRJK",
         "destination": {
           "locode": "HRRJK",
@@ -858,13 +826,13 @@
       "atd": null,
       "phase": "at_berth",
       "first_seen": "2026-11-19T13:00:00+01:00",
-      "last_seen": "2026-11-24T23:15:00+01:00",
+      "last_seen": "2026-11-25T00:00:00+01:00",
       "listed": true,
       "imo": "9298129",
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/port/rijeka-2263",
-        "checked_at": "2026-11-24T23:15:00+01:00",
+        "checked_at": "2026-11-25T00:00:00+01:00",
         "found": false
       },
       "trail": {
@@ -924,12 +892,12 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-23T06:45:00+01:00",
-      "last_seen": "2026-11-24T23:15:00+01:00",
+      "last_seen": "2026-11-25T00:00:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/port/rijeka-2263",
-        "checked_at": "2026-11-24T23:15:00+01:00",
+        "checked_at": "2026-11-25T00:00:00+01:00",
         "found": false
       },
       "imo": "9437139",
@@ -1028,7 +996,7 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-23T06:45:00+01:00",
-      "last_seen": "2026-11-24T23:15:00+01:00",
+      "last_seen": "2026-11-25T00:00:00+01:00",
       "listed": true
     },
     "CMA CGM CARMEN|PHX010E19": {
@@ -1044,7 +1012,7 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-23T08:15:00+01:00",
-      "last_seen": "2026-11-24T23:15:00+01:00",
+      "last_seen": "2026-11-25T00:00:00+01:00",
       "listed": true
     },
     "SC MEDFORD|153W": {
@@ -1060,8 +1028,40 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-23T06:45:00+01:00",
-      "last_seen": "2026-11-24T23:15:00+01:00",
+      "last_seen": "2026-11-25T00:00:00+01:00",
       "listed": true
+    },
+    "PIERRE A|BMS0T0E19": {
+      "call_id": "PIERRE A|BMS0T0E19",
+      "name": "PIERRE A",
+      "shipper": "CMA",
+      "voyage_in": "BMS0T0E19",
+      "voyage_out": "BMS0T0E19",
+      "status": "DEPARTED",
+      "eta": "2026-11-14T14:30:00+01:00",
+      "etd": "2026-11-15T06:30:00+01:00",
+      "ata": "2026-11-14T10:00:00+01:00",
+      "atd": "2026-11-15T02:45:00+01:00",
+      "phase": "departed",
+      "first_seen": "2026-11-16T16:12:47+01:00",
+      "last_seen": "2026-11-24T23:15:00+01:00",
+      "listed": false
+    },
+    "MSC RENEE XIII|QX642E": {
+      "call_id": "MSC RENEE XIII|QX642E",
+      "name": "MSC RENEE XIII",
+      "shipper": "MSC",
+      "voyage_in": "QX642E",
+      "voyage_out": "QX642E",
+      "status": "DEPARTED",
+      "eta": "2026-11-14T22:30:00+01:00",
+      "etd": "2026-11-15T14:30:00+01:00",
+      "ata": "2026-11-15T06:00:00+01:00",
+      "atd": "2026-11-15T13:30:00+01:00",
+      "phase": "departed",
+      "first_seen": "2026-11-16T16:12:47+01:00",
+      "last_seen": "2026-11-24T23:15:00+01:00",
+      "listed": false
     },
     "MERIC|14": {
       "call_id": "MERIC|14",
