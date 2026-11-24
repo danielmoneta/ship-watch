@@ -5339,6 +5339,20 @@
       "events": 0,
       "research_needed": [],
       "errors": []
+    },
+    {
+      "at": "2026-11-24T13:45:00+01:00",
+      "terminal_ok": true,
+      "rows": 15,
+      "berth": [
+        "GANDA"
+      ],
+      "events": 1,
+      "research_needed": [
+        "GANDA",
+        "MICHIGAN"
+      ],
+      "errors": []
     }
   ],
   "events": [
@@ -5645,6 +5659,13 @@
       "from": "2026-11-28T06:30:00+01:00",
       "to": "2026-11-28T14:30:00+01:00",
       "observed": "2026-11-23T13:00:01+01:00"
+    },
+    {
+      "type": "arrived",
+      "call_id": "GANDA|15",
+      "name": "GANDA",
+      "at": "2026-11-25T07:00:00+01:00",
+      "observed": "2026-11-24T13:45:00+01:00"
     }
   ]
 }
