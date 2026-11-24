@@ -5321,6 +5321,15 @@
       "events": 0,
       "research_needed": [],
       "errors": []
+    },
+    {
+      "at": "2026-11-24T13:00:00+01:00",
+      "terminal_ok": true,
+      "rows": 15,
+      "berth": [],
+      "events": 0,
+      "research_needed": [],
+      "errors": []
     }
   ],
   "events": [
