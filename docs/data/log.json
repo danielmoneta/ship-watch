@@ -5496,6 +5496,17 @@
       "events": 0,
       "research_needed": [],
       "errors": []
+    },
+    {
+      "at": "2026-11-25T00:15:00+01:00",
+      "terminal_ok": true,
+      "rows": 13,
+      "berth": [
+        "GANDA"
+      ],
+      "events": 0,
+      "research_needed": [],
+      "errors": []
     }
   ],
   "events": [
