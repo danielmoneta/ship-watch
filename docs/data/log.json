@@ -5430,6 +5430,17 @@
       "events": 0,
       "research_needed": [],
       "errors": []
+    },
+    {
+      "at": "2026-11-24T19:45:01+01:00",
+      "terminal_ok": true,
+      "rows": 15,
+      "berth": [
+        "GANDA"
+      ],
+      "events": 1,
+      "research_needed": [],
+      "errors": []
     }
   ],
   "events": [
@@ -5759,6 +5770,14 @@
       "from": "2026-11-28T14:30:00+01:00",
       "to": "2026-11-30T22:30:00+01:00",
       "observed": "2026-11-24T15:00:00+01:00"
+    },
+    {
+      "type": "eta_changed",
+      "call_id": "CMA CGM QUEST|BMS0X0E19",
+      "name": "CMA CGM QUEST",
+      "from": "2026-11-27T22:30:00+01:00",
+      "to": "2026-11-28T06:30:00+01:00",
+      "observed": "2026-11-24T19:45:01+01:00"
     }
   ]
 }
