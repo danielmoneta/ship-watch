@@ -58,5 +58,20 @@
     },
     "next_port": null,
     "notes": "Previous port is VesselFinder's 'Last Port' (Derince, Turkey, ATD 12 Nov 13:16 UTC). AIS destination is Rijeka, which only shows she is bound there."
+  },
+  "GANDA|15": {
+    "researched_at": "2026-11-24T13:48:00+01:00",
+    "previous_port": {
+      "name": "Derince",
+      "locode": "TRDRC",
+      "departed_at": "2026-11-18T00:15:00+01:00",
+      "kind": "actual",
+      "source": "VesselFinder (AIS port call, Last Port)",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9298129",
+      "retrieved_at": "2026-11-24T13:48:00+01:00",
+      "confidence": "medium"
+    },
+    "next_port": null,
+    "notes": "Last Port ATD Nov 17 23:15 UTC (= Nov 18 00:15 Zagreb). Shiptrail has only an arrival at Kostrena (23 Nov), no earlier call. No next port found."
   }
 }

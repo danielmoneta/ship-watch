@@ -1,0 +1,83 @@
+{
+  "imo": "9437139",
+  "name": "MICHIGAN",
+  "aliases": [],
+  "mmsi": "215020000",
+  "fields": {
+    "flag": {
+      "value": "Malta",
+      "source": "Shiptrail; VesselFinder",
+      "source_url": "https://shiptrail.io/vessel/215020000-michigan",
+      "retrieved_at": "2026-11-24T13:48:00+01:00",
+      "confidence": "high"
+    },
+    "type": {
+      "value": "Container ship",
+      "source": "VesselFinder",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9437139",
+      "retrieved_at": "2026-11-24T13:48:00+01:00",
+      "confidence": "medium"
+    },
+    "year_built": {
+      "value": 2008,
+      "source": "VesselFinder; Flexport Atlas",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9437139",
+      "retrieved_at": "2026-11-24T13:48:00+01:00",
+      "confidence": "high"
+    },
+    "length_m": {
+      "value": 166,
+      "source": "Shiptrail; VesselFinder (166.15 m LOA)",
+      "source_url": "https://shiptrail.io/vessel/215020000-michigan",
+      "retrieved_at": "2026-11-24T13:48:00+01:00",
+      "confidence": "high"
+    },
+    "beam_m": {
+      "value": 25,
+      "source": "Shiptrail; VesselFinder",
+      "source_url": "https://shiptrail.io/vessel/215020000-michigan",
+      "retrieved_at": "2026-11-24T13:48:00+01:00",
+      "confidence": "high"
+    },
+    "gross_tonnage": {
+      "value": 15334,
+      "source": "VesselFinder",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9437139",
+      "retrieved_at": "2026-11-24T13:48:00+01:00",
+      "confidence": "medium"
+    },
+    "teu": {
+      "value": 1296,
+      "source": "Flexport Atlas (via search summary)",
+      "source_url": "https://atlas.flexport.com/vessel/imo:9437139/mmsi:215020000/name:michigan",
+      "retrieved_at": "2026-11-24T13:48:00+01:00",
+      "confidence": "low"
+    },
+    "callsign": {
+      "value": "9HA4926",
+      "source": "Shiptrail",
+      "source_url": "https://shiptrail.io/vessel/215020000-michigan",
+      "retrieved_at": "2026-11-24T13:48:00+01:00",
+      "confidence": "medium"
+    },
+    "owner": {
+      "value": "Carran Shipping Co.",
+      "source": "naviecapitani.it (via search summary)",
+      "source_url": "https://naviecapitani.it/gallerie%20navi/containers/schede%20navi/M/MI/Michigan.htm",
+      "retrieved_at": "2026-11-24T13:48:00+01:00",
+      "confidence": "low"
+    }
+  },
+  "photo": null,
+  "facts": [],
+  "research": {
+    "status": "partial",
+    "researched_at": "2026-11-24T13:48:00+01:00",
+    "missing": [
+      "photo",
+      "builder",
+      "operator"
+    ],
+    "notes": "Identified as IMO 9437139: Shiptrail and VesselFinder agree (Malta, 166 m container ship, under way to Koper in the Adriatic, 24 Nov 2026). Link to MSC not independently confirmed; MSC MICHIGAN VII (IMO 9196864) is a different ship. TEU and owner come from search summaries only (low). No Commons photo."
+  }
+}
