@@ -5364,6 +5364,17 @@
       "events": 0,
       "research_needed": [],
       "errors": []
+    },
+    {
+      "at": "2026-11-24T15:00:00+01:00",
+      "terminal_ok": true,
+      "rows": 15,
+      "berth": [
+        "GANDA"
+      ],
+      "events": 2,
+      "research_needed": [],
+      "errors": []
     }
   ],
   "events": [
@@ -5677,6 +5688,22 @@
       "name": "GANDA",
       "at": "2026-11-25T07:00:00+01:00",
       "observed": "2026-11-24T13:45:00+01:00"
+    },
+    {
+      "type": "eta_changed",
+      "call_id": "CMA CGM CARMEN|PHX010E19",
+      "name": "CMA CGM CARMEN",
+      "from": "2026-11-29T06:30:00+01:00",
+      "to": "2026-11-28T22:30:00+01:00",
+      "observed": "2026-11-24T15:00:00+01:00"
+    },
+    {
+      "type": "eta_changed",
+      "call_id": "SC MEDFORD|153W",
+      "name": "SC MEDFORD",
+      "from": "2026-11-28T14:30:00+01:00",
+      "to": "2026-11-30T22:30:00+01:00",
+      "observed": "2026-11-24T15:00:00+01:00"
     }
   ]
 }
