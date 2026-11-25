@@ -1,17 +1,6 @@
 {
   "runs": [
     {
-      "at": "2026-11-17T00:30:00+01:00",
-      "terminal_ok": true,
-      "rows": 15,
-      "berth": [
-        "MSC TERESA"
-      ],
-      "events": 0,
-      "research_needed": [],
-      "errors": []
-    },
-    {
       "at": "2026-11-17T01:15:00+01:00",
       "terminal_ok": true,
       "rows": 15,
@@ -5668,6 +5657,18 @@
     },
     {
       "at": "2026-11-25T16:00:00+01:00",
+      "terminal_ok": true,
+      "rows": 13,
+      "berth": [
+        "CMA CGM ANTIGONE",
+        "GANDA"
+      ],
+      "events": 0,
+      "research_needed": [],
+      "errors": []
+    },
+    {
+      "at": "2026-11-25T16:15:00+01:00",
       "terminal_ok": true,
       "rows": 13,
       "berth": [
