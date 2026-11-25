@@ -5633,6 +5633,18 @@
       "events": 0,
       "research_needed": [],
       "errors": []
+    },
+    {
+      "at": "2026-11-25T09:00:00+01:00",
+      "terminal_ok": true,
+      "rows": 13,
+      "berth": [
+        "CMA CGM ANTIGONE",
+        "GANDA"
+      ],
+      "events": 1,
+      "research_needed": [],
+      "errors": []
     }
   ],
   "events": [
@@ -5977,6 +5989,14 @@
       "name": "CMA CGM ANTIGONE",
       "at": "2026-11-25T07:30:00+01:00",
       "observed": "2026-11-25T07:45:00+01:00"
+    },
+    {
+      "type": "status_changed",
+      "call_id": "CMA CGM ANTIGONE|0BEOWE1MA",
+      "name": "CMA CGM ANTIGONE",
+      "from": "ARRIVED",
+      "to": "UNDER OPS",
+      "observed": "2026-11-25T09:00:00+01:00"
     }
   ]
 }
