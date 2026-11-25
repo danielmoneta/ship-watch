@@ -1,0 +1,113 @@
+{
+  "imo": "9734159",
+  "name": "CMA CGM QUEST",
+  "aliases": [],
+  "mmsi": "232061535",
+  "fields": {
+    "flag": {
+      "value": "United Kingdom",
+      "source": "Shiptrail + VesselFinder/MarineTraffic (via search summary)",
+      "source_url": "https://shiptrail.io/vessel/232061535-cma-cgm-quest",
+      "retrieved_at": "2026-11-25T07:50:00+01:00",
+      "confidence": "high",
+      "note": "Shipnext lists Cyprus; Shiptrail registry shows Cyprus/Limassol, AIS flag UK; majority of sources say UK"
+    },
+    "type": {
+      "value": "Container ship",
+      "source": "VesselFinder",
+      "source_url": "https://www.vesselfinder.com/vessels/details/9734159",
+      "retrieved_at": "2026-11-25T07:50:00+01:00",
+      "confidence": "medium"
+    },
+    "year_built": {
+      "value": 2017,
+      "source": "Shiptrail + VesselFinder",
+      "source_url": "https://shiptrail.io/vessel/232061535-cma-cgm-quest",
+      "retrieved_at": "2026-11-25T07:50:00+01:00",
+      "confidence": "high"
+    },
+    "length_m": {
+      "value": 185,
+      "source": "Shiptrail (AIS dimensions) + VesselFinder",
+      "source_url": "https://shiptrail.io/vessel/232061535-cma-cgm-quest",
+      "retrieved_at": "2026-11-25T07:50:00+01:00",
+      "confidence": "high"
+    },
+    "beam_m": {
+      "value": 30,
+      "source": "Shiptrail (AIS dimensions) + VesselFinder",
+      "source_url": "https://shiptrail.io/vessel/232061535-cma-cgm-quest",
+      "retrieved_at": "2026-11-25T07:50:00+01:00",
+      "confidence": "high"
+    },
+    "gross_tonnage": {
+      "value": 25090,
+      "source": "Shiptrail + search summary of tracker listings",
+      "source_url": "https://shiptrail.io/vessel/232061535-cma-cgm-quest",
+      "retrieved_at": "2026-11-25T07:50:00+01:00",
+      "confidence": "high"
+    },
+    "builder": {
+      "value": "Guangzhou Wenchong Shipyard",
+      "source": "Shiptrail",
+      "source_url": "https://shiptrail.io/vessel/232061535-cma-cgm-quest",
+      "retrieved_at": "2026-11-25T07:50:00+01:00",
+      "confidence": "medium"
+    },
+    "operator": {
+      "value": "CMA CGM",
+      "source": "Gard / MagicPort (via search summary)",
+      "source_url": "https://gard.no/vessels/69891/",
+      "retrieved_at": "2026-11-25T07:50:00+01:00",
+      "confidence": "medium"
+    },
+    "owner": {
+      "value": "CMA CGM S.A.",
+      "source": "Gard (via search summary)",
+      "source_url": "https://gard.no/vessels/69891/",
+      "retrieved_at": "2026-11-25T07:50:00+01:00",
+      "confidence": "medium"
+    },
+    "callsign": {
+      "value": "MSEY5",
+      "source": "Shiptrail + MarineTraffic",
+      "source_url": "https://shiptrail.io/vessel/232061535-cma-cgm-quest",
+      "retrieved_at": "2026-11-25T07:50:00+01:00",
+      "confidence": "high"
+    },
+    "former_names": {
+      "value": [
+        "Cape Quest"
+      ],
+      "source": "Shiptrail",
+      "source_url": "https://shiptrail.io/vessel/232061535-cma-cgm-quest",
+      "retrieved_at": "2026-11-25T07:50:00+01:00",
+      "confidence": "medium"
+    }
+  },
+  "facts": [],
+  "photo": {
+    "file": "data/photos/9734159.jpg",
+    "title": "Cape Quest cargo ship (Singapore).jpg",
+    "author": "Nigos",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Cape_Quest_cargo_ship_(Singapore).jpg",
+    "taken": "2019-03-11 16:14:45",
+    "width": 2095,
+    "height": 3028,
+    "retrieved_at": "2026-11-25T07:48:06+01:00",
+    "caption": "Photographed as CAPE QUEST, 2019"
+  },
+  "research": {
+    "status": "partial",
+    "researched_at": "2026-11-25T07:50:00+01:00",
+    "missing": [
+      "teu",
+      "deadweight_t",
+      "class"
+    ],
+    "notes": "Identified by Shiptrail and several trackers (IMO 9734159, MMSI 232061535, call sign MSEY5). TEU not found in any source. Photo is portrait orientation."
+  }
+}
