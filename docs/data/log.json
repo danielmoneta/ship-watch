@@ -1,19 +1,6 @@
 {
   "runs": [
     {
-      "at": "2026-11-17T15:00:00+01:00",
-      "terminal_ok": true,
-      "rows": 15,
-      "berth": [
-        "MSC EAGLE III"
-      ],
-      "events": 0,
-      "research_needed": [],
-      "errors": [
-        "aiscatcher: HTTP 403"
-      ]
-    },
-    {
       "at": "2026-11-17T15:15:00+01:00",
       "terminal_ok": true,
       "rows": 15,
@@ -5714,6 +5701,18 @@
     },
     {
       "at": "2026-11-26T08:00:00+01:00",
+      "terminal_ok": true,
+      "rows": 12,
+      "berth": [
+        "CMA CGM ANTIGONE",
+        "GANDA"
+      ],
+      "events": 0,
+      "research_needed": [],
+      "errors": []
+    },
+    {
+      "at": "2026-11-26T08:05:16+01:00",
       "terminal_ok": true,
       "rows": 12,
       "berth": [
