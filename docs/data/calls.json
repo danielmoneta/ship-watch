@@ -13,7 +13,7 @@
       "atd": "2026-11-17T12:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-26T19:00:00+01:00",
+      "last_seen": "2026-11-26T19:30:00+01:00",
       "listed": true,
       "imo": "9469560",
       "ais": {
@@ -132,7 +132,7 @@
       "atd": "2026-11-18T08:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-26T19:00:00+01:00",
+      "last_seen": "2026-11-26T19:30:00+01:00",
       "listed": true,
       "imo": "9302449",
       "ais": {
@@ -254,7 +254,7 @@
       "atd": "2026-11-20T03:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-26T19:00:00+01:00",
+      "last_seen": "2026-11-26T19:30:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
@@ -361,7 +361,7 @@
       "atd": "2026-11-23T12:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-26T19:00:00+01:00",
+      "last_seen": "2026-11-26T19:30:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
@@ -480,7 +480,7 @@
       "atd": "2026-11-20T18:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-26T19:00:00+01:00",
+      "last_seen": "2026-11-26T19:30:00+01:00",
       "listed": true,
       "imo": "9169043",
       "ais": {
@@ -603,7 +603,7 @@
       "atd": "2026-11-21T11:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-26T19:00:00+01:00",
+      "last_seen": "2026-11-26T19:30:00+01:00",
       "listed": true,
       "imo": "9961350",
       "ais": {
@@ -718,27 +718,14 @@
       "atd": null,
       "phase": "at_berth",
       "first_seen": "2026-11-19T13:00:00+01:00",
-      "last_seen": "2026-11-26T19:00:00+01:00",
+      "last_seen": "2026-11-26T19:30:00+01:00",
       "listed": true,
       "imo": "9298129",
       "ais": {
         "source": "Wingo Marine",
-        "source_url": "https://wingo-marine.com/ship/ganda-256387000",
-        "checked_at": "2026-11-26T19:00:00+01:00",
-        "found": true,
-        "mmsi": "256387000",
-        "distance_km": 4,
-        "nav": "Stopped",
-        "destination_raw": "HRRJK",
-        "destination": {
-          "locode": "HRRJK",
-          "name": "Rijeka, Croatia"
-        },
-        "destination_kind": "ais_destination",
-        "berth_consistent": true,
-        "last_report": "2026-11-26T12:08:00.000Z",
-        "nearest_port_label": "Rijeka",
-        "imo": "9298129"
+        "source_url": "https://wingo-marine.com/port/rijeka-2263",
+        "checked_at": "2026-11-26T19:30:00+01:00",
+        "found": false
       },
       "trail": {
         "source": "Shiptrail",
@@ -811,12 +798,12 @@
       "atd": null,
       "phase": "at_berth",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-26T19:00:00+01:00",
+      "last_seen": "2026-11-26T19:30:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/cma-cgm-antigone-249787000",
-        "checked_at": "2026-11-26T19:00:00+01:00",
+        "checked_at": "2026-11-26T19:30:00+01:00",
         "found": true,
         "mmsi": "249787000",
         "distance_km": 4.4,
@@ -828,7 +815,7 @@
         },
         "destination_kind": "ais_destination",
         "berth_consistent": true,
-        "last_report": "2026-11-26T17:32:00.000Z",
+        "last_report": "2026-11-26T18:10:00.000Z",
         "nearest_port_label": "Kostrena",
         "imo": "9996989"
       },
@@ -912,12 +899,12 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-23T06:45:00+01:00",
-      "last_seen": "2026-11-26T19:00:00+01:00",
+      "last_seen": "2026-11-26T19:30:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/michigan-215020000",
-        "checked_at": "2026-11-26T19:00:00+01:00",
+        "checked_at": "2026-11-26T19:30:00+01:00",
         "found": true,
         "mmsi": "215020000",
         "distance_km": 4,
@@ -1031,15 +1018,15 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-23T06:45:00+01:00",
-      "last_seen": "2026-11-26T19:00:00+01:00",
+      "last_seen": "2026-11-26T19:30:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/cma-cgm-quest-232061535",
-        "checked_at": "2026-11-26T19:00:00+01:00",
+        "checked_at": "2026-11-26T19:30:00+01:00",
         "found": true,
         "mmsi": "232061535",
-        "distance_km": 880,
+        "distance_km": 864,
         "nav": "14.0 kn",
         "destination_raw": "HRRJK",
         "destination": {
@@ -1147,7 +1134,7 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-23T08:15:00+01:00",
-      "last_seen": "2026-11-26T19:00:00+01:00",
+      "last_seen": "2026-11-26T19:30:00+01:00",
       "listed": true
     },
     "SC MEDFORD|153W": {
@@ -1163,7 +1150,7 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-23T06:45:00+01:00",
-      "last_seen": "2026-11-26T19:00:00+01:00",
+      "last_seen": "2026-11-26T19:30:00+01:00",
       "listed": true
     },
     "SC MEDFORD|152W": {
