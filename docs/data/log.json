@@ -1,19 +1,6 @@
 {
   "runs": [
     {
-      "at": "2026-11-17T17:30:00+01:00",
-      "terminal_ok": true,
-      "rows": 15,
-      "berth": [
-        "MSC EAGLE III"
-      ],
-      "events": 0,
-      "research_needed": [],
-      "errors": [
-        "aiscatcher: HTTP 403"
-      ]
-    },
-    {
       "at": "2026-11-17T17:45:00+01:00",
       "terminal_ok": true,
       "rows": 15,
@@ -5716,6 +5703,18 @@
       "events": 0,
       "research_needed": [],
       "errors": []
+    },
+    {
+      "at": "2026-11-26T12:15:00+01:00",
+      "terminal_ok": true,
+      "rows": 12,
+      "berth": [
+        "CMA CGM ANTIGONE",
+        "GANDA"
+      ],
+      "events": 3,
+      "research_needed": [],
+      "errors": []
     }
   ],
   "events": [
@@ -6068,6 +6067,30 @@
       "from": "ARRIVED",
       "to": "UNDER OPS",
       "observed": "2026-11-25T09:00:00+01:00"
+    },
+    {
+      "type": "eta_changed",
+      "call_id": "MICHIGAN|AH646A",
+      "name": "MICHIGAN",
+      "from": "2026-11-27T06:30:00+01:00",
+      "to": "2026-11-27T12:00:00+01:00",
+      "observed": "2026-11-26T12:15:00+01:00"
+    },
+    {
+      "type": "eta_changed",
+      "call_id": "CMA CGM QUEST|BMS0X0E19",
+      "name": "CMA CGM QUEST",
+      "from": "2026-11-28T06:30:00+01:00",
+      "to": "2026-11-28T14:30:00+01:00",
+      "observed": "2026-11-26T12:15:00+01:00"
+    },
+    {
+      "type": "eta_changed",
+      "call_id": "CMA CGM CARMEN|PHX010E19",
+      "name": "CMA CGM CARMEN",
+      "from": "2026-11-28T22:30:00+01:00",
+      "to": "2026-11-29T06:30:00+01:00",
+      "observed": "2026-11-26T12:15:00+01:00"
     }
   ]
 }
