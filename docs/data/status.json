@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-26T20:00:00+01:00",
+  "generated_at": "2026-11-26T21:00:01+01:00",
   "timezone": "Europe/Zagreb",
   "terminal": {
     "url": "https://webusercorner.ictsi.hr/?language=EN",
     "query_url": "https://webusercorner.ictsi.hr/?language=EN&from=16.11.2026&to=17.12.2026",
     "ok": true,
-    "fetched_at": "2026-11-26T20:00:00+01:00",
-    "last_attempt_at": "2026-11-26T20:00:00+01:00",
+    "fetched_at": "2026-11-26T21:00:01+01:00",
+    "last_attempt_at": "2026-11-26T21:00:01+01:00",
     "rows": 12,
     "error": null
   },
@@ -29,7 +29,7 @@
         "ais": {
           "source": "Wingo Marine",
           "source_url": "https://wingo-marine.com/ship/cma-cgm-antigone-249787000",
-          "checked_at": "2026-11-26T20:00:00+01:00",
+          "checked_at": "2026-11-26T21:00:01+01:00",
           "found": true,
           "mmsi": "249787000",
           "distance_km": 4.4,
@@ -41,7 +41,7 @@
           },
           "destination_kind": "ais_destination",
           "berth_consistent": true,
-          "last_report": "2026-11-26T18:10:00.000Z",
+          "last_report": "2026-11-26T19:31:00.000Z",
           "nearest_port_label": "Kostrena",
           "imo": "9996989"
         },
@@ -49,7 +49,7 @@
         "trail": {
           "source": "Shiptrail",
           "source_url": "https://shiptrail.io/vessel/249787000-cma-cgm-antigone",
-          "fetched_at": "2026-11-26T20:00:00+01:00",
+          "fetched_at": "2026-11-26T21:00:01+01:00",
           "mmsi": "249787000",
           "imo": "9996989",
           "name": "CMA CGM ANTIGONE",
@@ -120,7 +120,7 @@
             "kind": "actual",
             "source": "Shiptrail (AIS port-call history)",
             "source_url": "https://shiptrail.io/vessel/249787000-cma-cgm-antigone",
-            "retrieved_at": "2026-11-26T20:00:00+01:00",
+            "retrieved_at": "2026-11-26T21:00:01+01:00",
             "auto": true,
             "confidence": "medium"
           }
@@ -242,13 +242,13 @@
         "ais": {
           "source": "Wingo Marine",
           "source_url": "https://wingo-marine.com/port/rijeka-2263",
-          "checked_at": "2026-11-26T20:00:00+01:00",
+          "checked_at": "2026-11-26T21:00:01+01:00",
           "found": false
         },
         "trail": {
           "source": "Shiptrail",
           "source_url": "https://shiptrail.io/vessel/256387000-ganda",
-          "fetched_at": "2026-11-26T20:00:00+01:00",
+          "fetched_at": "2026-11-26T21:00:01+01:00",
           "mmsi": "256387000",
           "imo": "9298129",
           "name": "GANDA",
@@ -405,7 +405,7 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/michigan-215020000",
-        "checked_at": "2026-11-26T20:00:00+01:00",
+        "checked_at": "2026-11-26T21:00:01+01:00",
         "found": true,
         "mmsi": "215020000",
         "distance_km": 4,
@@ -423,17 +423,17 @@
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/215020000-michigan",
-        "fetched_at": "2026-11-26T20:00:00+01:00",
+        "fetched_at": "2026-11-26T21:00:01+01:00",
         "mmsi": "215020000",
         "imo": "9437139",
         "name": "MICHIGAN",
-        "last_heard": "2026-11-26T18:16:39.000Z",
+        "last_heard": "2026-11-26T19:34:58.000Z",
         "position": {
-          "lat": 45.28139,
-          "lon": 14.40438,
-          "at": "2026-11-26T18:16:39.000Z",
+          "lat": 45.28138,
+          "lon": 14.40444,
+          "at": "2026-11-26T19:34:58.000Z",
           "status": "Under way under engine power",
-          "speed_kn": 0.1
+          "speed_kn": 0.3
         },
         "quay_distance_km": 5.81,
         "at_quay": false,
@@ -508,7 +508,7 @@
           "kind": "actual",
           "source": "Shiptrail (AIS port-call history)",
           "source_url": "https://shiptrail.io/vessel/215020000-michigan",
-          "retrieved_at": "2026-11-26T20:00:00+01:00",
+          "retrieved_at": "2026-11-26T21:00:01+01:00",
           "auto": true,
           "confidence": "medium"
         }
@@ -612,10 +612,10 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/cma-cgm-quest-232061535",
-        "checked_at": "2026-11-26T20:00:00+01:00",
+        "checked_at": "2026-11-26T21:00:01+01:00",
         "found": true,
         "mmsi": "232061535",
-        "distance_km": 864,
+        "distance_km": 845,
         "nav": "14.0 kn",
         "destination_raw": "HRRJK",
         "destination": {
@@ -630,7 +630,7 @@
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/232061535-cma-cgm-quest",
-        "fetched_at": "2026-11-26T20:00:00+01:00",
+        "fetched_at": "2026-11-26T21:00:01+01:00",
         "mmsi": "232061535",
         "imo": "9734159",
         "name": "CMA CGM QUEST",
@@ -708,7 +708,7 @@
           "kind": "actual",
           "source": "Shiptrail (AIS port-call history)",
           "source_url": "https://shiptrail.io/vessel/232061535-cma-cgm-quest",
-          "retrieved_at": "2026-11-26T20:00:00+01:00",
+          "retrieved_at": "2026-11-26T21:00:01+01:00",
           "auto": true,
           "confidence": "medium"
         }
@@ -1485,18 +1485,18 @@
       "name": "Wingo Marine",
       "url": "https://wingo-marine.com/port/rijeka-2263",
       "ok": true,
-      "fetched_at": "2026-11-26T20:00:00+01:00",
-      "last_attempt_at": "2026-11-26T20:00:00+01:00",
+      "fetched_at": "2026-11-26T21:00:01+01:00",
+      "last_attempt_at": "2026-11-26T21:00:01+01:00",
       "error": null,
-      "summary": "31 vessels reported within 15 km in the last 24 hours",
-      "vessels_listed": 32
+      "summary": "27 vessels reported within 15 km in the last 24 hours",
+      "vessels_listed": 31
     },
     "aiscatcher": {
       "name": "AIS-catcher",
       "url": "https://www.aiscatcher.org/place/6398/brajdica-container-terminal",
       "ok": true,
-      "fetched_at": "2026-11-26T20:00:00+01:00",
-      "last_attempt_at": "2026-11-26T20:00:00+01:00",
+      "fetched_at": "2026-11-26T21:00:01+01:00",
+      "last_attempt_at": "2026-11-26T21:00:01+01:00",
       "error": null,
       "receiving_stations": 0,
       "vessels_inside": 0,
@@ -1507,8 +1507,8 @@
       "name": "Shiptrail",
       "url": "https://shiptrail.io/",
       "ok": true,
-      "fetched_at": "2026-11-26T20:00:00+01:00",
-      "last_attempt_at": "2026-11-26T20:00:00+01:00",
+      "fetched_at": "2026-11-26T21:00:01+01:00",
+      "last_attempt_at": "2026-11-26T21:00:01+01:00",
       "error": null,
       "note": "AIS-derived port calls and positions. Data: Shiptrail, shiptrail.io"
     }
@@ -1596,6 +1596,6 @@
   "stale_after_hours": 3,
   "research_pending": [],
   "research_needed": [],
-  "next_check_at": "2026-11-26T21:00:00+01:00",
+  "next_check_at": "2026-11-26T22:00:01+01:00",
   "stale_grace_minutes": 100
 }
