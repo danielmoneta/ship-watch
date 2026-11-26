@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-26T12:15:00+01:00",
+  "generated_at": "2026-11-26T13:00:00+01:00",
   "timezone": "Europe/Zagreb",
   "terminal": {
     "url": "https://webusercorner.ictsi.hr/?language=EN",
     "query_url": "https://webusercorner.ictsi.hr/?language=EN&from=16.11.2026&to=17.12.2026",
     "ok": true,
-    "fetched_at": "2026-11-26T12:15:00+01:00",
-    "last_attempt_at": "2026-11-26T12:15:00+01:00",
+    "fetched_at": "2026-11-26T13:00:00+01:00",
+    "last_attempt_at": "2026-11-26T13:00:00+01:00",
     "rows": 12,
     "error": null
   },
@@ -29,14 +29,14 @@
         "ais": {
           "source": "Wingo Marine",
           "source_url": "https://wingo-marine.com/port/rijeka-2263",
-          "checked_at": "2026-11-26T12:15:00+01:00",
+          "checked_at": "2026-11-26T13:00:00+01:00",
           "found": false
         },
         "imo": "9996989",
         "trail": {
           "source": "Shiptrail",
           "source_url": "https://shiptrail.io/vessel/249787000-cma-cgm-antigone",
-          "fetched_at": "2026-11-26T12:00:00+01:00",
+          "fetched_at": "2026-11-26T13:00:00+01:00",
           "mmsi": "249787000",
           "imo": "9996989",
           "name": "CMA CGM ANTIGONE",
@@ -107,7 +107,7 @@
             "kind": "actual",
             "source": "Shiptrail (AIS port-call history)",
             "source_url": "https://shiptrail.io/vessel/249787000-cma-cgm-antigone",
-            "retrieved_at": "2026-11-26T12:00:00+01:00",
+            "retrieved_at": "2026-11-26T13:00:00+01:00",
             "auto": true,
             "confidence": "medium"
           }
@@ -219,7 +219,7 @@
         "shipper": "SOC",
         "voyage_in": "15",
         "voyage_out": "15",
-        "status": "ARRIVED",
+        "status": "UNDER OPS",
         "eta": "2026-11-25T06:30:00+01:00",
         "etd": "2026-11-25T14:30:00+01:00",
         "ata": "2026-11-25T07:00:00+01:00",
@@ -229,13 +229,13 @@
         "ais": {
           "source": "Wingo Marine",
           "source_url": "https://wingo-marine.com/port/rijeka-2263",
-          "checked_at": "2026-11-26T12:15:00+01:00",
+          "checked_at": "2026-11-26T13:00:00+01:00",
           "found": false
         },
         "trail": {
           "source": "Shiptrail",
           "source_url": "https://shiptrail.io/vessel/256387000-ganda",
-          "fetched_at": "2026-11-26T12:00:00+01:00",
+          "fetched_at": "2026-11-26T13:00:00+01:00",
           "mmsi": "256387000",
           "imo": "9298129",
           "name": "GANDA",
@@ -392,26 +392,26 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/port/rijeka-2263",
-        "checked_at": "2026-11-26T12:15:00+01:00",
+        "checked_at": "2026-11-26T13:00:00+01:00",
         "found": false
       },
       "imo": "9437139",
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/215020000-michigan",
-        "fetched_at": "2026-11-26T12:00:00+01:00",
+        "fetched_at": "2026-11-26T13:00:00+01:00",
         "mmsi": "215020000",
         "imo": "9437139",
         "name": "MICHIGAN",
-        "last_heard": "2026-11-26T09:54:09.000Z",
+        "last_heard": "2026-11-26T11:56:09.000Z",
         "position": {
-          "lat": 45.28126,
-          "lon": 14.40451,
-          "at": "2026-11-26T09:54:09.000Z",
+          "lat": 45.28129,
+          "lon": 14.40493,
+          "at": "2026-11-26T11:56:09.000Z",
           "status": "Under way under engine power",
-          "speed_kn": 0.2
+          "speed_kn": 0
         },
-        "quay_distance_km": 5.82,
+        "quay_distance_km": 5.79,
         "at_quay": false,
         "destination_raw": "HRRJK",
         "bound_for": {
@@ -484,7 +484,7 @@
           "kind": "actual",
           "source": "Shiptrail (AIS port-call history)",
           "source_url": "https://shiptrail.io/vessel/215020000-michigan",
-          "retrieved_at": "2026-11-26T12:00:00+01:00",
+          "retrieved_at": "2026-11-26T13:00:00+01:00",
           "auto": true,
           "confidence": "medium"
         }
@@ -588,7 +588,7 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/cma-cgm-quest-232061535",
-        "checked_at": "2026-11-26T12:15:00+01:00",
+        "checked_at": "2026-11-26T13:00:00+01:00",
         "found": true,
         "mmsi": "232061535",
         "distance_km": 1007,
@@ -606,19 +606,19 @@
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/232061535-cma-cgm-quest",
-        "fetched_at": "2026-11-26T12:00:00+01:00",
+        "fetched_at": "2026-11-26T13:00:00+01:00",
         "mmsi": "232061535",
         "imo": "9734159",
         "name": "CMA CGM QUEST",
-        "last_heard": "2026-11-26T10:49:36.000Z",
+        "last_heard": "2026-11-26T11:59:39.000Z",
         "position": {
-          "lat": 36.46859,
-          "lon": 15.55912,
-          "at": "2026-11-26T10:49:36.000Z",
+          "lat": 36.68465,
+          "lon": 15.77212,
+          "at": "2026-11-26T11:59:39.000Z",
           "status": "Under way under engine power",
-          "speed_kn": 14.5
+          "speed_kn": 14
         },
-        "quay_distance_km": 988.57,
+        "quay_distance_km": 966.51,
         "at_quay": false,
         "destination_raw": "HRRJK",
         "bound_for": {
@@ -626,7 +626,7 @@
           "name": "Rijeka",
           "country": "Croatia"
         },
-        "destination_eta": "2026-11-28T07:00:00.000Z",
+        "destination_eta": "2026-11-28T12:00:00.000Z",
         "previous_port": {
           "locode": "MTMLA",
           "name": "Valletta",
@@ -684,7 +684,7 @@
           "kind": "actual",
           "source": "Shiptrail (AIS port-call history)",
           "source_url": "https://shiptrail.io/vessel/232061535-cma-cgm-quest",
-          "retrieved_at": "2026-11-26T12:00:00+01:00",
+          "retrieved_at": "2026-11-26T13:00:00+01:00",
           "auto": true,
           "confidence": "medium"
         }
@@ -1461,8 +1461,8 @@
       "name": "Wingo Marine",
       "url": "https://wingo-marine.com/port/rijeka-2263",
       "ok": true,
-      "fetched_at": "2026-11-26T12:15:00+01:00",
-      "last_attempt_at": "2026-11-26T12:15:00+01:00",
+      "fetched_at": "2026-11-26T13:00:00+01:00",
+      "last_attempt_at": "2026-11-26T13:00:00+01:00",
       "error": null,
       "summary": "49 vessels reported within 15 km in the last 24 hours",
       "vessels_listed": 28
@@ -1471,8 +1471,8 @@
       "name": "AIS-catcher",
       "url": "https://www.aiscatcher.org/place/6398/brajdica-container-terminal",
       "ok": true,
-      "fetched_at": "2026-11-26T12:15:00+01:00",
-      "last_attempt_at": "2026-11-26T12:15:00+01:00",
+      "fetched_at": "2026-11-26T13:00:00+01:00",
+      "last_attempt_at": "2026-11-26T13:00:00+01:00",
       "error": null,
       "receiving_stations": 0,
       "vessels_inside": 0,
@@ -1483,21 +1483,13 @@
       "name": "Shiptrail",
       "url": "https://shiptrail.io/",
       "ok": true,
-      "fetched_at": "2026-11-26T12:15:00+01:00",
-      "last_attempt_at": "2026-11-26T12:15:00+01:00",
+      "fetched_at": "2026-11-26T13:00:00+01:00",
+      "last_attempt_at": "2026-11-26T13:00:00+01:00",
       "error": null,
       "note": "AIS-derived port calls and positions. Data: Shiptrail, shiptrail.io"
     }
   },
   "last_events": [
-    {
-      "type": "eta_changed",
-      "call_id": "SC MEDFORD|153W",
-      "name": "SC MEDFORD",
-      "from": "2026-11-28T06:30:00+01:00",
-      "to": "2026-11-28T14:30:00+01:00",
-      "observed": "2026-11-23T13:00:01+01:00"
-    },
     {
       "type": "arrived",
       "call_id": "GANDA|15",
@@ -1567,11 +1559,19 @@
       "from": "2026-11-28T22:30:00+01:00",
       "to": "2026-11-29T06:30:00+01:00",
       "observed": "2026-11-26T12:15:00+01:00"
+    },
+    {
+      "type": "status_changed",
+      "call_id": "GANDA|15",
+      "name": "GANDA",
+      "from": "ARRIVED",
+      "to": "UNDER OPS",
+      "observed": "2026-11-26T13:00:00+01:00"
     }
   ],
   "stale_after_hours": 3,
   "research_pending": [],
   "research_needed": [],
-  "next_check_at": "2026-11-26T13:15:00+01:00",
+  "next_check_at": "2026-11-26T14:00:00+01:00",
   "stale_grace_minutes": 100
 }

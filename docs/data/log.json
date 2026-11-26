@@ -1,19 +1,6 @@
 {
   "runs": [
     {
-      "at": "2026-11-17T17:45:00+01:00",
-      "terminal_ok": true,
-      "rows": 15,
-      "berth": [
-        "MSC EAGLE III"
-      ],
-      "events": 0,
-      "research_needed": [],
-      "errors": [
-        "aiscatcher: HTTP 403"
-      ]
-    },
-    {
       "at": "2026-11-17T18:00:00+01:00",
       "terminal_ok": true,
       "rows": 15,
@@ -5715,6 +5702,18 @@
       "events": 3,
       "research_needed": [],
       "errors": []
+    },
+    {
+      "at": "2026-11-26T13:00:00+01:00",
+      "terminal_ok": true,
+      "rows": 12,
+      "berth": [
+        "CMA CGM ANTIGONE",
+        "GANDA"
+      ],
+      "events": 1,
+      "research_needed": [],
+      "errors": []
     }
   ],
   "events": [
@@ -6091,6 +6090,14 @@
       "from": "2026-11-28T22:30:00+01:00",
       "to": "2026-11-29T06:30:00+01:00",
       "observed": "2026-11-26T12:15:00+01:00"
+    },
+    {
+      "type": "status_changed",
+      "call_id": "GANDA|15",
+      "name": "GANDA",
+      "from": "ARRIVED",
+      "to": "UNDER OPS",
+      "observed": "2026-11-26T13:00:00+01:00"
     }
   ]
 }
