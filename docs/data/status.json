@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-26T21:15:00+01:00",
+  "generated_at": "2026-11-26T22:00:01+01:00",
   "timezone": "Europe/Zagreb",
   "terminal": {
     "url": "https://webusercorner.ictsi.hr/?language=EN",
     "query_url": "https://webusercorner.ictsi.hr/?language=EN&from=16.11.2026&to=17.12.2026",
     "ok": true,
-    "fetched_at": "2026-11-26T21:15:00+01:00",
-    "last_attempt_at": "2026-11-26T21:15:00+01:00",
+    "fetched_at": "2026-11-26T22:00:01+01:00",
+    "last_attempt_at": "2026-11-26T22:00:01+01:00",
     "rows": 12,
     "error": null
   },
@@ -29,7 +29,7 @@
         "ais": {
           "source": "Wingo Marine",
           "source_url": "https://wingo-marine.com/ship/cma-cgm-antigone-249787000",
-          "checked_at": "2026-11-26T21:15:00+01:00",
+          "checked_at": "2026-11-26T22:00:01+01:00",
           "found": true,
           "mmsi": "249787000",
           "distance_km": 4.4,
@@ -41,7 +41,7 @@
           },
           "destination_kind": "ais_destination",
           "berth_consistent": true,
-          "last_report": "2026-11-26T19:31:00.000Z",
+          "last_report": "2026-11-26T20:20:00.000Z",
           "nearest_port_label": "Kostrena",
           "imo": "9996989"
         },
@@ -49,7 +49,7 @@
         "trail": {
           "source": "Shiptrail",
           "source_url": "https://shiptrail.io/vessel/249787000-cma-cgm-antigone",
-          "fetched_at": "2026-11-26T21:00:01+01:00",
+          "fetched_at": "2026-11-26T22:00:01+01:00",
           "mmsi": "249787000",
           "imo": "9996989",
           "name": "CMA CGM ANTIGONE",
@@ -120,7 +120,7 @@
             "kind": "actual",
             "source": "Shiptrail (AIS port-call history)",
             "source_url": "https://shiptrail.io/vessel/249787000-cma-cgm-antigone",
-            "retrieved_at": "2026-11-26T21:00:01+01:00",
+            "retrieved_at": "2026-11-26T22:00:01+01:00",
             "auto": true,
             "confidence": "medium"
           }
@@ -225,167 +225,6 @@
           "level": "ais_consistent",
           "note": "AIS places the ship at a distance consistent with the Brajdica quay."
         }
-      },
-      {
-        "call_id": "GANDA|15",
-        "name": "GANDA",
-        "shipper": "SOC",
-        "voyage_in": "15",
-        "voyage_out": "15",
-        "status": "UNDER OPS",
-        "eta": "2026-11-25T06:30:00+01:00",
-        "etd": "2026-11-25T14:30:00+01:00",
-        "ata": "2026-11-25T07:00:00+01:00",
-        "atd": null,
-        "phase": "at_berth",
-        "imo": "9298129",
-        "ais": {
-          "source": "Wingo Marine",
-          "source_url": "https://wingo-marine.com/port/rijeka-2263",
-          "checked_at": "2026-11-26T21:15:00+01:00",
-          "found": false
-        },
-        "trail": {
-          "source": "Shiptrail",
-          "source_url": "https://shiptrail.io/vessel/256387000-ganda",
-          "fetched_at": "2026-11-26T21:00:01+01:00",
-          "mmsi": "256387000",
-          "imo": "9298129",
-          "name": "GANDA",
-          "last_heard": "2026-11-26T17:08:34.000Z",
-          "position": {
-            "lat": 45.20943,
-            "lon": 14.30746,
-            "at": "2026-11-26T17:08:34.000Z",
-            "status": "Under way sailing",
-            "speed_kn": 10
-          },
-          "quay_distance_km": 16.84,
-          "at_quay": false,
-          "destination_raw": "HRRJK",
-          "bound_for": {
-            "locode": "HRRJK",
-            "name": "Rijeka",
-            "country": "Croatia"
-          },
-          "destination_eta": "2026-11-23T16:00:00.000Z",
-          "previous_port": null,
-          "still_in_port": null,
-          "recent_calls": [
-            {
-              "locode": "HRKOS",
-              "name": "Kostrena",
-              "country": "Croatia",
-              "arrived_at": "2026-11-25T10:42:53.000Z",
-              "departed_at": "2026-11-26T07:12:55.000Z"
-            },
-            {
-              "locode": "HRRJK",
-              "name": "Rijeka",
-              "country": "Croatia",
-              "arrived_at": "2026-11-25T09:30:01.000Z",
-              "departed_at": "2026-11-25T09:48:38.000Z"
-            },
-            {
-              "locode": "HRKOS",
-              "name": "Kostrena",
-              "country": "Croatia",
-              "arrived_at": "2026-11-23T19:32:48.000Z",
-              "departed_at": "2026-11-25T08:32:46.000Z"
-            }
-          ]
-        },
-        "voyage": {
-          "researched_at": "2026-11-24T13:48:00+01:00",
-          "previous_port": {
-            "name": "Derince",
-            "locode": "TRDRC",
-            "departed_at": "2026-11-18T00:15:00+01:00",
-            "kind": "actual",
-            "source": "VesselFinder (AIS port call, Last Port)",
-            "source_url": "https://www.vesselfinder.com/vessels/details/9298129",
-            "retrieved_at": "2026-11-24T13:48:00+01:00",
-            "confidence": "medium"
-          },
-          "next_port": null,
-          "notes": "Last Port ATD Nov 17 23:15 UTC (= Nov 18 00:15 Zagreb). Shiptrail has only an arrival at Kostrena (23 Nov), no earlier call. No next port found."
-        },
-        "profile": {
-          "imo": "9298129",
-          "name": "GANDA",
-          "aliases": [],
-          "mmsi": "256387000",
-          "fields": {
-            "flag": {
-              "value": "Malta",
-              "source": "Wingo Marine (AIS)",
-              "source_url": "https://wingo-marine.com/ship/ganda-256387000",
-              "retrieved_at": "2026-11-20T05:30:00+01:00",
-              "confidence": "medium"
-            },
-            "length_m": {
-              "value": 80,
-              "source": "Wingo Marine (AIS broadcast dimensions)",
-              "source_url": "https://wingo-marine.com/ship/ganda-256387000",
-              "retrieved_at": "2026-11-20T05:30:00+01:00",
-              "confidence": "medium"
-            },
-            "beam_m": {
-              "value": 13,
-              "source": "Wingo Marine (AIS broadcast dimensions)",
-              "source_url": "https://wingo-marine.com/ship/ganda-256387000",
-              "retrieved_at": "2026-11-20T05:30:00+01:00",
-              "confidence": "medium"
-            },
-            "callsign": {
-              "value": "9HA3897",
-              "source": "Wingo Marine (AIS)",
-              "source_url": "https://wingo-marine.com/ship/ganda-256387000",
-              "retrieved_at": "2026-11-20T05:30:00+01:00",
-              "confidence": "medium"
-            },
-            "type": {
-              "value": "General cargo ship",
-              "source": "Shiptrail",
-              "source_url": "https://shiptrail.io/vessel/256387000-ganda",
-              "retrieved_at": "2026-11-20T05:32:00+01:00",
-              "confidence": "medium"
-            },
-            "year_built": {
-              "value": 2003,
-              "source": "Shiptrail",
-              "source_url": "https://shiptrail.io/vessel/256387000-ganda",
-              "retrieved_at": "2026-11-20T05:32:00+01:00",
-              "confidence": "medium"
-            }
-          },
-          "photo": {
-            "file": "data/photos/9298129.jpg",
-            "title": "Navire GANDA au port.jpg",
-            "author": "Farid mernissi",
-            "license": "CC BY-SA 4.0",
-            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-            "source_name": "Wikimedia Commons",
-            "source_url": "https://commons.wikimedia.org/wiki/File:Navire_GANDA_au_port.jpg",
-            "taken": "2020-11-11",
-            "width": 4160,
-            "height": 3120,
-            "retrieved_at": "2026-11-20T05:31:06+01:00"
-          },
-          "facts": [],
-          "research": {
-            "status": "partial",
-            "researched_at": "2026-11-20T05:32:00+01:00",
-            "missing": [
-              "teu"
-            ],
-            "notes": "GANDA is a general cargo ship (80 m), not a container ship, so TEU does not apply. Shiptrail particulars gave type and year built only; no builder, tonnage or operator found. Voyage researched 24 Nov 2026 (previous port Derince via VesselFinder)."
-          }
-        },
-        "corroboration": {
-          "level": "terminal_only",
-          "note": "Not found in the AIS source. Missing AIS is not evidence of absence."
-        }
       }
     ]
   },
@@ -405,7 +244,7 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/michigan-215020000",
-        "checked_at": "2026-11-26T21:15:00+01:00",
+        "checked_at": "2026-11-26T22:00:01+01:00",
         "found": true,
         "mmsi": "215020000",
         "distance_km": 4,
@@ -423,17 +262,17 @@
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/215020000-michigan",
-        "fetched_at": "2026-11-26T21:00:01+01:00",
+        "fetched_at": "2026-11-26T22:00:01+01:00",
         "mmsi": "215020000",
         "imo": "9437139",
         "name": "MICHIGAN",
-        "last_heard": "2026-11-26T19:34:58.000Z",
+        "last_heard": "2026-11-26T20:36:48.000Z",
         "position": {
-          "lat": 45.28138,
-          "lon": 14.40444,
-          "at": "2026-11-26T19:34:58.000Z",
+          "lat": 45.28142,
+          "lon": 14.40441,
+          "at": "2026-11-26T20:36:48.000Z",
           "status": "Under way under engine power",
-          "speed_kn": 0.3
+          "speed_kn": 0.2
         },
         "quay_distance_km": 5.81,
         "at_quay": false,
@@ -508,7 +347,7 @@
           "kind": "actual",
           "source": "Shiptrail (AIS port-call history)",
           "source_url": "https://shiptrail.io/vessel/215020000-michigan",
-          "retrieved_at": "2026-11-26T21:00:01+01:00",
+          "retrieved_at": "2026-11-26T22:00:01+01:00",
           "auto": true,
           "confidence": "medium"
         }
@@ -612,11 +451,11 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/cma-cgm-quest-232061535",
-        "checked_at": "2026-11-26T21:15:00+01:00",
+        "checked_at": "2026-11-26T22:00:01+01:00",
         "found": true,
         "mmsi": "232061535",
-        "distance_km": 845,
-        "nav": "14.0 kn",
+        "distance_km": 829,
+        "nav": "13.8 kn",
         "destination_raw": "HRRJK",
         "destination": {
           "locode": "HRRJK",
@@ -630,17 +469,17 @@
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/232061535-cma-cgm-quest",
-        "fetched_at": "2026-11-26T21:00:01+01:00",
+        "fetched_at": "2026-11-26T22:00:01+01:00",
         "mmsi": "232061535",
         "imo": "9734159",
         "name": "CMA CGM QUEST",
-        "last_heard": "2026-11-26T17:03:14.000Z",
+        "last_heard": "2026-11-26T17:03:19.288Z",
         "position": {
-          "lat": 37.61181,
-          "lon": 16.69587,
+          "lat": 37.6118,
+          "lon": 16.6959,
           "at": "2026-11-26T17:03:14.000Z",
-          "status": "Under way under engine power",
-          "speed_kn": 13.9
+          "status": null,
+          "speed_kn": null
         },
         "quay_distance_km": 877.12,
         "at_quay": false,
@@ -708,7 +547,7 @@
           "kind": "actual",
           "source": "Shiptrail (AIS port-call history)",
           "source_url": "https://shiptrail.io/vessel/232061535-cma-cgm-quest",
-          "retrieved_at": "2026-11-26T21:00:01+01:00",
+          "retrieved_at": "2026-11-26T22:00:01+01:00",
           "auto": true,
           "confidence": "medium"
         }
@@ -857,6 +696,92 @@
     }
   ],
   "recent_departures": [
+    {
+      "call_id": "GANDA|15",
+      "name": "GANDA",
+      "shipper": "SOC",
+      "voyage_in": "15",
+      "voyage_out": "15",
+      "status": "DEPARTED",
+      "eta": "2026-11-25T06:30:00+01:00",
+      "etd": "2026-11-25T14:30:00+01:00",
+      "ata": "2026-11-25T07:00:00+01:00",
+      "atd": "2026-11-26T17:00:00+01:00",
+      "phase": "departed",
+      "imo": "9298129",
+      "ais": {
+        "source": "Wingo Marine",
+        "source_url": "https://wingo-marine.com/port/rijeka-2263",
+        "checked_at": "2026-11-26T21:15:00+01:00",
+        "found": false
+      },
+      "trail": {
+        "source": "Shiptrail",
+        "source_url": "https://shiptrail.io/vessel/256387000-ganda",
+        "fetched_at": "2026-11-26T21:00:01+01:00",
+        "mmsi": "256387000",
+        "imo": "9298129",
+        "name": "GANDA",
+        "last_heard": "2026-11-26T17:08:34.000Z",
+        "position": {
+          "lat": 45.20943,
+          "lon": 14.30746,
+          "at": "2026-11-26T17:08:34.000Z",
+          "status": "Under way sailing",
+          "speed_kn": 10
+        },
+        "quay_distance_km": 16.84,
+        "at_quay": false,
+        "destination_raw": "HRRJK",
+        "bound_for": {
+          "locode": "HRRJK",
+          "name": "Rijeka",
+          "country": "Croatia"
+        },
+        "destination_eta": "2026-11-23T16:00:00.000Z",
+        "previous_port": null,
+        "still_in_port": null,
+        "recent_calls": [
+          {
+            "locode": "HRKOS",
+            "name": "Kostrena",
+            "country": "Croatia",
+            "arrived_at": "2026-11-25T10:42:53.000Z",
+            "departed_at": "2026-11-26T07:12:55.000Z"
+          },
+          {
+            "locode": "HRRJK",
+            "name": "Rijeka",
+            "country": "Croatia",
+            "arrived_at": "2026-11-25T09:30:01.000Z",
+            "departed_at": "2026-11-25T09:48:38.000Z"
+          },
+          {
+            "locode": "HRKOS",
+            "name": "Kostrena",
+            "country": "Croatia",
+            "arrived_at": "2026-11-23T19:32:48.000Z",
+            "departed_at": "2026-11-25T08:32:46.000Z"
+          }
+        ]
+      },
+      "voyage": {
+        "researched_at": "2026-11-24T13:48:00+01:00",
+        "previous_port": {
+          "name": "Derince",
+          "locode": "TRDRC",
+          "departed_at": "2026-11-18T00:15:00+01:00",
+          "kind": "actual",
+          "source": "VesselFinder (AIS port call, Last Port)",
+          "source_url": "https://www.vesselfinder.com/vessels/details/9298129",
+          "retrieved_at": "2026-11-24T13:48:00+01:00",
+          "confidence": "medium"
+        },
+        "next_port": null,
+        "notes": "Last Port ATD Nov 17 23:15 UTC (= Nov 18 00:15 Zagreb). Shiptrail has only an arrival at Kostrena (23 Nov), no earlier call. No next port found."
+      },
+      "profile": null
+    },
     {
       "call_id": "UNITY ONE|13",
       "name": "UNITY ONE",
@@ -1348,136 +1273,6 @@
         "notes": "AIS shows her moored at Trieste since 2026-11-14T05:49+01:00 (arrived from Koper, ATD 2026-11-13T06:46+01:00); not yet departed at research time. Port after Rijeka not found."
       },
       "profile": null
-    },
-    {
-      "call_id": "MSC EAGLE III|AH644A",
-      "name": "MSC EAGLE III",
-      "shipper": "MSC",
-      "voyage_in": "AH644A",
-      "voyage_out": "AH644A",
-      "status": "DEPARTED",
-      "eta": "2026-11-17T14:30:00+01:00",
-      "etd": "2026-11-18T05:00:00+01:00",
-      "ata": "2026-11-17T14:00:00+01:00",
-      "atd": "2026-11-18T08:30:00+01:00",
-      "phase": "departed",
-      "imo": "9302449",
-      "ais": {
-        "source": "Wingo Marine",
-        "source_url": "https://wingo-marine.com/ship/msc-eagle-iii-636024014",
-        "checked_at": "2026-11-18T08:00:00+01:00",
-        "found": true,
-        "mmsi": "636024014",
-        "distance_km": 4.2,
-        "nav": null,
-        "destination_raw": "HRPLE",
-        "destination": {
-          "locode": "HRPLE",
-          "name": "Ploče, Croatia"
-        },
-        "destination_kind": "ais_destination",
-        "berth_consistent": true,
-        "last_report": "2026-11-18T05:47:00.000Z",
-        "nearest_port_label": "Rijeka",
-        "imo": "9302449"
-      },
-      "trail": {
-        "source": "Shiptrail",
-        "source_url": "https://shiptrail.io/vessel/636024014-msc-eagle-iii",
-        "fetched_at": "2026-11-18T07:29:21+01:00",
-        "mmsi": "636024014",
-        "imo": "9302449",
-        "name": "MSC EAGLE III",
-        "last_heard": "2026-11-18T06:25:40.000Z",
-        "position": {
-          "lat": 45.31982,
-          "lon": 14.45363,
-          "at": "2026-11-18T06:25:40.000Z",
-          "status": "Moored",
-          "speed_kn": 0
-        },
-        "quay_distance_km": 0.07,
-        "at_quay": true,
-        "destination_raw": "HRPLE",
-        "bound_for": {
-          "locode": "HRPLE",
-          "name": "Ploce",
-          "country": "Croatia"
-        },
-        "destination_eta": "2026-11-19T05:30:00.000Z",
-        "previous_port": {
-          "locode": "ITTRS",
-          "name": "Trieste",
-          "country": "Italy",
-          "arrived_at": "2026-11-14T13:22:03.991Z",
-          "departed_at": "2026-11-16T00:47:16.744Z",
-          "url": "https://shiptrail.io/port/ittrs-trieste"
-        },
-        "still_in_port": null,
-        "recent_calls": [
-          {
-            "locode": "HRKOS",
-            "name": "Kostrena",
-            "country": "Croatia",
-            "arrived_at": "2026-11-17T12:51:22.000Z",
-            "departed_at": null
-          },
-          {
-            "locode": "HRRJK",
-            "name": "Rijeka",
-            "country": "Croatia",
-            "arrived_at": "2026-11-16T14:02:38.000Z",
-            "departed_at": "2026-11-17T12:21:15.000Z"
-          },
-          {
-            "locode": "ITTRS",
-            "name": "Trieste",
-            "country": "Italy",
-            "arrived_at": "2026-11-14T13:22:03.991Z",
-            "departed_at": "2026-11-16T00:47:16.744Z"
-          },
-          {
-            "locode": "SIKOP",
-            "name": "Koper",
-            "country": "Slovenia",
-            "arrived_at": "2026-11-13T11:44:52.115Z",
-            "departed_at": "2026-11-14T11:53:05.592Z"
-          },
-          {
-            "locode": "SIKOP",
-            "name": "Koper",
-            "country": "Slovenia",
-            "arrived_at": "2026-11-11T20:22:30.102Z",
-            "departed_at": "2026-11-13T11:08:54.757Z"
-          },
-          {
-            "locode": "ITVCE",
-            "name": "Venezia",
-            "country": "Italy",
-            "arrived_at": "2026-11-01T15:57:44.005Z",
-            "departed_at": "2026-11-03T07:11:50.094Z"
-          }
-        ]
-      },
-      "voyage": {
-        "researched_at": "2026-11-16T16:24:23+01:00",
-        "previous_port": {
-          "name": "Trieste",
-          "locode": "ITTRS",
-          "country": "Italy",
-          "arrived_at": "2026-11-14T14:22:03+01:00",
-          "departed_at": "2026-11-16T01:47:16+01:00",
-          "kind": "actual",
-          "source": "Shiptrail (AIS port-call history)",
-          "source_url": "https://shiptrail.io/vessel/636024014-msc-eagle-iii",
-          "retrieved_at": "2026-11-18T07:29:21+01:00",
-          "auto": true,
-          "confidence": "high"
-        },
-        "next_port": null,
-        "notes": "On 16 Nov ~16:00 local VesselFinder showed her at anchor in the Adriatic bound for Rijeka; Wingo placed her 18 km from the port. Next port after Rijeka not established."
-      },
-      "profile": null
     }
   ],
   "ais": {
@@ -1485,18 +1280,18 @@
       "name": "Wingo Marine",
       "url": "https://wingo-marine.com/port/rijeka-2263",
       "ok": true,
-      "fetched_at": "2026-11-26T21:15:00+01:00",
-      "last_attempt_at": "2026-11-26T21:15:00+01:00",
+      "fetched_at": "2026-11-26T22:00:01+01:00",
+      "last_attempt_at": "2026-11-26T22:00:01+01:00",
       "error": null,
-      "summary": "27 vessels reported within 15 km in the last 24 hours",
+      "summary": "26 vessels reported within 15 km in the last 24 hours",
       "vessels_listed": 31
     },
     "aiscatcher": {
       "name": "AIS-catcher",
       "url": "https://www.aiscatcher.org/place/6398/brajdica-container-terminal",
       "ok": true,
-      "fetched_at": "2026-11-26T21:15:00+01:00",
-      "last_attempt_at": "2026-11-26T21:15:00+01:00",
+      "fetched_at": "2026-11-26T22:00:01+01:00",
+      "last_attempt_at": "2026-11-26T22:00:01+01:00",
       "error": null,
       "receiving_stations": 0,
       "vessels_inside": 0,
@@ -1507,20 +1302,13 @@
       "name": "Shiptrail",
       "url": "https://shiptrail.io/",
       "ok": true,
-      "fetched_at": "2026-11-26T21:15:00+01:00",
-      "last_attempt_at": "2026-11-26T21:15:00+01:00",
+      "fetched_at": "2026-11-26T22:00:01+01:00",
+      "last_attempt_at": "2026-11-26T22:00:01+01:00",
       "error": null,
       "note": "AIS-derived port calls and positions. Data: Shiptrail, shiptrail.io"
     }
   },
   "last_events": [
-    {
-      "type": "arrived",
-      "call_id": "GANDA|15",
-      "name": "GANDA",
-      "at": "2026-11-25T07:00:00+01:00",
-      "observed": "2026-11-24T13:45:00+01:00"
-    },
     {
       "type": "eta_changed",
       "call_id": "CMA CGM CARMEN|PHX010E19",
@@ -1591,11 +1379,18 @@
       "from": "ARRIVED",
       "to": "UNDER OPS",
       "observed": "2026-11-26T13:00:00+01:00"
+    },
+    {
+      "type": "departed",
+      "call_id": "GANDA|15",
+      "name": "GANDA",
+      "at": "2026-11-26T17:00:00+01:00",
+      "observed": "2026-11-26T22:00:01+01:00"
     }
   ],
   "stale_after_hours": 3,
   "research_pending": [],
   "research_needed": [],
-  "next_check_at": "2026-11-26T22:15:00+01:00",
+  "next_check_at": "2026-11-26T23:00:01+01:00",
   "stale_grace_minutes": 100
 }
