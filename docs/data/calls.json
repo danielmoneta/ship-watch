@@ -1,124 +1,5 @@
 {
   "calls": {
-    "MSC TERESA|QX644E": {
-      "call_id": "MSC TERESA|QX644E",
-      "name": "MSC TERESA",
-      "shipper": "MSC",
-      "voyage_in": "QX644E",
-      "voyage_out": "QX644E",
-      "status": "DEPARTED",
-      "eta": "2026-11-16T06:30:00+01:00",
-      "etd": "2026-11-17T06:30:00+01:00",
-      "ata": "2026-11-16T10:30:00+01:00",
-      "atd": "2026-11-17T12:30:00+01:00",
-      "phase": "departed",
-      "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-26T23:00:00+01:00",
-      "listed": true,
-      "imo": "9469560",
-      "ais": {
-        "source": "Wingo Marine",
-        "source_url": "https://wingo-marine.com/ship/msc-teresa-357891000",
-        "checked_at": "2026-11-17T11:30:01+01:00",
-        "found": true,
-        "mmsi": "357891000",
-        "distance_km": 4.3,
-        "nav": null,
-        "destination_raw": "ITTRS",
-        "destination": {
-          "locode": "ITTRS",
-          "name": "Trieste, Italy"
-        },
-        "destination_kind": "ais_destination",
-        "berth_consistent": true,
-        "last_report": "2026-11-17T10:24:00.000Z",
-        "nearest_port_label": "Kostrena",
-        "imo": "9469560"
-      },
-      "trail": {
-        "source": "Shiptrail",
-        "source_url": "https://shiptrail.io/vessel/357891000-msc-teresa",
-        "fetched_at": "2026-11-17T11:30:01+01:00",
-        "mmsi": "357891000",
-        "imo": "9469560",
-        "name": "MSC TERESA",
-        "last_heard": "2026-11-17T10:28:05.000Z",
-        "position": {
-          "lat": 45.31936,
-          "lon": 14.45543,
-          "at": "2026-11-17T10:28:05.000Z",
-          "status": "Moored",
-          "speed_kn": 0
-        },
-        "quay_distance_km": 0.1,
-        "at_quay": true,
-        "destination_raw": "ITTRS",
-        "bound_for": {
-          "locode": "ITTRS",
-          "name": "Trieste",
-          "country": "Italy"
-        },
-        "destination_eta": "2026-11-18T07:00:00.000Z",
-        "previous_port": {
-          "locode": "ILHFA",
-          "name": "Haifa",
-          "country": "Israel",
-          "arrived_at": "2026-11-11T05:01:04.523Z",
-          "departed_at": "2026-11-12T12:18:52.222Z",
-          "url": "https://shiptrail.io/port/ilhfa-haifa"
-        },
-        "recent_calls": [
-          {
-            "locode": "HRKOS",
-            "name": "Kostrena",
-            "country": "Croatia",
-            "arrived_at": "2026-11-16T08:15:43.000Z",
-            "departed_at": null
-          },
-          {
-            "locode": "ILHFA",
-            "name": "Haifa",
-            "country": "Israel",
-            "arrived_at": "2026-11-11T05:01:04.523Z",
-            "departed_at": "2026-11-12T12:18:52.222Z"
-          },
-          {
-            "locode": "ILASH",
-            "name": "Ashdod",
-            "country": "Israel",
-            "arrived_at": "2026-11-07T20:29:01.042Z",
-            "departed_at": "2026-11-10T21:41:53.315Z"
-          },
-          {
-            "locode": "ILASH",
-            "name": "Ashdod",
-            "country": "Israel",
-            "arrived_at": "2026-11-07T15:12:34.803Z",
-            "departed_at": "2026-11-07T17:56:35.607Z"
-          },
-          {
-            "locode": "ILASH",
-            "name": "Ashdod",
-            "country": "Israel",
-            "arrived_at": "2026-11-06T10:19:00.865Z",
-            "departed_at": "2026-11-07T14:33:04.672Z"
-          }
-        ],
-        "particulars": {
-          "built": "2011",
-          "grossTonnage": 153115,
-          "netTonnage": 89067,
-          "deadweight": 165501,
-          "service": "Freight Ship",
-          "builder": "Hanwha Ocean",
-          "operator": "Mediterranean Shipping Company SRL",
-          "registry": "Panama",
-          "portOfRegistry": "Panama City",
-          "yardNumber": "4195"
-        },
-        "still_in_port": null
-      }
-    },
     "MSC EAGLE III|AH644A": {
       "call_id": "MSC EAGLE III|AH644A",
       "name": "MSC EAGLE III",
@@ -132,7 +13,7 @@
       "atd": "2026-11-18T08:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-26T23:00:00+01:00",
+      "last_seen": "2026-11-27T00:00:00+01:00",
       "listed": true,
       "imo": "9302449",
       "ais": {
@@ -254,7 +135,7 @@
       "atd": "2026-11-20T03:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-26T23:00:00+01:00",
+      "last_seen": "2026-11-27T00:00:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
@@ -361,7 +242,7 @@
       "atd": "2026-11-23T12:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-26T23:00:00+01:00",
+      "last_seen": "2026-11-27T00:00:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
@@ -480,7 +361,7 @@
       "atd": "2026-11-20T18:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-26T23:00:00+01:00",
+      "last_seen": "2026-11-27T00:00:00+01:00",
       "listed": true,
       "imo": "9169043",
       "ais": {
@@ -603,7 +484,7 @@
       "atd": "2026-11-21T11:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-26T23:00:00+01:00",
+      "last_seen": "2026-11-27T00:00:00+01:00",
       "listed": true,
       "imo": "9961350",
       "ais": {
@@ -718,7 +599,7 @@
       "atd": "2026-11-26T17:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-19T13:00:00+01:00",
-      "last_seen": "2026-11-26T23:00:00+01:00",
+      "last_seen": "2026-11-27T00:00:00+01:00",
       "listed": true,
       "imo": "9298129",
       "ais": {
@@ -798,12 +679,12 @@
       "atd": null,
       "phase": "at_berth",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-26T23:00:00+01:00",
+      "last_seen": "2026-11-27T00:00:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/cma-cgm-antigone-249787000",
-        "checked_at": "2026-11-26T23:00:00+01:00",
+        "checked_at": "2026-11-27T00:00:00+01:00",
         "found": true,
         "mmsi": "249787000",
         "distance_km": 4.4,
@@ -815,7 +696,7 @@
         },
         "destination_kind": "ais_destination",
         "berth_consistent": true,
-        "last_report": "2026-11-26T21:43:00.000Z",
+        "last_report": "2026-11-26T22:12:00.000Z",
         "nearest_port_label": "Kostrena",
         "imo": "9996989"
       },
@@ -823,7 +704,7 @@
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/249787000-cma-cgm-antigone",
-        "fetched_at": "2026-11-26T23:00:00+01:00",
+        "fetched_at": "2026-11-27T00:00:00+01:00",
         "mmsi": "249787000",
         "imo": "9996989",
         "name": "CMA CGM ANTIGONE",
@@ -899,12 +780,12 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-23T06:45:00+01:00",
-      "last_seen": "2026-11-26T23:00:00+01:00",
+      "last_seen": "2026-11-27T00:00:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/michigan-215020000",
-        "checked_at": "2026-11-26T23:00:00+01:00",
+        "checked_at": "2026-11-27T00:00:00+01:00",
         "found": true,
         "mmsi": "215020000",
         "distance_km": 4,
@@ -922,17 +803,17 @@
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/215020000-michigan",
-        "fetched_at": "2026-11-26T23:00:00+01:00",
+        "fetched_at": "2026-11-27T00:00:00+01:00",
         "mmsi": "215020000",
         "imo": "9437139",
         "name": "MICHIGAN",
-        "last_heard": "2026-11-26T20:36:48.000Z",
+        "last_heard": "2026-11-26T22:53:37.000Z",
         "position": {
-          "lat": 45.28142,
-          "lon": 14.40441,
-          "at": "2026-11-26T20:36:48.000Z",
+          "lat": 45.28125,
+          "lon": 14.40471,
+          "at": "2026-11-26T22:53:37.000Z",
           "status": "Under way under engine power",
-          "speed_kn": 0.2
+          "speed_kn": 0.1
         },
         "quay_distance_km": 5.81,
         "at_quay": false,
@@ -1018,16 +899,16 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-23T06:45:00+01:00",
-      "last_seen": "2026-11-26T23:00:00+01:00",
+      "last_seen": "2026-11-27T00:00:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/cma-cgm-quest-232061535",
-        "checked_at": "2026-11-26T23:00:00+01:00",
+        "checked_at": "2026-11-27T00:00:00+01:00",
         "found": true,
         "mmsi": "232061535",
-        "distance_km": 813,
-        "nav": "14.1 kn",
+        "distance_km": 798,
+        "nav": "14.5 kn",
         "destination_raw": "HRRJK",
         "destination": {
           "locode": "HRRJK",
@@ -1041,7 +922,7 @@
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/232061535-cma-cgm-quest",
-        "fetched_at": "2026-11-26T23:00:00+01:00",
+        "fetched_at": "2026-11-27T00:00:00+01:00",
         "mmsi": "232061535",
         "imo": "9734159",
         "name": "CMA CGM QUEST",
@@ -1134,7 +1015,7 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-23T08:15:00+01:00",
-      "last_seen": "2026-11-26T23:00:00+01:00",
+      "last_seen": "2026-11-27T00:00:00+01:00",
       "listed": true
     },
     "SC MEDFORD|153W": {
@@ -1150,8 +1031,127 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-23T06:45:00+01:00",
-      "last_seen": "2026-11-26T23:00:00+01:00",
+      "last_seen": "2026-11-27T00:00:00+01:00",
       "listed": true
+    },
+    "MSC TERESA|QX644E": {
+      "call_id": "MSC TERESA|QX644E",
+      "name": "MSC TERESA",
+      "shipper": "MSC",
+      "voyage_in": "QX644E",
+      "voyage_out": "QX644E",
+      "status": "DEPARTED",
+      "eta": "2026-11-16T06:30:00+01:00",
+      "etd": "2026-11-17T06:30:00+01:00",
+      "ata": "2026-11-16T10:30:00+01:00",
+      "atd": "2026-11-17T12:30:00+01:00",
+      "phase": "departed",
+      "first_seen": "2026-11-16T16:12:47+01:00",
+      "last_seen": "2026-11-26T23:00:00+01:00",
+      "listed": false,
+      "imo": "9469560",
+      "ais": {
+        "source": "Wingo Marine",
+        "source_url": "https://wingo-marine.com/ship/msc-teresa-357891000",
+        "checked_at": "2026-11-17T11:30:01+01:00",
+        "found": true,
+        "mmsi": "357891000",
+        "distance_km": 4.3,
+        "nav": null,
+        "destination_raw": "ITTRS",
+        "destination": {
+          "locode": "ITTRS",
+          "name": "Trieste, Italy"
+        },
+        "destination_kind": "ais_destination",
+        "berth_consistent": true,
+        "last_report": "2026-11-17T10:24:00.000Z",
+        "nearest_port_label": "Kostrena",
+        "imo": "9469560"
+      },
+      "trail": {
+        "source": "Shiptrail",
+        "source_url": "https://shiptrail.io/vessel/357891000-msc-teresa",
+        "fetched_at": "2026-11-17T11:30:01+01:00",
+        "mmsi": "357891000",
+        "imo": "9469560",
+        "name": "MSC TERESA",
+        "last_heard": "2026-11-17T10:28:05.000Z",
+        "position": {
+          "lat": 45.31936,
+          "lon": 14.45543,
+          "at": "2026-11-17T10:28:05.000Z",
+          "status": "Moored",
+          "speed_kn": 0
+        },
+        "quay_distance_km": 0.1,
+        "at_quay": true,
+        "destination_raw": "ITTRS",
+        "bound_for": {
+          "locode": "ITTRS",
+          "name": "Trieste",
+          "country": "Italy"
+        },
+        "destination_eta": "2026-11-18T07:00:00.000Z",
+        "previous_port": {
+          "locode": "ILHFA",
+          "name": "Haifa",
+          "country": "Israel",
+          "arrived_at": "2026-11-11T05:01:04.523Z",
+          "departed_at": "2026-11-12T12:18:52.222Z",
+          "url": "https://shiptrail.io/port/ilhfa-haifa"
+        },
+        "recent_calls": [
+          {
+            "locode": "HRKOS",
+            "name": "Kostrena",
+            "country": "Croatia",
+            "arrived_at": "2026-11-16T08:15:43.000Z",
+            "departed_at": null
+          },
+          {
+            "locode": "ILHFA",
+            "name": "Haifa",
+            "country": "Israel",
+            "arrived_at": "2026-11-11T05:01:04.523Z",
+            "departed_at": "2026-11-12T12:18:52.222Z"
+          },
+          {
+            "locode": "ILASH",
+            "name": "Ashdod",
+            "country": "Israel",
+            "arrived_at": "2026-11-07T20:29:01.042Z",
+            "departed_at": "2026-11-10T21:41:53.315Z"
+          },
+          {
+            "locode": "ILASH",
+            "name": "Ashdod",
+            "country": "Israel",
+            "arrived_at": "2026-11-07T15:12:34.803Z",
+            "departed_at": "2026-11-07T17:56:35.607Z"
+          },
+          {
+            "locode": "ILASH",
+            "name": "Ashdod",
+            "country": "Israel",
+            "arrived_at": "2026-11-06T10:19:00.865Z",
+            "departed_at": "2026-11-07T14:33:04.672Z"
+          }
+        ],
+        "particulars": {
+          "built": "2011",
+          "grossTonnage": 153115,
+          "netTonnage": 89067,
+          "deadweight": 165501,
+          "service": "Freight Ship",
+          "builder": "Hanwha Ocean",
+          "operator": "Mediterranean Shipping Company SRL",
+          "registry": "Panama",
+          "portOfRegistry": "Panama City",
+          "yardNumber": "4195"
+        },
+        "still_in_port": null
+      }
     },
     "SC MEDFORD|152W": {
       "call_id": "SC MEDFORD|152W",
