@@ -1,15 +1,6 @@
 {
   "runs": [
     {
-      "at": "2026-11-17T11:45:01+01:00",
-      "terminal_ok": true,
-      "rows": 15,
-      "berth": [],
-      "events": 1,
-      "research_needed": [],
-      "errors": []
-    },
-    {
       "at": "2026-11-17T12:30:00+01:00",
       "terminal_ok": true,
       "rows": 15,
@@ -5695,6 +5686,18 @@
     },
     {
       "at": "2026-11-26T05:00:00+01:00",
+      "terminal_ok": true,
+      "rows": 12,
+      "berth": [
+        "CMA CGM ANTIGONE",
+        "GANDA"
+      ],
+      "events": 0,
+      "research_needed": [],
+      "errors": []
+    },
+    {
+      "at": "2026-11-26T05:15:00+01:00",
       "terminal_ok": true,
       "rows": 12,
       "berth": [
