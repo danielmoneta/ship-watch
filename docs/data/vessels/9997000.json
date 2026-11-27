@@ -1,0 +1,44 @@
+{
+  "imo": "9997000",
+  "name": "CMA CGM CARMEN",
+  "aliases": [],
+  "mmsi": "248039000",
+  "fields": {
+    "flag": {
+      "value": "Malta",
+      "source": "Wingo Marine (AIS)",
+      "source_url": "https://wingo-marine.com/ship/cma-cgm-carmen-248039000",
+      "retrieved_at": "2026-11-27T10:30:00+01:00",
+      "confidence": "medium"
+    },
+    "length_m": {
+      "value": 366,
+      "source": "Wingo Marine (AIS broadcast dimensions)",
+      "source_url": "https://wingo-marine.com/ship/cma-cgm-carmen-248039000",
+      "retrieved_at": "2026-11-27T10:30:00+01:00",
+      "confidence": "medium"
+    },
+    "beam_m": {
+      "value": 51,
+      "source": "Wingo Marine (AIS broadcast dimensions)",
+      "source_url": "https://wingo-marine.com/ship/cma-cgm-carmen-248039000",
+      "retrieved_at": "2026-11-27T10:30:00+01:00",
+      "confidence": "medium"
+    },
+    "callsign": {
+      "value": "9HA6486",
+      "source": "Wingo Marine (AIS)",
+      "source_url": "https://wingo-marine.com/ship/cma-cgm-carmen-248039000",
+      "retrieved_at": "2026-11-27T10:30:00+01:00",
+      "confidence": "medium"
+    }
+  },
+  "photo": null,
+  "facts": [],
+  "research": {
+    "status": "auto",
+    "researched_at": null,
+    "missing": [],
+    "notes": "Created automatically from AIS data; awaiting research."
+  }
+}

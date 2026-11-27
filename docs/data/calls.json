@@ -13,7 +13,7 @@
       "atd": "2026-11-18T08:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-27T10:00:00+01:00",
+      "last_seen": "2026-11-27T10:30:00+01:00",
       "listed": true,
       "imo": "9302449",
       "ais": {
@@ -135,7 +135,7 @@
       "atd": "2026-11-20T03:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-27T10:00:00+01:00",
+      "last_seen": "2026-11-27T10:30:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
@@ -242,7 +242,7 @@
       "atd": "2026-11-23T12:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-27T10:00:00+01:00",
+      "last_seen": "2026-11-27T10:30:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
@@ -361,7 +361,7 @@
       "atd": "2026-11-20T18:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-27T10:00:00+01:00",
+      "last_seen": "2026-11-27T10:30:00+01:00",
       "listed": true,
       "imo": "9169043",
       "ais": {
@@ -484,7 +484,7 @@
       "atd": "2026-11-21T11:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-27T10:00:00+01:00",
+      "last_seen": "2026-11-27T10:30:00+01:00",
       "listed": true,
       "imo": "9961350",
       "ais": {
@@ -599,7 +599,7 @@
       "atd": "2026-11-26T17:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-19T13:00:00+01:00",
-      "last_seen": "2026-11-27T10:00:00+01:00",
+      "last_seen": "2026-11-27T10:30:00+01:00",
       "listed": true,
       "imo": "9298129",
       "ais": {
@@ -679,7 +679,7 @@
       "atd": "2026-11-27T09:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-27T10:00:00+01:00",
+      "last_seen": "2026-11-27T10:30:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
@@ -773,19 +773,19 @@
       "shipper": "MSC",
       "voyage_in": "AH646A",
       "voyage_out": "AH646A",
-      "status": "IN ARRIVAL",
+      "status": "ARRIVED",
       "eta": "2026-11-27T12:00:00+01:00",
       "etd": "2026-11-28T14:30:00+01:00",
-      "ata": null,
+      "ata": "2026-11-27T10:30:00+01:00",
       "atd": null,
-      "phase": "expected",
+      "phase": "at_berth",
       "first_seen": "2026-11-23T06:45:00+01:00",
-      "last_seen": "2026-11-27T10:00:00+01:00",
+      "last_seen": "2026-11-27T10:30:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/michigan-215020000",
-        "checked_at": "2026-11-27T10:00:00+01:00",
+        "checked_at": "2026-11-27T10:30:00+01:00",
         "found": true,
         "mmsi": "215020000",
         "distance_km": 3.7,
@@ -797,7 +797,9 @@
         },
         "destination_kind": "ais_destination",
         "berth_consistent": false,
-        "last_report": null
+        "last_report": "2026-11-27T08:06:00.000Z",
+        "nearest_port_label": "Rijeka",
+        "imo": "9437139"
       },
       "imo": "9437139",
       "trail": {
@@ -899,16 +901,16 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-23T06:45:00+01:00",
-      "last_seen": "2026-11-27T10:00:00+01:00",
+      "last_seen": "2026-11-27T10:30:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/cma-cgm-quest-232061535",
-        "checked_at": "2026-11-27T10:00:00+01:00",
+        "checked_at": "2026-11-27T10:30:00+01:00",
         "found": true,
         "mmsi": "232061535",
-        "distance_km": 640,
-        "nav": "13.6 kn",
+        "distance_km": 618,
+        "nav": "13.8 kn",
         "destination_raw": "HRRJK",
         "destination": {
           "locode": "HRRJK",
@@ -1015,8 +1017,72 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-23T08:15:00+01:00",
-      "last_seen": "2026-11-27T10:00:00+01:00",
-      "listed": true
+      "last_seen": "2026-11-27T10:30:00+01:00",
+      "listed": true,
+      "imo": "9997000",
+      "ais": {
+        "source": "Wingo Marine",
+        "source_url": "https://wingo-marine.com/ship/cma-cgm-carmen-248039000",
+        "checked_at": "2026-11-27T10:30:00+01:00",
+        "found": true,
+        "mmsi": "248039000",
+        "distance_km": null,
+        "nav": "16.8 kn",
+        "destination_raw": "HRRJK",
+        "destination": {
+          "locode": "HRRJK",
+          "name": "Rijeka, Croatia"
+        },
+        "destination_kind": "ais_destination",
+        "berth_consistent": false,
+        "last_report": "2026-11-27T09:17:00.000Z",
+        "nearest_port_label": null,
+        "imo": "9997000"
+      },
+      "trail": {
+        "source": "Shiptrail",
+        "source_url": "https://shiptrail.io/vessel/248039000-cma-cgm-carmen",
+        "fetched_at": "2026-11-27T10:30:00+01:00",
+        "mmsi": "248039000",
+        "imo": "9997000",
+        "name": "CMA CGM CARMEN",
+        "last_heard": "2026-11-26T16:52:00.000Z",
+        "position": {
+          "lat": 35.9088,
+          "lon": 27.3641,
+          "at": "2026-11-26T17:07:00.000Z",
+          "status": null,
+          "speed_kn": null
+        },
+        "quay_distance_km": 1507.26,
+        "at_quay": false,
+        "destination_raw": "HRRJK",
+        "bound_for": {
+          "locode": "HRRJK",
+          "name": "Rijeka",
+          "country": "Croatia"
+        },
+        "destination_eta": "2026-11-29T04:00:00.000Z",
+        "previous_port": {
+          "locode": "SGSIN",
+          "name": "Singapore",
+          "country": "Singapore",
+          "arrived_at": "2026-10-28T02:31:33.538Z",
+          "departed_at": "2026-10-28T02:53:03.774Z",
+          "url": "https://shiptrail.io/port/sgsin-singapore"
+        },
+        "recent_calls": [
+          {
+            "locode": "SGSIN",
+            "name": "Singapore",
+            "country": "Singapore",
+            "arrived_at": "2026-10-28T02:31:33.538Z",
+            "departed_at": "2026-10-28T02:53:03.774Z"
+          }
+        ],
+        "particulars": null,
+        "still_in_port": null
+      }
     },
     "SC MEDFORD|153W": {
       "call_id": "SC MEDFORD|153W",
@@ -1031,7 +1097,7 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-23T06:45:00+01:00",
-      "last_seen": "2026-11-27T10:00:00+01:00",
+      "last_seen": "2026-11-27T10:30:00+01:00",
       "listed": true
     },
     "MSC TERESA|QX644E": {
