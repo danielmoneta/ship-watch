@@ -1,20 +1,6 @@
 {
   "runs": [
     {
-      "at": "2026-11-18T13:45:00+01:00",
-      "terminal_ok": true,
-      "rows": 15,
-      "berth": [
-        "MSC AUDREY"
-      ],
-      "events": 0,
-      "research_needed": [
-        "MSC CAITLIN II",
-        "CMA CGM ALTAMIRA"
-      ],
-      "errors": []
-    },
-    {
       "at": "2026-11-18T14:30:00+01:00",
       "terminal_ok": true,
       "rows": 15,
@@ -5709,6 +5695,17 @@
     },
     {
       "at": "2026-11-27T20:00:00+01:00",
+      "terminal_ok": true,
+      "rows": 11,
+      "berth": [
+        "MICHIGAN"
+      ],
+      "events": 0,
+      "research_needed": [],
+      "errors": []
+    },
+    {
+      "at": "2026-11-27T20:30:00+01:00",
       "terminal_ok": true,
       "rows": 11,
       "berth": [
