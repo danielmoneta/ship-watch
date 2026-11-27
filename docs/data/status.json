@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-27T10:30:00+01:00",
+  "generated_at": "2026-11-27T10:45:00+01:00",
   "timezone": "Europe/Zagreb",
   "terminal": {
     "url": "https://webusercorner.ictsi.hr/?language=EN",
     "query_url": "https://webusercorner.ictsi.hr/?language=EN&from=17.11.2026&to=18.12.2026",
     "ok": true,
-    "fetched_at": "2026-11-27T10:30:00+01:00",
-    "last_attempt_at": "2026-11-27T10:30:00+01:00",
+    "fetched_at": "2026-11-27T10:45:00+01:00",
+    "last_attempt_at": "2026-11-27T10:45:00+01:00",
     "rows": 11,
     "error": null
   },
@@ -29,7 +29,7 @@
         "ais": {
           "source": "Wingo Marine",
           "source_url": "https://wingo-marine.com/ship/michigan-215020000",
-          "checked_at": "2026-11-27T10:30:00+01:00",
+          "checked_at": "2026-11-27T10:45:00+01:00",
           "found": true,
           "mmsi": "215020000",
           "distance_km": 3.7,
@@ -245,7 +245,7 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/cma-cgm-quest-232061535",
-        "checked_at": "2026-11-27T10:30:00+01:00",
+        "checked_at": "2026-11-27T10:45:00+01:00",
         "found": true,
         "mmsi": "232061535",
         "distance_km": 618,
@@ -476,7 +476,7 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/cma-cgm-carmen-248039000",
-        "checked_at": "2026-11-27T10:30:00+01:00",
+        "checked_at": "2026-11-27T10:45:00+01:00",
         "found": true,
         "mmsi": "248039000",
         "distance_km": null,
@@ -488,9 +488,7 @@
         },
         "destination_kind": "ais_destination",
         "berth_consistent": false,
-        "last_report": "2026-11-27T09:17:00.000Z",
-        "nearest_port_label": null,
-        "imo": "9997000"
+        "last_report": null
       },
       "trail": {
         "source": "Shiptrail",
@@ -583,15 +581,65 @@
             "source_url": "https://wingo-marine.com/ship/cma-cgm-carmen-248039000",
             "retrieved_at": "2026-11-27T10:30:00+01:00",
             "confidence": "medium"
+          },
+          "type": {
+            "value": "Container ship",
+            "source": "Flexport Atlas; VesselFinder",
+            "source_url": "https://atlas.flexport.com/vessel/imo:9997000/mmsi:248039000/name:cma-cgm-carmen",
+            "retrieved_at": "2026-11-27T12:00:00+01:00",
+            "confidence": "medium"
+          },
+          "year_built": {
+            "value": 2026,
+            "source": "Flexport Atlas (via web search summary)",
+            "source_url": "https://atlas.flexport.com/vessel/imo:9997000/mmsi:248039000/name:cma-cgm-carmen",
+            "retrieved_at": "2026-11-27T12:00:00+01:00",
+            "confidence": "low",
+            "note": "Search summary only; page itself not fetchable from this environment."
+          },
+          "builder": {
+            "value": "CSSC Jiangnan Shipyard",
+            "source": "Ship & Bunker (via web search summary)",
+            "source_url": "https://shipandbunker.com/news/world/729419-cma-cgm-takes-delivery-of-methanol-fuelled-boxship",
+            "retrieved_at": "2026-11-27T12:00:00+01:00",
+            "confidence": "low",
+            "note": "Search summary only; article not fetchable from this environment."
+          },
+          "teu": {
+            "value": 15000,
+            "source": "Ship & Bunker; Flexport Atlas (via web search summary)",
+            "source_url": "https://atlas.flexport.com/vessel/imo:9997000/mmsi:248039000/name:cma-cgm-carmen",
+            "retrieved_at": "2026-11-27T12:00:00+01:00",
+            "confidence": "low",
+            "note": "Sources disagree: 15,000 TEU (Ship & Bunker, Flexport) vs 16,188 TEU (later Flexport snapshot). 15,000 is the more consistent figure."
+          },
+          "deadweight_t": {
+            "value": 158781,
+            "source": "Maritime Optima (via web search summary)",
+            "source_url": "https://maritimeoptima.com/public/vessels/pages/imo:9997000/mmsi:248039000/CMA_CGM_CARMEN.html",
+            "retrieved_at": "2026-11-27T12:00:00+01:00",
+            "confidence": "low",
+            "note": "Summer deadweight; search summary only."
+          },
+          "operator": {
+            "value": "CMA CGM",
+            "source": "Ship & Bunker (via web search summary)",
+            "source_url": "https://shipandbunker.com/news/world/729419-cma-cgm-takes-delivery-of-methanol-fuelled-boxship",
+            "retrieved_at": "2026-11-27T12:00:00+01:00",
+            "confidence": "low",
+            "note": "Inferred from delivery report headline and vessel name."
           }
         },
         "photo": null,
         "facts": [],
         "research": {
-          "status": "auto",
-          "researched_at": null,
-          "missing": [],
-          "notes": "Created automatically from AIS data; awaiting research."
+          "status": "partial",
+          "researched_at": "2026-11-27T12:00:00+01:00",
+          "missing": [
+            "gross_tonnage",
+            "photo"
+          ],
+          "notes": "Shiptrail has no particulars for this ship; VesselFinder blocked (403); several sources not fetchable. Values from web search summaries, hence low confidence. Photo: none found in Commons for IMO 9997000."
         }
       }
     },
@@ -1191,8 +1239,8 @@
       "name": "Wingo Marine",
       "url": "https://wingo-marine.com/port/rijeka-2263",
       "ok": true,
-      "fetched_at": "2026-11-27T10:30:00+01:00",
-      "last_attempt_at": "2026-11-27T10:30:00+01:00",
+      "fetched_at": "2026-11-27T10:45:00+01:00",
+      "last_attempt_at": "2026-11-27T10:45:00+01:00",
       "error": null,
       "summary": "25 vessels reported within 15 km in the last 24 hours",
       "vessels_listed": 31
@@ -1201,8 +1249,8 @@
       "name": "AIS-catcher",
       "url": "https://www.aiscatcher.org/place/6398/brajdica-container-terminal",
       "ok": true,
-      "fetched_at": "2026-11-27T10:30:00+01:00",
-      "last_attempt_at": "2026-11-27T10:30:00+01:00",
+      "fetched_at": "2026-11-27T10:45:00+01:00",
+      "last_attempt_at": "2026-11-27T10:45:00+01:00",
       "error": null,
       "receiving_stations": 0,
       "vessels_inside": 0,
@@ -1213,8 +1261,8 @@
       "name": "Shiptrail",
       "url": "https://shiptrail.io/",
       "ok": true,
-      "fetched_at": "2026-11-27T10:30:00+01:00",
-      "last_attempt_at": "2026-11-27T10:30:00+01:00",
+      "fetched_at": "2026-11-27T10:45:00+01:00",
+      "last_attempt_at": "2026-11-27T10:45:00+01:00",
       "error": null,
       "note": "AIS-derived port calls and positions. Data: Shiptrail, shiptrail.io"
     }
@@ -1298,24 +1346,8 @@
     }
   ],
   "stale_after_hours": 3,
-  "research_pending": [
-    {
-      "name": "CMA CGM CARMEN",
-      "imo": "9997000",
-      "priority": "next_arrival"
-    }
-  ],
-  "research_needed": [
-    {
-      "name": "CMA CGM CARMEN",
-      "imo": "9997000",
-      "call_id": "CMA CGM CARMEN|PHX010E19",
-      "priority": "next_arrival",
-      "reasons": [
-        "profile holds only automatic AIS data"
-      ]
-    }
-  ],
-  "next_check_at": "2026-11-27T11:30:00+01:00",
+  "research_pending": [],
+  "research_needed": [],
+  "next_check_at": "2026-11-27T11:45:00+01:00",
   "stale_grace_minutes": 100
 }
