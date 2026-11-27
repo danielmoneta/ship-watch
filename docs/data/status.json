@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-27T18:30:01+01:00",
+  "generated_at": "2026-11-27T19:00:01+01:00",
   "timezone": "Europe/Zagreb",
   "terminal": {
     "url": "https://webusercorner.ictsi.hr/?language=EN",
     "query_url": "https://webusercorner.ictsi.hr/?language=EN&from=17.11.2026&to=18.12.2026",
     "ok": true,
-    "fetched_at": "2026-11-27T18:30:01+01:00",
-    "last_attempt_at": "2026-11-27T18:30:01+01:00",
+    "fetched_at": "2026-11-27T19:00:01+01:00",
+    "last_attempt_at": "2026-11-27T19:00:01+01:00",
     "rows": 11,
     "error": null
   },
@@ -29,7 +29,7 @@
         "ais": {
           "source": "Wingo Marine",
           "source_url": "https://wingo-marine.com/ship/michigan-215020000",
-          "checked_at": "2026-11-27T18:30:01+01:00",
+          "checked_at": "2026-11-27T19:00:01+01:00",
           "found": true,
           "mmsi": "215020000",
           "distance_km": 4.1,
@@ -49,15 +49,15 @@
         "trail": {
           "source": "Shiptrail",
           "source_url": "https://shiptrail.io/vessel/215020000-michigan",
-          "fetched_at": "2026-11-27T18:00:01+01:00",
+          "fetched_at": "2026-11-27T19:00:01+01:00",
           "mmsi": "215020000",
           "imo": "9437139",
           "name": "MICHIGAN",
-          "last_heard": "2026-11-27T16:54:39.000Z",
+          "last_heard": "2026-11-27T17:51:39.000Z",
           "position": {
-            "lat": 45.31985,
-            "lon": 14.45266,
-            "at": "2026-11-27T16:54:39.000Z",
+            "lat": 45.31987,
+            "lon": 14.45268,
+            "at": "2026-11-27T17:51:39.000Z",
             "status": "Moored",
             "speed_kn": 0
           },
@@ -134,7 +134,7 @@
             "kind": "actual",
             "source": "Shiptrail (AIS port-call history)",
             "source_url": "https://shiptrail.io/vessel/215020000-michigan",
-            "retrieved_at": "2026-11-27T18:00:01+01:00",
+            "retrieved_at": "2026-11-27T19:00:01+01:00",
             "auto": true,
             "confidence": "medium"
           }
@@ -245,7 +245,7 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/cma-cgm-quest-232061535",
-        "checked_at": "2026-11-27T18:30:01+01:00",
+        "checked_at": "2026-11-27T19:00:01+01:00",
         "found": true,
         "mmsi": "232061535",
         "distance_km": 451,
@@ -263,7 +263,7 @@
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/232061535-cma-cgm-quest",
-        "fetched_at": "2026-11-27T18:00:01+01:00",
+        "fetched_at": "2026-11-27T19:00:01+01:00",
         "mmsi": "232061535",
         "imo": "9734159",
         "name": "CMA CGM QUEST",
@@ -341,7 +341,7 @@
           "kind": "actual",
           "source": "Shiptrail (AIS port-call history)",
           "source_url": "https://shiptrail.io/vessel/232061535-cma-cgm-quest",
-          "retrieved_at": "2026-11-27T18:00:01+01:00",
+          "retrieved_at": "2026-11-27T19:00:01+01:00",
           "auto": true,
           "confidence": "medium"
         }
@@ -476,11 +476,11 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/cma-cgm-carmen-248039000",
-        "checked_at": "2026-11-27T18:30:01+01:00",
+        "checked_at": "2026-11-27T19:00:01+01:00",
         "found": true,
         "mmsi": "248039000",
         "distance_km": null,
-        "nav": "16.3 kn",
+        "nav": "16.6 kn",
         "destination_raw": "HRRJK",
         "destination": {
           "locode": "HRRJK",
@@ -1239,18 +1239,18 @@
       "name": "Wingo Marine",
       "url": "https://wingo-marine.com/port/rijeka-2263",
       "ok": true,
-      "fetched_at": "2026-11-27T18:30:01+01:00",
-      "last_attempt_at": "2026-11-27T18:30:01+01:00",
+      "fetched_at": "2026-11-27T19:00:01+01:00",
+      "last_attempt_at": "2026-11-27T19:00:01+01:00",
       "error": null,
       "summary": "25 vessels reported within 15 km in the last 24 hours",
-      "vessels_listed": 33
+      "vessels_listed": 34
     },
     "aiscatcher": {
       "name": "AIS-catcher",
       "url": "https://www.aiscatcher.org/place/6398/brajdica-container-terminal",
       "ok": true,
-      "fetched_at": "2026-11-27T18:30:01+01:00",
-      "last_attempt_at": "2026-11-27T18:30:01+01:00",
+      "fetched_at": "2026-11-27T19:00:01+01:00",
+      "last_attempt_at": "2026-11-27T19:00:01+01:00",
       "error": null,
       "receiving_stations": 0,
       "vessels_inside": 0,
@@ -1261,8 +1261,8 @@
       "name": "Shiptrail",
       "url": "https://shiptrail.io/",
       "ok": true,
-      "fetched_at": "2026-11-27T18:30:01+01:00",
-      "last_attempt_at": "2026-11-27T18:30:01+01:00",
+      "fetched_at": "2026-11-27T19:00:01+01:00",
+      "last_attempt_at": "2026-11-27T19:00:01+01:00",
       "error": null,
       "note": "AIS-derived port calls and positions. Data: Shiptrail, shiptrail.io"
     }
@@ -1349,6 +1349,6 @@
   "stale_after_hours": 3,
   "research_pending": [],
   "research_needed": [],
-  "next_check_at": "2026-11-27T19:30:01+01:00",
+  "next_check_at": "2026-11-27T20:00:01+01:00",
   "stale_grace_minutes": 100
 }
