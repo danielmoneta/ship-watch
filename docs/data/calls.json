@@ -13,7 +13,7 @@
       "atd": "2026-11-18T08:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-27T17:00:01+01:00",
+      "last_seen": "2026-11-27T17:30:00+01:00",
       "listed": true,
       "imo": "9302449",
       "ais": {
@@ -135,7 +135,7 @@
       "atd": "2026-11-20T03:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-27T17:00:01+01:00",
+      "last_seen": "2026-11-27T17:30:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
@@ -242,7 +242,7 @@
       "atd": "2026-11-23T12:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-27T17:00:01+01:00",
+      "last_seen": "2026-11-27T17:30:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
@@ -361,7 +361,7 @@
       "atd": "2026-11-20T18:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-27T17:00:01+01:00",
+      "last_seen": "2026-11-27T17:30:00+01:00",
       "listed": true,
       "imo": "9169043",
       "ais": {
@@ -484,7 +484,7 @@
       "atd": "2026-11-21T11:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-27T17:00:01+01:00",
+      "last_seen": "2026-11-27T17:30:00+01:00",
       "listed": true,
       "imo": "9961350",
       "ais": {
@@ -599,7 +599,7 @@
       "atd": "2026-11-26T17:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-19T13:00:00+01:00",
-      "last_seen": "2026-11-27T17:00:01+01:00",
+      "last_seen": "2026-11-27T17:30:00+01:00",
       "listed": true,
       "imo": "9298129",
       "ais": {
@@ -679,7 +679,7 @@
       "atd": "2026-11-27T09:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-27T17:00:01+01:00",
+      "last_seen": "2026-11-27T17:30:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
@@ -780,12 +780,12 @@
       "atd": null,
       "phase": "at_berth",
       "first_seen": "2026-11-23T06:45:00+01:00",
-      "last_seen": "2026-11-27T17:00:01+01:00",
+      "last_seen": "2026-11-27T17:30:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/michigan-215020000",
-        "checked_at": "2026-11-27T17:00:01+01:00",
+        "checked_at": "2026-11-27T17:30:00+01:00",
         "found": true,
         "mmsi": "215020000",
         "distance_km": 4.1,
@@ -901,15 +901,15 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-23T06:45:00+01:00",
-      "last_seen": "2026-11-27T17:00:01+01:00",
+      "last_seen": "2026-11-27T17:30:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/cma-cgm-quest-232061535",
-        "checked_at": "2026-11-27T17:00:01+01:00",
+        "checked_at": "2026-11-27T17:30:00+01:00",
         "found": true,
         "mmsi": "232061535",
-        "distance_km": 472,
+        "distance_km": 470,
         "nav": "13.8 kn",
         "destination_raw": "HRRJK",
         "destination": {
@@ -1017,17 +1017,17 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-23T08:15:00+01:00",
-      "last_seen": "2026-11-27T17:00:01+01:00",
+      "last_seen": "2026-11-27T17:30:00+01:00",
       "listed": true,
       "imo": "9997000",
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/cma-cgm-carmen-248039000",
-        "checked_at": "2026-11-27T17:00:01+01:00",
+        "checked_at": "2026-11-27T17:30:00+01:00",
         "found": true,
         "mmsi": "248039000",
         "distance_km": null,
-        "nav": "16.5 kn",
+        "nav": "16.3 kn",
         "destination_raw": "HRRJK",
         "destination": {
           "locode": "HRRJK",
@@ -1040,7 +1040,7 @@
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/248039000-cma-cgm-carmen",
-        "fetched_at": "2026-11-27T16:30:01+01:00",
+        "fetched_at": "2026-11-27T17:30:00+01:00",
         "mmsi": "248039000",
         "imo": "9997000",
         "name": "CMA CGM CARMEN",
@@ -1095,7 +1095,7 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-23T06:45:00+01:00",
-      "last_seen": "2026-11-27T17:00:01+01:00",
+      "last_seen": "2026-11-27T17:30:00+01:00",
       "listed": true
     },
     "MSC TERESA|QX644E": {
