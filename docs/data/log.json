@@ -1,15 +1,6 @@
 {
   "runs": [
     {
-      "at": "2026-11-18T09:45:00+01:00",
-      "terminal_ok": true,
-      "rows": 15,
-      "berth": [],
-      "events": 0,
-      "research_needed": [],
-      "errors": []
-    },
-    {
       "at": "2026-11-18T10:30:01+01:00",
       "terminal_ok": true,
       "rows": 15,
@@ -5719,6 +5710,19 @@
     },
     {
       "at": "2026-11-27T15:00:00+01:00",
+      "terminal_ok": true,
+      "rows": 11,
+      "berth": [
+        "MICHIGAN"
+      ],
+      "events": 0,
+      "research_needed": [],
+      "errors": [
+        "aiscatcher: HTTP 403"
+      ]
+    },
+    {
+      "at": "2026-11-27T15:30:00+01:00",
       "terminal_ok": true,
       "rows": 11,
       "berth": [
