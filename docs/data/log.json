@@ -1,17 +1,6 @@
 {
   "runs": [
     {
-      "at": "2026-11-18T06:30:00+01:00",
-      "terminal_ok": true,
-      "rows": 15,
-      "berth": [
-        "MSC EAGLE III"
-      ],
-      "events": 0,
-      "research_needed": [],
-      "errors": []
-    },
-    {
       "at": "2026-11-18T07:29:21+01:00",
       "terminal_ok": true,
       "rows": 15,
@@ -5705,6 +5694,17 @@
         "MICHIGAN"
       ],
       "events": 1,
+      "research_needed": [],
+      "errors": []
+    },
+    {
+      "at": "2026-11-27T11:30:00+01:00",
+      "terminal_ok": true,
+      "rows": 11,
+      "berth": [
+        "MICHIGAN"
+      ],
+      "events": 0,
       "research_needed": [],
       "errors": []
     }
