@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-27T09:45:00+01:00",
+  "generated_at": "2026-11-27T10:00:00+01:00",
   "timezone": "Europe/Zagreb",
   "terminal": {
     "url": "https://webusercorner.ictsi.hr/?language=EN",
     "query_url": "https://webusercorner.ictsi.hr/?language=EN&from=17.11.2026&to=18.12.2026",
     "ok": true,
-    "fetched_at": "2026-11-27T09:45:00+01:00",
-    "last_attempt_at": "2026-11-27T09:45:00+01:00",
+    "fetched_at": "2026-11-27T10:00:00+01:00",
+    "last_attempt_at": "2026-11-27T10:00:00+01:00",
     "rows": 11,
     "error": null
   },
@@ -31,7 +31,7 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/michigan-215020000",
-        "checked_at": "2026-11-27T09:45:00+01:00",
+        "checked_at": "2026-11-27T10:00:00+01:00",
         "found": true,
         "mmsi": "215020000",
         "distance_km": 3.7,
@@ -49,19 +49,19 @@
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/215020000-michigan",
-        "fetched_at": "2026-11-27T09:00:00+01:00",
+        "fetched_at": "2026-11-27T10:00:00+01:00",
         "mmsi": "215020000",
         "imo": "9437139",
         "name": "MICHIGAN",
-        "last_heard": "2026-11-27T07:47:55.000Z",
+        "last_heard": "2026-11-27T08:59:17.000Z",
         "position": {
-          "lat": 45.28238,
-          "lon": 14.40473,
-          "at": "2026-11-27T07:47:55.000Z",
-          "status": "At anchor",
-          "speed_kn": 0
+          "lat": 45.31286,
+          "lon": 14.42692,
+          "at": "2026-11-27T08:59:17.000Z",
+          "status": "Under way under engine power",
+          "speed_kn": 5.2
         },
-        "quay_distance_km": 5.71,
+        "quay_distance_km": 2.3,
         "at_quay": false,
         "destination_raw": "HRRJK",
         "bound_for": {
@@ -85,7 +85,7 @@
             "name": "Rijeka",
             "country": "Croatia",
             "arrived_at": "2026-11-26T04:12:19.000Z",
-            "departed_at": null
+            "departed_at": "2026-11-27T08:15:08.000Z"
           },
           {
             "locode": "SIKOP",
@@ -134,7 +134,7 @@
           "kind": "actual",
           "source": "Shiptrail (AIS port-call history)",
           "source_url": "https://shiptrail.io/vessel/215020000-michigan",
-          "retrieved_at": "2026-11-27T09:00:00+01:00",
+          "retrieved_at": "2026-11-27T10:00:00+01:00",
           "auto": true,
           "confidence": "medium"
         }
@@ -238,7 +238,7 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/cma-cgm-quest-232061535",
-        "checked_at": "2026-11-27T09:45:00+01:00",
+        "checked_at": "2026-11-27T10:00:00+01:00",
         "found": true,
         "mmsi": "232061535",
         "distance_km": 640,
@@ -256,7 +256,7 @@
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/232061535-cma-cgm-quest",
-        "fetched_at": "2026-11-27T09:00:00+01:00",
+        "fetched_at": "2026-11-27T10:00:00+01:00",
         "mmsi": "232061535",
         "imo": "9734159",
         "name": "CMA CGM QUEST",
@@ -334,7 +334,7 @@
           "kind": "actual",
           "source": "Shiptrail (AIS port-call history)",
           "source_url": "https://shiptrail.io/vessel/232061535-cma-cgm-quest",
-          "retrieved_at": "2026-11-27T09:00:00+01:00",
+          "retrieved_at": "2026-11-27T10:00:00+01:00",
           "auto": true,
           "confidence": "medium"
         }
@@ -489,7 +489,7 @@
       "shipper": "CMA",
       "voyage_in": "0BEOWE1MA",
       "voyage_out": "0BEOWE1MA",
-      "status": "COMPLETE",
+      "status": "DEPARTED",
       "eta": "2026-11-25T06:30:00+01:00",
       "etd": "2026-11-27T06:30:00+01:00",
       "ata": "2026-11-25T07:30:00+01:00",
@@ -1063,8 +1063,8 @@
       "name": "Wingo Marine",
       "url": "https://wingo-marine.com/port/rijeka-2263",
       "ok": true,
-      "fetched_at": "2026-11-27T09:45:00+01:00",
-      "last_attempt_at": "2026-11-27T09:45:00+01:00",
+      "fetched_at": "2026-11-27T10:00:00+01:00",
+      "last_attempt_at": "2026-11-27T10:00:00+01:00",
       "error": null,
       "summary": "26 vessels reported within 15 km in the last 24 hours",
       "vessels_listed": 31
@@ -1073,8 +1073,8 @@
       "name": "AIS-catcher",
       "url": "https://www.aiscatcher.org/place/6398/brajdica-container-terminal",
       "ok": true,
-      "fetched_at": "2026-11-27T09:45:00+01:00",
-      "last_attempt_at": "2026-11-27T09:45:00+01:00",
+      "fetched_at": "2026-11-27T10:00:00+01:00",
+      "last_attempt_at": "2026-11-27T10:00:00+01:00",
       "error": null,
       "receiving_stations": 0,
       "vessels_inside": 0,
@@ -1085,21 +1085,13 @@
       "name": "Shiptrail",
       "url": "https://shiptrail.io/",
       "ok": true,
-      "fetched_at": "2026-11-27T09:45:00+01:00",
-      "last_attempt_at": "2026-11-27T09:45:00+01:00",
+      "fetched_at": "2026-11-27T10:00:00+01:00",
+      "last_attempt_at": "2026-11-27T10:00:00+01:00",
       "error": null,
       "note": "AIS-derived port calls and positions. Data: Shiptrail, shiptrail.io"
     }
   },
   "last_events": [
-    {
-      "type": "eta_changed",
-      "call_id": "SC MEDFORD|153W",
-      "name": "SC MEDFORD",
-      "from": "2026-11-28T14:30:00+01:00",
-      "to": "2026-11-30T22:30:00+01:00",
-      "observed": "2026-11-24T15:00:00+01:00"
-    },
     {
       "type": "eta_changed",
       "call_id": "CMA CGM QUEST|BMS0X0E19",
@@ -1168,11 +1160,19 @@
       "name": "CMA CGM ANTIGONE",
       "at": "2026-11-27T09:00:00+01:00",
       "observed": "2026-11-27T08:15:00+01:00"
+    },
+    {
+      "type": "status_changed",
+      "call_id": "CMA CGM ANTIGONE|0BEOWE1MA",
+      "name": "CMA CGM ANTIGONE",
+      "from": "COMPLETE",
+      "to": "DEPARTED",
+      "observed": "2026-11-27T10:00:00+01:00"
     }
   ],
   "stale_after_hours": 3,
   "research_pending": [],
   "research_needed": [],
-  "next_check_at": "2026-11-27T10:45:00+01:00",
+  "next_check_at": "2026-11-27T11:00:00+01:00",
   "stale_grace_minutes": 100
 }
