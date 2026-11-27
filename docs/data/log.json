@@ -1,17 +1,6 @@
 {
   "runs": [
     {
-      "at": "2026-11-18T03:00:01+01:00",
-      "terminal_ok": true,
-      "rows": 15,
-      "berth": [
-        "MSC EAGLE III"
-      ],
-      "events": 0,
-      "research_needed": [],
-      "errors": []
-    },
-    {
       "at": "2026-11-18T03:15:00+01:00",
       "terminal_ok": true,
       "rows": 15,
@@ -5713,6 +5702,15 @@
       "events": 0,
       "research_needed": [],
       "errors": []
+    },
+    {
+      "at": "2026-11-27T08:15:00+01:00",
+      "terminal_ok": true,
+      "rows": 11,
+      "berth": [],
+      "events": 1,
+      "research_needed": [],
+      "errors": []
     }
   ],
   "events": [
@@ -6104,6 +6102,13 @@
       "name": "GANDA",
       "at": "2026-11-26T17:00:00+01:00",
       "observed": "2026-11-26T22:00:01+01:00"
+    },
+    {
+      "type": "departed",
+      "call_id": "CMA CGM ANTIGONE|0BEOWE1MA",
+      "name": "CMA CGM ANTIGONE",
+      "at": "2026-11-27T09:00:00+01:00",
+      "observed": "2026-11-27T08:15:00+01:00"
     }
   ]
 }
