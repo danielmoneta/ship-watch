@@ -1,0 +1,44 @@
+{
+  "imo": "9275103",
+  "name": "SC MEDFORD",
+  "aliases": [],
+  "mmsi": "636020667",
+  "fields": {
+    "flag": {
+      "value": "Liberia",
+      "source": "Wingo Marine (AIS)",
+      "source_url": "https://wingo-marine.com/ship/sc-medford-636020667",
+      "retrieved_at": "2026-11-28T14:30:00+01:00",
+      "confidence": "medium"
+    },
+    "length_m": {
+      "value": 155,
+      "source": "Wingo Marine (AIS broadcast dimensions)",
+      "source_url": "https://wingo-marine.com/ship/sc-medford-636020667",
+      "retrieved_at": "2026-11-28T14:30:00+01:00",
+      "confidence": "medium"
+    },
+    "beam_m": {
+      "value": 25,
+      "source": "Wingo Marine (AIS broadcast dimensions)",
+      "source_url": "https://wingo-marine.com/ship/sc-medford-636020667",
+      "retrieved_at": "2026-11-28T14:30:00+01:00",
+      "confidence": "medium"
+    },
+    "callsign": {
+      "value": "5LAC8",
+      "source": "Wingo Marine (AIS)",
+      "source_url": "https://wingo-marine.com/ship/sc-medford-636020667",
+      "retrieved_at": "2026-11-28T14:30:00+01:00",
+      "confidence": "medium"
+    }
+  },
+  "photo": null,
+  "facts": [],
+  "research": {
+    "status": "auto",
+    "researched_at": null,
+    "missing": [],
+    "notes": "Created automatically from AIS data; awaiting research."
+  }
+}

@@ -13,7 +13,7 @@
       "atd": "2026-11-20T03:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-28T14:15:00+01:00",
+      "last_seen": "2026-11-28T14:30:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
@@ -120,7 +120,7 @@
       "atd": "2026-11-23T12:30:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-28T14:15:00+01:00",
+      "last_seen": "2026-11-28T14:30:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
@@ -239,7 +239,7 @@
       "atd": "2026-11-20T18:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-28T14:15:00+01:00",
+      "last_seen": "2026-11-28T14:30:00+01:00",
       "listed": true,
       "imo": "9169043",
       "ais": {
@@ -362,7 +362,7 @@
       "atd": "2026-11-21T11:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-28T14:15:00+01:00",
+      "last_seen": "2026-11-28T14:30:00+01:00",
       "listed": true,
       "imo": "9961350",
       "ais": {
@@ -477,7 +477,7 @@
       "atd": "2026-11-26T17:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-19T13:00:00+01:00",
-      "last_seen": "2026-11-28T14:15:00+01:00",
+      "last_seen": "2026-11-28T14:30:00+01:00",
       "listed": true,
       "imo": "9298129",
       "ais": {
@@ -557,7 +557,7 @@
       "atd": "2026-11-27T09:00:00+01:00",
       "phase": "departed",
       "first_seen": "2026-11-16T16:12:47+01:00",
-      "last_seen": "2026-11-28T14:15:00+01:00",
+      "last_seen": "2026-11-28T14:30:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
@@ -658,12 +658,12 @@
       "atd": null,
       "phase": "at_berth",
       "first_seen": "2026-11-23T06:45:00+01:00",
-      "last_seen": "2026-11-28T14:15:00+01:00",
+      "last_seen": "2026-11-28T14:30:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/port/rijeka-2263",
-        "checked_at": "2026-11-28T14:15:00+01:00",
+        "checked_at": "2026-11-28T14:30:00+01:00",
         "found": false
       },
       "imo": "9437139",
@@ -759,19 +759,19 @@
       "shipper": "CMA",
       "voyage_in": "BMS0X0E19",
       "voyage_out": "BMS0X0E19",
-      "status": "IN ARRIVAL",
+      "status": "ARRIVED",
       "eta": "2026-11-28T14:30:00+01:00",
       "etd": "2026-11-29T06:30:00+01:00",
-      "ata": null,
+      "ata": "2026-11-28T14:10:00+01:00",
       "atd": null,
-      "phase": "expected",
+      "phase": "at_berth",
       "first_seen": "2026-11-23T06:45:00+01:00",
-      "last_seen": "2026-11-28T14:15:00+01:00",
+      "last_seen": "2026-11-28T14:30:00+01:00",
       "listed": true,
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/port/rijeka-2263",
-        "checked_at": "2026-11-28T14:15:00+01:00",
+        "checked_at": "2026-11-28T14:30:00+01:00",
         "found": false
       },
       "imo": "9734159",
@@ -871,13 +871,13 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-23T08:15:00+01:00",
-      "last_seen": "2026-11-28T14:15:00+01:00",
+      "last_seen": "2026-11-28T14:30:00+01:00",
       "listed": true,
       "imo": "9997000",
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/cma-cgm-carmen-248039000",
-        "checked_at": "2026-11-28T14:15:00+01:00",
+        "checked_at": "2026-11-28T14:30:00+01:00",
         "found": true,
         "mmsi": "248039000",
         "distance_km": null,
@@ -894,7 +894,7 @@
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/248039000-cma-cgm-carmen",
-        "fetched_at": "2026-11-28T13:30:01+01:00",
+        "fetched_at": "2026-11-28T14:30:00+01:00",
         "mmsi": "248039000",
         "imo": "9997000",
         "name": "CMA CGM CARMEN",
@@ -949,8 +949,114 @@
       "atd": null,
       "phase": "expected",
       "first_seen": "2026-11-23T06:45:00+01:00",
-      "last_seen": "2026-11-28T14:15:00+01:00",
-      "listed": true
+      "last_seen": "2026-11-28T14:30:00+01:00",
+      "listed": true,
+      "imo": "9275103",
+      "ais": {
+        "source": "Wingo Marine",
+        "source_url": "https://wingo-marine.com/ship/sc-medford-636020667",
+        "checked_at": "2026-11-28T14:30:00+01:00",
+        "found": true,
+        "mmsi": "636020667",
+        "distance_km": null,
+        "nav": "9.6 kn",
+        "destination_raw": "HRRJK",
+        "destination": {
+          "locode": "HRRJK",
+          "name": "Rijeka, Croatia"
+        },
+        "destination_kind": "ais_destination",
+        "berth_consistent": false,
+        "last_report": "2026-11-28T12:45:00.000Z",
+        "nearest_port_label": null,
+        "imo": "9275103"
+      },
+      "trail": {
+        "source": "Shiptrail",
+        "source_url": "https://shiptrail.io/vessel/636020667-sc-medford",
+        "fetched_at": "2026-11-28T14:30:00+01:00",
+        "mmsi": "636020667",
+        "imo": "9275103",
+        "name": "SC MEDFORD",
+        "last_heard": "2026-11-28T13:23:20.000Z",
+        "position": {
+          "lat": 38.42556,
+          "lon": 19.9337,
+          "at": "2026-11-28T13:23:20.000Z",
+          "status": "Under way under engine power",
+          "speed_kn": 10
+        },
+        "quay_distance_km": 890.29,
+        "at_quay": false,
+        "destination_raw": "HRRJK",
+        "bound_for": {
+          "locode": "HRRJK",
+          "name": "Rijeka",
+          "country": "Croatia"
+        },
+        "destination_eta": "2026-11-30T18:00:00.000Z",
+        "previous_port": {
+          "locode": "GRPIR",
+          "name": "Piraeus",
+          "country": "Greece",
+          "arrived_at": "2026-11-24T18:34:51.000Z",
+          "departed_at": "2026-11-27T04:58:20.437Z",
+          "url": "https://shiptrail.io/port/grpir-piraeus"
+        },
+        "recent_calls": [
+          {
+            "locode": "GRPIR",
+            "name": "Piraeus",
+            "country": "Greece",
+            "arrived_at": "2026-11-24T18:34:51.000Z",
+            "departed_at": "2026-11-27T04:58:20.437Z"
+          },
+          {
+            "locode": "GRPIR",
+            "name": "Piraeus",
+            "country": "Greece",
+            "arrived_at": "2026-11-24T12:59:01.003Z",
+            "departed_at": "2026-11-24T17:52:50.000Z"
+          },
+          {
+            "locode": "GRPIR",
+            "name": "Piraeus",
+            "country": "Greece",
+            "arrived_at": "2026-11-24T09:34:41.000Z",
+            "departed_at": "2026-11-24T11:24:07.746Z"
+          },
+          {
+            "locode": "GRPIR",
+            "name": "Piraeus",
+            "country": "Greece",
+            "arrived_at": "2026-11-24T05:21:00.013Z",
+            "departed_at": "2026-11-24T08:56:03.822Z"
+          },
+          {
+            "locode": "ITTLY",
+            "name": "Porto San Vitale",
+            "country": "Italy",
+            "arrived_at": "2026-11-16T20:19:51.000Z",
+            "departed_at": "2026-11-19T06:21:19.000Z"
+          },
+          {
+            "locode": "HRKOS",
+            "name": "Kostrena",
+            "country": "Croatia",
+            "arrived_at": "2026-11-15T15:30:51.000Z",
+            "departed_at": "2026-11-16T07:27:59.000Z"
+          }
+        ],
+        "particulars": {
+          "built": "2004",
+          "grossTonnage": 14308,
+          "builder": "Rolandwerft",
+          "registry": "Madeira",
+          "portOfRegistry": "Madeira",
+          "yardNumber": "216"
+        },
+        "still_in_port": null
+      }
     },
     "MSC EAGLE III|AH644A": {
       "call_id": "MSC EAGLE III|AH644A",

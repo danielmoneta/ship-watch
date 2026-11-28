@@ -1,17 +1,6 @@
 {
   "runs": [
     {
-      "at": "2026-11-19T07:30:00+01:00",
-      "terminal_ok": true,
-      "rows": 14,
-      "berth": [
-        "MSC AUDREY"
-      ],
-      "events": 0,
-      "research_needed": [],
-      "errors": []
-    },
-    {
       "at": "2026-11-19T07:45:00+01:00",
       "terminal_ok": true,
       "rows": 14,
@@ -5693,6 +5682,20 @@
       "events": 0,
       "research_needed": [],
       "errors": []
+    },
+    {
+      "at": "2026-11-28T14:30:00+01:00",
+      "terminal_ok": true,
+      "rows": 10,
+      "berth": [
+        "CMA CGM QUEST",
+        "MICHIGAN"
+      ],
+      "events": 1,
+      "research_needed": [
+        "SC MEDFORD"
+      ],
+      "errors": []
     }
   ],
   "events": [
@@ -6114,6 +6117,13 @@
       "from": "ARRIVED",
       "to": "UNDER OPS",
       "observed": "2026-11-27T11:15:00+01:00"
+    },
+    {
+      "type": "arrived",
+      "call_id": "CMA CGM QUEST|BMS0X0E19",
+      "name": "CMA CGM QUEST",
+      "at": "2026-11-28T14:10:00+01:00",
+      "observed": "2026-11-28T14:30:00+01:00"
     }
   ]
 }
