@@ -6,10 +6,11 @@
   "fields": {
     "flag": {
       "value": "Liberia",
-      "source": "Wingo Marine (AIS)",
-      "source_url": "https://wingo-marine.com/ship/sc-medford-636020667",
-      "retrieved_at": "2026-11-28T14:30:00+01:00",
-      "confidence": "medium"
+      "source": "Shiptrail; Wingo Marine (AIS)",
+      "source_url": "https://shiptrail.io/vessel/636020667-sc-medford",
+      "retrieved_at": "2026-11-28T15:00:00+01:00",
+      "confidence": "high",
+      "note": "Shiptrail particulars list registry Madeira; AIS flag is Liberia."
     },
     "length_m": {
       "value": 155,
@@ -31,14 +32,62 @@
       "source_url": "https://wingo-marine.com/ship/sc-medford-636020667",
       "retrieved_at": "2026-11-28T14:30:00+01:00",
       "confidence": "medium"
+    },
+    "year_built": {
+      "value": 2004,
+      "source": "Shiptrail",
+      "source_url": "https://shiptrail.io/vessel/636020667-sc-medford",
+      "retrieved_at": "2026-11-28T15:00:00+01:00",
+      "confidence": "medium"
+    },
+    "builder": {
+      "value": "Rolandwerft",
+      "source": "Shiptrail",
+      "source_url": "https://shiptrail.io/vessel/636020667-sc-medford",
+      "retrieved_at": "2026-11-28T15:00:00+01:00",
+      "confidence": "medium"
+    },
+    "gross_tonnage": {
+      "value": 14308,
+      "source": "Shiptrail; Flexport Atlas",
+      "source_url": "https://atlas.flexport.com/vessel/imo:9275103/mmsi:636020667/name:sc-medford",
+      "retrieved_at": "2026-11-28T15:00:00+01:00",
+      "confidence": "high"
+    },
+    "deadweight_t": {
+      "value": 16439,
+      "source": "Flexport Atlas (via search summary)",
+      "source_url": "https://atlas.flexport.com/vessel/imo:9275103/mmsi:636020667/name:sc-medford",
+      "retrieved_at": "2026-11-28T15:00:00+01:00",
+      "confidence": "low",
+      "note": "Single source."
+    },
+    "teu": {
+      "value": 1200,
+      "source": "Flexport Atlas (via search summary)",
+      "source_url": "https://atlas.flexport.com/vessel/imo:9275103/mmsi:636020667/name:sc-medford",
+      "retrieved_at": "2026-11-28T15:00:00+01:00",
+      "confidence": "low",
+      "note": "Single source; VesselFinder leaves TEU blank."
+    },
+    "former_names": {
+      "value": [
+        "CNC Hong Kong"
+      ],
+      "source": "Gard vessel list (via search summary)",
+      "source_url": "https://gard.no/vessels/47680",
+      "retrieved_at": "2026-11-28T15:00:00+01:00",
+      "confidence": "medium"
     }
   },
   "photo": null,
   "facts": [],
   "research": {
-    "status": "auto",
-    "researched_at": null,
-    "missing": [],
-    "notes": "Created automatically from AIS data; awaiting research."
+    "status": "partial",
+    "researched_at": "2026-11-28T15:00:00+01:00",
+    "missing": [
+      "photo"
+    ],
+    "notes": "No Commons photo found by IMO or name. TEU and DWT single-source."
   }
 }
