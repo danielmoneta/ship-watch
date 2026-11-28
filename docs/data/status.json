@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-28T17:00:00+01:00",
+  "generated_at": "2026-11-28T17:30:00+01:00",
   "timezone": "Europe/Zagreb",
   "terminal": {
     "url": "https://webusercorner.ictsi.hr/?language=EN",
     "query_url": "https://webusercorner.ictsi.hr/?language=EN&from=18.11.2026&to=19.12.2026",
     "ok": true,
-    "fetched_at": "2026-11-28T17:00:00+01:00",
-    "last_attempt_at": "2026-11-28T17:00:00+01:00",
+    "fetched_at": "2026-11-28T17:30:00+01:00",
+    "last_attempt_at": "2026-11-28T17:30:00+01:00",
     "rows": 10,
     "error": null
   },
@@ -29,7 +29,7 @@
         "ais": {
           "source": "Wingo Marine",
           "source_url": "https://wingo-marine.com/port/rijeka-2263",
-          "checked_at": "2026-11-28T17:00:00+01:00",
+          "checked_at": "2026-11-28T17:30:00+01:00",
           "found": false
         },
         "imo": "9734159",
@@ -259,7 +259,7 @@
         "ais": {
           "source": "Wingo Marine",
           "source_url": "https://wingo-marine.com/port/rijeka-2263",
-          "checked_at": "2026-11-28T17:00:00+01:00",
+          "checked_at": "2026-11-28T17:30:00+01:00",
           "found": false
         },
         "imo": "9437139",
@@ -463,7 +463,7 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/cma-cgm-carmen-248039000",
-        "checked_at": "2026-11-28T17:00:00+01:00",
+        "checked_at": "2026-11-28T17:30:00+01:00",
         "found": true,
         "mmsi": "248039000",
         "distance_km": null,
@@ -480,7 +480,7 @@
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/248039000-cma-cgm-carmen",
-        "fetched_at": "2026-11-28T16:30:00+01:00",
+        "fetched_at": "2026-11-28T17:30:00+01:00",
         "mmsi": "248039000",
         "imo": "9997000",
         "name": "CMA CGM CARMEN",
@@ -530,7 +530,7 @@
           "kind": "actual",
           "source": "Shiptrail (AIS port-call history)",
           "source_url": "https://shiptrail.io/vessel/248039000-cma-cgm-carmen",
-          "retrieved_at": "2026-11-28T16:30:00+01:00",
+          "retrieved_at": "2026-11-28T17:30:00+01:00",
           "auto": true,
           "confidence": "medium"
         }
@@ -646,7 +646,7 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/sc-medford-636020667",
-        "checked_at": "2026-11-28T17:00:00+01:00",
+        "checked_at": "2026-11-28T17:30:00+01:00",
         "found": true,
         "mmsi": "636020667",
         "distance_km": null,
@@ -663,7 +663,7 @@
       "trail": {
         "source": "Shiptrail",
         "source_url": "https://shiptrail.io/vessel/636020667-sc-medford",
-        "fetched_at": "2026-11-28T16:30:00+01:00",
+        "fetched_at": "2026-11-28T17:30:00+01:00",
         "mmsi": "636020667",
         "imo": "9275103",
         "name": "SC MEDFORD",
@@ -748,7 +748,7 @@
           "kind": "actual",
           "source": "Shiptrail (AIS port-call history)",
           "source_url": "https://shiptrail.io/vessel/636020667-sc-medford",
-          "retrieved_at": "2026-11-28T16:30:00+01:00",
+          "retrieved_at": "2026-11-28T17:30:00+01:00",
           "auto": true,
           "confidence": "medium"
         }
@@ -1429,8 +1429,8 @@
       "name": "Wingo Marine",
       "url": "https://wingo-marine.com/port/rijeka-2263",
       "ok": true,
-      "fetched_at": "2026-11-28T17:00:00+01:00",
-      "last_attempt_at": "2026-11-28T17:00:00+01:00",
+      "fetched_at": "2026-11-28T17:30:00+01:00",
+      "last_attempt_at": "2026-11-28T17:30:00+01:00",
       "error": null,
       "summary": "42 vessels reported within 15 km in the last 24 hours",
       "vessels_listed": 31
@@ -1440,15 +1440,15 @@
       "url": "https://www.aiscatcher.org/place/6398/brajdica-container-terminal",
       "ok": false,
       "fetched_at": "2026-11-28T15:00:00+01:00",
-      "last_attempt_at": "2026-11-28T17:00:00+01:00",
+      "last_attempt_at": "2026-11-28T17:30:00+01:00",
       "error": "HTTP 403"
     },
     "shiptrail": {
       "name": "Shiptrail",
       "url": "https://shiptrail.io/",
       "ok": true,
-      "fetched_at": "2026-11-28T17:00:00+01:00",
-      "last_attempt_at": "2026-11-28T17:00:00+01:00",
+      "fetched_at": "2026-11-28T17:30:00+01:00",
+      "last_attempt_at": "2026-11-28T17:30:00+01:00",
       "error": null,
       "note": "AIS-derived port calls and positions. Data: Shiptrail, shiptrail.io"
     }
@@ -1534,6 +1534,6 @@
   "stale_after_hours": 3,
   "research_pending": [],
   "research_needed": [],
-  "next_check_at": "2026-11-28T18:00:00+01:00",
+  "next_check_at": "2026-11-28T18:30:00+01:00",
   "stale_grace_minutes": 100
 }
