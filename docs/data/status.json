@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-28T18:00:00+01:00",
+  "generated_at": "2026-11-28T18:15:00+01:00",
   "timezone": "Europe/Zagreb",
   "terminal": {
     "url": "https://webusercorner.ictsi.hr/?language=EN",
     "query_url": "https://webusercorner.ictsi.hr/?language=EN&from=18.11.2026&to=19.12.2026",
     "ok": true,
-    "fetched_at": "2026-11-28T18:00:00+01:00",
-    "last_attempt_at": "2026-11-28T18:00:00+01:00",
+    "fetched_at": "2026-11-28T18:15:00+01:00",
+    "last_attempt_at": "2026-11-28T18:15:00+01:00",
     "rows": 10,
     "error": null
   },
@@ -29,7 +29,7 @@
         "ais": {
           "source": "Wingo Marine",
           "source_url": "https://wingo-marine.com/port/rijeka-2263",
-          "checked_at": "2026-11-28T18:00:00+01:00",
+          "checked_at": "2026-11-28T18:15:00+01:00",
           "found": false
         },
         "imo": "9734159",
@@ -258,9 +258,22 @@
         "phase": "at_berth",
         "ais": {
           "source": "Wingo Marine",
-          "source_url": "https://wingo-marine.com/port/rijeka-2263",
-          "checked_at": "2026-11-28T18:00:00+01:00",
-          "found": false
+          "source_url": "https://wingo-marine.com/ship/michigan-215020000",
+          "checked_at": "2026-11-28T18:15:00+01:00",
+          "found": true,
+          "mmsi": "215020000",
+          "distance_km": 4.1,
+          "nav": "Stopped",
+          "destination_raw": "HRRJK",
+          "destination": {
+            "locode": "HRRJK",
+            "name": "Rijeka, Croatia"
+          },
+          "destination_kind": "ais_destination",
+          "berth_consistent": true,
+          "last_report": "2026-11-28T15:19:00.000Z",
+          "nearest_port_label": "Rijeka",
+          "imo": "9437139"
         },
         "imo": "9437139",
         "trail": {
@@ -440,8 +453,8 @@
           }
         },
         "corroboration": {
-          "level": "terminal_only",
-          "note": "Not found in the AIS source. Missing AIS is not evidence of absence."
+          "level": "ais_consistent",
+          "note": "AIS places the ship at a distance consistent with the Brajdica quay."
         }
       }
     ]
@@ -463,11 +476,11 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/cma-cgm-carmen-248039000",
-        "checked_at": "2026-11-28T18:00:00+01:00",
+        "checked_at": "2026-11-28T18:15:00+01:00",
         "found": true,
         "mmsi": "248039000",
         "distance_km": null,
-        "nav": "16.3 kn",
+        "nav": "16.7 kn",
         "destination_raw": "HRRJK",
         "destination": {
           "locode": "HRRJK",
@@ -646,11 +659,11 @@
       "ais": {
         "source": "Wingo Marine",
         "source_url": "https://wingo-marine.com/ship/sc-medford-636020667",
-        "checked_at": "2026-11-28T18:00:00+01:00",
+        "checked_at": "2026-11-28T18:15:00+01:00",
         "found": true,
         "mmsi": "636020667",
         "distance_km": null,
-        "nav": "9.8 kn",
+        "nav": "9.6 kn",
         "destination_raw": "HRRJK",
         "destination": {
           "locode": "HRRJK",
@@ -1429,10 +1442,10 @@
       "name": "Wingo Marine",
       "url": "https://wingo-marine.com/port/rijeka-2263",
       "ok": true,
-      "fetched_at": "2026-11-28T18:00:00+01:00",
-      "last_attempt_at": "2026-11-28T18:00:00+01:00",
+      "fetched_at": "2026-11-28T18:15:00+01:00",
+      "last_attempt_at": "2026-11-28T18:15:00+01:00",
       "error": null,
-      "summary": "42 vessels reported within 15 km in the last 24 hours",
+      "summary": "41 vessels reported within 15 km in the last 24 hours",
       "vessels_listed": 31
     },
     "aiscatcher": {
@@ -1440,15 +1453,15 @@
       "url": "https://www.aiscatcher.org/place/6398/brajdica-container-terminal",
       "ok": false,
       "fetched_at": "2026-11-28T15:00:00+01:00",
-      "last_attempt_at": "2026-11-28T18:00:00+01:00",
+      "last_attempt_at": "2026-11-28T18:15:00+01:00",
       "error": "HTTP 403"
     },
     "shiptrail": {
       "name": "Shiptrail",
       "url": "https://shiptrail.io/",
       "ok": true,
-      "fetched_at": "2026-11-28T18:00:00+01:00",
-      "last_attempt_at": "2026-11-28T18:00:00+01:00",
+      "fetched_at": "2026-11-28T18:15:00+01:00",
+      "last_attempt_at": "2026-11-28T18:15:00+01:00",
       "error": null,
       "note": "AIS-derived port calls and positions. Data: Shiptrail, shiptrail.io"
     }
@@ -1534,6 +1547,6 @@
   "stale_after_hours": 3,
   "research_pending": [],
   "research_needed": [],
-  "next_check_at": "2026-11-28T19:00:00+01:00",
+  "next_check_at": "2026-11-28T19:15:00+01:00",
   "stale_grace_minutes": 100
 }
