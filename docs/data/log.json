@@ -1,17 +1,6 @@
 {
   "runs": [
     {
-      "at": "2026-11-19T07:45:00+01:00",
-      "terminal_ok": true,
-      "rows": 14,
-      "berth": [
-        "MSC AUDREY"
-      ],
-      "events": 0,
-      "research_needed": [],
-      "errors": []
-    },
-    {
       "at": "2026-11-19T08:30:01+01:00",
       "terminal_ok": true,
       "rows": 14,
@@ -5695,6 +5684,18 @@
       "research_needed": [
         "SC MEDFORD"
       ],
+      "errors": []
+    },
+    {
+      "at": "2026-11-28T14:45:00+01:00",
+      "terminal_ok": true,
+      "rows": 10,
+      "berth": [
+        "CMA CGM QUEST",
+        "MICHIGAN"
+      ],
+      "events": 0,
+      "research_needed": [],
       "errors": []
     }
   ],
