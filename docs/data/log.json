@@ -1,17 +1,6 @@
 {
   "runs": [
     {
-      "at": "2026-11-19T01:45:00+01:00",
-      "terminal_ok": true,
-      "rows": 14,
-      "berth": [
-        "MSC AUDREY"
-      ],
-      "events": 0,
-      "research_needed": [],
-      "errors": []
-    },
-    {
       "at": "2026-11-19T02:30:01+01:00",
       "terminal_ok": true,
       "rows": 14,
@@ -5685,6 +5674,17 @@
     },
     {
       "at": "2026-11-28T09:36:44+01:00",
+      "terminal_ok": true,
+      "rows": 10,
+      "berth": [
+        "MICHIGAN"
+      ],
+      "events": 0,
+      "research_needed": [],
+      "errors": []
+    },
+    {
+      "at": "2026-11-28T10:00:01+01:00",
       "terminal_ok": true,
       "rows": 10,
       "berth": [
