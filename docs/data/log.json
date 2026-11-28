@@ -1,18 +1,6 @@
 {
   "runs": [
     {
-      "at": "2026-11-19T10:15:00+01:00",
-      "terminal_ok": true,
-      "rows": 14,
-      "berth": [
-        "UNITY ONE",
-        "MSC AUDREY"
-      ],
-      "events": 1,
-      "research_needed": [],
-      "errors": []
-    },
-    {
       "at": "2026-11-19T10:30:00+01:00",
       "terminal_ok": true,
       "rows": 14,
@@ -5713,6 +5701,20 @@
       "errors": [
         "aiscatcher: HTTP 403"
       ]
+    },
+    {
+      "at": "2026-11-28T17:45:01+01:00",
+      "terminal_ok": true,
+      "rows": 10,
+      "berth": [
+        "CMA CGM QUEST",
+        "MICHIGAN"
+      ],
+      "events": 1,
+      "research_needed": [],
+      "errors": [
+        "aiscatcher: HTTP 403"
+      ]
     }
   ],
   "events": [
@@ -6141,6 +6143,14 @@
       "name": "CMA CGM QUEST",
       "at": "2026-11-28T14:10:00+01:00",
       "observed": "2026-11-28T14:30:00+01:00"
+    },
+    {
+      "type": "status_changed",
+      "call_id": "CMA CGM QUEST|BMS0X0E19",
+      "name": "CMA CGM QUEST",
+      "from": "ARRIVED",
+      "to": "UNDER OPS",
+      "observed": "2026-11-28T17:45:01+01:00"
     }
   ]
 }
