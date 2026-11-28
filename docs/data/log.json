@@ -1,20 +1,6 @@
 {
   "runs": [
     {
-      "at": "2026-11-19T11:15:01+01:00",
-      "terminal_ok": true,
-      "rows": 14,
-      "berth": [
-        "UNITY ONE",
-        "MSC AUDREY"
-      ],
-      "events": 0,
-      "research_needed": [],
-      "errors": [
-        "aiscatcher: HTTP 403"
-      ]
-    },
-    {
       "at": "2026-11-19T11:30:01+01:00",
       "terminal_ok": true,
       "rows": 14,
@@ -5708,6 +5694,20 @@
     },
     {
       "at": "2026-11-28T18:15:00+01:00",
+      "terminal_ok": true,
+      "rows": 10,
+      "berth": [
+        "CMA CGM QUEST",
+        "MICHIGAN"
+      ],
+      "events": 0,
+      "research_needed": [],
+      "errors": [
+        "aiscatcher: HTTP 403"
+      ]
+    },
+    {
+      "at": "2026-11-28T18:30:01+01:00",
       "terminal_ok": true,
       "rows": 10,
       "berth": [
